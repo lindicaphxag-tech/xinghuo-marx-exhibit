@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14110f">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<title>三种入口 · 星火与道路</title>
+<style>
+  :root{
+    --soot:#14110f; --paper:#f2e9d8; --dim:#a99a86; --line:rgba(226,196,150,.22);
+    --red:#a8332c; --gold:#c9a262; --green:#5f7b6c;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:
+      radial-gradient(ellipse at 78% 4%,#3a2418 0,transparent 42%),
+      radial-gradient(ellipse at 6% 98%,#2a1f18 0,transparent 46%),
+      var(--soot);
+    color:var(--paper);font:16px/1.7 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  }
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .wrap{width:min(1180px,calc(100% - 44px));margin:0 auto;padding:24px 0 60px}
+  .masthead{display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:8px 0 20px;border-bottom:1px solid var(--line);color:var(--dim);font-size:12.5px;letter-spacing:.06em}
+  .masthead strong{color:var(--paper);font-weight:600}
+  header.intro{padding:clamp(38px,6vw,74px) 0 clamp(24px,3vw,36px)}
+  .eyebrow{margin:0 0 14px;color:var(--gold);font-size:11.5px;letter-spacing:.16em}
+  h1{margin:0 0 18px;font-size:clamp(30px,4.6vw,50px);line-height:1.16;font-weight:600;letter-spacing:.01em}
+  h1 em{font-style:normal;color:#e0967f}
+  .lede{margin:0;max-width:640px;color:#ded0bb;font-size:16px;line-height:1.85}
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0 40px}
+  @media(max-width:900px){.cards{grid-template-columns:1fr}}
+  .card{position:relative;display:flex;flex-direction:column;gap:12px;padding:26px 24px 22px;
+    border:1px solid var(--line);border-radius:3px;background:rgba(255,244,228,.03);
+    transition:border-color .18s ease,background .18s ease,transform .18s ease}
+  .card:hover,.card:focus-within{border-color:rgba(201,162,98,.62);background:rgba(255,244,228,.06);transform:translateY(-2px)}
+  .card .no{font-size:12px;letter-spacing:.22em;color:var(--gold)}
+  .card h2{margin:0;font-size:23px;font-weight:600;letter-spacing:.01em}
+  .card .what{color:var(--dim);font-size:13.5px;margin:0}
+  .card .why{margin:6px 0 0;color:#ded0bb;font-size:14px;line-height:1.8}
+  .card .go{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13.5px}
+  .card .go a{color:var(--gold);border-bottom:1px solid transparent}
+  .card .go a:hover{border-bottom-color:var(--gold)}
+  .card.s1{background:linear-gradient(160deg,rgba(168,51,44,.16),rgba(255,244,228,.03) 62%)}
+  .card.s2{background:linear-gradient(160deg,rgba(95,123,108,.16),rgba(255,244,228,.03) 62%)}
+  .card.s3{background:linear-gradient(160deg,rgba(201,162,98,.14),rgba(255,244,228,.03) 62%)}
+  .secondary{border-top:1px solid var(--line);padding-top:24px}
+  .secondary h3{margin:0 0 14px;font-size:13px;letter-spacing:.14em;color:var(--dim);font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips a{padding:7px 13px;border:1px solid var(--line);border-radius:20px;font-size:13px;color:#ded0bb}
+  .chips a:hover{border-color:var(--gold);color:var(--paper)}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px}
+</style>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <strong>星火与道路 · 工人运动时空叙事</strong>
+    <span>1831 — 1917　·　三种读法</span>
+  </div>
+
+  <header class="intro">
+    <p class="eyebrow">ENTRY · 从哪一条路进入</p>
+    <h1>同一座展馆，<em>三种走法</em></h1>
+    <p class="lede">十一卷讲的是同一段历史，但来访的人目的不同：有人要一条讲得完的线，有人想自己钻进去，有人只想知道这条说法凭什么站得住。三条路共用同一批史料与展品，不重复建设。</p>
+  </header>
+
+  <div class="cards">
+    <article class="card s1">
+      <div class="no">01 · 跟随历史</div>
+      <h2>电影式导览</h2>
+      <p class="what">6 站 · 约 8 分钟 · 可暂停可接管</p>
+      <p class="why">按编排好的顺序走：城市 → 组织 → 传播 → 行动 → 空间 → 记忆。适合课堂、比赛演示，也适合第一次来的人。</p>
+      <div class="go">
+        <a href="index.html?tour=1">开始导览 →</a>
+        <a href="hall.html">先看展厅</a>
+      </div>
+    </article>
+
+    <article class="card s2">
+      <div class="no">02 · 自由探索</div>
+      <h2>三维空间漫游</h2>
+      <p class="what">9 个程序化场景 · 可自由旋转</p>
+      <p class="why">工厂、公社广场、石库门、印刷工坊、集会大厅、街垒街区、书房、纪念空间、档案厅。想去哪儿去哪儿，不按剧本。</p>
+      <div class="go">
+        <a href="scenes-3d.html">进入九场景 →</a>
+        <a href="corridor.html">走廊 · 九扇门</a>
+      </div>
+    </article>
+
+    <article class="card s3">
+      <div class="no">03 · 研究档案</div>
+      <h2>文献与证据</h2>
+      <p class="what">272 条资产 · 27 册文献 · 38 件开放模型</p>
+      <p class="why">按分类、来源、许可检索展品；逐页翻读公版书刊；区分实测扫描、开放模型、图像数字化与推断性复原四种证据等级。</p>
+      <div class="go">
+        <a href="assets.html">档案与展品目录 →</a>
+        <a href="reader.html">文献阅读室</a>
+        <a href="kinetic.html?v=era1">星火长廊 · 史料环廊</a>
+        <a href="wall.html?v=era1">史料墙 · 135 张平铺</a>
+        <a href="graph3d.html">三维知识图谱</a>
+        <a href="sim.html">运动扩散模拟</a>
+        <a href="compare.html">依据与复原对照</a>
+        <a href="compare-docs.html">文献并排比较</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="secondary">
+    <h3>其他入口</h3>
+    <div class="chips">
+      <a href="open-3d.html">开放三维机械库 · 38 件</a>
+      <a href="scenes.html">历史空间证据目录 · 16 条</a>
+      <a href="reading-room-panorama.html">大英阅览室全景</a>
+      <a href="large-world.html">空间尺度对照</a>
+      <a href="index.html">完整十一卷</a>
+    </div>
+  </div>
+
+  <footer>三种入口共用同一批历史对象与展品详情。展品标注区分「实测扫描 / 开放数字模型 / 历史图像数字化 / 依据史料复原」，不把推断当作实测。</footer>
+</div>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "scene_id": "chartist_kennington_common",
+  "subject": "Kennington Park current Mapillary street-level imagery",
+  "image_key": "1328336487804718",
+  "viewer_url": "https://www.mapillary.com/app/?image_key=1328336487804718",
+  "discovery_page": "https://thegreatbritainguide.com/place/kennington-park/",
+  "attribution": "Mapillary contributors",
+  "license_reported_by_discovery_page": "CC BY-SA 4.0",
+  "capture_date": "not verified; inspect Mapillary image metadata",
+  "limits": "Current park imagery, not a historical scan; exact 1848 rally ground viewpoint not established; capture date and contributor should be checked on the hosted Mapillary page.",
+  "license_reported_by_official_mapillary": "CC BY-SA 4.0",
+  "official_license_and_attribution_rules": "https://help.mapillary.com/hc/en-us/articles/115001770409-CC-BY-SA-license-for-open-data",
+  "attribution_requirement": "Use the actual contributor username displayed on the hosted image page; this project links to the host and does not copy the image."
+}

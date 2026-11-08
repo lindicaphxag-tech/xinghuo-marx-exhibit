@@ -1,0 +1,133 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://apicollections.parismusees.paris.fr/iiif/320175283/manifest",
+  "@type": "sc:Manifest",
+  "label": "La place de l'Hôtel de Ville ( Juillet 1830)",
+  "metadata": [
+    {
+      "label": "Autres titres",
+      "value": [
+        "La place de l'Hôtel de Ville ( Juillet 1830) (Titre inscrit (lettre))",
+        "La place de l'Hôtel de Ville, 4ème arrondissement, Paris. (Titre factice)",
+        "Paris historique Ancien et Moderne (Titre de la série)"
+      ]
+    },
+    {
+      "label": "Autres titres",
+      "value": [
+        "La place de l'Hôtel de Ville ( Juillet 1830) (Titre inscrit (lettre))",
+        "La place de l'Hôtel de Ville, 4ème arrondissement, Paris. (Titre factice)",
+        "Paris historique Ancien et Moderne (Titre de la série)"
+      ]
+    },
+    {
+      "label": "Auteur",
+      "value": [
+        "Anonyme",
+        "Anonyme"
+      ]
+    },
+    {
+      "label": "Dénomination",
+      "value": "Photographie (dénomination)"
+    },
+    {
+      "label": "Type d'objet",
+      "value": [
+        "Photographie",
+        "Arts graphiques"
+      ]
+    },
+    {
+      "label": "Date de production",
+      "value": "<div class=\"pm-date-precision\">\n      <span class=\"precision\">Entre</span>\n  \n                            <span class=\"year\">1906</span>\n        \n                          <span class=\"precision\">et</span>\n              \n                          <span class=\"year\">1910</span>\n            </div>\n"
+    },
+    {
+      "label": "Époque/Période",
+      "value": [
+        "Epoque contemporaine (1790 à nos jours)",
+        "Epoque contemporaine (1790 à nos jours)"
+      ]
+    },
+    {
+      "label": "Description",
+      "value": [
+        "<p>Tirage collé aux angles sur montage de format 55 x 72 cm. D'après une estampe ou un dessin.</p>\n"
+      ]
+    },
+    {
+      "label": "Description iconographique",
+      "value": [
+        "<p>Place de l'Hôtel de Ville, 4ème arrondissement, Paris.</p>\n"
+      ]
+    },
+    {
+      "label": "Dimensions",
+      "value": [
+        "Oeuvre - Hauteur 19.2 cm",
+        "Oeuvre - Largeur 29.1 cm"
+      ]
+    },
+    {
+      "label": "Mode d'acquisition",
+      "value": "Mode d'acquisition inconnu"
+    },
+    {
+      "label": "Numéro d’inventaire",
+      "value": "PH58133"
+    },
+    {
+      "label": "Institution",
+      "value": "Musée Carnavalet, Histoire de Paris"
+    },
+    {
+      "label": "Catalogue des œuvres de Paris Musées",
+      "value": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/la-place-de-l-hotel-de-ville-juillet-1830"
+    }
+  ],
+  "thumbnail": {
+    "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/thumbnail/collections/atoms/images/CAR/aze_carph058133_001.jpg?itok=RyGVGs5u",
+    "@type": "dctypes:Image",
+    "height": 199,
+    "width": 300
+  },
+  "logo": {
+    "@id": "https://apicollections.parismusees.paris.fr/themes/custom/pm8/logo.svg"
+  },
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@id": "https://apicollections.parismusees.paris.fr/iiif/320175283/manifest/canvas/AZE_CARPH058133_001",
+          "@type": "sc:Canvas",
+          "height": 2160,
+          "width": 3253,
+          "label": "AZE_CARPH058133_001",
+          "metadata": [
+            {
+              "label": "Droits",
+              "value": "CC0 Paris Musées / Musée Carnavalet – Histoire de Paris"
+            },
+            {
+              "label": "Copyright",
+              "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+            }
+          ],
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "https://apicollections.parismusees.paris.fr/iiif/320175283/manifest/canvas/AZE_CARPH058133_001",
+              "resource": {
+                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/aze_carph058133_001.jpg?itok=mCi6Zv0a",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>依据与复原对照 · 数字复原是怎么做出来的</title>
+<link rel="stylesheet" href="css/hotspot.css?v=hs1">
+<style>
+  :root{--soot:#14110f;--panel:#1b1714;--line:#332d26;--paper:#f2e9d8;--dim:#a2968a;--red:#a8332c;--gold:#c9a262;--green:#5f7b6c}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--soot);color:var(--paper);font:15px/1.7 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  a{color:var(--gold);text-decoration:none}
+  header{padding:20px 28px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  h1{margin:0;font-size:19px}
+  h1 span{color:var(--red)}
+  .sub{color:var(--dim);font-size:13px}
+  main{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:calc(100vh - 150px)}
+  @media(max-width:900px){main{grid-template-columns:1fr}}
+  nav{border-right:1px solid var(--line);padding:12px 8px;max-height:calc(100vh - 96px);overflow-y:auto}
+  nav button{display:block;width:100%;text-align:left;padding:8px 10px;border:0;border-radius:4px;background:none;color:var(--dim);font:inherit;font-size:13px;cursor:pointer}
+  nav button:hover{background:#221d19;color:var(--paper)}
+  nav button.on{background:var(--red);color:#fff}
+  nav button small{display:block;font-size:11px;opacity:.7;margin-top:2px}
+  section{padding:18px 26px 40px}
+  .compare{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#0d0b0a}
+  .pane{position:relative;min-height:460px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .pane img{width:100%;height:100%;object-fit:contain;display:block}
+  .pane canvas{width:100%;height:100%;display:block}
+  .pane .tag{position:absolute;left:12px;top:10px;padding:3px 9px;border-radius:3px;font-size:11.5px;letter-spacing:.08em}
+  .pane.evidence .tag{background:rgba(95,123,108,.85);color:#eaf3ee}
+  .pane.recon .tag{background:rgba(168,51,44,.85);color:#ffeae6}
+  .divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:rgba(201,162,98,.7);cursor:ew-resize}
+  .divider::after{content:"";position:absolute;left:-9px;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,98,.25)}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+  .meta div{padding:12px 14px;border:1px solid var(--line);border-radius:4px;background:rgba(255,244,228,.03);font-size:13px;color:var(--dim)}
+  .meta b{display:block;color:var(--paper);font-size:13.5px;margin-bottom:4px;font-weight:600}
+  .note{margin-top:14px;padding:12px 14px;border-left:2px solid var(--gold);color:var(--dim);font-size:13px}
+  .empty{padding:50px;color:var(--dim);text-align:center}
+</style>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<header>
+  <h1>依据与复原对照 <span>·</span> 数字复原是怎么做出来的</h1>
+  <div class="sub">左侧是历史依据图像，右侧是由它生成的模型｜<a href="index.html">← 主展馆</a>｜<a href="enter.html">三种入口</a></div>
+</header>
+<main>
+  <nav id="list"></nav>
+  <section>
+    <div id="view"></div>
+  </section>
+</main>
+<script src="assets/vendor/three-r147/three.min.js"></script>
+<script src="assets/vendor/three-r147/GLTFLoader.js"></script>
+<script src="assets/vendor/three-r147/OrbitControls.js"></script>
+<script>
+(function(){
+  "use strict";
+  var ITEMS = [], cur = -1;
+  var viewEl = document.getElementById("view"), listEl = document.getElementById("list");
+  var renderer = null, scene = null, camera = null, controls = null, model = null, raf = null;
+  var loader = new THREE.GLTFLoader();
+
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+  function buildNav(){
+    ITEMS.forEach(function(it,i){
+      var b=document.createElement("button");
+      b.innerHTML=esc(it.name)+"<small>"+(it.quality==="ok"?"可用":it.quality==="flat"?"薄片":"失败")+" · "+(it.license||"")+"</small>";
+      b.onclick=function(){ pick(i); };
+      listEl.appendChild(b);
+    });
+  }
+
+  function pick(i){
+    cur = i;
+    Array.prototype.forEach.call(listEl.children, function(b,k){ b.classList.toggle("on", k===i); });
+    var it = ITEMS[i];
+    viewEl.innerHTML =
+      '<div class="compare" id="cmp">' +
+        '<div class="pane evidence"><span class="tag">历史依据图像</span><img alt="" src="'+esc(it.source_image)+'"></div>' +
+        '<div class="pane recon"><span class="tag">数字复原（单图推断）</span><canvas id="cmp-canvas"></canvas></div>' +
+        '<div class="divider" id="divider"></div>' +
+      '</div>' +
+      '<div class="meta">' +
+        '<div><b>来源图像</b>'+esc(it.creator||"未署名")+" · "+esc(it.license||"")+'<br><a href="'+esc(it.source_url)+'" target="_blank" rel="noopener">核对原始页面 ↗</a></div>' +
+        '<div><b>复原方法</b>单图生成（TripoSR）→ 减面到 6 万面 → GLB。没有任何多视角测量，几何是推断。</div>' +
+        '<div><b>可靠性判断</b>体量填充率 '+esc(it.fill)+'　·　'+esc(it.note||"")+'</div>' +
+        '<div><b>可用于什么</b>'+(it.quality==="ok"?"体量、轮廓、展厅占位":"仅说明方法边界，不宜作实物依据")+'</div>' +
+      '</div>' +
+      '<p class="note">对照的意义不是「像不像」，而是让人看见：这个模型只有一张照片作依据，它的正面可信度高、背面完全是猜的；黑色剪影边缘说明轮廓之外没有几何证据。</p>';
+
+    initViewer(it);
+    bindDivider();
+  }
+
+  function initViewer(it){
+    var canvas = document.getElementById("cmp-canvas");
+    if(!canvas || typeof THREE === "undefined") return;
+    if(renderer){ renderer.dispose(); renderer = null; }
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+    if("outputColorSpace" in renderer) renderer.outputColorSpace = THREE.SRGBColorSpace;
+    else if("outputEncoding" in renderer) renderer.outputEncoding = THREE.sRGBEncoding;
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(38, canvas.clientWidth/canvas.clientHeight, 0.01, 200);
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x33302c, 1.2));
+    var key = new THREE.DirectionalLight(0xfff2dd, 1.4); key.position.set(3,5,4); scene.add(key);
+    controls = new THREE.OrbitControls(camera, canvas);
+    controls.enableDamping = true; controls.dampingFactor = 0.08;
+
+    loader.load("assets/models/" + it.file, function(g){
+      model = g.scene;
+      /* 自动立正：把包围盒里最长的轴转到竖直方向（TripoSR 导出的朝向不统一） */
+      var pre = new THREE.Box3().setFromObject(model);
+      var ps = pre.getSize(new THREE.Vector3());
+      if (ps.x >= ps.y && ps.x >= ps.z) model.rotation.z = Math.PI / 2;
+      else if (ps.z >= ps.y && ps.z >= ps.x) model.rotation.x = -Math.PI / 2;
+      model.updateMatrixWorld(true);
+      scene.add(model);
+      var box = new THREE.Box3().setFromObject(model);
+      var c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
+      var r = Math.max(s.x,s.y,s.z) || 1;
+      model.position.sub(c);
+      camera.position.set(r*0.85, r*0.35, r*1.5);
+      camera.near = r/100; camera.far = r*100; camera.updateProjectionMatrix();
+      controls.target.set(0,0,0); controls.update();
+      loop();
+    }, undefined, function(){
+      var pane = canvas.parentNode;
+      if(pane) pane.insertAdjacentHTML("beforeend", '<p style="position:absolute;bottom:12px;left:12px;color:#a8332c;font-size:12px">模型加载失败</p>');
+    });
+
+    function loop(){
+      raf = requestAnimationFrame(loop);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    window.addEventListener("resize", function(){
+      if(!renderer || !canvas.clientWidth) return;
+      camera.aspect = canvas.clientWidth/canvas.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+    });
+  }
+
+  function bindDivider(){
+    var cmp = document.getElementById("cmp");
+    var div = document.getElementById("divider");
+    if(!cmp || !div) return;
+    var dragging = false;
+    function move(x){
+      var rect = cmp.getBoundingClientRect();
+      var p = Math.min(0.92, Math.max(0.08, (x - rect.left) / rect.width));
+      div.style.left = (p * 100) + "%";
+      var panes = cmp.querySelectorAll(".pane");
+      panes[1].style.clipPath = "inset(0 0 0 " + (p * 100) + "%)";
+      panes[1].style.position = "absolute";
+      panes[1].style.left = "0"; panes[1].style.right = "0"; panes[1].style.top = "0"; panes[1].style.bottom = "0";
+      panes[0].style.position = "relative";
+    }
+    div.addEventListener("pointerdown", function(e){ dragging = true; div.setPointerCapture(e.pointerId); });
+    window.addEventListener("pointermove", function(e){ if(dragging) move(e.clientX); });
+    window.addEventListener("pointerup", function(){ dragging = false; });
+    div.addEventListener("keydown", function(e){
+      if(e.key === "ArrowLeft" || e.key === "ArrowRight"){
+        e.preventDefault();
+        var curLeft = parseFloat(div.style.left) || 50;
+        move(cmp.getBoundingClientRect().left + ((curLeft + (e.key === "ArrowRight" ? 5 : -5)) / 100) * cmp.getBoundingClientRect().width);
+      }
+    });
+    div.tabIndex = 0;
+    div.setAttribute("role", "slider");
+    div.setAttribute("aria-label", "拖动比较依据与复原");
+    div.setAttribute("aria-valuemin", "8");
+    div.setAttribute("aria-valuemax", "92");
+    div.setAttribute("aria-valuenow", "50");
+  }
+
+  fetch("assets/models/models.json").then(function(r){return r.json();}).then(function(d){
+    ITEMS = (d.items||[]).filter(function(x){ return x.source_image; });
+    if(!ITEMS.length){ viewEl.innerHTML = '<div class="empty">没有可对照的展品</div>'; return; }
+    buildNav();
+    pick(0);
+  }).catch(function(e){
+    viewEl.innerHTML = '<div class="empty">models.json 加载失败：'+esc(e.message)+"</div>";
+  });
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

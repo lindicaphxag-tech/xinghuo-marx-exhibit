@@ -1,0 +1,27 @@
+.video-tour-page {
+  min-height: 100vh;
+  padding: 56px 24px 72px;
+  color: #28231e;
+  background: #eee9df;
+}
+.video-tour-wrap { width: min(1120px, 100%); margin: 0 auto; }
+.video-tour-back { display: inline-block; margin-bottom: 28px; color: #694336; }
+.video-tour-kicker { color: #8d372f; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+.video-tour-page h1 { max-width: 860px; margin: 10px 0 14px; font-size: clamp(34px, 5vw, 58px); line-height: 1.13; }
+.video-tour-lede { max-width: 780px; margin: 0 0 26px; color: #62594f; font-size: 17px; line-height: 1.8; }
+.video-tour-player { overflow: hidden; border: 1px solid #c9bda9; background: #191713; box-shadow: 0 20px 55px rgba(30, 24, 19, .18); }
+.video-tour-player video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #181612; }
+.video-tour-actions { display: flex; flex-wrap: wrap; gap: 16px; margin: 14px 0 34px; }
+.video-tour-actions a { color: #713b30; }
+.video-tour-chapters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 18px 0 40px; }
+.video-tour-chapters button { min-height: 74px; padding: 12px; text-align: left; color: #3a3027; border: 1px solid #cfc3b1; background: rgba(255,255,255,.42); cursor: pointer; }
+.video-tour-chapters button:hover, .video-tour-chapters button:focus-visible { border-color: #9d4035; background: #fffaf1; }
+.video-tour-chapters strong { display: block; margin-bottom: 4px; color: #963b31; font-size: 11px; letter-spacing: .08em; }
+.video-tour-page details { max-width: 850px; border-top: 1px solid #c7bcad; padding: 14px 0; }
+.video-tour-page summary { color: #493b30; cursor: pointer; }
+.video-tour-page details p { color: #62594f; line-height: 1.8; }
+@media (max-width: 680px) {
+  .video-tour-page { padding: 30px 16px 48px; }
+  .video-tour-chapters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .video-tour-lede { font-size: 15px; }
+}

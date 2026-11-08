@@ -1,0 +1,17 @@
+{
+  "item_id": "paris_1848_street",
+  "title": "Barricade dans la rue Saint-Martin le 25 février 1848, 3ème et 4ème arrondissements",
+  "artist": "James Duffield Harding",
+  "date": "1848-02-25 (depicted date)",
+  "museum_inventory": "Musée Carnavalet D.8384",
+  "media": "Pencil and watercolor on paper",
+  "dimensions_cm": [19.5, 25.5],
+  "local_file": "assets/scenes/sources/paris-1848-saint-martin-barricade-CC0.jpg",
+  "source_page": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/barricade-dans-la-rue-saint-martin-le-25-fevrier-1848-3eme-et-4eme",
+  "license": "CC0 Paris Musées",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "James Duffield Harding, Musée Carnavalet D.8384, via Paris Musées; CC0.",
+  "geographic_precision": "Rue Saint-Martin, 3rd/4th arrondissements; exact intersection not specified by the catalogue.",
+  "model_use": "Constrains only visible street-side composition and barricade materials. The GLB is an interpretive reconstruction, not a survey or photogrammetric scan.",
+  "downloaded_from": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_38373-3.jpg?itok=f3PbTmhI"
+}

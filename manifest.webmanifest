@@ -1,0 +1,20 @@
+{
+  "name": "星火与道路 · 工人运动时空叙事",
+  "short_name": "星火与道路",
+  "description": "1831—1917 工人运动数字展馆：沿街垒、报刊、车间与阅览室重走工人阶级组织起来的道路。",
+  "start_url": "./hall.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1a100c",
+  "theme_color": "#a83332",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

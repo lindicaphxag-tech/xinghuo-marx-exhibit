@@ -1,0 +1,42 @@
+{
+  "title": "Historical interior scenes from the Smolny Institute",
+  "collection": "Zeno Fotografie / Wikimedia Commons",
+  "date": "Unknown",
+  "author": "Russischer Photograph",
+  "representation": "historic-photographs; not a 3D scan",
+  "license": "Wikimedia Commons file pages mark the photographs Public Domain; Zeno.org compilation is marked GNU Free Documentation License.",
+  "source_category": "https://commons.wikimedia.org/wiki/Category:Historical_images_of_interior_of_Smolny_Institute",
+  "scope": "Four images are catalogued only as scenes from Smolny Institute. The available metadata does not identify a room, exact date, camera position, or dimensions.",
+  "use_limitations": [
+    "Do not label these as the 1917 Assembly Hall or Lenin's office without independent evidence.",
+    "Do not use these images to claim a photogrammetric model or measured interior.",
+    "Show the original Commons file page and its license information with each image."
+  ],
+  "images": [
+    {
+      "label": "Scene 1",
+      "file": "Russischer Photograph - Szene aus dem Smolny-Institut (1) (Zeno Fotografie).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(1)_(Zeno_Fotografie).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/33/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%281%29_%28Zeno_Fotografie%29.jpg"
+    },
+    {
+      "label": "Scene 2",
+      "file": "Russischer Photograph - Szene aus dem Smolny-Institut (2) (Zeno Fotografie).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(2)_(Zeno_Fotografie).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%282%29_%28Zeno_Fotografie%29.jpg"
+    },
+    {
+      "label": "Scene 3",
+      "file": "Russischer Photograph - Szene aus dem Smolny-Institut (3) (Zeno Fotografie).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(3)_(Zeno_Fotografie).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%283%29_%28Zeno_Fotografie%29.jpg"
+    },
+    {
+      "label": "Scene 4",
+      "file": "Russischer Photograph - Szene aus dem Smolny-Institut (4) (Zeno Fotografie).jpg",
+      "url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(4)_(Zeno_Fotografie).jpg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%284)_%28Zeno_Fotografie%29.jpg"
+    }
+  ]
+}
+

@@ -1,0 +1,2355 @@
+{
+  "title": "历史空间现场与复原",
+  "note": "共16条历史空间展项：现存遗址扫描、现存建筑/纪念碑扫描、当代 LiDAR 裸地/表面地形、馆藏模型约束复原与有来源的历史空间复原。毁坏或改建地点依据档案重建；交互模型不自动等于实景扫描。",
+  "items": [
+    {
+      "id": "industrial_factory",
+      "type": "scene",
+      "name": "Mytholme Mill · 1779 水力毛纺厂遗址",
+      "file": null,
+      "previewClass": "factory",
+      "glyph": "⚙",
+      "representation": "present-day-archaeological-scan",
+      "embedUrl": "https://sketchfab.com/models/e1716754f3c241ce8685248241d9d2db/embed?ui_theme=light",
+      "model_url": "https://sketchfab.com/3d-models/mytholme-mill-saddleworth-3d-photogrammetry-e1716754f3c241ce8685248241d9d2db",
+      "credit": "PBarrett · Sketchfab · CC BY-NC-ND（非商业、禁止演绎）· 仅原站嵌入，不复制/改作模型",
+      "note": "外部三维窗展示 PBarrett 于2017年4月考古发掘前制作的 Mytholme Mill 遗址摄影测量模型（Sketchfab页标注 CC BY-NC-ND）。模型记录当时仍存的遗址外观和地形，不是完整厂房或室内扫描，也不等于1779年原厂状态。本项目只嵌入原站播放器，不下载或改作网格；该许可禁止商业使用与演绎，若项目改为商业发布须先取得另行授权。设备无法渲染时，可切换到配对的当代LiDAR表面模型。展馆不以概念模型补造已消失厂房。",
+      "reference_url": "https://sketchfab.com/3d-models/mytholme-mill-saddleworth-3d-photogrammetry-e1716754f3c241ce8685248241d9d2db",
+      "reference_label": "核对实景扫描、来源与许可",
+      "reference_note": "摄影测量对象为现存遗址；页面标注 CC BY-NC-ND。嵌入源站查看，不下载修改或重新分发。",
+      "camera_direction": [
+        0.5,
+        0.32,
+        1
+      ],
+      "paired_scene_id": "mytholme_mill_current_dsm",
+      "license_status": "CC BY-NC-ND（仅非商业、禁止演绎）；当前采用原站嵌入"
+    },
+    {
+      "id": "mytholme_mill_current_dsm",
+      "type": "scene",
+      "name": "Mytholme Mill 遗址 · 当代 LiDAR 表面（1米源数据）",
+      "file": "mytholme_mill_current_dsm.glb",
+      "previewClass": "factory",
+      "glyph": "⌂",
+      "representation": "present-day-lidar-surface",
+      "credit": "Environment Agency LiDAR Composite DSM · OGL v3.0",
+      "note": "这是Saddleworth Mytholme Mill现址周边600米范围的当代数字表面网格，屋顶、树冠和地表上表面按2米间距采样；垂直比例未夸大。它与旁边2017年采集的遗址摄影测量模型时期不同，DSM不提供垂直立面、内部或纹理。",
+      "source_url": "https://data.source.coop/rebalance-earth/ea-dem/FZ_DSM/DEFLATE/SD99ne_FZ_DSM_1m.tif",
+      "reference_url": "https://www.castleshawarchaeology.co.uk/research.htm",
+      "reference_label": "Castleshaw Roman Forts：Mytholme Mill 遗址调查与摄影测量模型",
+      "reference_note": "遗址调查与2017年摄影测量信息见 Castleshaw Roman Forts；此网格的采样中心依据Saddleworth Placenames & Locations公布的 OSGB36 国家格网 SD 99483 06291。网格中心用于旧址周边定位，不代表摄影测量扫描的测量控制点。",
+      "source_image_caption": "当代LiDAR数字表面模型，显示屋顶/树冠顶部，不是建筑立面摄影测量，也不代表1779年厂房形貌。",
+      "paired_scene_id": "industrial_factory",
+      "reconstruction_basis": "与2017年遗址摄影测量模型并列，用当代环境署LiDAR Composite DSM观察遗址周边现状；两个数据层时间和采集方法不同。",
+      "reconstruction_uncertainty": "坐标中心依据Mytholme Mill公开国家格网位置；600米裁切范围用于周边空间阅读，不是历史地籍边界。数据为DSM，不含墙面立面或室内。",
+      "model_disclaimer": "当代实测数字表面网格 · 非纹理网格、非完整建筑扫描、非1779年历史现场。",
+      "camera_direction": [
+        0.5,
+        0.32,
+        1
+      ],
+      "related_sources": [
+        {
+          "url": "https://www.lawtonsofsaddleworth.net/saddleworth-placenames-locations.html",
+          "label": "Mytholme Mill 国家格网位置记录",
+          "note": "当地地名位置索引列出 OSGB36 格网 E399483 N406291；据此定位600米DSM裁切中心。"
+        },
+        {
+          "url": "assets/scenes/sources/mytholme-mill-current-dsm.json",
+          "label": "本地LiDAR数据处理记录",
+          "note": "含数据集、开放许可、投影、分辨率、裁切范围和模型限制。"
+        }
+      ]
+    },
+    {
+      "id": "paris_commune_square",
+      "type": "scene",
+      "name": "巴黎公社 · 市政厅广场",
+      "file": null,
+      "previewClass": "commune",
+      "glyph": "✦",
+      "representation": "present-day-scan",
+      "embedUrl": "https://sketchfab.com/models/f4fcf806935a43028c67d2a3450fd88a/embed?ui_theme=light",
+      "model_url": "https://sketchfab.com/3d-models/hotel-de-ville-f4fcf806935a43028c67d2a3450fd88a",
+      "credit": "现存建筑摄影测量 · 巴黎市政厅 · 作者 M. Dailly",
+      "note": "交互窗嵌入 M. Dailly 上传的巴黎市政厅摄影测量模型（约40.7万三角面），可拖动旋转和缩放；它扫描的是现存建筑，不能代表1871年火灾前旧市政厅。来源页注明由 Agisoft Metashape 上传并标记 photogrammetry / 3dscan，但未声明开放复用许可，因此只在原站播放器内查看，不下载、镜像或改编。若设备负载较高，可切换到展厅内巴黎周边 IGN 实测 LiDAR 点云。旧市政厅另列为史料约束复原，并可查看PM55/PM57馆藏比例模型影像。此处并列的是“1871年火灾前复原—现存建筑摄影测量—当代区域点云”三种不同证据。",
+      "reference_url": "https://parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/hotel-de-ville-etat-actuel",
+      "reference_label": "巴黎博物馆联盟：现状与重建年代",
+      "reference_note": "Sketchfab 页面确认由 Agisoft Metashape 上传且标注 photogrammetry / 3dscan，但没有声明开放复用许可，API 也未提供 license 字段且下载关闭。展厅仅提供来源站官方播放器的可选入口，不下载、镜像或改编；由于页面报告模型过重，不将其作为默认视图。1871年前旧市政厅另用CC0馆藏模型复原。",
+      "related_sources": [
+        {
+          "url": "assets/scenes/sources/hotel-de-ville-pm55/reconstruction-assessment.json",
+          "label": "摄影测量试建评估记录",
+          "note": "47 张馆藏照片仅有 4 张成功配准、515 个稀疏点；几何不足以发布为完整 3D 模型。"
+        },
+        {
+          "url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "label": "IGN LiDAR HD 巴黎现状点云 · 开放数据",
+          "note": "法国官方分类航空激光点云，许可证 Licence Ouverte 2.0。IGN官方数据集仍公开；旧viewer当前不可达，展厅内点云可直接加载，外部辅助查看请用按地址搜索的开源第三方查看器。点云代表现状，不代表1871年旧市政厅或旧城区立面细节。"
+        },
+        {
+          "url": "https://open-landmarks.benmaps.fr/landmarks/hotel-de-ville/",
+          "label": "Open Landmarks：巴黎市政厅开放几何模型及分层许可",
+          "note": "该条目给出模型坐标、50米高度、29,606三角面与可下载GLB，并区分原创几何CC BY 4.0和OSM空间数据ODbL 1.0；页面说明模型为AI辅助建筑解释/程序化建模、无摄影纹理。它是可核对的现状几何参照，不是现场扫描。"
+        },
+        {
+          "url": "assets/scenes/sources/site-model-search-20261101.json",
+          "label": "巴黎市政厅摄影测量候选复核（2026-11-01）",
+          "note": "记录现存市政厅现状摄影测量匹配项与许可限制；不可用于1871年前旧市政厅空间。"
+        }
+      ],
+      "evidence_galleries": [
+        {
+          "id": "pm55",
+          "title": "PM55 铜质地形模型 · 1857–1869",
+          "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/l-hotel-de-ville-avant-1871",
+          "credit": "CC0 Paris Musées / Musée Carnavalet - Histoire de Paris · CC0",
+          "note": "卡纳瓦莱博物馆藏 PM55，铜质 plan-relief，25 × 83 × 47 cm，19 kg。馆藏记录说明其呈现八个亭楼、三座庭院（其中一座有玻璃顶）、沿河花园和围栏。47 张 CC0 影像覆盖整体、庭院、立面与细部。它是历史比例模型，不是建筑现场扫描；摄影测量试建仅注册 4 张、得到 515 个稀疏点，不能构成完整网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-17.jpg",
+              "label": "LPDP_56735-17"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-2.jpg",
+              "label": "LPDP_56735-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-3.jpg",
+              "label": "LPDP_56735-3"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-4.jpg",
+              "label": "LPDP_56735-4"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-5.jpg",
+              "label": "LPDP_56735-5"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-6.jpg",
+              "label": "LPDP_56735-6"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-7.jpg",
+              "label": "LPDP_56735-7"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-8.jpg",
+              "label": "LPDP_56735-8"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-9.jpg",
+              "label": "LPDP_56735-9"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-10.jpg",
+              "label": "LPDP_56735-10"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-11.jpg",
+              "label": "LPDP_56735-11"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-12.jpg",
+              "label": "LPDP_56735-12"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-13.jpg",
+              "label": "LPDP_56735-13"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-14.jpg",
+              "label": "LPDP_56735-14"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-15.jpg",
+              "label": "LPDP_56735-15"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-16.jpg",
+              "label": "LPDP_56735-16"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-1.jpg",
+              "label": "LPDP_56735-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-18.jpg",
+              "label": "LPDP_56735-18"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-19.jpg",
+              "label": "LPDP_56735-19"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-20.jpg",
+              "label": "LPDP_56735-20"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-1.jpg",
+              "label": "LPDP_56736-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-2.jpg",
+              "label": "LPDP_56736-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-3.jpg",
+              "label": "LPDP_56736-3"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-4.jpg",
+              "label": "LPDP_56736-4"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-5.jpg",
+              "label": "LPDP_56736-5"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-6.jpg",
+              "label": "LPDP_56736-6"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-7.jpg",
+              "label": "LPDP_56736-7"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-8.jpg",
+              "label": "LPDP_56736-8"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-9.jpg",
+              "label": "LPDP_56736-9"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-10.jpg",
+              "label": "LPDP_56736-10"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-11.jpg",
+              "label": "LPDP_56736-11"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-12.jpg",
+              "label": "LPDP_56736-12"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-13.jpg",
+              "label": "LPDP_56736-13"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-14.jpg",
+              "label": "LPDP_56736-14"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-15.jpg",
+              "label": "LPDP_56736-15"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-16.jpg",
+              "label": "LPDP_56736-16"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-17.jpg",
+              "label": "LPDP_56736-17"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-18.jpg",
+              "label": "LPDP_56736-18"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-19.jpg",
+              "label": "LPDP_56736-19"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-1.jpg",
+              "label": "LPDP_56737-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-2.jpg",
+              "label": "LPDP_56737-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-3.jpg",
+              "label": "LPDP_56737-3"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-4.jpg",
+              "label": "LPDP_56737-4"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-5.jpg",
+              "label": "LPDP_56737-5"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-6.jpg",
+              "label": "LPDP_56737-6"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-7.jpg",
+              "label": "LPDP_56737-7"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56740-1.jpg",
+              "label": "LPDP_56740-1"
+            }
+          ]
+        },
+        {
+          "id": "pm57",
+          "title": "PM57 木质比例模型 · 约 1860",
+          "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/modele-reduit-de-l-hotel-de-ville-de-paris",
+          "credit": "CC0 Paris Musees / Musee Carnavalet - Histoire de Paris · CC0",
+          "note": "卡纳瓦莱博物馆藏 PM57，安德烈·莫里永制作，木、纸板与金属，32 × 42.5 × 29 cm。22 张 CC0 影像记录模型整体和立面细部。它同样是馆藏模型，不是历史建筑的实景扫描；不得由照片推断未见的建筑内部。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_71738-30.jpg",
+              "label": "LPDP_71738-30"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-13.jpg",
+              "label": "LPDP_74395-13"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-14.jpg",
+              "label": "LPDP_74395-14"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-15.jpg",
+              "label": "LPDP_74395-15"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-16.jpg",
+              "label": "LPDP_74395-16"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-17.jpg",
+              "label": "LPDP_74395-17"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-18.jpg",
+              "label": "LPDP_74395-18"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-19.jpg",
+              "label": "LPDP_74395-19"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-20.jpg",
+              "label": "LPDP_74395-20"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-22.jpg",
+              "label": "LPDP_74395-22"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-23.jpg",
+              "label": "LPDP_74395-23"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-24.jpg",
+              "label": "LPDP_74395-24"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-25.jpg",
+              "label": "LPDP_74395-25"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-26.jpg",
+              "label": "LPDP_74395-26"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-27.jpg",
+              "label": "LPDP_74395-27"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-28.jpg",
+              "label": "LPDP_74395-28"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-29.jpg",
+              "label": "LPDP_74395-29"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-30.jpg",
+              "label": "LPDP_74395-30"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-31.jpg",
+              "label": "LPDP_74395-31"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74398-1.jpg",
+              "label": "LPDP_74398-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74398-2.jpg",
+              "label": "LPDP_74398-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74398-3.jpg",
+              "label": "LPDP_74398-3"
+            }
+          ]
+        }
+      ],
+      "camera_direction": [
+        0.42,
+        0.3,
+        -1
+      ],
+      "related_3d_models": [
+        {
+          "name": "巴黎现状地表与建筑 · IGN LiDAR HD 点云",
+          "viewer_url": "https://romain974.github.io/lidar-viewer/",
+          "model_url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "credit": "法国国家地理与森林信息研究所（IGN）· LiDAR HD · Licence Ouverte 2.0",
+          "note": "可在展厅内直接加载巴黎市政厅周边约240米范围的当前分类 LiDAR HD 点云；点云表现屋顶、地表和上方要素的实测点，单色渲染，不是完整立面网格或历史场景。数据许可 Licence Ouverte 2.0；查看器署名保留。IGN 官方旧查看器入口无法在当前网络环境解析；备用链接改为可按地址搜索的开源 LiDAR HD 查看器。该外部查看器是第三方工具，数据来自 IGN 开放点云。",
+          "inline_lidar": {
+            "center": [
+              2.3522,
+              48.8566
+            ],
+            "span": 240
+          },
+          "representation_label": "当代 LiDAR 点云 · 实测地表/屋顶",
+          "license_status": "Licence Ouverte 2.0；公开数据可按该许可复用，需保留 IGN 与数据集署名。",
+          "viewer_label": "在开源 LiDAR HD 查看器中按地址搜索点云 ↗"
+        },
+        {
+          "name": "巴黎现存市政厅 · 作者摄影测量模型",
+          "embed_url": "https://sketchfab.com/models/f4fcf806935a43028c67d2a3450fd88a/embed?ui_theme=light",
+          "model_url": "https://sketchfab.com/3d-models/hotel-de-ville-f4fcf806935a43028c67d2a3450fd88a",
+          "action_label": "尝试打开来源站建筑摄影测量",
+          "credit": "M. Dailly · Sketchfab 官方嵌入；设备过载时可改看 IGN LiDAR 点云",
+          "note": "Sketchfab作者 M. Dailly 的现存巴黎市政厅摄影测量模型（Agisoft Metashape，约406.9k三角面）；是火灾后重建建筑的现状扫描，不是1871年旧楼。来源页当前无法由自动读取验证其授权类型，因此本项目只通过Sketchfab播放器嵌入，不下载或本地重打包；授权范围以来源页为准。模型体量较大，部分设备可能无法渲染，可改看馆内 IGN 实测 LiDAR 点云。",
+          "representation_label": "当代建筑摄影测量 · 非1871年旧楼",
+          "license_status": "来源页许可未能独立核验；仅提供Sketchfab原站嵌入，不下载、复制或重新分发网格。"
+        },
+        {
+          "name": "巴黎市政厅 · 开放许可几何参照模型",
+          "viewer_url": "https://open-landmarks.benmaps.fr/landmarks/hotel-de-ville/",
+          "model_url": "https://open-landmarks.benmaps.fr/landmarks/hotel-de-ville/",
+          "data_label": "模型、几何来源与许可说明 ↗",
+          "credit": "Open Landmarks · OpenStreetMap contributors",
+          "note": "该页面提供坐标2.35256, 48.85644、建筑高度约50米的无纹理几何模型，可用于核对当代市政厅的大体量、位置和比例。项目说明模型由建筑解释与程序化建模生成，空间底图来自OpenStreetMap；它不是摄影测量扫描，不能取代左侧来源站托管的现场摄影测量或IGN点云。",
+          "representation_label": "当代建筑几何参照 · OSM/程序化建模，非实扫",
+          "license_status": "项目原创模型部分CC BY 4.0；OSM派生空间数据ODbL 1.0。此处仅链接原模型页；若下载或改编，须分别履行署名及数据库许可义务。"
+        }
+      ],
+      "paired_scene_id": "hotel_de_ville_pre1871"
+    },
+    {
+      "id": "paris_commune_memorial_scan",
+      "type": "scene",
+      "name": "巴黎公社记忆 · 革命遇难者纪念碑（1909实景扫描）",
+      "file": null,
+      "previewClass": "commune",
+      "glyph": "✚",
+      "representation": "present-day-scan",
+      "embedUrl": "https://sketchfab.com/models/7e54deda45b3492fbb1d6ca780bb15c7/embed?ui_theme=light",
+      "model_url": "https://sketchfab.com/3d-models/monument-to-the-victims-of-the-revolutions-7e54deda45b3492fbb1d6ca780bb15c7",
+      "credit": "Antoine Dresen · Sketchfab · CC BY 4.0",
+      "note": "可旋转查看 Paul Moreau-Vauthier 于1909年创作的“革命遇难者纪念碑”摄影测量扫描。它位于拉雪兹神父公墓北侧的 Samuel-de-Champlain 纪念园（约 2.3908, 48.8638），并非公墓内真正的联邦社墙，也不是1871年处决现场。巴黎市政府说明，纪念碑使用了与联邦社墙相关的石材，纪念在1871年5月被处决的公社社员。把扫描放在独立地点，便于区分历史事件现场、原墙与后来建成的纪念物。模型页标注 CC BY；展馆只嵌入原站播放器，署名 Antoine Dresen，不本地复制网格。",
+      "reference_url": "https://paris-v4.paris.fr/pages/cimetiere-du-pere-lachaise-un-haut-lieu-de-memoire-17725",
+      "reference_label": "巴黎市政府：公社事件、联邦社墙与纪念碑位置",
+      "reference_note": "巴黎市政府说明，1871年5月在公墓发生战斗和处决；1907年设纪念牌，后在公墓另一侧建成革命遇难者纪念碑。该碑位于墓园外侧 Samuel-de-Champlain 纪念园，以相关墙石构成。",
+      "site_coordinates": [
+        2.3908121,
+        48.8638261
+      ],
+      "historical_phases": [
+        {
+          "date": "1871-05-27—28",
+          "title": "公墓战斗与处决",
+          "description": "公社最后阶段的战斗发生在拉雪兹神父公墓；被俘公社社员在墓园围墙一带遭处决。这里的模型不是该日现场，也不能用来推断处决墙的精确形貌。"
+        },
+        {
+          "date": "1909",
+          "title": "纪念碑在公墓外侧建成",
+          "description": "Paul Moreau-Vauthier 创作的纪念碑设置在 Samuel-de-Champlain 纪念园。它是后来的纪念景观，位置与真正的联邦社墙不同。"
+        },
+        {
+          "date": "当代扫描",
+          "title": "纪念碑摄影测量模型",
+          "description": "Antoine Dresen 发布的 Sketchfab 模型标记为摄影测量并采用 CC BY。扫描呈现当前纪念碑，不代表1871年现场。"
+        }
+      ],
+      "related_sources": [
+        {
+          "url": "https://sketchfab.com/3d-models/monument-to-the-victims-of-the-revolutions-7e54deda45b3492fbb1d6ca780bb15c7",
+          "label": "摄影测量扫描、作者与 CC BY 许可",
+          "note": "Sketchfab 发布页将其标注为 photogrammetry，作者 Antoine Dresen，Creative Commons Attribution。"
+        },
+        {
+          "url": "https://parisrevolutionnaire.org/bulletin-des-amies-et-amis-de-la-commune/",
+          "label": "纪念碑精确地点与历史区分",
+          "note": "该资料将纪念碑标注在 19 avenue Gambetta / Jardin Samuel-de-Champlain，并提供约略坐标；巴黎市政府来源用于核对公墓内战斗、处决及纪念碑沿革。"
+        },
+        {
+          "url": "assets/scenes/sources/sketchfab-site-scan-search-20261101.json",
+          "label": "同题扫描候选比较与检索边界",
+          "note": "官方公开 API 搜索发现同题的 1.87M 与 5.46M 面版本；本条保留 449,931 面版本。检索仅覆盖 Sketchfab，不代表全网穷尽。"
+        },
+        {
+          "url": "assets/scenes/sources/site-model-search-20261101.json",
+          "label": "联邦社墙与拉雪兹三维扫描逐址检索（2026-11-01）",
+          "note": "记录实际命中的1909年公墓外纪念碑扫描版本、不同纪念碑误命中，以及本次未检出联邦社墙本体扫描；明确纪念碑不是处决墙。"
+        }
+      ],
+      "license_status": "CC BY 4.0（Sketchfab模型页标注 Creative Commons Attribution）；嵌入原站并保留作者署名与来源链接。"
+    },
+    {
+      "id": "federated_wall_current_lidar",
+      "type": "scene",
+      "name": "拉雪兹公墓 · 联邦社墙周边现状 LiDAR",
+      "file": null,
+      "previewClass": "commune",
+      "glyph": "⌖",
+      "representation": "present-day-lidar-point-cloud",
+      "credit": "法国国家地理与森林信息研究所（IGN）· LiDAR HD · Licence Ouverte 2.0",
+      "note": "此展项提供公墓东南侧联邦社墙附近约240米范围的当代航空 LiDAR 点云，可观察现状地形和地表高程。地点坐标为地图定位近似值。点云不含1871年墙体历史形态；今天墙体经历过后期重建/修缮，因此不得将其说成原始1871年砖墙扫描。公开检索尚未找到可核验的墙体摄影测量网格。",
+      "site_coordinates": [
+        2.40008,
+        48.85968
+      ],
+      "related_3d_models": [
+        {
+          "name": "联邦社墙周边 · 当代 IGN LiDAR HD 点云",
+          "viewer_url": "https://romain974.github.io/lidar-viewer/",
+          "model_url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "credit": "法国国家地理与森林信息研究所（IGN）· LiDAR HD · Licence Ouverte 2.0",
+          "note": "在展厅内加载拉雪兹公墓东南侧附近约240米范围点云，以现状测绘作为遗址环境参照，不表示1871年场景。",
+          "inline_lidar": {
+            "center": [
+              2.40008,
+              48.85968
+            ],
+            "span": 240
+          },
+          "representation_label": "当代 LiDAR 点云 · 非历史扫描",
+          "license_status": "Licence Ouverte 2.0；公开数据按许可复用并署名 IGN。",
+          "viewer_label": "在开源 LiDAR HD 查看器中查看点云 ↗"
+        },
+        {
+          "name": "联邦社墙 · Google Earth 现状三维地理影像",
+          "viewer_url": "https://earth.google.com/web/search/48.85968,2.40008",
+          "model_url": "https://earth.google.com/",
+          "credit": "Google Earth · 在线地图与三维影像服务",
+          "note": "打开后可在地图中检查联邦社墙周边当前城市环境。该服务的三维覆盖、影像日期与细节随地区和平台数据而变化；它不是可下载测绘网格，也不是1871年现场复原。",
+          "representation_label": "当代地图三维影像 · 覆盖随地区变化",
+          "license_status": "仅使用 Google Earth 原站；不复制、下载或改编平台影像。"
+        }
+      ],
+      "related_sources": [
+        {
+          "url": "assets/scenes/sources/ign-paris-lidar.json",
+          "label": "IGN LiDAR HD 数据集、许可与查看器说明",
+          "note": "在线查看器会按坐标请求该地区可用的开放点云瓦片；覆盖与精度以数据服务实际返回为准。"
+        },
+        {
+          "url": "assets/scenes/sources/site-model-search-20261101.json",
+          "label": "联邦社墙逐址模型检索结果",
+          "note": "未检出可核验的墙体摄影测量网格；排除墓园外1909年纪念碑扫描。"
+        },
+        {
+          "url": "https://www.paris.fr/lieux/cimetiere-du-pere-lachaise-4080",
+          "label": "巴黎市政府：拉雪兹公墓与联邦社墙现址",
+          "note": "核对联邦社墙位于公墓内；此官方页面提供现址参观资料，但不提供可下载扫描网格。"
+        },
+        {
+          "url": "https://www.lemonde.fr/culture/article/2021/04/15/six-idees-pour-se-souvenir-de-la-commune_6076944_3246.html",
+          "label": "《世界报》：现存围墙经历重建",
+          "note": "报道明确指出今天的围墙并非1871年处决时的原墙，旧围墙损坏后曾重建；因此本展只将新点云用于当代环境参照。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Mur_F%C3%A9d%C3%A9r%C3%A9s_Cimeti%C3%A8re_P%C3%A8re_Lachaise_-_Paris_XX_(FR75)_-_2024-08-24_-_2.jpg",
+          "label": "2024年联邦社墙现场照片与拍摄坐标",
+          "note": "可用于核对墙址与现状；此单张照片不构成摄影测量资料，按 CC BY-SA 4.0 使用时须署名并遵守相同方式共享。"
+        }
+      ],
+      "license_status": "IGN LiDAR HD · Licence Ouverte 2.0；墙体三维扫描仍未发现。"
+    },
+    {
+      "id": "hotel_de_ville_pre1871",
+      "type": "scene",
+      "name": "巴黎公社 · 火灾前旧市政厅（史料约束复原）",
+      "file": "hotel_de_ville_pre1871.glb",
+      "previewClass": "commune",
+      "glyph": "⌂",
+      "representation": "historical-reconstruction",
+      "credit": "依据卡纳瓦莱博物馆 PM55/PM57 比例模型影像与馆藏描述搭建 · 非实景扫描",
+      "note": "旧市政厅于1871年被焚毁，故不存在可供现场扫描的旧建筑。此交互模型依据1857—1869年PM55铜质地形模型和约1860年PM57木质模型重建总体关系：八个亭楼、三座庭院（含玻璃顶庭院）、沿河花园与围栏。它以馆藏模型为几何证据，不等于旧建筑的精确测绘；外部建筑细部仍待图纸和照片逐项校正。",
+      "reference_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/l-hotel-de-ville-avant-1871",
+      "reference_label": "巴黎博物馆联盟：火灾前旧市政厅 PM55 馆藏记录",
+      "reference_note": "馆藏比例模型影像为CC0；尺寸和构件描述以馆藏页为准。47张模型照片不能直接重建毫米级建筑网格。",
+      "reconstruction_basis": "PM55馆藏描述明确列出8个亭楼、3座庭院（含玻璃顶庭院）、沿河花园和围栏；模型整体关系受馆藏模型多视角影像约束。",
+      "reconstruction_uncertainty": "原建筑内部空间、具体街景尺度与建筑立面细部仍需同期图纸、照片及档案补足；本模型表达形制关系，不是可用于工程测量的数字孪生。",
+      "model_disclaimer": "1871年已毁建筑的史料约束三维复原；不存在现场扫描。",
+      "evidence_galleries": [
+        {
+          "id": "pm55",
+          "title": "PM55 铜质地形模型 · 1857–1869",
+          "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/l-hotel-de-ville-avant-1871",
+          "credit": "CC0 Paris Musées / Musée Carnavalet - Histoire de Paris · CC0",
+          "note": "卡纳瓦莱博物馆藏 PM55，铜质 plan-relief，25 × 83 × 47 cm，19 kg。馆藏记录说明其呈现八个亭楼、三座庭院（其中一座有玻璃顶）、沿河花园和围栏。47 张 CC0 影像覆盖整体、庭院、立面与细部。它是历史比例模型，不是建筑现场扫描；摄影测量试建仅注册 4 张、得到 515 个稀疏点，不能构成完整网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-17.jpg",
+              "label": "LPDP_56735-17"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-2.jpg",
+              "label": "LPDP_56735-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-3.jpg",
+              "label": "LPDP_56735-3"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-4.jpg",
+              "label": "LPDP_56735-4"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-5.jpg",
+              "label": "LPDP_56735-5"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-6.jpg",
+              "label": "LPDP_56735-6"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-7.jpg",
+              "label": "LPDP_56735-7"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-8.jpg",
+              "label": "LPDP_56735-8"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-9.jpg",
+              "label": "LPDP_56735-9"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-10.jpg",
+              "label": "LPDP_56735-10"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-11.jpg",
+              "label": "LPDP_56735-11"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-12.jpg",
+              "label": "LPDP_56735-12"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-13.jpg",
+              "label": "LPDP_56735-13"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-14.jpg",
+              "label": "LPDP_56735-14"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-15.jpg",
+              "label": "LPDP_56735-15"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-16.jpg",
+              "label": "LPDP_56735-16"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-1.jpg",
+              "label": "LPDP_56735-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-18.jpg",
+              "label": "LPDP_56735-18"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-19.jpg",
+              "label": "LPDP_56735-19"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56735-20.jpg",
+              "label": "LPDP_56735-20"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-1.jpg",
+              "label": "LPDP_56736-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-2.jpg",
+              "label": "LPDP_56736-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-3.jpg",
+              "label": "LPDP_56736-3"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-4.jpg",
+              "label": "LPDP_56736-4"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-5.jpg",
+              "label": "LPDP_56736-5"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-6.jpg",
+              "label": "LPDP_56736-6"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-7.jpg",
+              "label": "LPDP_56736-7"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-8.jpg",
+              "label": "LPDP_56736-8"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-9.jpg",
+              "label": "LPDP_56736-9"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-10.jpg",
+              "label": "LPDP_56736-10"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-11.jpg",
+              "label": "LPDP_56736-11"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-12.jpg",
+              "label": "LPDP_56736-12"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-13.jpg",
+              "label": "LPDP_56736-13"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-14.jpg",
+              "label": "LPDP_56736-14"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-15.jpg",
+              "label": "LPDP_56736-15"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-16.jpg",
+              "label": "LPDP_56736-16"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-17.jpg",
+              "label": "LPDP_56736-17"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-18.jpg",
+              "label": "LPDP_56736-18"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56736-19.jpg",
+              "label": "LPDP_56736-19"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-1.jpg",
+              "label": "LPDP_56737-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-2.jpg",
+              "label": "LPDP_56737-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-3.jpg",
+              "label": "LPDP_56737-3"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-4.jpg",
+              "label": "LPDP_56737-4"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-5.jpg",
+              "label": "LPDP_56737-5"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-6.jpg",
+              "label": "LPDP_56737-6"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56737-7.jpg",
+              "label": "LPDP_56737-7"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm55/LPDP_56740-1.jpg",
+              "label": "LPDP_56740-1"
+            }
+          ]
+        },
+        {
+          "id": "pm57",
+          "title": "PM57 木质比例模型 · 约 1860",
+          "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/modele-reduit-de-l-hotel-de-ville-de-paris",
+          "credit": "CC0 Paris Musees / Musee Carnavalet - Histoire de Paris · CC0",
+          "note": "卡纳瓦莱博物馆藏 PM57，安德烈·莫里永制作，木、纸板与金属，32 × 42.5 × 29 cm。22 张 CC0 影像记录模型整体和立面细部。它同样是馆藏模型，不是历史建筑的实景扫描；不得由照片推断未见的建筑内部。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_71738-30.jpg",
+              "label": "LPDP_71738-30"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-13.jpg",
+              "label": "LPDP_74395-13"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-14.jpg",
+              "label": "LPDP_74395-14"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-15.jpg",
+              "label": "LPDP_74395-15"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-16.jpg",
+              "label": "LPDP_74395-16"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-17.jpg",
+              "label": "LPDP_74395-17"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-18.jpg",
+              "label": "LPDP_74395-18"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-19.jpg",
+              "label": "LPDP_74395-19"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-20.jpg",
+              "label": "LPDP_74395-20"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-22.jpg",
+              "label": "LPDP_74395-22"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-23.jpg",
+              "label": "LPDP_74395-23"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-24.jpg",
+              "label": "LPDP_74395-24"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-25.jpg",
+              "label": "LPDP_74395-25"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-26.jpg",
+              "label": "LPDP_74395-26"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-27.jpg",
+              "label": "LPDP_74395-27"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-28.jpg",
+              "label": "LPDP_74395-28"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-29.jpg",
+              "label": "LPDP_74395-29"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-30.jpg",
+              "label": "LPDP_74395-30"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74395-31.jpg",
+              "label": "LPDP_74395-31"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74398-1.jpg",
+              "label": "LPDP_74398-1"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74398-2.jpg",
+              "label": "LPDP_74398-2"
+            },
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-pm57/LPDP_74398-3.jpg",
+              "label": "LPDP_74398-3"
+            }
+          ]
+        },
+        {
+          "id": "place-1830-print",
+          "title": "市政厅广场 · 1830 场景版画（1906–1910 年照片）",
+          "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/la-place-de-l-hotel-de-ville-juillet-1830",
+          "credit": "匿名版画的照片 · Musée Carnavalet / Paris Musées · CC0",
+          "note": "馆藏元数据将本件定为1906–1910年版画照片（PH58133），图像描绘1830年7月的市政厅广场。它是后世对1830年场景的图像记录，不是1830年现场照片、实物三维模型或旧市政厅测绘；只作为复原时的广场景观参照。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/hotel-de-ville-1830/carnavalet-place-hotel-de-ville-1830.jpg",
+              "label": "PH58133 · 版画照片（1906–1910）",
+              "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/la-place-de-l-hotel-de-ville-juillet-1830"
+            }
+          ]
+        },
+        {
+          "id": "ruins-1871",
+          "title": "市政厅火灾后废墟 · 1871年现场照片",
+          "source_url": "https://www.metmuseum.org/art/collection/search/270202",
+          "credit": "Hippolyte-Auguste Collard · 1871 · The Met 59.600.59 · CC0",
+          "note": "这张相片直接记录巴黎公社失败后被焚毁的市政厅遗址，可与火灾前 PM55/PM57 馆藏模型和相邻条目的现存重建建筑扫描比较。它是二维原始史料，不是历史建筑三维网格。The Met 标注 Public Domain；Wikimedia Commons 提供 CC0 文件与署名记录。",
+          "images": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/c/c4/-The_H%C3%B6tel_de_Ville_after_the_Commune-_MET_DP200359.jpg",
+              "label": "Collard · 1871年废墟 · The Met 59.600.59",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A-The_H%C3%B6tel_de_Ville_after_the_Commune-_MET_DP200359.jpg"
+            }
+          ]
+        }
+      ],
+      "camera_direction": [
+        0.42,
+        0.3,
+        -1
+      ],
+      "related_3d_models": [
+        {
+          "name": "巴黎现状地表与建筑 · IGN LiDAR HD 点云",
+          "viewer_url": "https://romain974.github.io/lidar-viewer/",
+          "model_url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "credit": "法国国家地理与森林信息研究所（IGN）· LiDAR HD · Licence Ouverte 2.0",
+          "note": "可在展厅内直接加载巴黎市政厅周边约240米范围的当前分类 LiDAR HD 点云；点云表现屋顶、地表和上方要素的实测点，单色渲染，不是完整立面网格或历史场景。数据许可 Licence Ouverte 2.0；查看器署名保留。IGN 官方旧查看器入口无法在当前网络环境解析；备用链接改为可按地址搜索的开源 LiDAR HD 查看器。该外部查看器是第三方工具，数据来自 IGN 开放点云。",
+          "inline_lidar": {
+            "center": [
+              2.3522,
+              48.8566
+            ],
+            "span": 240
+          },
+          "representation_label": "当代 LiDAR 点云 · 实测地表/屋顶",
+          "license_status": "Licence Ouverte 2.0；公开数据可按该许可复用，需保留 IGN 与数据集署名。",
+          "viewer_label": "在开源 LiDAR HD 查看器中按地址搜索点云 ↗"
+        },
+        {
+          "name": "巴黎市政厅旧址 · Google Earth 现状三维地理影像",
+          "viewer_url": "https://earth.google.com/web/search/Paris+City+Hall,+Place+de+l'H%C3%B4tel+de+Ville,+Paris",
+          "model_url": "https://earth.google.com/",
+          "credit": "Google Earth · 在线地图与三维影像服务",
+          "note": "用于观察旧市政厅原址今天的街区、广场及1871年后重建的市政厅。三维覆盖和影像年代随平台更新；这里展示的是现状地理背景，不是火灾前旧楼网格。",
+          "representation_label": "同址现状三维地理影像 · 非历史建筑模型",
+          "license_status": "仅使用 Google Earth 原站；不复制、下载或改编平台影像。"
+        }
+      ],
+      "related_sources": [
+        {
+          "url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "label": "IGN LiDAR HD 巴黎现状点云 · 开放数据",
+          "note": "法国官方分类航空激光点云，许可证 Licence Ouverte 2.0。IGN官方数据集仍公开；旧viewer当前不可达，展厅内点云可直接加载，外部辅助查看请用按地址搜索的开源第三方查看器。点云代表现状，不代表1871年旧市政厅或旧城区立面细节。"
+        },
+        {
+          "url": "assets/scenes/sources/hotel-de-ville-pm55/reconstruction-assessment.json",
+          "label": "PM55 / PM57 馆藏模型摄影测量可行性评估",
+          "note": "PM55：47张照片仅注册4张、515个稀疏点。PM57：22张照片注册10张、2886个稀疏点，但覆盖仅为模型局部且比例失真。两组结果都不构成完整历史建筑网格；本页继续使用有明确证据边界的总体关系复原。"
+        },
+        {
+          "url": "https://www.carnavalet.paris.fr/en/collections/place-de-lhotel-de-ville-31-july-1830-arrival-louis-philippe-duc-dorleans",
+          "label": "卡纳瓦莱博物馆：1833年市政厅广场立体模型（馆藏4886）",
+          "note": "Pierre-Louis Foulley于1833年制作的大型实物模型，表现1830年7月31日路易-菲利普到达市政厅的场景；作者曾在场。它提供同时代建筑与广场整体关系的立体参照，可与PM55/PM57合读，但不是旧市政厅的实景扫描，也不是巴黎公社时期（1871）的布置。馆方页面没有公开可下载三维扫描；模型照片署名© Pierre Antoine，故本项目仅链接馆方记录，不复制其照片。"
+        },
+        {
+          "url": "https://data.tmw.at/object/111013702",
+          "label": "维也纳技术博物馆：巴黎市政厅玻璃立体照片馆藏记录",
+          "note": "馆藏条目标注为17×8.3厘米玻璃立体照片，题名 Hotel de Ville de Paris；页面未著录拍摄年代，也未提供足以确认画面对应火灾前旧楼的说明。作为历史立体摄影史料线索供查阅，不用于约束1871年前复原几何，也不将其误标为建筑扫描。"
+        },
+        {
+          "url": "https://data.tmw.at/object/111013703",
+          "label": "维也纳技术博物馆：Rue de Rivoli 与巴黎市政厅立体照片",
+          "note": "同组玻璃立体照片，目录未著录拍摄年代；画面年代及其与1871年火灾前后建筑状态的关系仍待辨识。仅作史料线索。"
+        }
+      ],
+      "paired_scene_id": "paris_commune_square"
+    },
+    {
+      "id": "shanghai_machine_weaving_bureau",
+      "type": "scene",
+      "name": "上海机器织布局 · 杨树浦路主厂房（1889—1893史料复原）",
+      "file": "shanghai_machine_weaving_bureau.glb",
+      "previewClass": "factory",
+      "glyph": "⚙",
+      "representation": "historical-reconstruction",
+      "credit": "杨浦地方史与馆藏模型照片 · 门楼几何按 CC BY-SA 3.0 改编 · 非实景扫描",
+      "note": "场景限定为上海机器织布局火灾前主厂房，不代表灾后重建的华盛纺织总厂。1880年重新筹办并在杨树浦购地，1889年厂房竣工、1890年投产；1893年10月火灾焚毁。旧门牌杨树浦路87号后来约为杨树浦路1900号一带，不是澳门路150号的上海纺织博物馆旧址。主厂房约550×80英尺、三层；地方史资料记载投产规模为纱锭27000枚、布机530台。三维场景加入依据馆藏实体比例模型照片制作的入口门楼，作为参考视角下的局部复原；窗洞现以穿墙开口呈现，但窗格数量、间距与设备布置均为便于理解空间的示意，不等于原厂测绘。",
+      "reference_url": "https://www.thepaper.cn/newsDetail_forward_19513921",
+      "reference_label": "杨浦区政务：杨树浦路旧照片与机器织布局旧址（今杨树浦路1900号）",
+      "reference_note": "杨浦时报记载旧门牌杨树浦路87号；杨浦地方史报道进一步将旧址范围约束为今杨树浦路1830—1930号之间、北至杨树浦路、南临黄浦江、东近广德路、西近宁国南路。该范围是历史厂区尺度，不是主厂房精确基址；原始竣工图与旧厂房扫描尚未找到。",
+      "related_sources": [
+        {
+          "url": "https://www.thepaper.cn/newsDetail_forward_19513921",
+          "label": "杨浦区政务：机器织布局大门旧照与厂址沿革",
+          "note": "2022年杨浦政务图文记录：原址为旧杨树浦路87号，1889年建厂工程竣工，1890年投产，1893年10月清花间火灾后厂货俱焚，1893年11月启动原址重建，1894年8月恢复生产；配图包括“上海机器织布局大门”，但图注未给拍摄年代或许可。该图现只链接原报道，不复制入展馆，也不据其日期不明而冒充火灾前1889年原物。来源还展示后续华盛总厂大门、车间照片，均属灾后不同建筑阶段。"
+        },
+        {
+          "url": "https://m.thepaper.cn/newsDetail_forward_14923648?from=sina",
+          "label": "图溯上海／上海市测绘院：投产规模数据",
+          "note": "地方史地图文章记载织布局1890年投产、约300亩、27000枚纱锭和530台布机，1893年10月火灾、1894年改名华盛纺织总厂。总量可用于说明工业规模，不足以推导原厂设备的精确位置与排布。"
+        },
+        {
+          "url": "https://yptimes.shyp.gov.cn/html/2016-01/07/content_4_2.htm",
+          "label": "杨浦时报：上海机器织布局旧址为杨树浦路87号",
+          "note": "杨浦区属报刊记载工厂设在杨树浦沿黄浦江地带、旧门牌杨树浦路87号。"
+        },
+        {
+          "url": "https://www.thepaper.cn/newsDetail_forward_8445736",
+          "label": "上海机器织布局旧址范围与沿革",
+          "note": "地方史文章将旧址约束到今杨树浦路1830—1930号之间，并描述其南沿黄浦江、东至广德路附近；这是厂区范围，不能当成主厂房的精确地籍定位。"
+        },
+        {
+          "url": "https://ghzyj.sh.gov.cn/gzdt/20261008/e3a3cfa9c88542828e582a2bb5bbf378.html",
+          "label": "上海市规划资源局：魔玩时空·太格基模正式开放（2026-10-07）",
+          "note": "官方2026-10-07公告称城市底座面向市民、开发者、行业伙伴开放；上海全域有轻量体块模型，内环城区有建筑结构模型，重点地标另建精细单体模型。平台可搜索旧路名、查看历史影像与建筑档案。公开浏览与开发者资源调用权限分开；须按平台提示和相关数据许可使用。未证实杨树浦路1900号这一具体点位采用精细单体模型，不能称为机器织布局扫描。"
+        },
+        {
+          "url": "https://www.sohu.com/a/418252535_120209938",
+          "label": "世界技能博物馆：上海机器织布局重建系列照片藏品记录",
+          "note": "上海纺织博物馆曾向世界技能博物馆提供机器织布局重建系列照片；公开报道称其中一组由1933年申新纺织集团收购三新纱厂时拍摄，记录的是1893年火灾后沿用/改建的同址厂区，不可直接当成1889年初建状态。报道未提供可下载的完整照片组与逐张许可，暂不能据此生成或发布摄影测量网格；这是后续向馆方申请高清照片与重建授权的明确档案线索。"
+        },
+        {
+          "url": "https://www.10100.com/article/31564755",
+          "label": "机器织布局筹建沿革：厂房尺寸与设备记录",
+          "note": "转述的工业史资料称主厂房约550英尺长、80英尺宽、三层；本模型按约167.6×24.4米构建总体量，细部仍待同期原始图纸核对。"
+        },
+        {
+          "url": "https://english.shpt.gov.cn/living/entertainment/996.shtml",
+          "label": "上海市政府英文网：上海纺织博物馆",
+          "note": "记录上海纺织博物馆位于澳门路150号、设于申新九厂旧址，并说明其历史谱系与机器织布局有关。该地址是后来迁厂后的遗址，不与杨树浦路原始主厂址混为一处。"
+        },
+        {
+          "url": "https://daj.shpt.gov.cn/html/2908.html",
+          "label": "上海市普陀区档案局：申新九厂沿革",
+          "note": "档案部门记载机器织布局旧址在杨树浦路、1893年火灾及后续改组/迁址，可用于厘清澳门路博物馆旧址与杨树浦原址的区别。"
+        },
+        {
+          "url": "assets/scenes/sources/shanghai-machine-bureau-scale-model.json",
+          "label": "博物馆织布局比例模型照片来源与许可",
+          "note": "Coolmanjackey，2013-08-03，CC BY-SA 3.0；单张实体模型照片，仅作外观参照。"
+        },
+        {
+          "url": "https://www.kpyun.net/kepujiaoyutiyanjidi2.html?orderby=views&orderway=asc",
+          "label": "上海科普云：上海纺织博物馆VR全景入口",
+          "note": "2022-02-09目录曾列出“VR全景游-上海纺织博物馆”。原目录仍可访问，但目录所指直达页 https://www.kpyun.net/kepujiaoyutiyanjidi2/1156.html 当前返回“未找到指定的栏目”，因此已从可用三维/全景入口撤下，仅保留该目录作为曾发布过现馆线上全景的历史线索。该全景即使恢复，也属于澳门路150号现馆，不是杨树浦路机器织布局原址扫描。"
+        },
+        {
+          "url": "https://english.shanghai.gov.cn/en-CityTour/20250325/100ec92cb0ba4c36b24c5af1d2564715.html",
+          "label": "上海市政府：杨树浦电厂遗址公园与杨树浦工业带",
+          "note": "官方导览将杨树浦电厂遗址公园定位于杨树浦路2800号，记载电厂1911年建立；这与约1900号的机器织布局旧址是不同地点。"
+        },
+        {
+          "url": "https://www.daowen.com/lilun/2266207.html",
+          "label": "机器织布局正门历史照片线索（未获复用授权）",
+          "note": "工业史文章脚注称此图版为原件老照片、非绘画，虽经多次翻拍而轮廓不清；并据蒋昌宁访谈把正门定位到今天的电站辅机厂（隆昌路口），解释旧门牌87号与后来的杨树浦路1900号转换。文章未给照片拍摄年代，也未提供原件或可复用许可；因此只作外部核验线索，不下载、不做纹理、不据图推算门楼尺寸。"
+        },
+        {
+          "url": "https://www.thepaper.cn/newsDetail_forward_24867068",
+          "label": "上海机器织布局火灾与华盛总厂复建年代复核",
+          "note": "该文记载机器织布局于1893年10月19日火灾后重建，华盛纺织总厂于1894年9月17日开工。部分英文二手摘要将原厂火灾记作1891年，但杨浦地方史资料把1891年的“新棉纺织局”作为另一项企业沿革，不能将它与原厂1893年火灾混为一事；本展区采用1893年火灾、1894年复建阶段，并保留复核依据。"
+        },
+        {
+          "url": "https://yptimes.shyp.gov.cn/resfile/2013-04-16/06/06.pdf",
+          "label": "杨浦时报：1891年华新纺织新局为另一条企业沿革",
+          "note": "杨浦区属报刊记载1891年另一家官商合办的华新纺织新局建成开工，并另记上海机器织布局于1893年被烧毁、改组重建。此条可解释部分英文摘要可能混淆的企业/年份；本场景的1893火灾阶段据具体火灾报道及地方档案采用。"
+        },
+        {
+          "url": "https://dh.shda.gov.cn/",
+          "label": "上海市档案馆：跟着档案观上海数字人文平台（工业遗存地图与档案检索）",
+          "note": "档案馆平台提供多时期历史地图、地标档案、GIS时空浏览、知识图谱与三维城市功能，可作为杨浦滨江工业遗存的区域档案探索入口。以“上海机器织布局”检索其公开地标实体接口时未找到本厂址实体条目；因此这里仅作周边工业史延伸检索，不是织布局实景扫描、精确地块定位或本场景几何证据。馆藏影像的下载与再利用权利须按平台及具体档案条目核对。"
+        },
+        {
+          "url": "https://www.saac.gov.cn/daj/c100198/202606/30853935e28f43e1a3298f09d9537421.shtml",
+          "label": "国家档案局：上海档案馆数字人文平台的地图、档案与三维城市功能说明",
+          "note": "官方介绍指出平台整合12幅历史地图与3000余件档案、照片和视频，覆盖杨浦滨江等工业遗存，并提供档案知识图谱、流媒体故事及三维城市功能。其概述未指明上海机器织布局为平台内独立实体，本条不据此宣称已取得该址的现场扫描。"
+        },
+        {
+          "url": "https://www.shda.gov.cn/daxw/zxsd/202609/t20260928_76698.html",
+          "label": "上海市档案馆：跟着档案观上海 4.0（历史地图、GIS与工业档案）",
+          "note": "上海市档案馆2026年升级的“跟着档案观上海”平台以12幅历史地图和3000余件档案/照片/影像构建GIS时空检索，支持历史地图与现状地图对照及三维城市浏览。对平台公开搜索接口检索“上海机器织布局”后，未发现实体或档案条目直接命中本厂名；新版明确新增的纺织地标包括申新纺织厂，但未说明涵盖机器织布局。可用来查杨浦工业带周边时空材料与历史地图，不可称为本旧址扫描或原厂三维模型。本展项仅外链平台，不抓取、不复制其中未核权影像。"
+        },
+        {
+          "url": "assets/scenes/sources/shanghai-open-city-api-audit-20261101.json",
+          "label": "上海开放城市·公开三维服务接口核验（2026-11-01）",
+          "note": "已直接读取官方公告所指公开 SuperMap REST 目录：当前发布场景名为 QingXie，目录有13个具名数据集，本次未发现杨浦/杨树浦/1900号或机器织布局资源。它证明服务公开可读，不证明该旧址有可用模型；门户仍保留为人工检索入口，避免把未确认的数据当成实扫。"
+        },
+        {
+          "url": "https://sh.people.com.cn/n2/2023/1120/c134768-40647480.html",
+          "label": "杨浦滨江文物建筑三维数字化保护平台·测绘技术与访问边界",
+          "note": "报道记载平台以无人机倾斜摄影、三维激光扫描和近景摄影测量构建滨江文物建筑精细实景模型；但没有列出杨树浦路1900号具体模型的公开下载链接或复用许可。平台存在不等于本展已取得模型，因此暂不嵌入未经授权的数据。"
+        },
+        {
+          "url": "https://www.shanghai.gov.cn/cmsres/b6/b6f9e26e61ed481b89616febc0b56e53/f37e8f426eafc97ef02899190ef9fb4d.pdf",
+          "label": "上海市政府：杨树浦滨江保留建筑的现状规模",
+          "note": "官方文件列出上海锅炉厂旧址保留厂房、三新纱厂仓库及建筑面积、层数和檐口高度；这些是该地块现存/后续工业遗存信息，不是1889年机器织布局主厂房测绘。"
+        }
+      ],
+      "historical_phases": [
+        {
+          "date": "1878",
+          "title": "筹办倡议",
+          "description": "彭汝琮提出在上海筹办机器织布局；这时尚未形成杨树浦厂房。"
+        },
+        {
+          "date": "1880",
+          "title": "重新筹办并选址杨树浦",
+          "description": "李鸿章重新筹办，厂址改定在杨树浦沿江地带，购地300余亩。这里是厂区范围，不等于主厂房实测边界。"
+        },
+        {
+          "date": "1889",
+          "title": "主厂房工程竣工",
+          "description": "地方史资料记载建厂工程竣工。当前3D只尝试复原火灾前主厂房总体体量与门楼，不代表设备、内部和场地边界已精确测绘。"
+        },
+        {
+          "date": "1890",
+          "title": "开始生产",
+          "description": "织布局正式投入生产。历史资料记载约27000枚纱锭、530台布机；展厅模型不把这些数量当成精确空间布置。"
+        },
+        {
+          "date": "1893-10",
+          "title": "清花间起火，厂货俱焚",
+          "description": "火灾摧毁原厂阶段，当前历史复原限定在这一阶段之前；不把后续华盛总厂建筑倒灌进1889年模型。"
+        },
+        {
+          "date": "1893-11—1894-08",
+          "title": "原址重建并恢复生产",
+          "description": "地方史文章记载火灾后在原址重建新厂，1894年8月开始生产。该阶段是不同建筑状态，现有GLB不展示为已复原模型。"
+        }
+      ],
+      "reconstruction_basis": "杨浦区政务报道刊有织布局大门旧照，并给出旧址沿革；上海市测绘院地方史地图记载1890年投产、约300亩、27000枚纱锭和530台布机；馆藏实体比例模型照片（CC BY-SA 3.0）提供一个外观视角。主厂房尺度约550×80英尺、三层据地方工业史资料。大门构件为依据馆藏实体模型照片的局部参考复原。",
+      "reconstruction_uncertainty": "尚未取得原厂完整竣工图、可量测历史地籍图、室内设备布置图或原址实景扫描。比例模型只提供单幅正面照片，不证明门楼尺寸与1889年实物完全一致；地方报道未注明大门旧照拍摄年代，1894年原址重建后不能确认照片属于火灾前。后立面窗洞采用重复开口让墙体结构可读，但开口数量、宽度、间距、窗框及窗台构造没有史料逐项核验，均为示意参数；内墙窗格、设备、门楼背面、临江码头与厂区内道路不作精确复原。",
+      "model_disclaimer": "这是由不同证据层组成的历史空间复原：主厂房按报道尺度制作，门楼按馆藏比例模型单一视角参考，机器按投产总量作稀疏原理示意。不是原址实测扫描或数字孪生；视角中可区分证据与推演的边界。",
+      "camera_direction": [
+        0.2,
+        0.22,
+        1
+      ],
+      "evidence_galleries": [
+        {
+          "id": "shanghai-textile-museum-scale-model",
+          "title": "上海纺织博物馆机器织布局模型 · 单幅实拍（2013）",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%B5%B7%E7%BA%BA%E7%BB%87%E5%8D%9A%E7%89%A9%E9%A6%86%E6%9C%BA%E5%99%A8%E7%BB%87%E5%B8%83%E5%88%B6%E9%80%A0%E5%B1%80%E6%A8%A1%E5%9E%8B.jpg",
+          "credit": "Coolmanjackey · CC BY-SA 3.0 · Wikimedia Commons",
+          "note": "2013年8月3日于上海纺织博物馆拍摄的机器织布局比例模型照片。本项目附带本地缩放副本，减少第三方图片服务失效；它提供馆藏实体模型的单一视角，可对照屋顶、翼部和入口门楼，不是旧厂房现场扫描，也不能由单张照片推导背面、精确尺寸或设备布局。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/shanghai-machine-bureau-scale-model.jpg",
+              "label": "博物馆机器织布局比例模型 · 2013-08-03 · 3008×2000",
+              "source_url": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%B5%B7%E7%BA%BA%E7%BB%87%E5%8D%9A%E7%89%A9%E9%A6%86%E6%9C%BA%E5%99%A8%E7%BB%87%E5%B8%83%E5%88%B6%E9%80%A0%E5%B1%80%E6%A8%A1%E5%9E%8B.jpg"
+            }
+          ]
+        }
+      ],
+      "related_3d_models": [
+        {
+          "id": "shanghai-yangshupu-current-city-model",
+          "name": "杨树浦路1900号现址 · Google Earth 三维地理影像",
+          "title": "杨树浦路1900号 · 当代现址空间",
+          "representation": "present-day-geospatial-viewer",
+          "viewer_url": "https://earth.google.com/web/search/杨树浦路1900号,上海",
+          "viewer_label": "打开杨树浦路1900号现址三维地图 ↗",
+          "credit": "Google Earth · 在线地图与三维影像服务",
+          "note": "按现址地址打开当前地图。若该区域提供三维影像，可倾斜查看现状建筑与街区；覆盖、影像日期及细节依平台数据而异。当前址包含不同时期厂区遗存与更新建筑，地图不能据此定位1889年织布局的精确轮廓，也不是原厂扫描。",
+          "model_url": "https://earth.google.com/",
+          "data_label": "Google Earth 平台与使用条款 ↗",
+          "representation_label": "当代现址地图 · 三维影像覆盖依平台而定",
+          "license_status": "仅打开 Google Earth 原站；不下载、复制或改编平台影像。"
+        },
+        {
+          "id": "yangshupu-power-plant-context-model",
+          "name": "杨树浦电厂遗址 · 杨浦工业带空间参照",
+          "title": "杨树浦电厂遗址 · 来源站三维模型",
+          "representation": "third-party-context-model",
+          "viewer_url": "https://sketchfab.com/3d-models/industrial-heritage-yangshupu-power-plant-35d6fc9208314804a46d40879da6531c",
+          "viewer_label": "在 Sketchfab 查看杨树浦电厂三维模型 ↗",
+          "credit": "Tigershill · Sketchfab · Shanghai Industrial Heritage - Yangshupu Power Plant",
+          "note": "这是杨树浦电厂遗址的来源站托管模型，可作为杨浦滨江工业遗产的地区背景。上海市政府资料将电厂遗址定位于杨树浦路2800号，并记载电厂1911年建立；机器织布局旧址则在杨树浦路约1900号一带，是不同地点、不同建筑和年代。Sketchfab页面没有说明该模型是现场扫描还是历史重建，也没有提供可复用许可声明，因此此处只链接原站查看，不称为机器织布局实扫，不下载、复制或改编模型。",
+          "model_url": "https://sketchfab.com/3d-models/industrial-heritage-yangshupu-power-plant-35d6fc9208314804a46d40879da6531c",
+          "data_label": "模型来源与原站权利信息 ↗",
+          "representation_label": "杨浦工业带背景模型 · 非机器织布局旧址扫描",
+          "license_status": "原站未显示可复用许可；仅链接来源站，不复制或重新分发。"
+        },
+        {
+          "id": "shanghai-archives-time-map",
+          "name": "上海历史地图与杨浦工业档案 · 官方数字人文平台",
+          "title": "跟着档案观上海 4.0 · 历史地图与档案检索",
+          "representation": "historical-gis-archive",
+          "viewer_url": "https://dh.shda.gov.cn/?lang=zh",
+          "viewer_label": "打开上海历史地图与工业档案 ↗",
+          "model_url": "https://www.shda.gov.cn/daxw/zxsd/202609/t20260928_76698.html",
+          "data_label": "平台功能、数据范围与馆藏说明 ↗",
+          "credit": "上海市档案局（馆）及平台共建单位",
+          "note": "上海市档案馆2026年升级的“跟着档案观上海”平台以12幅历史地图和3000余件档案/照片/影像构建GIS时空检索，支持历史地图与现状地图对照及三维城市浏览。对平台公开搜索接口检索“上海机器织布局”后，未发现实体或档案条目直接命中本厂名；新版明确新增的纺织地标包括申新纺织厂，但未说明涵盖机器织布局。可用来查杨浦工业带周边时空材料与历史地图，不可称为本旧址扫描或原厂三维模型。本展项仅外链平台，不抓取、不复制其中未核权影像。",
+          "representation_label": "历史地图 / GIS / 档案检索入口 · 非旧址扫描",
+          "license_status": "外链官方平台；平台内档案图片的具体使用权限以原档案条目和平台声明为准，本项目不下载或复制。"
+        }
+      ],
+      "camera_focus_diameter": 60,
+      "camera_note": "默认聚焦主厂房约60米立面段；滚轮可缩至全体，鼠标拖动可环绕与平移。此为视角配置，不改变模型的史料复原属性。"
+    },
+    {
+      "id": "chartist_kennington_common",
+      "type": "scene",
+      "name": "宪章运动 · 肯宁顿公地",
+      "file": "chartist_kennington_common.glb",
+      "previewClass": "common",
+      "glyph": "✦",
+      "representation": "historical-reconstruction",
+      "credit": "William Edward Kilburn · 1848 肯宁顿公地银版照片及同期史料约束复原 · 非实景扫描",
+      "note": "1848 年 4 月 10 日肯宁顿公地集会有基尔伯恩银版照片。此地仍存在，但1848年公地的边界与景观已变化，现有模型是以开放空间解释集会关系的史料复原，并非现场扫描，也不从照片推断全场人群或地形。可切换到公园现存装饰柱摄影测量，比较“历史集会图像”和“当代局部实扫”的证据差异。",
+      "reference_url": "https://academic.oup.com/jvc/article/29/3/430/7695220",
+      "reference_label": "开放论文：肯宁顿公地照片、视角与史料争议",
+      "reference_note": "研究指出照片覆盖范围有限，且人群规模说法有争议；不应把单张照片扩绘成无证据的完整现场。基尔伯恩照片为 Royal Collection 藏品，经 Wikimedia Commons 标注为公有领域。",
+      "source_image": "assets/scenes/sources/chartist_kennington_1848.jpg",
+      "source_image_alt": "William Edward Kilburn 拍摄的1848年4月10日肯宁顿公地宪章派集会银版照片",
+      "source_image_caption": "William Edward Kilburn，1848年4月10日银版照片，Royal Collection RCIN 2932484。图像为修复版本；Public Domain Mark。照片仅覆盖有限视域，不能用来测定全场人群数量或完整地形。",
+      "source_image_credit_url": "https://commons.wikimedia.org/wiki/File:Chartist_meeting_on_Kennington_Common_by_William_Edward_Kilburn_1848_-_restoration1.jpg",
+      "evidence_galleries": [
+        {
+          "id": "kennington-1848-daguerreotype",
+          "title": "肯宁顿公地集会原始视觉证据 · 1848-04-10",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Chartist_meeting_on_Kennington_Common_by_William_Edward_Kilburn_1848_-_restoration1.jpg",
+          "credit": "William Edward Kilburn · Royal Collection RCIN 2932484 · Wikimedia Commons Public Domain Mark",
+          "note": "两张数字图是同一块1848年银版的不同数字呈现，不是两个独立机位：一张为高分辨修复版本，另一张为馆藏银版的黑白扫描。照片只覆盖镜头可见范围；平台、马车、人群和远景可作图像证据，画幅之外的公地边界、总人数、准确地形与集会台坐标仍不能由它单独推出。Royal Collection 另藏同日配对银版 RCIN 2932482，可从馆方记录查看，但不在本地复制受馆方控制的图像。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/chartist_kennington_1848.jpg",
+              "label": "RCIN 2932484 · 高分辨修复版本 · Public Domain Mark",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Chartist_meeting_on_Kennington_Common_by_William_Edward_Kilburn_1848_-_restoration1.jpg"
+            },
+            {
+              "src": "assets/scenes/sources/chartist_kennington_1848_original.jpg",
+              "label": "RCIN 2932484 · 银版黑白扫描 · Public Domain Mark",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Chartist_meeting,_Kennington_Common.jpg"
+            }
+          ]
+        }
+      ],
+      "reconstruction_basis": "已知：1848年共同地、约20英亩开放地、4月10日集会影像；可见物件与摄影视域以基尔伯恩银版及同期报道约束。",
+      "reconstruction_uncertainty": "不确定：1848年集会台准确位置、当年地面起伏、围观人数与人群分布。公园后来景观改造；尚未完成历史地籍图与当代地形配准。",
+      "model_disclaimer": "可旋转的1848年空间关系复原；不是历史现场扫描。公园现存构件的扫描单独标为当代实测，不代表1848年景观。",
+      "related_3d_models": [
+        {
+          "name": "肯宁顿公园现状 · 纪念柱摄影测量扫描",
+          "embed_url": "https://sketchfab.com/models/b8cd5c4046004a968d8ce1e5d374eafa/embed?ui_theme=light",
+          "model_url": "https://sketchfab.com/3d-models/decorative-column-neoclassical-columns-b8cd5c4046004a968d8ce1e5d374eafa",
+          "credit": "Alina · CC BY 4.0",
+          "note": "Sketchfab作者 Alina 标注此模型由 RealityScan Mobile 制作，采集对象是 Kennington Park 西侧的装饰柱；发布页标注 Creative Commons Attribution。模型约1百万三角面，低配设备可能加载较慢。它是公园现状局部扫描，不是1848年历史景观；嵌入保留作者署名与来源链接。",
+          "representation_label": "当代摄影测量扫描 · 公园纪念柱",
+          "license_status": "CC BY（Sketchfab 作者页标注 Creative Commons Attribution；署名 Alina）"
+        },
+        {
+          "id": "kennington-park-mapillary-current",
+          "name": "Kennington Park · Mapillary现状街景",
+          "title": "肯宁顿公园 · Mapillary现状360°街景",
+          "representation": "present-day-360-imagery",
+          "viewer_url": "https://www.mapillary.com/app/?image_key=1328336487804718",
+          "viewer_label": "打开肯宁顿公园360°街景",
+          "model_url": "https://help.mapillary.com/hc/en-us/articles/115001770409-CC-BY-SA-license-for-open-data",
+          "data_label": "Mapillary官方许可与署名规则 ↗",
+          "credit": "Mapillary contributor（姓名见托管页） · CC BY-SA 4.0",
+          "note": "这是肯宁顿公园的现状街景入口，由 Mapillary 托管。Mapillary 官方说明图像采用 CC BY-SA 4.0，需按托管页标明具体投稿者。影像日期及是否为完整360°图像以 Mapillary 页面显示为准。它不是1848年景观，尚未证明机位位于当年集会的精确中心；仅作现状公园空间参照。",
+          "representation_label": "当代街景影像 · 非1848全景",
+          "license_status": "CC BY-SA 4.0（Mapillary开放数据）；本项目仅链接原托管影像，署名以投稿者页面为准。"
+        }
+      ],
+      "camera_direction": [
+        0.38,
+        0.2,
+        1
+      ],
+      "paired_scene_id": "chartist_kennington_current_terrain",
+      "related_sources": [
+        {
+          "url": "https://albert.rct.uk/collections/photographs-collection/record-of-historical-events/the-chartist-meeting-on-kennington-common-10-april-1848",
+          "label": "Royal Collection：配对银版 RCIN 2932482",
+          "note": "馆方记录将其描述为1848年4月10日同场集会的另一块 daguerreotype；它是配对原始影像，不与 Commons 上 RCIN 2932484 的数字处理版本混为同一张。馆方图像不在本地镜像。"
+        },
+        {
+          "url": "https://albert.rct.uk/collections/photographs-collection/record-of-historical-events/the-chartist-meeting-on-kennington-common-10-april-1848-0",
+          "label": "Royal Collection：银版 RCIN 2932484 馆藏记录",
+          "note": "作者 William Edward Kilburn；银版，图像约10.7 × 14.7厘米；拍摄日期1848年4月10日。该馆藏记录用于校对 Commons 图像对应的实物编号与元数据。"
+        },
+        {
+          "url": "https://www.nationalarchives.gov.uk/image/c14a677b-54ed-4ce1-8e1c-52a16bb50b44/",
+          "label": "英国国家档案馆：1848年4月10日肯宁顿公地集会图像",
+          "note": "馆藏页面将其描述为《Illustrated London News》1848年4月15日刊载、根据银版照片制作的集会图像；它是历史视觉证据，不是现场三维扫描。"
+        },
+        {
+          "url": "https://www.lambeth.gov.uk/parks/kennington-park",
+          "label": "兰贝斯区议会：肯宁顿公园与共同地历史",
+          "note": "地方政府说明现今公园位于历史 Kennington Common 场址；公园今天的景观形成于1848年集会之后，现状地形不能直接当作当年地貌。"
+        },
+        {
+          "url": "https://thegreatbritainguide.com/place/kennington-park/",
+          "label": "Kennington Park Mapillary全景入口与影像署名说明",
+          "note": "第三方目录提供 Mapillary image_key 1328336487804718 的交互入口，并标示影像许可 CC BY-SA 4.0。具体投稿者和拍摄时间请在 Mapillary 页面核对。"
+        },
+        {
+          "url": "https://help.mapillary.com/hc/en-us/articles/115001770409-CC-BY-SA-license-for-open-data",
+          "label": "Mapillary官方：街景影像CC BY-SA许可与署名要求",
+          "note": "官方说明 Mapillary 图像采用 CC BY-SA，网页再利用需标明影像标题、Mapillary链接、投稿者用户名及许可；该项目只链接到平台，不复制或改编该用户影像。"
+        },
+        {
+          "url": "assets/scenes/sources/site-model-search-20261101.json",
+          "label": "肯宁顿公地公开三维模型检索（2026-11-01）",
+          "note": "记录未发现肯宁顿公地集会扫描，并排除通用柱式等无地点证据的误命中。"
+        }
+      ]
+    },
+    {
+      "id": "chartist_kennington_current_terrain",
+      "type": "scene",
+      "name": "肯宁顿公园 · 当代裸地 LiDAR 地形（1米源数据）",
+      "file": "kennington_common_current_terrain.glb",
+      "previewClass": "common",
+      "glyph": "⌁",
+      "representation": "present-day-lidar-terrain",
+      "credit": "地形网格由英格兰环境署 LiDAR Composite DTM 1m 派生（2米抽样）· OGL v3.0",
+      "note": "这是肯宁顿公园周边约800米范围的现状裸地地形网格：原始DEM空间分辨率1米，展示网格按2米采样，垂直方向5倍夸张以便观察缓坡。它只反映当代地表高程，不含建筑、树木、地表纹理，也不能证明1848年的地貌或集会布局。与上一个条目并置用于观察地点延续与环境变化。",
+      "source_url": "https://data.source.coop/rebalance-earth/ea-dem/DTM/DEFLATE/TQ37nw_DTM_1m.tif",
+      "reference_url": "https://environment.data.gov.uk/dataset/13787b9a-26a4-4775-8523-806d13af58fc",
+      "reference_label": "英格兰环境署 DTM 数据、元数据与许可",
+      "reference_note": "原始地形数据由 Environment Agency 发布为 OGL v3.0；来源文件为1米分辨率 Cloud-Optimized GeoTIFF，EPSG:27700，垂直基准 Ordnance Datum Newlyn。",
+      "model_disclaimer": "当代LiDAR裸地地形；不是1848年历史扫描。水平2米采样，垂直夸张5倍。",
+      "camera_direction": [
+        0.55,
+        0.52,
+        0.8
+      ],
+      "paired_scene_id": "chartist_kennington_common",
+      "related_sources": [
+        {
+          "url": "https://www.lambeth.gov.uk/parks/kennington-park",
+          "label": "兰贝斯区议会：肯宁顿公园历史与现址",
+          "note": "官方说明公园位于历史 Kennington Common 场址，并介绍现公园设施。1848年集会发生在公园建成之前。"
+        }
+      ]
+    },
+    {
+      "id": "paris_1848_street",
+      "type": "scene",
+      "name": "1848 · 圣马丁街垒街景复原（街段未精确定位）",
+      "file": "paris_1848_street.glb",
+      "previewClass": "street",
+      "glyph": "▦",
+      "representation": "historical-reconstruction",
+      "credit": "James Duffield Harding · 巴黎卡纳瓦莱博物馆藏1848年原图（CC0）约束复原 · 非实景扫描",
+      "note": "这是依据卡纳瓦莱博物馆藏1848年2月25日原图搭建的可旋转街景复原。原图只定位到圣马丁街、巴黎第三区/第四区，没有标出精确街口，因此模型不是某个门牌或路口的复原。石块、横木、翻倒手推车和马匹按画面中的可见关系建模；街宽、立面尺寸、遮挡区域和人物身份均未测定。",
+      "reference_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/barricade-dans-la-rue-saint-martin-le-25-fevrier-1848-3eme-et-4eme",
+      "reference_label": "巴黎卡纳瓦莱博物馆：圣马丁街垒原始图像（CC0）",
+      "reference_note": "James Duffield Harding 于1848年绘制；馆藏记录标注 Rue Saint-Martin、1848-02-25、藏品 D.8384、巴黎第三区/第四区，图像为CC0。目录没有提供具体街口、立面尺寸或三维扫描，因此模型只解释画面中的街垒构成与街道空间关系。",
+      "source_image": "assets/scenes/sources/paris-1848-saint-martin-barricade-CC0.jpg",
+      "source_image_alt": "1848年2月25日巴黎圣马丁街垒，James Duffield Harding绘",
+      "source_image_caption": "James Duffield Harding，巴黎卡纳瓦莱博物馆藏 D.8384，1848-02-25；CC0 Paris Musées。原图显示石块、横木、车辆和人群，但只标注 Rue Saint-Martin（第三区/第四区），没有给出精确街口。",
+      "reconstruction_basis": "已知：1848年2月25日原图中的街道透视关系、横贯道路的街垒、铺石、木料、翻倒车辆和马匹。模型只据这些可见构件组织三维画面，不从图像推导可测量的街道平面。",
+      "reconstruction_uncertainty": "不确定：具体街段/路口、原始街宽与立面尺寸、街垒背面及个体身份。馆藏目录只给Rue Saint-Martin及第三区/第四区范围；模型的未见面和体块尺度均为解释性推演。",
+      "model_disclaimer": "可旋转的历史空间三维复原；不是该年代的实景扫描。几何需随新测绘/馆藏图纸继续校正。",
+      "camera_direction": [
+        1,
+        0.24,
+        0.2
+      ],
+      "related_sources": [
+        {
+          "url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "label": "巴黎街区现状 LiDAR HD 点云 · IGN 开放数据",
+          "note": "另可加载 Rue Saint-Martin 163号附近约240米现状分类点云，作为同街名区域的当代空间参照。馆藏画作只标到圣马丁街第三区/第四区，无法证明街垒就在该坐标；因此此点云不代表事件精确原址，也不是1848年街景。Licence Ouverte 2.0，署名 IGN。"
+        },
+        {
+          "url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/barricade-dans-la-rue-saint-martin-le-25-fevrier-1848-3eme-et-4eme#infos-principales",
+          "label": "卡纳瓦莱博物馆：1848年2月25日圣马丁街垒原作记录",
+          "note": "馆藏目录记录 James Duffield Harding 于1848年创作的圣马丁街垒图，给出街名和第三区/第四区，但没有具体街口或街道测绘。"
+        },
+        {
+          "url": "https://www.servicehistorique.sga.defense.gouv.fr/ark/1069446",
+          "label": "法国国防历史局：1848年巴黎及周边总图档案记录",
+          "note": "这是1848年巴黎设防与周边公社总图的档案目录，可用于理解城市尺度背景；比例与用途不支持定位这张街垒图的具体街口。"
+        },
+        {
+          "url": "https://api-adresse.data.gouv.fr/search/?q=163%20Rue%20Saint-Martin%2075003%20Paris&limit=1",
+          "label": "法国地址数据库：Rue Saint-Martin 163号现状地理编码",
+          "note": "2026-11-03查询法国官方 BAN 地址接口，返回“163 Rue Saint-Martin 75003 Paris”，坐标2.351952, 48.862373。展厅 LiDAR 中心为2.351938, 48.862407，距现状地址点约4米，可核验“同街名片区参考”的现代位置。此地理编码不表示1848年街垒就在163号；卡纳瓦莱原图仍只定位圣马丁街第三区/第四区，历史街口未知。"
+        }
+      ],
+      "related_3d_models": [
+        {
+          "name": "Rue Saint-Martin 163号附近 · 当代 IGN LiDAR 街区点云",
+          "viewer_url": "https://romain974.github.io/lidar-viewer/",
+          "model_url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "credit": "法国国家地理与森林信息研究所（IGN）· LiDAR HD · Licence Ouverte 2.0",
+          "note": "主展馆可加载约240米范围的现状分类点云。中心坐标与法国地址数据库对现代Rue Saint-Martin 163号的地理编码相距约4米，因此可确认这是同街名片区的当代空间参照；1848年画作没有给出具体街口，不能据此认定为街垒准确发生点。点云仅呈现今天地表与屋顶，不含1848年建筑立面或内部。",
+          "inline_lidar": {
+            "center": [
+              2.351938,
+              48.862407
+            ],
+            "span": 240
+          },
+          "representation_label": "当代 LiDAR 实测 · 同街名片区参考，非1848原址定位",
+          "license_status": "Licence Ouverte 2.0；保留 IGN 与数据集署名。",
+          "viewer_label": "在开源 LiDAR HD 查看器中按地址搜索点云 ↗"
+        }
+      ],
+      "evidence_galleries": [
+        {
+          "id": "paris-1848-original",
+          "title": "卡纳瓦莱博物馆原图 · 1848年2月25日",
+          "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/barricade-dans-la-rue-saint-martin-le-25-fevrier-1848-3eme-et-4eme",
+          "credit": "James Duffield Harding · Paris Musées / Musée Carnavalet · CC0",
+          "note": "原始图像用于对照可见构件，不是街道测绘图；馆藏记录只给出街名与行政区范围，未指明精确路口。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/paris-1848-saint-martin-barricade-CC0.jpg",
+              "label": "D.8384 · 《圣马丁街垒速写》 · CC0",
+              "source_url": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/barricade-dans-la-rue-saint-martin-le-25-fevrier-1848-3eme-et-4eme"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first_international_printshop",
+      "type": "scene",
+      "name": "第一国际成立 · 圣马丁堂重建会堂（1864史料复原）",
+      "file": "first_international_printshop.glb",
+      "previewClass": "press",
+      "glyph": "▤",
+      "representation": "historical-reconstruction",
+      "credit": "《The Builder》1853年测量记述与伦敦档案馆1847年原始设计版画 · 史料约束复原 · 非实景扫描",
+      "note": "1864年第一国际成立大会使用的圣马丁堂并非1850年原建筑：原堂在1860年火灾中被毁，之后以音乐会堂用途重建并于1862/63年前后重新开放。现有模型以《The Builder》记载的1853年主厅尺度及空间组织作比例参照，但尚无重建后、可证实为1864年状态的完整平面或实测资料，因此它是“重建会堂的证据约束示意”，不是1864年现场数字孪生。楼上主厅、楼下讲堂、图书室、教室、走廊与入口厅按来源中有尺寸的空间建模；房间邻接和楼梯为示意。1850年版画早于原厅扩建且早于火灾，不能直接证明1864年内部；1867年Queen’s Theatre又是后续改建阶段，均与1864年场景分开。",
+      "reference_url": "https://www.londonpicturearchive.org.uk/view-item?i=309134",
+      "reference_label": "伦敦档案馆：1847 年圣马丁堂设计版画",
+      "reference_note": "馆藏版画题为 St Martin’s Hall, Long Acre，档案编号 SC_PZ_WE_01_1644。外观设计图为建筑史料，不是三维扫描。",
+      "source_image": "assets/scenes/sources/st_martins_hall_c1850.jpg",
+      "source_image_alt": "约1850年圣马丁堂版画，呈现历史会堂内部",
+      "source_image_caption": "约1850年版画，收录于 Walter Thornbury《Old and New London》第3卷；Wikimedia Commons 标注 Public Domain Mark。图像可供观察早期会堂空间，但不是1864年成立大会现场照片。",
+      "source_image_credit_url": "https://commons.wikimedia.org/wiki/File:St_Martin%27s_Hall.jpg",
+      "reconstruction_basis": "有据：第一国际1864年9月28日成立大会在圣马丁堂举行；《The Builder》1853年报道记录旧会堂的主厅及附属房间尺寸；1860年火灾后会堂重建并于1862/63年前后重开。模型将1853年尺寸作为该地点音乐会堂的比例参照，而不是已确认的1864年竣工尺寸；1864年重建后平面尚待档案核验。 1850—1853年的同期建筑描述还记有高侧窗、三侧楼座、木格平顶与斜顶、吊挂煤气灯及铁拱承重等可见构造；当前模型用这些文字约束主厅的空间特征，但因1860年后重建图缺失，不能断言1864年新厅完全沿用旧构造。",
+      "reconstruction_uncertainty": "关键不确定性：1853年原厅在1860年火灾中被毁；现无重建后完整平面/剖面、测绘、同期室内照片或精确装修图证明1864年会堂完全沿用旧厅尺寸。当前模型的主厅尺度借用1853年文字记录，不能冒称重建厅的实测值。各附属房间邻接、楼梯、家具及1864年会议席位均为示意，待新史料校正。 窗格分隔、楼座栏杆的具体式样和铁拱/木格屋顶构造细节尚缺火灾后重建时期的图像或竣工图；模型中这些构件用于解释主厅结构，具体造型仍属基于早期文字记录的示意。",
+      "model_disclaimer": "1864年重建期会堂的证据约束教学复原，不是历史现场扫描或已验证数字孪生。空间尺寸借用1853年旧厅报道作为比例参照；火灾后重建的具体几何尚无充分史料证明。 尤其是1860年火灾后重建的栏杆、窗框和屋顶细部，仅为结构解释，不是1864年实物照片复原。",
+      "camera_direction": [
+        0.25,
+        0.34,
+        -1
+      ],
+      "paired_scene_id": "first_international_site_current_dsm",
+      "related_sources": [
+        {
+          "url": "https://www.londonpicturearchive.org.uk/view-item?i=309134",
+          "label": "伦敦档案馆：圣马丁堂音乐厅原始设计版画（1847）",
+          "note": "档案目录将其著录为《Illustrated London News》木刻版画，题为圣马丁堂音乐厅原始设计，执行日期1847年，地图定位仅为近似。它提供场地与最初设计的历史线索；对象早于1853年完成的大堂、1860年火灾和1864年第一国际成立大会，不能据此直接确定1864年重建会堂细部或平面。高分辨率文件需向伦敦档案馆申请许可，本项目仅链接目录。"
+        },
+        {
+          "url": "https://www.arthurlloyd.co.uk/QueensLongacre.htm",
+          "label": "圣马丁堂同期建筑报道：1850/1853年尺寸与图像",
+          "note": "页面转录《The Builder》同期报道并刊有建筑图像；它提供文字尺寸，但不是可核验的1853年完整楼层平面图。"
+        },
+        {
+          "url": "https://victorianlondon.org/buildings/stmartinsmusichall.htm",
+          "label": "《The Builder》1853年报道与 John Timbs《Curiosities of London》（1867）",
+          "note": "网页转录《The Builder》1850及1853年报道：1853年完整主厅尺寸约121英尺6英寸×55英尺5英寸×40英尺，记录入口、平台、楼座、分格内顶和吊挂煤气灯；同时转录 Timbs 1867年关于1853年火灾后修复扩建的说明。1867年尺寸不作为本模型的来源。"
+        },
+        {
+          "url": "https://www.londonmuseum.org.uk/collections/v/object-979088/st-martins-hall/",
+          "label": "伦敦博物馆藏圣马丁堂室内版画 NN28188（1850—1851）",
+          "note": "馆藏将图像年代记为1850—1851，许可CC BY-NC 4.0，允许非商业使用并须署名London Museum。版画早于1853年完整大厅建成，只作为较早的室内视觉证据，不用来证明1864年会场布置。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:St_Martin%27s_Hall.jpg",
+          "label": "Wikimedia Commons：Walter Thornbury《Old and New London》第3卷版画",
+          "note": "约1850年的圣马丁堂印刷图像；馆藏数字文件标注 Public Domain Mark。可帮助观察会堂内部空间，但不是摄影测量资料，也不记录1864年会议当日的家具和人员位置。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:View_of_90_Long_Acre_and_the_former_police_station_from_Bow_Street_-_geograph.org.uk_-_3294856.jpg",
+          "label": "Wikimedia Commons：90 Long Acre与Bow Street现状照片（2013）",
+          "note": "Robert Lamb，2013-01-13，CC BY-SA 2.0；照片显示现址建筑周边，不是圣马丁堂历史建筑扫描。"
+        },
+        {
+          "url": "assets/scenes/sources/st-martins-hall-reconstruction.json",
+          "label": "圣马丁堂建筑数据与模型边界记录",
+          "note": "汇总1850、1853及1867年各阶段描述，标明模型中已知尺寸与示意性房间布局。"
+        },
+        {
+          "url": "https://hd.housedivided.dickinson.edu/node/33533",
+          "label": "1860年火灾与会堂被毁记录",
+          "note": "该历史事件条目引《Annual Register》记载1860年8月26日火灾摧毁圣马丁堂，并称其重建后于1862年重新开放。它提示1864年的建筑阶段与1850年原厅不同；本地模型暂无重建后的竣工测绘依据。"
+        },
+        {
+          "url": "https://marxists-malta.org/archive/braunthal/history-international/vol1/9founding.htm",
+          "label": "第一国际成立大会日期与场地",
+          "note": "历史叙述确认大会于1864年9月28日在伦敦圣马丁堂举行。场地名称可确认，但不提供会堂平面或建筑扫描。"
+        },
+        {
+          "url": "https://www.londonmuseum.org.uk/collections/v/object-430406/st-martins-music-hall-long-acre/",
+          "label": "伦敦博物馆藏《圣马丁堂音乐厅》版画 Z2273（1850—1851）",
+          "note": "馆方记录该木刻版画制作于1850—1851年，图像可非商业使用并须署名 London Museum；馆方说明建筑1860年焚毁。它是火灾前建筑的图像证据，不是1864年重建会堂的扫描或照片。"
+        },
+        {
+          "url": "assets/scenes/sources/site-model-search-20261101.json",
+          "label": "圣马丁堂与 Long Acre 公开三维模型检索（2026-11-01）",
+          "note": "记录精确关键词未找到圣马丁堂扫描，并排除阿德莱德同名 Queen’s Theatre 的历史复原模型。"
+    },
+    {
+      "url": "assets/scenes/sources/st-martins-hall-panoskin-exclusion.json",
+      "label": "同名 St Martin’s Hall 360 导览地点核验",
+      "note": "该导览实际位于美国匹兹堡，展示现代游戏室、共享办公和摄影棚；与伦敦 Long Acre 历史会堂无关，故排除。"
+        }
+      ],
+      "evidence_galleries": [
+        {
+          "id": "st-martins-hall-interior-c1850",
+          "title": "圣马丁堂约1850年版画 · 会堂内部早期参照",
+          "source_url": "https://commons.wikimedia.org/wiki/File:St_Martin%27s_Hall.jpg",
+          "credit": "Walter Thornbury《Old and New London》第3卷 · Public Domain Mark",
+          "note": "该版画约作于1850年，早于1853年完整大厅开放，只能作为较早的会堂内部视觉参照；图像不是1864年成立大会的现场记录。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/st_martins_hall_c1850.jpg",
+              "label": "圣马丁堂室内版画 · 约1850 · Thornbury《Old and New London》",
+              "source_url": "https://commons.wikimedia.org/wiki/File:St_Martin%27s_Hall.jpg"
+            }
+          ]
+        },
+        {
+          "id": "long-acre-current-view-2013",
+          "title": "圣马丁堂旧址现状 · 90 Long Acre外观（2013）",
+          "source_url": "https://commons.wikimedia.org/wiki/File:View_of_90_Long_Acre_and_the_former_police_station_from_Bow_Street_-_geograph.org.uk_-_3294856.jpg",
+          "credit": "Robert Lamb / Geograph · CC BY-SA 2.0",
+          "note": "照片从 Bow Street 方向拍摄，显示当代90 Long Acre及附近建筑。它是2013年单幅街景，不是圣马丁堂旧址原址的测绘全景，也不显示1864年会堂。",
+          "images": [
+            {
+              "src": "assets/scenes/90-long-acre-bow-street-2013.jpg",
+              "label": "90 Long Acre与Bow Street一带 · Robert Lamb · 2013-01-13 · 1280px署名缩图",
+              "source_url": "https://commons.wikimedia.org/wiki/File:View_of_90_Long_Acre_and_the_former_police_station_from_Bow_Street_-_geograph.org.uk_-_3294856.jpg"
+            }
+          ]
+        }
+      ],
+      "historical_phases": [
+        {
+          "date": "1847–1850",
+          "title": "原堂建成并开放",
+          "description": "会堂由订阅集资建设，1850年开始开放。现存约1850年版画只能作为这一早期阶段的室内参照。"
+        },
+        {
+          "date": "1853",
+          "title": "扩建后完整开放",
+          "description": "《The Builder》记载主厅及附属空间尺寸。该阶段早于1860年火灾，不能直接视为第一国际大会现场。"
+        },
+        {
+          "date": "1860",
+          "title": "火灾摧毁原堂",
+          "description": "1860年8月26日火灾后，1850年原建筑阶段终止。"
+        },
+        {
+          "date": "1862–1863",
+          "title": "重建后重新开放",
+          "description": "二级历史资料记重建会堂于1862/63年前后重开；目前没有足够公开测绘资料确认重建后的完整平面与室内细节。"
+        },
+        {
+          "date": "1864-09-28",
+          "title": "第一国际成立大会",
+          "description": "大会在火灾后重建的圣马丁堂举行。模型表达可确认的会堂空间关系，不重演未有图像证据支持的当天人物、座次或陈设。"
+        },
+        {
+          "date": "1867",
+          "title": "改建为Queen’s Theatre",
+          "description": "场地后续转为剧院；剧院内部属于另一建筑阶段，不并入1864年会堂场景。"
+        }
+      ]
+    },
+    {
+      "id": "first_international_site_current_dsm",
+      "type": "scene",
+      "name": "圣马丁堂旧址 · 90 Long Acre 当代 LiDAR 表面（1米源数据）",
+      "file": "st_martins_hall_current_dsm.glb",
+      "previewClass": "hall",
+      "glyph": "⌁",
+      "representation": "present-day-lidar-surface",
+      "credit": "地形网格由英格兰环境署 LiDAR Composite DSM 1m 派生（2米抽样）· OGL v3.0",
+      "note": "此场景呈现圣马丁堂旧址现址（今90 Long Acre）周边600米范围的当代 LiDAR 数字表面模型：建筑屋顶与树冠等上表面高程经过2米采样后制成可旋转网格，垂直比例未夸大。DSM不是立面摄影测量：墙面、纹理、内部与年代变化均不包含在内。它呈现1860年火灾及后续改建后今天的场地，供与相邻的1864年会堂历史复原对照。",
+      "source_url": "https://data.source.coop/rebalance-earth/ea-dem/FZ_DSM/DEFLATE/TQ38sw_FZ_DSM_1m.tif",
+      "reference_url": "https://environment.data.gov.uk/dataset/9ba4d5ac-d596-445a-9056-dae3ddec0178",
+      "reference_label": "环境署 LiDAR DSM 数据集、元数据与许可",
+      "reference_note": "原始DSM为1米分辨率Cloud-Optimized GeoTIFF；数据来源为 Environment Agency，采用 OGL v3.0。当前位置取90 Long Acre地址所在的国家格网约530313,181149。",
+      "model_disclaimer": "当代 LiDAR 数字表面网格：2米抽样，含屋顶/树冠上表面，不是建筑外立面扫描，也不是1864年历史现场。",
+      "reconstruction_basis": "与前一条史料复原对应：圣马丁堂旧址今位于90 Long Acre；1864年9月28日国际工人协会成立大会在此举行。",
+      "reconstruction_uncertainty": "旧堂具体建筑平面与现址现代地籍的精确边界仍以历史地图/土地档案进一步套合为准；当前 DSM 模型范围为600米局部视野。",
+      "related_context_id": "first_international_printshop",
+      "camera_direction": [
+        0.62,
+        0.58,
+        0.64
+      ],
+      "paired_scene_id": "first_international_printshop",
+      "related_3d_models": [
+        {
+          "name": "90 Long Acre 旧址街区 · Google Earth 现状三维影像",
+          "viewer_url": "https://earth.google.com/web/search/90+Long+Acre,+London+WC2E+9NA",
+          "viewer_label": "在 Google Earth 查看现址三维影像",
+          "model_url": "https://earth.google.com/web/search/90+Long+Acre,+London+WC2E+9NA",
+          "data_label": "打开 Google Earth 现状影像",
+          "credit": "Google Earth · 第三方托管现状影像",
+          "note": "此入口定位圣马丁堂旧址现址（90 Long Acre），用于观察伦敦街区现状三维影像；当前影像日期、精细程度与是否覆盖此楼的立面以 Google Earth 实际显示为准。它不是圣马丁堂扫描，也不是1864年历史现场。展馆只链接原平台，不下载或再分发其影像。",
+          "representation_label": "当代三维地图影像 · 非建筑扫描",
+          "license_status": "Google Earth 平台内容条款适用；仅链接在线浏览，不截取、复制或重发布影像/模型。"
+        },
+        {
+          "name": "圣马丁堂旧址 · LAYRS London 同址楼宇三维地图",
+          "viewer_url": "https://stop-token.com/lab/london/?b=0000000000107759",
+          "model_url": "https://stop-token.com/lab/london/b/0000000000107759/",
+          "data_label": "核对建筑故事、19世纪地图图层与数据许可 ↗",
+          "credit": "LAYRS: London · OpenStreetMap / Overture · Environment Agency LiDAR",
+          "note": "地图将 Queen’s Theatre, Long Acre 定位为建在 St Martin’s Hall 原址上的后继建筑，并可定位到该建筑打开 3D 楼宇地图；其楼高由环境署 LiDAR 估算，足迹来自开放楼宇数据库。可在地图中切换“On the 1890s map”图层，观察1890年代该地已有建筑。它提供当前街区的地理/体量背景，不是会堂扫描；地图中的1910年代戏院条目也不能代替1864年会堂复原。",
+          "representation_label": "同址楼宇体量与历史地图 · 开放数据，非建筑扫描",
+          "license_status": "地图代码 MIT；楼宇足迹含 ODbL 数据，高程来自 Environment Agency LiDAR / OGL；照片各自遵循来源许可。仅链接原站，不复制数据。"
+        }
+      ],
+      "related_sources": [
+        {
+          "url": "https://stop-token.com/lab/london/b/0000000000107759/",
+          "label": "LAYRS London：Queen’s Theatre, Long Acre 同址关系与建筑条目",
+          "note": "页面明确说明1867年建立的Queen’s Theatre位于1850年开放的St Martin’s Hall旧址；这补足了会堂遗址延续到后继戏院的空间关系。页面记载楼高18米、位置在Long Acre与Endell Street街角，并链接可选中的三维楼宇地图。"
+        },
+        {
+          "url": "https://stop-token.com/lab/london/",
+          "label": "LAYRS London：同址三维楼宇图、环境署LiDAR高度与1890年代图层",
+          "note": "项目覆盖内伦敦约21.3万栋楼；足迹来自Overture/OSM，建筑高度由1米环境署LiDAR合成数据估算；另可切换1891—1896年OS地图建筑层。空间/高度是开放地图表达，不是实景摄影测量或历史会堂模型。许可分层及数据方法见页面 About 与 GitHub README。"
+        }
+      ]
+    },
+    {
+      "id": "marx_reading_room",
+      "type": "scene",
+      "name": "经典著作 · 阅览室",
+      "file": "marx_reading_room.glb",
+      "previewClass": "reading",
+      "glyph": "书",
+      "representation": "historical-reconstruction",
+      "credit": "《大英博物馆读者手册》（1868）与馆方建筑史料 · 尺度约束复原 · 非马克思时期室内扫描",
+      "note": "圆形阅览室由 Sydney Smirke 设计，1857年开放；马克思曾在此使用图书馆。三维模型按1868年读者手册所记圆顶直径140英尺、地面至穹顶高106英尺重定总体比例，呈现环形阅览空间与中心穹顶。书架、阅览桌和细部位置是教学复原，不等于任何一个年代的完整室内测绘。现存室内在1997年图书馆迁出、2000年大中庭改造、2013年关闭、2024年重新开放后经历多次功能变化；现状影像不能直接代表马克思所见的室内陈设。本地GLB是史料约束复原，不是现场扫描。",
+      "reference_url": "https://www.wrightandwright.co.uk/projects/the-round-reading-room-at-the-british-museum",
+      "reference_label": "圆形阅览室建筑与2024年重新开放说明",
+      "reference_note": "建筑师事务所介绍原建筑于1857年建成、1997年图书馆迁出、2013年关闭及2024年重新开放；页面提及原有桌椅与书架。该页是建筑与改造说明，不提供可下载的实测三维模型。",
+      "related_sources": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/A_Handbook_for_Readers_at_the_British_Museum._Thomas_Nichoals._%281868%29.pdf",
+          "label": "《大英博物馆读者手册》（1868）：阅览室直径与穹顶高度",
+          "note": "同期手册记载阅览室圆顶直径140英尺、地面至穹顶高106英尺。本地模型据此按约42.67米直径、32.31米高度重定总体比例；家具数量、桌位与书目陈列没有据此假造为精准历史布置。"
+        },
+        {
+          "url": "https://www.britishmuseum.org/sites/default/files/2022-03/Greek_Revival_simplicity_and_splendour_large_print_guide.pdf",
+          "label": "大英博物馆：Greek Revival 导览（PDF）",
+          "note": "馆方建筑史导览确认圆形阅览室由 Sydney Smirke 设计并于 1857 年开放；用于约束年代、圆形空间和穹顶结构，不作为历史室内扫描。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:The_interior_of_the_Reading_Room_of_the_British_Museum.jpg",
+          "label": "大英博物馆圆形阅览室现状照片 · CC0",
+          "note": "Robert-brook 于 2025-01-11 拍摄，文件页标注 CC0 1.0，含拍摄坐标与 EXIF。单张当代照片，不构成三维扫描或1850—60年代历史状态证明。"
+        },
+        {
+          "url": "https://www.wrightandwright.co.uk/projects/the-round-reading-room-at-the-british-museum",
+          "label": "圆形阅览室建筑师记录：1857—2024年功能变化",
+          "note": "建筑师事务所记录原建筑1857年开放、作为大英图书馆主要阅览室服务约140年、图书馆1997年迁出、2013年关闭，并于2024年重新向公众开放；这条功能时间线用于提示不同年代室内陈设不可混用。"
+        },
+        {
+          "url": "https://newart.city/catalog/museum-of-computational-image-artefacts-remote-access-room",
+          "label": "MoCIA：大英博物馆 Room 18（2022）摄影测量与LiDAR扫描目录记录",
+          "note": "此目录记录的是大英博物馆 Room 18 的现状扫描，地点不是圆形阅览室；页面未提供可再利用许可或可下载网格。它说明馆内存在其他房间的扫描记录，但不能作为本展项空间模型或阅览室扫描使用，因此仅列为排除项，不嵌入或复制。"
+        },
+        {
+          "url": "assets/scenes/sources/site-model-search-20261101.json",
+          "label": "大英博物馆阅览室公开三维模型检索（2026-11-01）",
+          "note": "记录未发现阅览室空间扫描，并排除被关键词误命中的亚述馆藏浮雕；另区分馆方 Second Life 教学模型档案。"
+        }
+      ],
+      "historical_phases": [
+        {
+          "date": "1857",
+          "title": "圆形阅览室开放",
+          "description": "Sydney Smirke设计的圆形阅览室投入使用，中心穹顶和环形阅读空间成为博物馆庭院的核心。马克思在伦敦居住期间使用大英博物馆图书馆；本模型只表达空间组织，未复原其具体座位或阅读瞬间。"
+        },
+        {
+          "date": "1997",
+          "title": "图书馆迁出",
+          "description": "大英图书馆迁往圣潘克拉斯后，阅览室不再承担原来的日常公共阅览功能。此后影像记录的家具、开放方式与使用人群，已与19世纪不同。"
+        },
+        {
+          "date": "2000",
+          "title": "纳入大中庭",
+          "description": "大中庭改造重新打开围绕阅览室的庭院空间，圆形阅览室与博物馆公共流线的关系发生变化。"
+        },
+        {
+          "date": "2013",
+          "title": "对公众关闭",
+          "description": "阅览室关闭并用于博物馆档案。约2006年全景记录的是这一时期前后的空间状态，不是马克思时代。"
+        },
+        {
+          "date": "2024",
+          "title": "重新开放",
+          "description": "经适应性改造后重新向访客开放，原有桌椅与书架再次成为参观体验的一部分。2025年照片属于这一当代阶段。"
+        }
+      ],
+      "reconstruction_basis": "已知：圆形阅览室直径140英尺、穹顶自地面高106英尺（1868年读者手册）；圆形平面、中心穹顶和环形阅览空间由馆方建筑导览、历史图像及现状影像交叉参照。模型外径约42.67米，顶部高度约32.31米。",
+      "reconstruction_uncertainty": "尺寸约束的是总体空间与穹顶高度，不代表已完成建筑级测绘。尚未取得马克思在场时期的房间级测绘与完整同期影像；具体座位、桌面物件、书目陈列、环形书架各层与窗格比例仍待档案核实。2006年全景与2025年照片属于不同功能阶段。馆方/建筑师目前没有公开可下载的室内实测网格。",
+      "model_disclaimer": "总体尺度按1868年记录重定比例的历史空间复原；家具和细部仍为教学示意。不是马克思使用时期的实景扫描，也不是建筑测绘级数字孪生。",
+      "camera_direction": [
+        0.45,
+        0.25,
+        1
+      ],
+      "source_image": "assets/scenes/sources/british_museum_reading_room_2025.jpg",
+      "source_image_alt": "大英博物馆圆形阅览室现状，Robert-brook 于 2025 年 1 月 11 日拍摄",
+      "source_image_caption": "现场参照照片：大英博物馆圆形阅览室，2025-01-11，Robert-brook，CC0 1.0。照片记录的是现状，非马克思时代影像，也不是三维扫描；用于核对圆形阅览空间及中心穹顶形态。",
+      "source_image_credit_url": "https://commons.wikimedia.org/wiki/File:The_interior_of_the_Reading_Room_of_the_British_Museum.jpg",
+      "evidence_galleries": [
+        {
+          "id": "reading-room-2006-panorama",
+          "title": "阅览室近180°实景全景 · 约 2006",
+          "source_url": "https://commons.wikimedia.org/wiki/File:British_Museum_Reading_Room_Panorama_Feb_2006.jpg",
+          "credit": "Diliff · CC BY-SA 3.0 / CC BY 2.5 · Wikimedia Commons",
+          "note": "Diliff 将2×5张照片拼接成近180°室内全景，约摄于2006年。实景全景，不是三维网格；记录的是2000年代阅览室状态，不是马克思时代的家具、书目或使用情境。可用于核对穹顶、环形书架和径向阅览空间。许可可选CC BY-SA 3.0或CC BY 2.5；图像经裁切/压缩时应标注修改。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/british_museum_reading_room_panorama_2006.jpg",
+              "label": "阅览室近180°全景 · Diliff · 2006"
+            }
+          ]
+        }
+      ],
+      "related_3d_models": [
+        {
+          "name": "大英博物馆圆形阅览室 · 近180°实景全景（约2006）",
+          "viewer_url": "reading-room-panorama.html",
+          "viewer_label": "进入阅览室实景全景浏览",
+          "model_url": "https://commons.wikimedia.org/wiki/File:British_Museum_Reading_Room_Panorama_Feb_2006.jpg",
+          "data_label": "原始全景影像与许可",
+          "credit": "Diliff · 2×5 张照片拼接 · 约2006年 · Wikimedia Commons",
+          "note": "本地交互浏览器展示来自Wikimedia Commons的近180°室内实景拼接照片。它记录约2006年的真实阅览室，而不是摄影测量模型、完整360°全景或马克思时期原状。",
+          "representation": "present-day-180-panorama",
+          "representation_label": "现状实景照片全景 · 近180° · 非三维扫描",
+          "license_status": "CC BY-SA 3.0（另提供CC BY 2.5选项）；摄影Diliff。图片由发布站远程提供，本地页面提供浏览控件。"
+        },
+        {
+          "name": "大英博物馆圆形阅览室 · 馆方教学3D数字表示",
+          "viewer_url": "https://dev.thecdm.ca/projects/archives/british-museum-reading-room",
+          "viewer_label": "查看历史3D项目档案说明",
+          "model_url": "https://dev.thecdm.ca/projects/archives/british-museum-reading-room",
+          "data_label": "项目档案页面与许可信息",
+          "credit": "British Museum 团队教学数字项目 · Centre for Digital Media 项目档案",
+          "note": "项目档案记载大英博物馆团队曾为线上学习制作 Second Life 阅览室数字场景；目前页面是项目记录，未发现仍可运行的交互模型，也未说明摄影测量方法、可下载网格或再利用许可。按钮因此指向项目说明，而不宣称可直接进入实时模型；它不能替代实景扫描或马克思时代陈设证据。",
+          "representation_label": "馆方教学3D表示 · 非扫描",
+          "license_status": "项目页面未给出可复用网格许可；本项目只链接原项目页面，不下载或镜像模型。"
+        },
+        {
+          "name": "大英博物馆馆舍外观 · Google Arts & Culture 3D模型（2021）",
+          "viewer_url": "https://artsandculture.google.com/asset/the-british-museum/mgEz-cliF7pv-A",
+          "viewer_label": "打开馆舍外观3D模型",
+          "model_url": "https://artsandculture.google.com/asset/the-british-museum/mgEz-cliF7pv-A",
+          "data_label": "查看作品版权与模型说明",
+          "credit": "Google Arts & Culture · © 2021 Google",
+          "note": "Google Arts & Culture页面提供伦敦大英博物馆馆舍外观的3D模型，可作为圆形阅览室所在建筑整体的现状空间参照；它不是圆形阅览室室内扫描，也不是马克思时代状态。只从发布平台打开，不下载或本地镜像。",
+          "representation_label": "平台三维模型 · 馆舍外观",
+          "license_status": "Google Arts & Culture 页面版权/平台条款适用；本项目仅外链在线查看，不下载或本地复制。"
+        },
+        {
+          "name": "大英博物馆馆内 · Google Arts & Culture交互漫游（现状）",
+          "viewer_url": "https://artsandculture.google.com/streetview/british-museum/AwEp68JO4NECkQ",
+          "viewer_label": "进入馆内360°漫游",
+          "model_url": "https://britishmuseum.withgoogle.com/",
+          "data_label": "查看大英博物馆官方虚拟访问入口 ↗",
+          "representation": "present-day-interior-360",
+          "credit": "大英博物馆虚拟访问 · Google Arts & Culture承载",
+          "note": "官方虚拟访问可交互漫游馆内空间；具体路线与房间覆盖以平台当前内容为准。若进入圆形阅览室，可观察其现状空间；这不是可下载的三维网格，也不是马克思使用时期或1857年原始陈设。",
+          "representation_label": "馆内360°漫游 · 现状",
+          "license_status": "Google Arts & Culture 托管内容；本项目仅外链漫游，不复制全景图像或重新发布。"
+        }
+      ],
+      "paired_scene_id": "british_museum_current_dsm"
+    },
+    {
+      "id": "british_museum_current_dsm",
+      "type": "scene",
+      "name": "大英博物馆 · 当代屋顶与地表实测 LiDAR",
+      "file": "british_museum_current_dsm.glb",
+      "previewClass": "archive",
+      "glyph": "⌂",
+      "representation": "present-day-lidar-surface",
+      "credit": "Environment Agency National LiDAR Programme · OGL 3.0",
+      "note": "这是大英博物馆周边500×500米的当代第一回波 LiDAR 数字表面模型：源数据1米分辨率，网格按2米采样，垂直比例未夸张。第一回波包含地面、建筑屋顶和植被顶部，提供真实地理位置与建筑上表面形状；它没有立面、窗户、室内和材质，不能替代阅览室内部模型。它与相邻的室内展陈复原形成“当代建筑外壳—历史阅览室空间”的同址对照。复合数据来自不同飞行批次，未将单一日期强加给所有像素。",
+      "reference_url": "https://environment.data.gov.uk/survey",
+      "reference_label": "英国环境署：全国 LiDAR 数据下载与产品说明",
+      "reference_note": "模型使用 TQ28se 与 TQ38sw 两个 5 km 网格的 Environment Agency First Return DSM 1 m GeoTIFF，依据英国国家格网 EPSG:27700 裁切。来源转换副本由 Source Cooperative 按原始开放政府许可提供；署名保留 Environment Agency。",
+      "paired_scene_id": "marx_reading_room",
+      "camera_direction": [
+        0.5,
+        0.75,
+        1
+      ],
+      "camera_focus_diameter": 5,
+      "related_sources": [
+        {
+          "url": "https://ckan.publishing.service.gov.uk/dataset/national-lidar-programme",
+          "label": "Environment Agency National LiDAR Programme · 产品、分辨率与数据范围",
+          "note": "官方目录说明全国1米空间分辨率、5 km分块，提供点云、数字表面模型与数字地形模型；DSM包含地面及表面物体。本场景采用 First Return DSM，反映屋顶和植被顶面，不是立面或室内扫描。"
+        },
+        {
+          "url": "https://experience.arcgis.com/experience/753ad2ebd3554fa696885b8c366c3049/page/Home/?views=2022-2m-Layers%2CNational-LIDAR-Programme",
+          "label": "Environment Agency Geomatics Hub · 开放许可与署名要求",
+          "note": "环境署说明其国家测绘数据在开放政府许可下免费使用，并要求使用时确认署名。"
+        },
+        {
+          "url": "https://source.coop/rebalance-earth/ea-dem/ea-lidar-fz-dsm-1m.json",
+          "label": "Source Cooperative · 环境署 1米第一回波 DSM 转换目录",
+          "note": "本地生成器使用公开转换后的 Cloud Optimized GeoTIFF 两个相邻图幅；原始来源为 Environment Agency，转换副本也采用 OGL。"
+        },
+        {
+          "url": "assets/scenes/sources/british-museum-current-dsm.json",
+          "label": "本地模型处理参数、图幅与时间边界",
+          "note": "包含裁切中心、相邻图幅、许可、分辨率、采样间距、转换脚本与DSM不包含立面/室内的限制。复合图幅的具体飞行日期未确认。"
+        }
+      ]
+    },
+    {
+      "id": "commune_notice_room",
+      "type": "scene",
+      "name": "巴黎市政厅 · 重建后现存室内（公社时期空间待考）",
+      "file": null,
+      "previewClass": "notice",
+      "glyph": "▧",
+      "representation": "present-day-interior-360",
+      "credit": "巴黎市政府提供的重建后市政厅 Street View · Google Arts & Culture 承载",
+      "note": "已撤下无法由史料验证的会议室概念模型。本条现在只提供巴黎市政厅火灾后重建建筑的现存室内全景漫游，供观察同址空间如何更替；它不是 1871 年旧楼扫描，也不能定位公社的具体会议室或公告位置。",
+      "reference_url": "https://catzarts.beauxartsparis.fr/fr/notice/ph-18473-projet-de-reconstruction-de-l-hotel-de-ville-de-paris-1355cda0-e134-43ee-9314-1ba0c01e049c",
+      "reference_label": "巴黎美术学院：市政厅重建图纸档案",
+      "reference_note": "可用于核对火灾后的重建图纸；它不是旧市政厅内部实测资料。",
+      "reconstruction_basis": "巴黎市政府说明，现存市政厅内部可通过 Street View 从广场进入并切换楼层；室内装饰为 1871 年火灾后的重建设计。",
+      "reconstruction_uncertainty": "公社时期会议室确切位置、房间尺寸、内部陈设和告示张贴位置尚无直接证据；现状全景不得外推为旧楼内部复原。",
+      "model_disclaimer": "本条不再展示推测性室内几何。所链接全景是火灾后重建建筑的现状影像漫游，不是 1871 年旧市政厅扫描。",
+      "camera_direction": [
+        0.3,
+        0.28,
+        -1
+      ],
+      "related_sources": [
+        {
+          "url": "https://archives.paris.fr/offre-pedagogique/ressources-pedagogiques/la-commune-de-paris",
+          "label": "巴黎档案馆：巴黎公社教育资源",
+          "note": "可查1871年巴黎地图、时间线、信件、行政文件、版画、照片和平面图；目前尚未找到可定位具体会议室的同期材料。"
+        },
+        {
+          "url": "https://catzarts.beauxartsparis.fr/fr/notice/ph-18473-projet-de-reconstruction-de-l-hotel-de-ville-de-paris-1355cda0-e134-43ee-9314-1ba0c01e049c",
+          "label": "巴黎美术学院：旧市政厅火灾后重建设计图纸",
+          "note": "仅用于核对火灾后的新楼设计；不作为旧市政厅内部或公社会议室的直接证据。"
+        },
+        {
+          "url": "https://www.paris.fr/pages/visiter-l-hotel-de-ville-2316",
+          "label": "巴黎市政府：市政厅官方室内虚拟漫游",
+          "note": "巴黎市政府说明，官方 Street View 漫游可以从广场进入市政厅并切换楼层；页面指出内部装饰是在1871年公社火灾后重建的。它只用于观察重建后的同址空间，不证明公社时期会议室布局。"
+        },
+        {
+          "url": "https://www.detour-promenades.fr/parcours/c800HuMCeunVBKfKq9fg",
+          "label": "CAUE de Paris：市政厅重建后空间与Place de Grève历史互动导览",
+          "note": "巴黎建筑、城市与环境委员会的线上导览，页面列出九个空间节点，提供地图Satellite/3D切换、现状厅室图像与历史图版；第九站包含1871年火灾与重建沿革、1919年市政厅后方选举海报等资料。图像由CAUE、巴黎市政府及BHVP等供图，版权按原图注。它提供的是现状空间导览与历史证据，不是旧市政厅实景扫描。"
+        }
+      ],
+      "related_3d_models": [
+        {
+          "name": "巴黎市政厅现存重建建筑 · 摄影测量扫描（1871年后）",
+          "embed_url": "https://sketchfab.com/models/f4fcf806935a43028c67d2a3450fd88a/embed?ui_theme=light",
+          "model_url": "https://sketchfab.com/3d-models/hotel-de-ville-f4fcf806935a43028c67d2a3450fd88a",
+          "action_label": "打开同址现状摄影测量扫描",
+          "credit": "现存建筑摄影测量 · 巴黎市政厅 · 作者 M. Dailly",
+          "note": "这是火灾后重建的现存市政厅建筑扫描，显示同一市政地块的当代建筑外观。它不是公社时期旧楼，也不包含旧市政厅的会议室内部；仅作地点与建筑更替对照。",
+          "representation_label": "当代建筑摄影测量 · 1871年后重建",
+          "license_status": "来源页许可未能独立核验；仅提供 Sketchfab 原站嵌入，不下载、复制或重新分发网格。"
+        },
+        {
+          "name": "巴黎市政厅周边 · IGN LiDAR HD 当代点云",
+          "viewer_url": "https://romain974.github.io/lidar-viewer/",
+          "model_url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+          "credit": "法国国家地理与森林信息研究所（IGN）· Licence Ouverte 2.0",
+          "note": "公开机载 LiDAR 测量的巴黎现状地表与屋顶，用于同址城市环境对照；不含室内、不是旧楼扫描。",
+          "inline_lidar": {
+            "center": [
+              2.3522,
+              48.8566
+            ],
+            "span": 240
+          },
+          "representation_label": "当代 LiDAR 点云 · 室外",
+          "license_status": "Licence Ouverte 2.0；公开数据可按该许可复用，需保留 IGN 与数据集署名。",
+          "viewer_label": "在开源 LiDAR HD 查看器中按地址搜索点云 ↗"
+        },
+        {
+          "name": "巴黎市政厅内部 · 官方 Street View 漫游（1871年后重建）",
+          "title": "巴黎市政厅重建后内部空间 · 多层全景漫游",
+          "representation": "present-day-interior-360",
+          "viewer_url": "https://artsandculture.google.com/asset/mairie-de-paris/VAG9RpzXn9ijjA",
+          "viewer_label": "打开市政厅内部多层全景漫游",
+          "model_url": "https://www.paris.fr/pages/visiter-l-hotel-de-ville-2316",
+          "data_label": "巴黎市政府：漫游说明与建筑年代 ↗",
+          "credit": "Ville de Paris 提供入口 · Google Arts & Culture 承载 Street View",
+          "note": "可由广场进入市政厅内部并通过楼层菜单切换。巴黎市政府说明，现存室内装饰是在1871年公社火灾后重建的。这是重建后同址建筑的全景漫游，不是可下载网格，不是旧市政厅，也不能用来推断公社时期具体会议室位置或陈设。",
+          "representation_label": "馆内360°漫游 · 1871年后重建",
+          "license_status": "巴黎市政府/Google Arts & Culture 托管内容；本项目仅外链查看，不下载或复制全景。"
+        },
+        {
+          "id": "paris-hotel-de-ville-caue-interactive-tour",
+          "name": "巴黎市政厅重建后现状 · CAUE互动空间史导览",
+          "title": "在巴黎市政厅厅室与Place de Grève史料之间漫游",
+          "representation": "present-day-interactive-tour",
+          "viewer_url": "https://www.detour-promenades.fr/parcours/c800HuMCeunVBKfKq9fg",
+          "viewer_label": "打开巴黎建筑委员会互动导览 ↗",
+          "model_url": "https://www.detour-promenades.fr/parcours/c800HuMCeunVBKfKq9fg",
+          "data_label": "导览内容与图像署名 ↗",
+          "credit": "CAUE de Paris / Détour · 图像署名见原页面各图注",
+          "note": "CAUE de Paris 的互动步行导览含地图（可切换“3D”视图）、厅室图像与分站说明，覆盖荣誉楼梯、拱廊沙龙、节庆大厅、市政会议厅、市长办公室及前庭等。页面讨论1871年火灾后重建、现存建筑内部沿革，并展示1919年市政厅后方选举海报照片等资料。它是现存重建建筑的互动图文导览，不是可下载的摄影测量网格，也不是公社时期旧市政厅或其室内扫描。",
+          "representation_label": "现存重建建筑互动导览 · 含历史图版，非旧楼扫描",
+          "license_status": "仅链接CAUE原站；图像与档案图版版权/许可依原页面署名，展馆不下载或复制。"
+        }
+      ]
+    },
+    {
+      "id": "memory_archive_hall",
+      "type": "scene",
+      "name": "斯莫尔尼宫 · 1917 年革命总部",
+      "file": "memory_archive_hall.glb",
+      "previewClass": "archive",
+      "glyph": "✧",
+      "representation": "historical-reconstruction",
+      "credit": "斯莫尔尼学院现存主楼 · 历史复原模型；尚无合格全楼扫描",
+      "note": "本地模型为斯莫尔尼学院主楼的可交互新古典建筑复原，按二级建筑史资料所记超过220米的长立面重做总体尺度，呈现三层长翼、中央八柱门廊、山花和重复窗列。夸伦吉1806—1808年原图与现状照片约束门廊和立面构图；2026年现状与1917年园林、入口不同，模型不把后来纪念景观放进革命总部现场。模型不是主楼实扫；建筑深度、各层净高、窗湾间距及内部仍缺可核验测绘资料。相邻大教堂扫描不用于替代学院。",
+      "reference_url": "https://visit-petersburg.ru/en/leisure/places/tp-194704-smolnyy-institut-blagorodnykh-devits/",
+      "reference_label": "圣彼得堡官方旅游网：斯莫尔尼学院、革命总部与现用建筑沿革",
+      "reference_note": "资料说明现楼为圣彼得堡政府使用；1917年曾作为十月革命筹备总部，11月全俄苏维埃代表大会在此召开。相邻斯莫尔尼大教堂是不同建筑，不用其扫描替代学院主楼。",
+      "related_sources": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Quarenghi_smolny.jpg",
+          "label": "夸伦吉：斯莫尔尼学院主立面局部与墙体详图 · 艾尔米塔什藏",
+          "note": "原图约作于1806—1808年，艾尔米塔什藏，馆藏编号ОР-9648；Commons标注Public Domain Mark。图像只覆盖主立面中部和墙体详图，不是完整平面图；用来约束门廊和立面构成，不证明1917年内部陈设。"
+        },
+        {
+          "url": "https://www.encspb.ru/object/2855701438?dv=2853872334&lc=en",
+          "label": "圣彼得堡百科：建筑年代、八柱门廊与1917年使用史",
+          "note": "资料记载主楼由夸伦吉设计于1806—1808年、中央门廊为八柱；1917年后由党政机关使用。建筑史记录用于复核门廊柱数和功能沿革，不提供可下载扫描网格。"
+        },
+        {
+          "url": "https://www.geohyst.ru/index.php/node/8518",
+          "label": "斯莫尔尼建筑沿革资料：主楼立面长度超过220米",
+          "note": "二级建筑史资料称1806—1808年建成的学院主楼沿立面长逾220米、三层。本模型用220米作为近似整体长度约束，仍不把该二级来源当作竣工图；深度和内部平面待档案测绘。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:0410Ca._Saint_Petersburg._Main_building_of_the_Smolny_Institute.jpg",
+          "label": "斯莫尔尼学院主楼现状照片 · Wikimedia Commons",
+          "note": "作者 Александровы АГ，2023-06-10，CC BY-SA 4.0；只证明当前外观，不代表 1917 年历史复原。"
+        },
+        {
+          "url": "https://www.marx-memorial-library.org.uk/project/russian-revolution/smolny-institute-soviet-headquarters",
+          "label": "Marx Memorial Library · 斯莫尔尼苏维埃总部",
+          "note": "用于核对 1917 年总部地点与历史背景；不提供建筑扫描文件。"
+        },
+        {
+          "url": "https://smolny-museum.ru/contacts_sm",
+          "label": "斯莫尔尼博物馆官方：现址与入内规定",
+          "note": "馆方确认博物馆位于斯莫尔尼主楼内，建筑同时作为圣彼得堡政府办公地点；仅提供预约带队参观，受安全管理限制。当前未发现馆方公开的主楼室内三维扫描，因此此处保留可核验的外观史料复原，并将现状花园全景作为外部对照。"
+        },
+        {
+          "url": "https://smolny-museum.ru/tours_sm",
+          "label": "斯莫尔尼博物馆官方：参观路线与可见历史空间",
+          "note": "馆方介绍参观者可进入历史大会堂、列宁办公室及其住所等展陈空间。该网页证明这些室内空间可在受限导览中现场观看，但没有提供360°全景、摄影测量数据或可下载三维网格；因此仅作为空间功能与实地访问限制的证据，不等于公开室内扫描。"
+        },
+        {
+          "url": "https://photogrammetria.ru/358-geodezicheskie-i-fotogrammetricheskie-obmery-smolnogo-sobora-i-ego-maketa.html",
+          "label": "斯莫尔尼大教堂激光扫描项目报告（不是学院主楼）",
+          "note": "专业测绘公司记录2020年对相邻斯莫尔尼大教堂进行地面激光扫描，并生成高/中精度OBJ多边形模型；合同成果交付委托方，页面未提供模型下载。该报告证明大教堂已有实测成果，但对象不是斯莫尔尼学院主楼，不能拿来冒充革命总部建筑的扫描。"
+        },
+        {
+          "url": "https://photogrammetria.ru/204-polnyy-perechen-obektov-za-period-s-2008-po-2018-god.html",
+          "label": "斯莫尔尼大会堂建筑测绘项目记录（2018；同址内部测绘线索）",
+          "note": "测绘公司项目清单第341项记载：2018年2月对地址为圣彼得堡 Smolny proezd 1, lit. B 的斯莫尔尼修道院文物建筑大会堂进行建筑测量。该地址与斯莫尔尼学院主楼/博物馆所在建筑相符，但清单没有公开测绘成果、点云或网格下载；目前只作为申请核实数据可用性的档案线索，没有把任何测绘内容混入本地GLB。"
+        },
+        {
+          "url": "https://smolny-museum.ru/contacts",
+          "label": "斯莫尔尼博物馆官方地址（核对2018测绘地点）",
+          "note": "馆方地址为 Smolny proezd 1, lit. B。与测绘公司2018年大会堂项目清单所列地址相符，可支持同址判断；不证明两份资料对应同一房间，也不提供扫描文件。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Parterre_Garden_of_Smolny_Institute_2016-06_1465028778.jpg",
+          "label": "Wikimedia Commons：斯莫尔尼学院花园360°全景原始文件",
+          "note": "Artem Svetlov，拍摄于2016-06-04，5376×2688，CC BY 4.0。分类标记为360° panorama；拍摄坐标 59.946636, 30.393703。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%B0_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_2022_01.jpg",
+          "label": "斯莫尔尼主楼横向端立面照片 · 2022-07-26",
+          "note": "作者 Никонико962；Wikimedia Commons 标注 CC BY-SA 4.0。馆藏说明定位为主楼 Smolny proezd 1B。此单张现状照补充端立面细节，不是1917年史料或建筑扫描；重采样图像保留原作者、来源和相同许可。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%B0_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_2022_02.jpg",
+          "label": "斯莫尔尼主楼侧立面转角照片 · 2022-07-26",
+          "note": "作者 Никонико962；Wikimedia Commons 标注 CC BY-SA 4.0。馆藏说明定位为主楼 Smolny proezd 1B。画面补充现状侧立面和端立面交接关系，不是1917年史料或建筑扫描；重采样图像保留原作者、来源和相同许可。"
+        },
+        {
+          "url": "assets/scenes/sources/smolny-institute/photogrammetry-assessment.json",
+          "label": "主楼多视角照片摄影测量试建评估",
+          "note": "在原17张许可照片基础上，又加入两张2022年同日、同址侧立面照片做追加试算。19张照片自动相机分组仍仅注册2张、得到31个稀疏点；新增照片相互间56个几何内点的配对无法独立初始化成模型。未形成可用全楼网格。详细参数和逐张来源见评估记录。"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D1%81%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D0%B8%D1%86%D1%8B_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%B2%D0%B8%D1%86_%D0%BD%D0%B0_%D1%83%D1%80%D0%BE%D0%BA%D0%B5_%D1%82%D0%B0%D0%BD%D1%86%D0%B5%D0%B2.jpg",
+          "label": "Karl Bulla：斯莫尔尼学院1913年舞蹈课室内照片",
+          "note": "Wikimedia Commons记录拍摄时间为1913年、作者Karl Bulla，标记Public Domain Mark；画面属于女校舞蹈课，未被识别为革命大会堂或列宁办公室。只作为同一建筑群的革命前室内参照。"
+        },
+        {
+          "url": "assets/scenes/sources/site-model-search-20261101.json",
+          "label": "斯莫尔尼学院公开三维模型检索（2026-11-01）",
+          "note": "记录本次未发现斯莫尔尼主楼或大会堂公开扫描；已有专业测绘项目未公开交付网格。"
+        }
+      ],
+      "reconstruction_basis": "有据：夸伦吉1806—1808年原图（艾尔米塔什藏ОР-9648）约束主立面中部和墙体详图；圣彼得堡建筑资料记录中央八柱门廊；二级建筑史资料报称主楼立面长度超过220米，模型据此用220米近似尺度生成长翼；2017、2023、2026年现状照片核对可见外观。",
+      "reconstruction_uncertainty": "超过220米的长度来自二级资料，而非竣工测绘；主楼深度、层高、窗湾精确间距与侧后立面仍无可核验平立剖面。摄影测量未形成连通网络，故没有发布为实扫。室内、1917年家具与使用布局未知；今日前庭的门廊、纪念物和喷泉部分建于1917年后，不放入革命总部时期模型。",
+      "historical_phases": [
+        {
+          "date": "1806–1808",
+          "title": "夸伦吉设计并建成主楼",
+          "description": "主楼采用严格古典主义构图，中央八柱门廊成为立面焦点。现存的夸伦吉原图只覆盖主立面中段与墙体详图，不能单独复原整栋楼。"
+        },
+        {
+          "date": "1917",
+          "title": "革命总部与苏维埃活动",
+          "description": "斯莫尔尼主楼成为革命筹备和党政活动中心。此处重点是既有建筑被重新使用；模型不声称掌握当年具体房间的家具和逐日布置。"
+        },
+        {
+          "date": "1923–1924",
+          "title": "入口与花园改造",
+          "description": "建筑史资料记载，面向广场的入口增设前柱门廊，花园也经过重新栽植。这些改造晚于1917年，不能直接放进革命现场画面。"
+        },
+        {
+          "date": "1927",
+          "title": "列宁纪念像设置",
+          "description": "入口前设置列宁纪念像，属于后来的纪念景观，不是1917年总部现场的一部分。"
+        },
+        {
+          "date": "1933–1934",
+          "title": "花园增设喷泉",
+          "description": "花园喷泉形成于1930年代；现状花园全景记录的是更晚的景观阶段。"
+        },
+        {
+          "date": "1991—今天",
+          "title": "政府办公与预约参观",
+          "description": "主楼继续承担政府办公等用途，馆方参观受预约和带队安排限制。受限开放也解释了为什么当前缺少可公开下载的室内实测扫描。"
+        }
+      ],
+      "model_disclaimer": "立面长度按历史建筑资料所述逾220米做近似比例复原；中央八柱和立面构图有图纸/建筑史依据，层高、窗湾、建筑深度、后立面和内部仍为示意，不是主楼实景扫描。相邻斯莫尔尼大教堂扫描不代表此建筑。",
+      "camera_direction": [
+        0.35,
+        0.28,
+        -1
+      ],
+      "source_image": "assets/scenes/sources/smolny-institute/smolny-main-2017-front-01.jpg",
+      "source_image_alt": "斯莫尔尼学院主楼现状正立面，GAlexandrova 于 2017 年拍摄",
+      "source_image_caption": "现存主楼正立面照片：GAlexandrova，2017-04-28，CC BY-SA 4.0。它用于核对外观比例，不是 1917 年扫描、室内扫描或完整摄影测量模型。",
+      "source_image_credit_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny.jpg",
+      "evidence_galleries": [
+        {
+          "id": "smolny-institute-interior-bulla-1913",
+          "title": "革命前斯莫尔尼女校内部 · Karl Bulla 1913–1914",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D1%81%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D0%B8%D1%86%D1%8B_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%B2%D0%B8%D1%86_%D0%BD%D0%B0_%D1%83%D1%80%D0%BE%D0%BA%D0%B5_%D1%82%D0%B0%D0%BD%D1%86%D0%B5%D0%B2.jpg",
+          "credit": "Karl Bulla · 1913–1914 · Wikimedia Commons · Public Domain Mark",
+          "note": "四张馆藏照片分别记录舞蹈课（1913）、餐厅（1913）、课堂（约1913—1914）和宿舍（1914）。它们呈现革命前女校时期真实的室内活动与空间，但没有一张被识别为1917年大会堂、列宁办公室或革命会议现场；因此只作为同一建筑机构的前史参照，不据此推算革命总部房间平面。Commons 文件页均标注 Public Domain。",
+          "images": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/6/62/%D0%92%D0%BE%D1%81%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D0%B8%D1%86%D1%8B_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%B2%D0%B8%D1%86_%D0%BD%D0%B0_%D1%83%D1%80%D0%BE%D0%BA%D0%B5_%D1%82%D0%B0%D0%BD%D1%86%D0%B5%D0%B2.jpg",
+              "label": "斯莫尔尼学院舞蹈课 · Karl Bulla · 1913 · 2903×1924",
+              "source_url": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D1%81%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D0%B8%D1%86%D1%8B_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%B2%D0%B8%D1%86_%D0%BD%D0%B0_%D1%83%D1%80%D0%BE%D0%BA%D0%B5_%D1%82%D0%B0%D0%BD%D1%86%D0%B5%D0%B2.jpg"
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Smolny_Institute%2C_the_dining_room.jpg",
+              "label": "斯莫尔尼女校餐厅 · Karl Bulla · 1913 · 600×405",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Smolny_Institute,_the_dining_room.jpg"
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/2/21/Smolny_Institute%2C_a_lesson.jpg",
+              "label": "斯莫尔尼女校课堂 · Karl Bulla · 1913–1914 · 600×383",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Smolny_Institute,_a_lesson.jpg"
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/8/86/Smolny_Institute%2C_dormitory.jpg",
+              "label": "斯莫尔尼女校宿舍 · Karl Bulla · 1914 · 600×407",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Smolny_Institute,_dormitory.jpg"
+            }
+          ]
+        },
+        {
+          "id": "commons-2011",
+          "title": "2011 年 · 主楼冬季与春季外观",
+          "source_url": "https://commons.wikimedia.org/wiki/File%3ASG106109.JPG",
+          "credit": "Flying Russian、MartinPutz · Wikimedia Commons · CC BY-SA 3.0；本地展示使用缩图，保留原始署名与许可链接。",
+          "note": "当代建筑外观证据；非1917年现场照片，也不是三维扫描。不同相机位置、拍摄日期与焦距未完整记录，不能仅据此生成可验证的全楼摄影测量网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/31c8a7ce3d.jpg",
+              "label": "SG106109.JPG · 2011-04-24",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3ASG106109.JPG"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/14527f4331.jpg",
+              "label": "SG106115.JPG · 2011-04-24",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3ASG106115.JPG"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/9f63c3d3e7.jpg",
+              "label": "SG106116.JPG · 2011-04-24",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3ASG106116.JPG"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/ae46c39824.jpg",
+              "label": "SmolniyInstitute100.jpg · 2011-03-12",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3ASmolniyInstitute100.jpg"
+            }
+          ]
+        },
+        {
+          "id": "commons-2017",
+          "title": "2017 年 · 主楼及临街长翼",
+          "source_url": "https://commons.wikimedia.org/wiki/File%3A5380._St._Petersburg._Smolny_Prospect%2C_8.jpg",
+          "credit": "GAlexandrova · Wikimedia Commons · CC BY-SA 4.0；本地展示使用缩图，保留原始署名与许可链接。",
+          "note": "当代建筑外观证据；非1917年现场照片，也不是三维扫描。不同相机位置、拍摄日期与焦距未完整记录，不能仅据此生成可验证的全楼摄影测量网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/a23856dc83.jpg",
+              "label": "5380. St. Petersburg. Smolny Prospect, 8.jpg · 2017-04-28",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A5380._St._Petersburg._Smolny_Prospect%2C_8.jpg"
+            }
+          ]
+        },
+        {
+          "id": "commons-2019",
+          "title": "2019 年 · 主立面与花园视角",
+          "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B5_%D0%92%D0%BE%D1%81%D0%BF%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%B2%D0%B8%D1%86_%28%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%29_2H1A4117WI.jpg",
+          "credit": "Kora27 · Wikimedia Commons · CC BY-SA 4.0；本地展示使用缩图，保留原始署名与许可链接。",
+          "note": "当代建筑外观证据；非1917年现场照片，也不是三维扫描。不同相机位置、拍摄日期与焦距未完整记录，不能仅据此生成可验证的全楼摄影测量网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/446465ad90.jpg",
+              "label": "Императорское Воспитательное общество благородных девиц (Смольный институт) 2H1A4117WI.jpg · 2019-06-08",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B5_%D0%92%D0%BE%D1%81%D0%BF%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%B2%D0%B8%D1%86_%28%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%29_2H1A4117WI.jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/a6adccdf93.jpg",
+              "label": "Императорское Воспитательное общество благородных девиц (Смольный институт) 2H1A4119WI.jpg · 2019-06-08",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B5_%D0%92%D0%BE%D1%81%D0%BF%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D1%85_%D0%B4%D0%B5%D0%B2%D0%B8%D1%86_%28%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%29_2H1A4119WI.jpg"
+            }
+          ]
+        },
+        {
+          "id": "commons-2023",
+          "title": "2023 年 · 主楼与俯瞰视角",
+          "source_url": "https://commons.wikimedia.org/wiki/File%3A0410Ca._Saint_Petersburg._Main_building_of_the_Smolny_Institute.jpg",
+          "credit": "Александровы АГ · Wikimedia Commons · CC BY-SA 4.0；本地展示使用缩图，保留原始署名与许可链接。",
+          "note": "当代建筑外观证据；非1917年现场照片，也不是三维扫描。不同相机位置、拍摄日期与焦距未完整记录，不能仅据此生成可验证的全楼摄影测量网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/8b0e06010a.jpg",
+              "label": "0410Ca. Saint Petersburg. Main building of the Smolny Institute.jpg · 2023-06-10",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A0410Ca._Saint_Petersburg._Main_building_of_the_Smolny_Institute.jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/dd4d53970c.jpg",
+              "label": "0415Ca. Saint Petersburg. Smolny Institute.jpg · 2023-06-10",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A0415Ca._Saint_Petersburg._Smolny_Institute.jpg"
+            }
+          ]
+        },
+        {
+          "id": "commons-202603",
+          "title": "2026 年 3 月 · 主立面细部",
+          "source_url": "https://commons.wikimedia.org/wiki/File%3A0431Ha._Saint_Petersburg._Main_building_of_the_Smolny_Institute.jpg",
+          "credit": "Александровы АГ · Wikimedia Commons · CC BY-SA 4.0；本地展示使用缩图，保留原始署名与许可链接。",
+          "note": "当代建筑外观证据；非1917年现场照片，也不是三维扫描。不同相机位置、拍摄日期与焦距未完整记录，不能仅据此生成可验证的全楼摄影测量网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/985fa27d22.jpg",
+              "label": "0431Ha. Saint Petersburg. Main building of the Smolny Institute.jpg · 2026-03-22",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A0431Ha._Saint_Petersburg._Main_building_of_the_Smolny_Institute.jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/69d502532d.jpg",
+              "label": "0680Ha. Saint Petersburg. Main building of the Smolny Institute.jpg · 2026-03-22",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A0680Ha._Saint_Petersburg._Main_building_of_the_Smolny_Institute.jpg"
+            }
+          ]
+        },
+        {
+          "id": "commons-202605",
+          "title": "2026 年 5 月 · 主立面与前庭",
+          "source_url": "https://commons.wikimedia.org/wiki/File%3ASmolny_Institute_in_Saint_Petersburg_%28May_2026%29.jpg",
+          "credit": "Vyacheslav Bukharov、Екатерина Борисова · Wikimedia Commons · CC BY-SA 4.0；本地展示使用缩图，保留原始署名与许可链接。",
+          "note": "当代建筑外观证据；非1917年现场照片，也不是三维扫描。不同相机位置、拍摄日期与焦距未完整记录，不能仅据此生成可验证的全楼摄影测量网格。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/36e99848dc.jpg",
+              "label": "Smolny Institute in Saint Petersburg (May 2026).jpg · 2026-05-17",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3ASmolny_Institute_in_Saint_Petersburg_%28May_2026%29.jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/candidate-photos/b867122176.jpg",
+              "label": "Смольный, май 2026 01.jpg · 2026-05-03",
+              "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%2C_%D0%BC%D0%B0%D0%B9_2026_01.jpg"
+            }
+          ]
+        },
+        {
+          "id": "smolny-exterior-2026",
+          "title": "斯莫尔尼学院主楼 · 现状外观影像（2026）",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9,_%D0%BC%D0%B0%D0%B9_2026_01.jpg",
+          "credit": "Екатерина Борисова · CC BY-SA 4.0 · Wikimedia Commons",
+          "note": "两张照片于2026年5月3日拍摄，分别使用不同焦距，可核对现存主楼入口、立面与屋顶轮廓。它们是建筑现状照片，不是摄影测量数据；没有足够重叠视角来生成可信网格，也不能证明1917年内部陈设。",
+          "images": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%2C%20%D0%BC%D0%B0%D0%B9%202026%2001.jpg?width=1280",
+              "label": "主楼外观 · 2026-05-03 · 4870×3636 · 约282mm等效焦距",
+              "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9,_%D0%BC%D0%B0%D0%B9_2026_01.jpg"
+            },
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%2C%20%D0%BC%D0%B0%D0%B9%202026%2002.jpg?width=1280",
+              "label": "主楼外观 · 2026-05-03 · 4411×3306 · 24mm等效焦距",
+              "source_url": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9,_%D0%BC%D0%B0%D0%B9_2026_02.jpg"
+            }
+          ]
+        },
+        {
+          "id": "smolny-historic-interior-scenes",
+          "title": "斯莫尔尼学院历史室内影像 · 未定年照片（展陈/室内场景）",
+          "source_url": "https://commons.wikimedia.org/wiki/Category:Historical_images_of_interior_of_Smolny_Institute",
+          "credit": "Russischer Photograph · Zeno Fotografie / Wikimedia Commons · Public Domain（图像）；图像集编纂标注 GNU FDL",
+          "note": "Commons 将这组照片归入斯莫尔尼学院历史室内影像，原始条目只标注“场景”、拍摄日期未知。它们可作为空间氛围与室内构件的史料线索，但不能据此认定为1917年大会堂、列宁办公室或某个确定房间，也没有视角重叠和尺度数据，不能生成实测三维模型。点击单张可查看原始馆藏说明与许可。",
+          "images": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/3/33/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%281%29_%28Zeno_Fotografie%29.jpg",
+              "label": "历史室内场景照片 1 · 日期与房间未考定",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(1)_(Zeno_Fotografie).jpg"
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%282%29_%28Zeno_Fotografie%29.jpg",
+              "label": "历史室内场景照片 2 · 日期与房间未考定",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(2)_(Zeno_Fotografie).jpg"
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%283%29_%28Zeno_Fotografie%29.jpg",
+              "label": "历史室内场景照片 3 · 日期与房间未考定",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(3)_(Zeno_Fotografie).jpg"
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_%284%29_%28Zeno_Fotografie%29.jpg",
+              "label": "历史室内场景照片 4 · 日期与房间未考定",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Russischer_Photograph_-_Szene_aus_dem_Smolny-Institut_(4)_(Zeno_Fotografie).jpg"
+            }
+          ]
+        },
+        {
+          "id": "smolny-main-building-2017",
+          "title": "斯莫尔尼学院主楼 · 多角度现状照片（2017）",
+          "source_url": "https://commons.wikimedia.org/wiki/Category:Smolny_Institute",
+          "credit": "GAlexandrova · 2017-04-28 · CC BY-SA 4.0 · Wikimedia Commons",
+          "note": "四张同日多角度照片记录现存学院主楼外观，可对照立面和侧向体量。摄影测量试建中，8张照片仅有2组通过几何验证，无法形成连通相机网络，未得到稀疏模型；这些照片不是建筑扫描，也不代表1917年内部。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/smolny-main-2017-front-01.jpg",
+              "label": "主立面角度 1",
+              "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny.jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/smolny-main-2017-front-02.jpg",
+              "label": "主立面角度 2",
+              "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny_(2).jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/smolny-main-2017-side-01.jpg",
+              "label": "侧向立面角度 1",
+              "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny_(3).jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/smolny-main-2017-side-02.jpg",
+              "label": "侧向立面角度 2",
+              "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny_(4).jpg"
+            }
+          ]
+        },
+        {
+          "id": "smolny-quarenghi-design-1806",
+          "title": "夸伦吉原始设计 · 主立面中段与墙体详图（1806—1808）",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Quarenghi_smolny.jpg",
+          "credit": "Giacomo Quarenghi · State Hermitage · Public Domain Mark",
+          "note": "艾尔米塔什藏品ОР-9648。图纸是主立面中段及墙体详图，不是完整立面或全楼平面；它用于核对建筑设计细部，不能替代1917年现场扫描。",
+          "images": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Quarenghi_smolny.jpg/1280px-Quarenghi_smolny.jpg",
+              "label": "夸伦吉原图缩图 · 1,280 × 757 · PDM",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Quarenghi_smolny.jpg"
+            }
+          ]
+        },
+        {
+          "id": "smolny-current-side-facade-2022",
+          "title": "斯莫尔尼学院主楼 · 侧立面现状照片（2022-07-26）",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%B0_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_2022_01.jpg",
+          "credit": "Никонико962 · Wikimedia Commons · CC BY-SA 4.0",
+          "note": "两张同日照片从不同角度记录现存主楼端立面与侧立面转角。它们用于核对当前建筑构成，不证明1917年外观完全相同，也未生成可靠摄影测量网格。展馆显示的是Wikimedia缩放图，按CC BY-SA 4.0署名并保留相同许可。",
+          "images": [
+            {
+              "src": "assets/scenes/sources/smolny-institute/smolny-main-side-2022-01.jpg",
+              "label": "主楼横向端立面 · 2022-07-26 21:17 · 1920px署名图",
+              "source_url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%B0_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_2022_01.jpg"
+            },
+            {
+              "src": "assets/scenes/sources/smolny-institute/smolny-main-side-2022-02.jpg",
+              "label": "主楼侧立面与端部转角 · 2022-07-26 21:17 · 1920px署名图",
+              "source_url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%B0_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_2022_02.jpg"
+            }
+          ]
+        }
+      ],
+      "related_3d_models": [
+        {
+          "id": "smolny-parterre-360-2016",
+          "title": "斯莫尔尼学院 · 花园360°实景全景（2016）",
+          "representation": "present-day-360-panorama",
+          "viewer_url": "smolny-panorama.html",
+          "viewer_label": "进入斯莫尔尼花园360°实景漫游",
+          "model_url": "https://commons.wikimedia.org/wiki/File:Parterre_Garden_of_Smolny_Institute_2016-06_1465028778.jpg",
+          "data_label": "摄影者与许可（CC BY 4.0）",
+          "image_url": "assets/scenes/smolny-parterre-360.jpg",
+          "credit": "Artem Svetlov · 2016-06-04 · CC BY 4.0",
+          "note": "这是斯莫尔尼学院花园的360°等距柱状全景照片，可拖动环视现状花园。拍摄坐标 59.946636, 30.393703。它记录的是2016年花园实景，不是1917年室内扫描或革命时期的建筑状态；不能据此推断建筑内部或被遮挡区域。",
+          "name": "斯莫尔尼学院 · 花园360°实景全景（2016）",
+          "representation_label": "现状360°全景照片 · 花园",
+          "license_status": "CC BY 4.0；随展馆本地展示时保留 Artem Svetlov 作者署名、来源页与许可链接。"
+        },
+        {
+          "id": "smolny-current-site-google-earth",
+          "name": "斯莫尔尼学院主楼 · Google Earth 现状三维地理影像",
+          "viewer_url": "https://earth.google.com/web/search/Smolny+Institute,+Saint+Petersburg",
+          "model_url": "https://earth.google.com/",
+          "viewer_label": "打开斯莫尔尼学院现址三维地图 ↗",
+          "credit": "Google Earth · 在线地图与三维影像服务",
+          "note": "用于查看斯莫尔尼学院主楼及周边现状。可用三维影像覆盖、影像日期与建筑细节依平台数据而异；不是1917年室内扫描或历史模型。",
+          "representation_label": "现址三维地图 · 覆盖随地区变化",
+          "license_status": "仅打开 Google Earth 原站；不下载、复制或改编平台影像。"
+        }
+      ],
+      "camera_focus_diameter": 60,
+      "camera_note": "默认聚焦中央入口与相邻立面约60米段；滚轮可缩至全长，鼠标拖动可环绕与平移。此为视角配置，不改变模型的史料复原属性。"
+    }
+  ]
+}

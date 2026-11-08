@@ -1,0 +1,22 @@
+{
+  "item_id": "chartist_kennington_current_terrain",
+  "dataset": "Environment Agency LiDAR Composite Digital Terrain Model (DTM), 1 m",
+  "original_resolution_m": 1,
+  "display_mesh_sampling_m": 2,
+  "display_extent_m": 800,
+  "vertical_datum": "Ordnance Datum Newlyn",
+  "crs": "EPSG:27700",
+  "license": "Open Government Licence v3.0",
+  "producer": "Environment Agency",
+  "host": "Source Cooperative / Rebalance Earth",
+  "source_cog": "https://data.source.coop/rebalance-earth/ea-dem/DTM/DEFLATE/TQ37nw_DTM_1m.tif",
+  "source_catalog": "https://data.source.coop/rebalance-earth/ea-dem/ea-lidar-dtm-1m.json",
+  "official_dataset": "https://environment.data.gov.uk/dataset/13787b9a-26a4-4775-8523-806d13af58fc",
+  "coordinates_center_wgs84": [
+    -0.105,
+    51.48
+  ],
+  "processing_script": "scripts/build_kennington_lidar_terrain.py",
+  "processing": "1 m DTM subset to 800 m square; sampled at 2 m into textured-by-elevation GLB; vertical exaggeration 5x. No buildings, vegetation, or photographic texture.",
+  "historical_limit": "Contemporary terrain only; post-dates 1848 and cannot establish historic ground shape or assembly location."
+}

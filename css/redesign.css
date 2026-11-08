@@ -1,0 +1,256 @@
+/* redesign.css — 设计复审后的覆盖层
+ * 依据 anthropics/skills · frontend-design 的两遍法：
+ *   1) 用主题自身的材料（铅印、档案、青铜）定调，而不是套"米色+衬线+赭红"的默认皮；
+ *   2) 删掉被点名的模板痕迹：全大写字母间距 eyebrow、中点串、按钮尾巴的 →、逐节淡入。
+ * 只在 main.css 之后加载，用低特异度选择器覆盖，不动原结构。
+ */
+
+:root {
+  /* 令牌：取自 19 世纪铅印工坊与青铜锈色，不是通用米色方案 */
+  --ink:        #14120E;
+  --soot:       #12110E;
+  --newsprint:  #E7E0D1;
+  --patina:     #5F7B6C;   /* 铜绿：次级信息、链接 */
+  --vermilion:  #A8342A;   /* 印泥红：只用于印章与分隔线 */
+  --rule:       rgba(20, 18, 14, 0.16);
+  --rule-light: rgba(231, 224, 209, 0.18);
+
+  --measure: 34em;         /* 正文行宽上限，约 34 个汉字 × 2 */
+}
+
+/* ---------- 字体：两种，界限清楚 ---------- */
+body { font-family: var(--sans); }
+
+/* ---------- 章节头：把 eyebrow 换成"卷号侧栏 + 印章" ---------- */
+.chapter-head { position: relative; max-width: 46em; }
+
+/* 英文大写 eyebrow：整条隐藏（模板痕迹），由 JS 换成中文卷印 */
+.chapter-head .kicker--off { display: none !important; }
+
+/* 卷印：方形红框、两字竖排、微旋，像盖上去的 */
+.seal {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--vermilion);
+  color: var(--vermilion);
+  font-family: var(--serif);
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  font-variant-numeric: tabular-nums;
+  transform: rotate(-2.5deg);
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.chapter-head h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  max-width: 18ch;
+}
+
+.chapter-head .lede {
+  max-width: var(--measure);
+  line-height: 1.85;
+  color: var(--paper-dim);
+}
+
+/* ---------- 版面：右侧留白 + 左侧卷号栏（critical edition 式） ---------- */
+.section > .inner,
+.section > .chapter-head { position: relative; }
+
+.vol-margin {
+  position: absolute;
+  left: -58px;
+  top: 6px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.28em;
+  color: var(--brass);
+  opacity: 0.42;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* 卷号侧栏在窄屏隐藏，避免挤压正文 */
+@media (max-width: 1100px) {
+  .vol-margin { display: none; }
+}
+
+/* ---------- 按钮：去掉尾巴的箭头与全大写 ---------- */
+.btn {
+  font-family: var(--sans);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* ---------- 动效：只保留一处编排好的开场，取消逐节淡入 ---------- */
+.reveal,
+.reveal.in {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* ---------- 可访问性：键盘焦点必须可见 ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+/* ---------- 元信息串：中点换成细线分隔 ---------- */
+.topbar .meta span + span::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+  margin-right: 22px;
+  vertical-align: middle;
+}
+
+/* ---------- 正文密度：中文正文行高略松 ---------- */
+.desc, p.desc, .colophon p { line-height: 1.85; }
+
+/* ---------- 导览叙事：问题先行，工具退到第二层 ---------- */
+.hero h1 { max-width: 15ch; font-size: clamp(44px, 7vw, 88px); line-height: 1.08; }
+.hero .sub { max-width: 650px; font-size: clamp(16px, 1.65vw, 20px); line-height: 1.85; }
+.hero-actions { align-items: center; gap: 12px 16px; }
+.hero-actions .btn.primary { min-height: 52px; padding-inline: 24px; font-size: 15px; }
+.hero-archive-link { color: #fff8eb; font-size: 13px; text-decoration: underline; text-underline-offset: 5px; }
+.hero-tour-note { margin: 16px 0 0; color: rgba(255,248,235,.78); font-size: 12px; letter-spacing: .04em; }
+.learning-routes { scroll-margin-top: 24px; }
+.route-card { display: flex; flex-direction: column; align-items: flex-start; }
+.route-card button { margin-top: auto; }
+.finale-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 22px; }
+.finale-actions button { padding: 11px 15px; color: #fff8ed; background: #754327; border: 1px solid #754327; font: inherit; cursor: pointer; }
+.finale-actions a { color: #fff8ed; font-size: 13px; text-underline-offset: 4px; }
+
+.guided-tour {
+  position: fixed; z-index: 1000; inset: auto 22px 20px; display: grid;
+  grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 18px 26px;
+  max-width: 1040px; margin-inline: auto; padding: 17px 20px;
+  color: #f8f2e7; background: rgba(39,36,30,.97); border-top: 3px solid #c39a61;
+  box-shadow: 0 12px 40px rgba(0,0,0,.28);
+}
+.guided-tour[hidden] { display: none; }
+.guided-tour-copy { min-width: 0; }
+.guided-tour-count { display: block; margin-bottom: 4px; color: #d2b486; font-size: 10px; letter-spacing: .1em; }
+.guided-tour-title { display: block; color: #fff8eb; font: 600 19px/1.35 var(--serif); }
+.guided-tour-text { max-width: 72ch; margin: 4px 0 0; color: rgba(255,248,235,.82); font-size: 13px; line-height: 1.6; }
+.guided-tour-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+.guided-tour-actions button { min-height: 38px; padding: 7px 11px; color: #f8f2e7; background: transparent; border: 1px solid rgba(255,248,235,.38); font: inherit; font-size: 12px; cursor: pointer; }
+.guided-tour-actions button:disabled { opacity: .42; cursor: default; }
+.guided-tour-actions .guided-tour-next { color: #28231c; background: #d2b486; border-color: #d2b486; font-weight: 700; }
+.guided-tour-actions .guided-tour-exit { border-color: transparent; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 720px) {
+  .hero h1 { max-width: 12ch; }
+  .hero-actions { align-items: flex-start; }
+  .hero-archive-link { flex-basis: 100%; }
+  .guided-tour { inset: auto 10px 10px; grid-template-columns: 1fr; gap: 12px; padding: 14px; }
+  .guided-tour-title { font-size: 17px; }
+  .guided-tour-text { font-size: 12px; }
+  .guided-tour-actions { justify-content: flex-start; }
+}
+
+
+/* 刊物数字化入口 */
+.press-resources{margin-top:14px;display:grid;gap:8px}
+.press-resources-head{margin:0 0 2px;font-size:11px;letter-spacing:.16em;color:var(--brass,#b08d4f)}
+.press-resources a{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border:1px solid rgba(90,70,40,.2);
+  border-radius:5px;text-decoration:none;background:rgba(255,255,255,.35)}
+.press-resources a:hover{border-color:rgba(168,51,44,.5);background:rgba(255,255,255,.6)}
+.press-resources b{font-size:13px;color:#2f2822}
+.press-resources span{font-size:11.5px;color:#6d6357;line-height:1.6}
+
+
+/* 编者批注 */
+.press-notes{margin:12px 0 4px;border-left:2px solid #a8332c;padding:8px 0 8px 12px;background:rgba(168,51,44,.04)}
+.press-notes-head{margin:0 0 8px;font-size:11px;letter-spacing:.16em;color:#a8332c}
+.press-note{display:flex;gap:9px;margin-bottom:8px;font-size:12.5px;line-height:1.72;color:#4a4038}
+.press-note-kind{flex:0 0 auto;font-size:10.5px;letter-spacing:.08em;padding:1px 7px;border-radius:2px;height:18px;
+  display:inline-flex;align-items:center}
+.kind-clue .press-note-kind{background:rgba(60,90,70,.12);color:#3d5a4a}
+.kind-cmp .press-note-kind{background:rgba(154,107,18,.12);color:#8a5f0e}
+.kind-doubt .press-note-kind{background:rgba(168,51,44,.12);color:#8e2b24}
+.press-note-dot{position:absolute;right:8px;top:8px;font-size:10px;letter-spacing:.06em;color:#a8332c;
+  border:1px solid rgba(168,51,44,.4);border-radius:2px;padding:0 4px}
+
+
+/* 章节卡片：不再靠压暗区分，改用底色 + 左侧色条标出当前章 */
+.map-chapter { opacity:.82; border-left:3px solid transparent; transition:opacity .25s, background-color .25s, border-color .25s; }
+.map-chapter h3 { color:#241f1a; }
+.map-chapter .lead { color:#4a4238; }
+.map-chapter li { color:#4a4238; }
+.map-chapter li::before { background:#8a5f0e; }
+.map-chapter .yr { color:#7a5220; }
+.map-chapter .note { color:#6d5b3c; }
+.map-chapter.active {
+  opacity:1; background:#efe7d8; border-left-color:#a8332c;
+  box-shadow: inset 0 0 0 1px rgba(120,85,47,.18);
+}
+.map-chapter.active h3 { color:#1f1a16; }
+.map-chapter.active .lead, .map-chapter.active li { color:#3a322b; }
+
+
+/* 章节硬内容 */
+.chapter-hard{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(120,85,47,.28)}
+.hard-head{margin:0 0 8px;font-size:10.5px;letter-spacing:.16em;color:#8a5f0e}
+.hard-list{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:12.5px;line-height:1.65}
+.hard-list dt{color:#7a5220;white-space:nowrap;font-family:var(--mono,monospace);font-size:11px;padding-top:2px}
+.hard-list dd{margin:0;color:#332c25}
+.hard-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+.hard-imgs figure{margin:0;overflow:hidden;border:1px solid rgba(120,85,47,.2);background:#fff}
+.hard-imgs img{display:block;width:100%;height:74px;object-fit:cover}
+.hard-imgs figcaption{font-size:9.5px;line-height:1.3;color:#6d6357;padding:3px 4px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hard-src{margin-top:9px;font-size:11px;color:#6d6357;line-height:1.7}
+.hard-src a{color:#8a5f0e;text-decoration:none;border-bottom:1px dotted rgba(138,95,14,.5)}
+.hard-src a:hover{color:#a8332c;border-bottom-color:#a8332c}
+
+
+/* 卷二 在线阅读 */
+.relic-reader{margin-top:26px;padding:18px 20px;border:1px solid rgba(120,85,47,.22);background:rgba(255,255,255,.5)}
+.rr-kicker{margin:0 0 4px;font-size:10.5px;letter-spacing:.2em;color:#8a5f0e}
+.relic-reader h3{margin:0 0 6px;font-size:18px;color:#241f1a}
+.rr-sub{margin:0 0 14px;font-size:12.5px;color:#5d5349;line-height:1.7}
+.rr-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.rr-tab{font:inherit;font-size:12.5px;padding:6px 14px;border-radius:999px;cursor:pointer;
+  border:1px solid rgba(120,85,47,.3);background:#fff;color:#5d5349}
+.rr-tab:hover{border-color:#8a5f0e;color:#8a5f0e}
+.rr-tab.active{background:#8a2f28;border-color:#8a2f28;color:#fff}
+.rr-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:780px){.rr-pair{grid-template-columns:1fr}}
+.rr-de,.rr-zh{padding:12px 14px;border-radius:4px}
+.rr-de{background:rgba(0,0,0,.04);border-left:3px solid #8a5f0e}
+.rr-zh{background:rgba(168,51,44,.05);border-left:3px solid #8a2f28}
+.rr-lang{display:block;font-size:10px;letter-spacing:.14em;color:#8a5f0e;margin-bottom:6px}
+.rr-zh .rr-lang{color:#8a2f28}
+.rr-de p,.rr-zh p{margin:0;font-size:15px;line-height:1.85;color:#241f1a}
+.rr-de p{font-family:Georgia,"Times New Roman",serif;font-style:italic}
+.rr-notes{margin-top:14px;display:grid;gap:8px}
+.rr-note-item{display:flex;gap:9px;font-size:12.5px;line-height:1.75;color:#3f372f}
+.rr-note-kind{flex:0 0 auto;font-size:10.5px;letter-spacing:.06em;padding:1px 7px;border-radius:2px;height:18px;
+  display:inline-flex;align-items:center}
+.kind-clue .rr-note-kind{background:rgba(60,90,70,.12);color:#3d5a4a}
+.kind-cmp .rr-note-kind{background:rgba(154,107,18,.12);color:#8a5f0e}
+.kind-doubt .rr-note-kind{background:rgba(168,51,44,.12);color:#8e2b24}
+.rr-note{margin:12px 0 0;font-size:11px;color:#6d6357;line-height:1.7}

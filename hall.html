@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#211812">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:title" content="星火与道路 · 工人运动时空叙事">
+<meta property="og:description" content="沿生产条件、理论自觉、组织实践和认识方法，自动走进工人运动史。">
+<title>星火与道路 · 工人运动时空叙事</title>
+<script src="js/file-guard.js"></script>
+<style>
+  :root{color-scheme:dark;--ink:#211812;--ink-2:#2a2018;--paper:#f4ead7;--muted:#c7b79d;--gold:#d2ad70;--red:#a83332;--line:rgba(220,190,140,.25)}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;min-height:100vh;color:var(--paper);background:radial-gradient(ellipse at 72% 6%,#52321e 0,transparent 37%),radial-gradient(ellipse at 5% 95%,#3a2118 0,transparent 42%),var(--ink);font:16px/1.65 "Microsoft YaHei","Noto Serif CJK SC",serif}
+  a{color:inherit}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+  .wrap{width:min(1120px,calc(100% - 44px));margin:0 auto;padding:26px 0 42px}
+  .masthead{display:flex;justify-content:space-between;align-items:center;padding:7px 0 23px;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px;letter-spacing:.12em}
+  .masthead strong{color:var(--paper);font-weight:600;letter-spacing:.04em}
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:46px;align-items:end;padding:clamp(48px,9vw,106px) 0 66px}
+  .eyebrow{margin:0 0 17px;color:var(--gold);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+  h1{max-width:760px;margin:0;color:#fff8eb;font-size:clamp(42px,7.2vw,86px);line-height:1.08;font-weight:600;letter-spacing:.01em}
+  h1 span{color:#e2957f}
+  .hook{max-width:660px;margin:24px 0 0;color:#e8d7bb;font-size:clamp(17px,2vw,22px);line-height:1.75}
+  .hero-note{align-self:end;margin:0 0 5px;padding:15px 0 4px 18px;border-left:1px solid var(--gold);color:var(--muted);font-size:13px;line-height:1.8}
+  .hero-note strong{display:block;margin-bottom:5px;color:var(--paper);font-size:14px}
+  .feature{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 38px;align-items:center;padding:clamp(24px,4vw,42px);background:linear-gradient(112deg,rgba(128,49,39,.56),rgba(54,35,25,.94) 63%);border:1px solid rgba(226,180,113,.5);box-shadow:0 22px 60px rgba(0,0,0,.22)}
+  .feature-kicker{margin:0 0 8px;color:#e7c58e;font-size:11px;letter-spacing:.13em}
+  .feature h2{margin:0;color:#fff8eb;font-size:clamp(23px,3vw,34px);font-weight:600;line-height:1.3}
+  .feature p{max-width:680px;margin:10px 0 0;color:#ddcdb3;font-size:14px}
+  .feature-link{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 20px;color:#211812;background:#e3c18a;text-decoration:none;font-weight:700;white-space:nowrap;transition:background .18s,transform .18s}
+  .feature-links{display:flex;flex-wrap:wrap;gap:10px}
+  .feature-link:hover{background:#f0d7a8;transform:translateY(-2px)}
+  .route{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:7px;padding-top:18px;border-top:1px solid rgba(226,180,113,.26)}
+  .route span{position:relative;padding:0 8px;color:#d6c3a5;font-size:12px;text-align:center}
+  .route span+span:before{content:"";position:absolute;top:9px;left:-3px;width:6px;height:1px;background:var(--gold);opacity:.7}
+  .route b{display:block;margin-bottom:3px;color:#e7c58e;font-size:10px;font-weight:500;letter-spacing:.08em}
+  .explore{padding:50px 0 0}
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:17px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+  .section-head h2{margin:0;color:#f8efdf;font-size:19px;font-weight:600}
+  .section-head p{margin:0;color:#b9a88e;font-size:12px}
+  .doors{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .door{display:flex;min-height:146px;flex-direction:column;padding:19px 17px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:inherit;text-decoration:none;transition:background .18s}
+  .door:hover{background:rgba(229,192,132,.08)}
+  .door small{color:#d5a665;font-size:10px;letter-spacing:.09em}
+  .door h3{margin:9px 0 5px;color:#f5e9d6;font-size:16px;font-weight:600}
+  .door p{margin:0;color:#b9a88e;font-size:12px;line-height:1.6}
+  .footer{display:flex;justify-content:space-between;gap:18px;margin-top:27px;padding-top:16px;border-top:1px solid var(--line);color:#a99475;font-size:11px}
+  .footer a{color:#e3c18a;text-underline-offset:3px}
+  @media(max-width:800px){.hero{grid-template-columns:1fr;gap:18px;padding:56px 0 42px}.hero-note{max-width:530px}.doors{grid-template-columns:repeat(2,minmax(0,1fr))}.route{grid-template-columns:repeat(3,1fr);gap:13px 0}.route span:nth-child(4):before{display:none}.feature{grid-template-columns:1fr}.feature-link{justify-self:start}}
+  @media(max-width:520px){.wrap{width:min(100% - 30px,1120px);padding-top:15px}.masthead span:last-child{display:none}.hero{padding:48px 0 34px}.feature{padding:23px 19px}.route{grid-template-columns:repeat(2,1fr);row-gap:12px}.route span:nth-child(odd):before{display:none}.doors{grid-template-columns:1fr}.door{min-height:unset;padding:16px}.section-head{display:block}.section-head p{margin-top:5px}.footer{display:block}.footer span{display:block;margin-top:7px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<main class="wrap">
+  <div class="masthead"><strong>星火与道路</strong><span>工人运动时空叙事　|　1831—1917</span></div>
+  <section class="hero" aria-labelledby="title">
+    <div>
+      <p class="eyebrow">跟随历史 · 电影式导览入口</p>
+      <h1 id="title">四层九节点，<br><span>把历史解释走一遍</span></h1>
+      <p class="hook">从里昂街头出发，沿生产条件、理论自觉、组织实践和认识方法，走到巴黎公社与 1917 年。让历史解释的逻辑本身成为参观路线。</p>
+    </div>
+    <p class="hero-note"><strong>这座展馆怎样带你前进</strong>自动导览用九个节点展开四层历史逻辑；展品以 E1—E4 标出材料与复原依据。视频页提供旁白、字幕和章节跳转。</p>
+  </section>
+
+  <section class="feature" aria-labelledby="tour-title">
+    <div>
+      <p class="feature-kicker">建议首次参观 · 四层九节点 · 约 3 分钟</p>
+      <h2 id="tour-title">从生产条件走到开放历史</h2>
+      <p>进入主展馆后，启动自动导览。页面会按四层逻辑滚动并逐站讲解；也可以观看带旁白、字幕与章节跳转的完整视频。</p>
+    </div>
+    <div class="feature-links"><a class="feature-link" href="index.html?tour=1">开始自动导览 <span aria-hidden="true">　↗</span></a><a class="feature-link" href="video-tour.html">观看讲解视频 <span aria-hidden="true">　▶</span></a></div>
+    <div class="route" aria-label="四层历史逻辑">
+      <span><b>第一层</b>生产条件与矛盾</span><span><b>第二层</b>理论自觉与认识</span><span><b>第三层</b>组织实践与经验</span><span><b>第四层</b>证据层级与开放历史</span>
+    </div>
+  </section>
+
+  <section class="explore" aria-labelledby="explore-title">
+    <div class="section-head"><h2 id="explore-title">或从你感兴趣的线索开始</h2><p>适合二次参观、课堂查阅和自由探索</p></div>
+    <nav class="doors" aria-label="展馆其他入口">
+      <a class="door" href="corridor.html"><small>空间漫游</small><h3>🌀 3D 走廊 · 九扇门</h3><p>拖动前进，从阅览室、1848 街垒到 1917 斯莫尔尼，推开任意一扇门。</p></a>
+      <a class="door" href="scenes.html"><small>空间与现场</small><h3>历史空间目录</h3><p>进入 9 个空间体验，查看对应的历史模型与空间资料。</p></a>
+      <a class="door" href="assets.html"><small>展品与档案</small><h3>统一检索目录</h3><p>检索 310 条记录：18 份文献、73 张图像、63 个文物模型、9 个空间体验、16 个空间模型和 131 条交互记录。</p></a>
+      <a class="door" href="reading-room-panorama.html"><small>沉浸体验</small><h3>大英博物馆阅览室</h3><p>进入阅览室全景，观察马克思写作与研究的空间。</p></a>
+      <a class="door" href="large-world.html"><small>尺度对照</small><h3>大世界空间工作台</h3><p>从全国、城市到街区尺度查看空间模型。</p></a>
+      <a class="door" href="splat-viewer.html"><small>本地工具</small><h3>实景 Splat 工作台</h3><p>导入本地 PLY、SPZ 或 SOG 文件查看高斯泼溅场景。</p></a>
+    </nav>
+  </section>
+
+  <footer class="footer"><span>互动数字展馆 · 10 卷主题展区 · 四层九节点自动导览</span><span>建议从 <a href="index.html?tour=1">自动导览</a> 开始，再进入 <a href="assets.html">档案目录</a></span></footer>
+</main>
+<script src="js/pwa-register.js"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

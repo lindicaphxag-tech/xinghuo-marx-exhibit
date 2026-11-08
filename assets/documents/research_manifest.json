@@ -1,0 +1,47 @@
+{
+  "schema": "1.0",
+  "generated": "2026-11-02",
+  "purpose": "Offline research corpus for the labor movement exhibition. These are selected digitized texts, not complete runs of the newspaper.",
+  "derived_browsable_index": {
+    "path": "bee-hive/index.json",
+    "generator": "scripts/import_beehive.py",
+    "issue_count": 65,
+    "article_count": 4780,
+    "reader": "press archive chapter in index.html",
+    "scope": "Selected issues dated 1862 and 1872; OCR text and per-article metadata, no page facsimile images."
+  },
+  "items": [
+    {
+      "id": "bee-hive-1862-plaintext",
+      "title": "The Bee-Hive (1862) — OCR full text and metadata package",
+      "publisher": "British Library",
+      "date_scope": "1862",
+      "format": "ZIP / plaintext + metadata XML",
+      "file": "the-bee-hive-1862-plaintext.zip",
+      "bytes": 4521740,
+      "sha256": "2C3EDDD464C788B69BAD5B731EB1E119BFED4BCC31538404D626D3659B0E209B",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://bl.iro.bl.uk/entities/product/6f05315c-e2bf-4d66-bfdb-145036f29d51",
+      "doi": "10.23636/dth2-z430",
+      "coverage_note": "One year package from a partial digitized run; not the entire title or full issue-image facsimiles.",
+      "exhibition_modules": ["network", "press", "river"]
+    },
+    {
+      "id": "bee-hive-1872-plaintext",
+      "title": "The Bee-Hive (1872) — OCR full text and metadata package",
+      "publisher": "British Library",
+      "date_scope": "1872",
+      "format": "ZIP / plaintext + metadata XML",
+      "file": "the-bee-hive-1872-plaintext.zip",
+      "bytes": 11648681,
+      "sha256": "23F7D81219DB0FBA219BC8CC79724C18044C95A8D1D021EE3FCF4B5E4D240B03",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://bl.iro.bl.uk/entities/product/6f05315c-e2bf-4d66-bfdb-145036f29d51",
+      "doi": "10.23636/dth2-z430",
+      "coverage_note": "One year package from a partial digitized run; not the entire title or full issue-image facsimiles.",
+      "exhibition_modules": ["network", "press", "river"]
+    }
+  ]
+}

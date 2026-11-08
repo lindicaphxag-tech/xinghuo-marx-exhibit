@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>影像与声音 · 可播放清单</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<style>
+  :root{--bg:#0c0a09;--ink:#f2e9d8;--dim:#8d8175;--gold:#c9a262;--red:#a8332c;--line:rgba(201,162,98,.16)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  a{color:var(--gold);text-decoration:none}
+  header{padding:20px 30px 12px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:20px}
+  h1 small{display:block;font-size:11.5px;letter-spacing:.22em;color:var(--gold);margin-bottom:6px;font-weight:400}
+  .sub{color:var(--dim);font-size:12.5px;margin-top:6px;max-width:940px}
+  .warn{margin:14px 30px 0;padding:10px 14px;border-left:2px solid var(--red);background:rgba(168,51,44,.08);
+    font-size:12.5px;color:#d8cbb8;max-width:1100px}
+  main{padding:14px 30px 70px}
+  h2{font-size:12.5px;letter-spacing:.2em;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:12px;margin:26px 0 12px}
+  h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .clip{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#0f0d0c}
+  .frame{position:relative;aspect-ratio:16/9;background:#000}
+  .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .cap{padding:10px 13px 12px}
+  .cap .tag{display:inline-block;font-size:10.5px;letter-spacing:.1em;padding:1px 7px;border-radius:2px;margin-right:8px}
+  .t-read{background:rgba(94,113,128,.28);color:#bfd0da}
+  .t-film{background:rgba(168,51,44,.24);color:#f0bdb8}
+  .t-anim{background:rgba(201,162,98,.22);color:#e6cfa2}
+  .t-doc{background:rgba(95,123,108,.26);color:#c6dccb}
+  .cap b{font-size:14px}
+  .cap p{margin:6px 0 0;font-size:12px;color:#a89c8c;line-height:1.6}
+  .cap .meta{margin-top:6px;font-size:11px;color:#6f6558}
+  .back{position:fixed;right:24px;bottom:20px;font-size:12px;color:#8d8175;background:rgba(12,10,9,.9);
+    border:1px solid var(--line);padding:7px 13px;border-radius:999px;z-index:9}
+  .back:hover{color:var(--gold)}
+</style>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<header>
+  <h1><small>VIDEO &amp; AUDIO · 可播放</small>影像与声音</h1>
+  <p class="sub">11 段视频直接在内嵌播放器里放，不用跳转。每段都标了性质：朗读、电影、动画还是纪录片。</p>
+</header>
+
+
+
+<main>
+  <h2>朗读 · 演说文本（声音是现代录制）</h2>
+  <div class="grid">
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV18Gem6uE3j&page=1&autoplay=0&high_quality=1" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-read">朗读</span><b>《关于自由贸易的演说》</b>
+        <p>马克思 1848 年 1 月在布鲁塞尔发表的演说，全长约 21 分钟。此片为配图朗读，非现场录音。</p>
+        <div class="meta">21:40 · BV18Gem6uE3j · <a href="https://www.bilibili.com/video/BV18Gem6uE3j/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV1PW4y1y72s&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-read">朗读</span><b>《在人民报创刊纪念会上的演说》</b>
+        <p>1856 年 4 月 14 日伦敦。马克思关于无产阶级历史使命的著名演说。</p>
+        <div class="meta">BV1PW4y1y72s · <a href="https://www.bilibili.com/video/BV1PW4y1y72s/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV1Sft2ziEZF&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-read">有声书</span><b>《共产党宣言》全文中英朗读</b>
+        <p>逐段朗读、同步原文，适合课堂跟读。文本为 1848 年原文。</p>
+        <div class="meta">BV1Sft2ziEZF · <a href="https://www.bilibili.com/video/BV1Sft2ziEZF/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV18BvSBVEzb&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-read">朗读</span><b>《共产党宣言》前言</b>
+        <p>短篇，适合做展馆背景音或课堂导入。</p>
+        <div class="meta">BV18BvSBVEzb · <a href="https://www.bilibili.com/video/BV18BvSBVEzb/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>电影 · 扮演（人物是演员）</h2>
+  <div class="grid">
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV1zTGyzzED8&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-film">电影</span><b>《巴黎的黎明》（1936，苏联）</b>
+        <p>巴黎公社题材的经典影片，中俄双字。公社最早的完整影像叙事之一。</p>
+        <div class="meta">1936 · BV1zTGyzzED8 · <a href="https://www.bilibili.com/video/BV1zTGyzzED8/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV1V1AgzVEUg&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-doc">历史见证</span><b>巴黎公社最后一位战士：阿德里安·勒热纳</b>
+        <p>1971 年拍摄的当事人访谈——他本人参加过 1871 年公社。这是全清单里唯一带历史见证性质的一条。</p>
+        <div class="meta">1971 · BV1V1AgzVEUg · <a href="https://www.bilibili.com/video/BV1V1AgzVEUg/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV1aS4y117RJ&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-film">二创</span><b>《青年马克思》配乐剪辑</b>
+        <p>用电影素材配歌的二次创作，情绪强、史料弱。展映需注明是二创。</p>
+        <div class="meta">BV1aS4y117RJ · <a href="https://www.bilibili.com/video/BV1aS4y117RJ/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>动画 · 传记</h2>
+  <div class="grid">
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV1zSevzvE7m&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-anim">动画</span><b>《马克思传》EP1 黎明伊始</b>
+        <p>近年国产传记动画的第一集。入门可用，细节需与原著核对。</p>
+        <div class="meta">BV1zSevzvE7m · <a href="https://www.bilibili.com/video/BV1zSevzvE7m/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>纪录片 · 叙述</h2>
+  <div class="grid">
+    <div class="clip">
+      <div class="frame"><iframe loading="lazy" src="https://player.bilibili.com/player.html?bvid=BV1sh4y1Y7XW&page=1&autoplay=0" allowfullscreen></iframe></div>
+      <div class="cap"><span class="tag t-doc">纪录片</span><b>《卡尔·马克思的一生》</b>
+        <p>编年体梳理：特里尔、巴黎、布鲁塞尔、伦敦。引用需回到原著。</p>
+        <div class="meta">BV1sh4y1Y7XW · <a href="https://www.bilibili.com/video/BV1sh4y1Y7XW/" target="_blank" rel="noopener">原页 ↗</a></div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+<a class="back" href="index.html">← 返回展馆</a>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

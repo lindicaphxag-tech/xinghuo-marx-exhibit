@@ -1,0 +1,849 @@
+{
+ "source": "The Bee-Hive, 1862 & 1872 selections, British Library CC0 (DOI 10.23636/dth2-z430)",
+ "issues": 65,
+ "articles": 4780,
+ "years": [
+  "1862",
+  "1872"
+ ],
+ "issuesPerYear": {
+  "1862": 13,
+  "1872": 52
+ },
+ "articlesPerYear": {
+  "1862": 1306,
+  "1872": 3474
+ },
+ "topWords": [
+  [
+   "london",
+   3595
+  ],
+  [
+   "meeting",
+   3509
+  ],
+  [
+   "great",
+   2743
+  ],
+  [
+   "street",
+   2671
+  ],
+  [
+   "working",
+   2591
+  ],
+  [
+   "society",
+   2361
+  ],
+  [
+   "present",
+   2303
+  ],
+  [
+   "hours",
+   2203
+  ],
+  [
+   "last",
+   2190
+  ],
+  [
+   "week",
+   2172
+  ],
+  [
+   "every",
+   2126
+  ],
+  [
+   "committee",
+   2102
+  ],
+  [
+   "trades",
+   2098
+  ],
+  [
+   "trade",
+   1951
+  ],
+  [
+   "house",
+   1881
+  ],
+  [
+   "general",
+   1874
+  ],
+  [
+   "held",
+   1872
+  ],
+  [
+   "labour",
+   1729
+  ],
+  [
+   "wages",
+   1713
+  ],
+  [
+   "public",
+   1631
+  ],
+  [
+   "without",
+   1603
+  ],
+  [
+   "place",
+   1585
+  ],
+  [
+   "members",
+   1576
+  ],
+  [
+   "having",
+   1507
+  ],
+  [
+   "tion",
+   1462
+  ],
+  [
+   "bill",
+   1420
+  ],
+  [
+   "following",
+   1389
+  ],
+  [
+   "government",
+   1374
+  ],
+  [
+   "question",
+   1372
+  ],
+  [
+   "large",
+   1358
+  ],
+  [
+   "country",
+   1332
+  ],
+  [
+   "year",
+   1296
+  ],
+  [
+   "labourers",
+   1266
+  ],
+  [
+   "number",
+   1264
+  ],
+  [
+   "taken",
+   1263
+  ],
+  [
+   "free",
+   1252
+  ],
+  [
+   "union",
+   1236
+  ],
+  [
+   "price",
+   1233
+  ],
+  [
+   "take",
+   1221
+  ],
+  [
+   "shall",
+   1207
+  ],
+  [
+   "secretary",
+   1200
+  ],
+  [
+   "given",
+   1190
+  ],
+  [
+   "during",
+   1188
+  ],
+  [
+   "lord",
+   1164
+  ],
+  [
+   "operative",
+   1157
+  ],
+  [
+   "part",
+   1156
+  ],
+  [
+   "saturday",
+   1152
+  ],
+  [
+   "england",
+   1136
+  ],
+  [
+   "association",
+   1126
+  ],
+  [
+   "sent",
+   1107
+  ],
+  [
+   "office",
+   1086
+  ],
+  [
+   "received",
+   1080
+  ],
+  [
+   "strike",
+   1080
+  ],
+  [
+   "give",
+   1075
+  ],
+  [
+   "evening",
+   1055
+  ],
+  [
+   "societies",
+   1051
+  ],
+  [
+   "long",
+   1036
+  ],
+  [
+   "masters",
+   1029
+  ],
+  [
+   "right",
+   1027
+  ],
+  [
+   "order",
+   1019
+  ]
+ ],
+ "labourItems": [
+  {
+   "date": "1862-10-11",
+   "title": "BRISTOL REFORM UNION.",
+   "file": "1862-10-11.json"
+  },
+  {
+   "date": "1862-10-11",
+   "title": "HIGH WAGES 127 THE FREE STATES.",
+   "file": "1862-10-11.json"
+  },
+  {
+   "date": "1862-10-18",
+   "title": "COIL MINERS' STRIKES.",
+   "file": "1862-10-18.json"
+  },
+  {
+   "date": "1862-10-25",
+   "title": "TE.A.DES' UNIONS AND POLITICS.",
+   "file": "1862-10-25.json"
+  },
+  {
+   "date": "1862-11-15",
+   "title": "3IETECLEY MINERS' COAL STRIKE.",
+   "file": "1862-11-15.json"
+  },
+  {
+   "date": "1862-11-22",
+   "title": "TRADES' UNIONS AND POLITICS.",
+   "file": "1862-11-22.json"
+  },
+  {
+   "date": "1862-11-22",
+   "title": "TRADES' UNION POLITICAL UNION.",
+   "file": "1862-11-22.json"
+  },
+  {
+   "date": "1862-12-06",
+   "title": "TRADES' UNIONS AND POLITICS.",
+   "file": "1862-12-06.json"
+  },
+  {
+   "date": "1862-12-20",
+   "title": "BOLTON JOINERS' STRIKE.",
+   "file": "1862-12-20.json"
+  },
+  {
+   "date": "1872-01-06",
+   "title": "STRIKE OP ENOINEP,ItB.",
+   "file": "1872-01-06.json"
+  },
+  {
+   "date": "1872-01-06",
+   "title": "HUDDERSFIELD. THE WEAVERS' STRIKE.",
+   "file": "1872-01-06.json"
+  },
+  {
+   "date": "1872-01-20",
+   "title": "UNIONISTS AND NON-UNIONISTS.",
+   "file": "1872-01-20.json"
+  },
+  {
+   "date": "1872-01-20",
+   "title": "IMPORTANT TO TRADES UNIONISTS.",
+   "file": "1872-01-20.json"
+  },
+  {
+   "date": "1872-01-27",
+   "title": "TRADES UNIONS; IN THE PULPIT.",
+   "file": "1872-01-27.json"
+  },
+  {
+   "date": "1872-02-10",
+   "title": "TRADES 'UNIONS.",
+   "file": "1872-02-10.json"
+  },
+  {
+   "date": "1872-03-02",
+   "title": "TRADES UNION CONGRESSPARLIAMENTARY COMMITTEE.",
+   "file": "1872-03-02.json"
+  },
+  {
+   "date": "1872-03-09",
+   "title": "BURNLEY. IMPENDING STRIKE OF wzavEns.",
+   "file": "1872-03-09.json"
+  },
+  {
+   "date": "1872-03-09",
+   "title": "PAYMENT OF WAGES TO WORK-",
+   "file": "1872-03-09.json"
+  },
+  {
+   "date": "1872-03-09",
+   "title": "WORK AND WAGES IN CANADA.",
+   "file": "1872-03-09.json"
+  },
+  {
+   "date": "1872-03-16",
+   "title": "LEEDS. TUE STRIKEI.",
+   "file": "1872-03-16.json"
+  },
+  {
+   "date": "1872-03-16",
+   "title": "IMPENDING STRIKE OF THE LONDON COMPOSITORS.",
+   "file": "1872-03-16.json"
+  },
+  {
+   "date": "1872-03-23",
+   "title": "WORK AND WAGES IN CANADA. .",
+   "file": "1872-03-23.json"
+  },
+  {
+   "date": "1872-03-23",
+   "title": "TIIE MISTERS AND SERVANTS WAGES BILL.",
+   "file": "1872-03-23.json"
+  },
+  {
+   "date": "1872-03-30",
+   "title": "MASTERS AND SERVANTS WAGES BILL. •",
+   "file": "1872-03-30.json"
+  },
+  {
+   "date": "1872-03-30",
+   "title": "WAGES WITHOUT STOPPAGES. To the Editor of the BEE-HlVri.",
+   "file": "1872-03-30.json"
+  },
+  {
+   "date": "1872-04-06",
+   "title": "STRIKES.",
+   "file": "1872-04-06.json"
+  },
+  {
+   "date": "1872-04-06",
+   "title": "WARWICKSHIRE LABOURERS' UNION.",
+   "file": "1872-04-06.json"
+  },
+  {
+   "date": "1872-04-13",
+   "title": "TUE FLAX TRADE STRIKE.",
+   "file": "1872-04-13.json"
+  },
+  {
+   "date": "1872-04-13",
+   "title": "CANON GIRDLESTONE AND THE WARWICKSHIRE STRIKE. , [Commurn CAI ED ;]",
+   "file": "1872-04-13.json"
+  },
+  {
+   "date": "1872-04-13",
+   "title": "NON-UNIONIST.",
+   "file": "1872-04-13.json"
+  },
+  {
+   "date": "1872-04-20",
+   "title": "GERMAN STRIKES.",
+   "file": "1872-04-20.json"
+  },
+  {
+   "date": "1872-04-20",
+   "title": "WAGES BILL.",
+   "file": "1872-04-20.json"
+  },
+  {
+   "date": "1872-04-27",
+   "title": "SOUTH WALES. COLLIERS' WAGES.",
+   "file": "1872-04-27.json"
+  },
+  {
+   "date": "1872-04-27",
+   "title": "STRIKES.",
+   "file": "1872-04-27.json"
+  },
+  {
+   "date": "1872-05-04",
+   "title": "DERBY. TILE TIIREATENED STRIKE.",
+   "file": "1872-05-04.json"
+  },
+  {
+   "date": "1872-05-04",
+   "title": "UNIONISM AND STRIKE.",
+   "file": "1872-05-04.json"
+  },
+  {
+   "date": "1872-05-11",
+   "title": "NORTH AMPTON. THE SHOEMAKERS' STRIKE,",
+   "file": "1872-05-11.json"
+  },
+  {
+   "date": "1872-05-11",
+   "title": "NOTTINGTIA.M. TEE lIOSIETtS' STRIKE. -AN APPEAL TO WORKING",
+   "file": "1872-05-11.json"
+  },
+  {
+   "date": "1872-05-11",
+   "title": "STRIKE Of CARrENTEfIe AND JOINERS.",
+   "file": "1872-05-11.json"
+  },
+  {
+   "date": "1872-05-11",
+   "title": "HOUSE OF COUNIONS—TnuasDIy.",
+   "file": "1872-05-11.json"
+  },
+  {
+   "date": "1872-05-18",
+   "title": "SOUTHAMPTON. TERMINATION OF TIIE SEAMEN'S STRIKE.",
+   "file": "1872-05-18.json"
+  },
+  {
+   "date": "1872-05-18",
+   "title": "TRADES UNION CONGRESSPARLIAMENTARY COMMIT.CEE.",
+   "file": "1872-05-18.json"
+  },
+  {
+   "date": "1872-05-25",
+   "title": "AGRICULTURAL UNION.-CANON • GIRDLESTONE.",
+   "file": "1872-05-25.json"
+  },
+  {
+   "date": "1872-05-25",
+   "title": "TILE COLLIERS' STRIKE AT SEMIAM.",
+   "file": "1872-05-25.json"
+  },
+  {
+   "date": "1872-06-08",
+   "title": "Tint STRIKE AT TWO 21.10(1.",
+   "file": "1872-06-08.json"
+  },
+  {
+   "date": "1872-06-08",
+   "title": "LONDON TAILORS AND TILE DUILLIN STRIKE.",
+   "file": "1872-06-08.json"
+  },
+  {
+   "date": "1872-06-08",
+   "title": "PROBABLE ADVANCE. IN THE WAGES Or COAL",
+   "file": "1872-06-08.json"
+  },
+  {
+   "date": "1872-06-15",
+   "title": "STRIKE OF LONDON CARPENTERS.",
+   "file": "1872-06-15.json"
+  },
+  {
+   "date": "1872-06-15",
+   "title": "JOINERS' STRIKE AT HALIFAX.",
+   "file": "1872-06-15.json"
+  },
+  {
+   "date": "1872-06-15",
+   "title": "TIIE JOINERS' STRIKE AT YORK.",
+   "file": "1872-06-15.json"
+  },
+  {
+   "date": "1872-06-15",
+   "title": "COLLIERS. WAGES IN SOLJTII",
+   "file": "1872-06-15.json"
+  },
+  {
+   "date": "1872-06-15",
+   "title": "MINERS' DISPUTE IN LEEDS.",
+   "file": "1872-06-15.json"
+  },
+  {
+   "date": "1872-06-22",
+   "title": "STRIKE AND LOCK-OUT OF THE LONDON BUILDING TRADES.",
+   "file": "1872-06-22.json"
+  },
+  {
+   "date": "1872-06-22",
+   "title": "PAYMENT OF TUE MEN ON STRIKE.",
+   "file": "1872-06-22.json"
+  },
+  {
+   "date": "1872-06-22",
+   "title": "PAYMENT OF WAGES BILL.",
+   "file": "1872-06-22.json"
+  },
+  {
+   "date": "1872-06-29",
+   "title": "EXTENT OF THE LOCK-OUT.",
+   "file": "1872-06-29.json"
+  },
+  {
+   "date": "1872-06-29",
+   "title": "TUB LtZTV3 MINTRUS' DISPUTE.",
+   "file": "1872-06-29.json"
+  },
+  {
+   "date": "1872-06-29",
+   "title": "TICE TRADES 'UNION coNGREss. PARLIAMENTARY COMMITTEE.",
+   "file": "1872-06-29.json"
+  },
+  {
+   "date": "1872-07-06",
+   "title": "STRIKE AND LOCKOUT IN THE LONDON BUILDING TRADES.",
+   "file": "1872-07-06.json"
+  },
+  {
+   "date": "1872-07-06",
+   "title": "STRIKE OF THAMES LIGHTER-",
+   "file": "1872-07-06.json"
+  },
+  {
+   "date": "1872-07-13",
+   "title": "T AMWOR at. STRIKE or JOINERS.",
+   "file": "1872-07-13.json"
+  },
+  {
+   "date": "1872-07-13",
+   "title": "MACCLESFIELD. STRIKE OF SILK DYERS.",
+   "file": "1872-07-13.json"
+  },
+  {
+   "date": "1872-07-13",
+   "title": "HUDDERSFIELD. STRIKE or WEA.TERS•",
+   "file": "1872-07-13.json"
+  },
+  {
+   "date": "1872-07-13",
+   "title": "DISPUTE IN THE LONDON BUILDING TRADES.",
+   "file": "1872-07-13.json"
+  },
+  {
+   "date": "1872-07-13",
+   "title": "SOCIAL SCIENCE ASSOCIATION AND THE LOCK-OUT. '",
+   "file": "1872-07-13.json"
+  },
+  {
+   "date": "1872-07-13",
+   "title": "DISPUTE IN THE BUILDING TRADES,",
+   "file": "1872-07-13.json"
+  },
+  {
+   "date": "1872-07-13",
+   "title": "LOCK-OUT Or LABOURERS IN OIFORDSIIIRE.",
+   "file": "1872-07-13.json"
+  },
+  {
+   "date": "1872-07-20",
+   "title": ",THE DISPUTE IN THE L9NION BUITAbINd titApE§. . ,",
+   "file": "1872-07-20.json"
+  },
+  {
+   "date": "1872-07-20",
+   "title": "STRIKE OF THE THAMES",
+   "file": "1872-07-20.json"
+  },
+  {
+   "date": "1872-07-27",
+   "title": "DISPUTE IN THE LONDON BUILDING TRADES.",
+   "file": "1872-07-27.json"
+  },
+  {
+   "date": "1872-07-27",
+   "title": "EFFECT OF HIGH WAGES.",
+   "file": "1872-07-27.json"
+  },
+  {
+   "date": "1872-07-27",
+   "title": "T.HE DISPUTE IN THE BUILDING TRADE. To the Editor of the BEE-HIVE.",
+   "file": "1872-07-27.json"
+  },
+  {
+   "date": "1872-08-03",
+   "title": "DISPUTE IN TIM LON. DON BUILDING TRADES.",
+   "file": "1872-08-03.json"
+  },
+  {
+   "date": "1872-08-03",
+   "title": "STRIKES IN GERMANY.",
+   "file": "1872-08-03.json"
+  },
+  {
+   "date": "1872-08-03",
+   "title": "LAi3OUR AND WAGES.*",
+   "file": "1872-08-03.json"
+  },
+  {
+   "date": "1872-08-17",
+   "title": "GENERAL UNION OP CAR-",
+   "file": "1872-08-17.json"
+  },
+  {
+   "date": "1872-08-24",
+   "title": "BUILDERS' STRIKE.",
+   "file": "1872-08-24.json"
+  },
+  {
+   "date": "1872-08-24",
+   "title": "LOWESTOFT. STRIKE OF SEAMEN.",
+   "file": "1872-08-24.json"
+  },
+  {
+   "date": "1872-08-31",
+   "title": "TERMINATION OF DISPUTE IN THE LONDON ' BUILDING TRADES.",
+   "file": "1872-08-31.json"
+  },
+  {
+   "date": "1872-08-31",
+   "title": "LORD EBURY ON LABOUR AND • UNIONS,",
+   "file": "1872-08-31.json"
+  },
+  {
+   "date": "1872-08-31",
+   "title": "WORK AND WAGES OF THE",
+   "file": "1872-08-31.json"
+  },
+  {
+   "date": "1872-09-07",
+   "title": "TIIREA.TENED STRIKE IN TIIE LONDON BAKING TRAD.",
+   "file": "1872-09-07.json"
+  },
+  {
+   "date": "1872-09-14",
+   "title": "MR. ARCHIBALD BRIGGS AND TRADES UNIONS.",
+   "file": "1872-09-14.json"
+  },
+  {
+   "date": "1872-09-14",
+   "title": "TRADES UNIONS IN VICTORIA.",
+   "file": "1872-09-14.json"
+  },
+  {
+   "date": "1872-09-14",
+   "title": "WORK AND WAGES OF THE LONDON POSTMEN.",
+   "file": "1872-09-14.json"
+  },
+  {
+   "date": "1872-09-21",
+   "title": "LATE BUILDERS' STRIKE.",
+   "file": "1872-09-21.json"
+  },
+  {
+   "date": "1872-09-21",
+   "title": "WORK AND WAGES OF THE LONDON POSTMEN.",
+   "file": "1872-09-21.json"
+  },
+  {
+   "date": "1872-09-28",
+   "title": "STRIKE AT MESSRS. CORBETT AND M'CLYIYIONT'S.",
+   "file": "1872-09-28.json"
+  },
+  {
+   "date": "1872-09-28",
+   "title": "WORK AND WAGES OF THE LONDON POSTMEN. PART 111.",
+   "file": "1872-09-28.json"
+  },
+  {
+   "date": "1872-09-28",
+   "title": "TRADES UNION CONGRESS.",
+   "file": "1872-09-28.json"
+  },
+  {
+   "date": "1872-10-05",
+   "title": "TRADES UNION CONGRESS",
+   "file": "1872-10-05.json"
+  },
+  {
+   "date": "1872-10-12",
+   "title": "SETTLEMENT OF THE STRIKE Al",
+   "file": "1872-10-12.json"
+  },
+  {
+   "date": "1872-10-12",
+   "title": "NATIONAL AGRICULTURAD LAB OURE AS' UNION.",
+   "file": "1872-10-12.json"
+  },
+  {
+   "date": "1872-10-12",
+   "title": "TIIIC WAGES QUESTION.",
+   "file": "1872-10-12.json"
+  },
+  {
+   "date": "1872-10-12",
+   "title": "[ADVETtrfirElf ENT, TRADES UNION 001GRESS.-",
+   "file": "1872-10-12.json"
+  },
+  {
+   "date": "1872-10-19",
+   "title": "TilE TIIRE&TENED LOCK-OUT IN SOUTH WALES.",
+   "file": "1872-10-19.json"
+  },
+  {
+   "date": "1872-10-26",
+   "title": "TRADE UNIONISNI AND OUR /:ORq(3ISI",
+   "file": "1872-10-26.json"
+  },
+  {
+   "date": "1872-10-26",
+   "title": "NATIONAL AGRICULTURAL LABOURERS' UNION.",
+   "file": "1872-10-26.json"
+  },
+  {
+   "date": "1872-10-26",
+   "title": "AGRICULTURAL LABOURERS' UNION.",
+   "file": "1872-10-26.json"
+  },
+  {
+   "date": "1872-10-26",
+   "title": "I:ADVERTISEMENT.] TRADES UNION CONGRESS.",
+   "file": "1872-10-26.json"
+  },
+  {
+   "date": "1872-11-02",
+   "title": "NOTTINGHAM DYERS' LOCK-OUT.",
+   "file": "1872-11-02.json"
+  },
+  {
+   "date": "1872-11-02",
+   "title": "CADVERTISEMENT.] TRADES UNION CONGRESS.",
+   "file": "1872-11-02.json"
+  },
+  {
+   "date": "1872-11-09",
+   "title": "LADVERTISEUENT.) TRADES UNION CONGRESS.",
+   "file": "1872-11-09.json"
+  },
+  {
+   "date": "1872-11-16",
+   "title": "COLLIERS WAGES.",
+   "file": "1872-11-16.json"
+  },
+  {
+   "date": "1872-11-16",
+   "title": "WEAVERS' STRIKE AT",
+   "file": "1872-11-16.json"
+  },
+  {
+   "date": "1872-11-16",
+   "title": "{ADVARTISEMIINT.Ii. TRADES UNION CO GRESS.",
+   "file": "1872-11-16.json"
+  },
+  {
+   "date": "1872-11-23",
+   "title": "GENERAL UNION OF",
+   "file": "1872-11-23.json"
+  },
+  {
+   "date": "1872-11-23",
+   "title": "STRIKE OF FARM LABOURERS IN BEDFORDSHIRE.",
+   "file": "1872-11-23.json"
+  },
+  {
+   "date": "1872-11-23",
+   "title": "CLYDE ENGINEERS' DISPUTE.",
+   "file": "1872-11-23.json"
+  },
+  {
+   "date": "1872-11-23",
+   "title": "LOCK-OUT IN THE STAFFORDSHIRE POTTERIES.",
+   "file": "1872-11-23.json"
+  },
+  {
+   "date": "1872-11-30",
+   "title": "REDUCTION OF WAGES IN SOUTH",
+   "file": "1872-11-30.json"
+  },
+  {
+   "date": "1872-11-30",
+   "title": "STRIKE OF GLASSOUrTERS.",
+   "file": "1872-11-30.json"
+  },
+  {
+   "date": "1872-12-07",
+   "title": "STRIKE OF THE LONDON GAS",
+   "file": "1872-12-07.json"
+  },
+  {
+   "date": "1872-12-14",
+   "title": "-I.4Dvith.TISEILENT.I TRADES UNION CONGRESS.",
+   "file": "1872-12-14.json"
+  },
+  {
+   "date": "1872-12-21",
+   "title": "GAS STOK.ERS' STRIKE.",
+   "file": "1872-12-21.json"
+  },
+  {
+   "date": "1872-12-21",
+   "title": "(ADVERTISEMENT.] TRADES \"UNION CONGRESS.",
+   "file": "1872-12-21.json"
+  },
+  {
+   "date": "1872-12-28",
+   "title": "CADVEItTISE3fENT.I TRADES 'UNION CONGRESS.",
+   "file": "1872-12-28.json"
+  }
+ ],
+ "labourItemCount": 117,
+ "sections": [],
+ "generated_by": "本项目脚本 tools/analyse_beehive.py（可复算）"
+}

@@ -1,0 +1,45 @@
+{
+  "dataset": "LiDAR HD classified point clouds",
+  "producer": "Institut national de l’information géographique et forestière (IGN)",
+  "viewer_url": "https://romain974.github.io/lidar-viewer/",
+  "dataset_url": "https://www.data.gouv.fr/datasets/nuages-de-points-lidar-hd",
+  "license": "Licence Ouverte / Open Licence 2.0",
+  "formats": [
+    "LAS/LAZ 1.4"
+  ],
+  "nominal_density": "At least 10 pulses/m² (dataset specification)",
+  "tile_size": "1 km² tiles; approximately 500 MB–2 GB each (dataset description)",
+  "relevant_area": "Paris petite couronne, selected in the official viewer",
+  "representation": "Present-day classified aerial LiDAR point cloud for ground and above-ground objects; regional spatial context, not a facade-textured photogrammetry mesh and not a historical reconstruction.",
+  "used_for": [
+    "paris_commune_square",
+    "hotel_de_ville_pre1871",
+    "federated_wall_current_lidar"
+  ],
+  "local_copy": false,
+  "notes": "Use the official streaming viewer instead of downloading huge point-cloud tiles into the website repository. Old Hôtel de Ville geometry remains an evidence-constrained historical reconstruction.",
+  "viewer_library": "lidar-viewer 1.0.0",
+  "viewer_repository": "https://github.com/romain974/lidar-viewer",
+  "viewer_commit": "3df0c31f03afba9c0fd0b2cd2b60319f365b670b",
+  "viewer_license": "Upstream custom attribution license; LICENSE and NOTICE are vendored. Required clickable credit to https://www.simulateur-toiture.fr remains enabled.",
+  "in_app_viewer": {
+    "center_wgs84": [
+      2.3522,
+      48.8566
+    ],
+    "span_m": 240,
+    "max_points": 300000,
+    "renderer": "single-tone WebGL points; no textured mesh or classification colors",
+    "additional_centers_wgs84": {
+      "federated_wall_current_lidar": [
+        2.40008,
+        48.85968
+      ]
+    }
+  },
+  "viewer_files": "assets/vendor/lidar-viewer-1.0.0/",
+  "previous_viewer_url": "https://visionneuse-lidarhd.ign.fr/",
+  "viewer_provider": "Romain Rivière · open-source third-party web viewer; not an IGN-operated site",
+  "viewer_access_note": "Viewer fallback changed after the legacy IGN viewer host failed DNS/timeout checks in this environment. The official IGN open dataset remains linked separately; direct in-exhibit loading remains the primary experience. The external viewer accepts address search and displays available COPC coverage.",
+  "checked_date": "2026-11-01"
+}

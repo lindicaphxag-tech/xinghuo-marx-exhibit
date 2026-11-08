@@ -1,0 +1,129 @@
+{
+  "title": "历史空间逐址公开三维模型检索",
+  "checked_at": "2026-11-01",
+  "platform": "Sketchfab official public REST API v3; separate official collection/project pages are listed where relevant.",
+  "api": "https://api.sketchfab.com/v3/search?type=models&q={urlencoded-query}&count=20",
+  "coverage": "检索公开可索引的 Sketchfab 模型与指定馆藏/项目页，不代表对全网、未公开馆藏、登录后资源或许可未公开资源的穷尽检索。查询结果需逐个核对对象与地点；名称命中本身不证明地点、年代或采集方式。",
+  "queries": [
+    {
+      "site": "拉雪兹公墓·1871年联邦社墙（处决地点）",
+      "queries": [
+        "Mur des Fédérés",
+        "Mur des Federes",
+        "Federated Wall Pere Lachaise",
+        "Père Lachaise cemetery photogrammetry",
+        "Pere Lachaise cemetery Paris 3D scan"
+      ],
+      "results": [
+        {
+          "model": "Monument to the victims of the revolutions",
+          "uid": "7e54deda45b3492fbb1d6ca780bb15c7",
+          "faces": 449931,
+          "license": "CC BY 4.0",
+          "decision": "纳入独立展项：这是公墓外 Samuel-de-Champlain 花园内的1909年纪念碑，不是墓园内1871年执行枪决的墙。该版为已检出同题版本中的较轻版本。"
+        },
+        {
+          "model": "Victimes des Révolutions (high res)",
+          "uid": "308e0f320acb42b184e58301c9fc328f",
+          "faces": 5459153,
+          "license": "CC BY 4.0",
+          "decision": "同一作者、同一1909年纪念碑的高分辨率版；不作为默认模型，以免设备负载过高。"
+        },
+        {
+          "model": "Victimes des Révolutions (Victims of Revolutions)",
+          "uid": "2a16d71b1df74ff5a3297b5c6203d478",
+          "faces": 1871725,
+          "license": "CC BY 4.0",
+          "decision": "同一作者、同一1909年纪念碑的中分辨率版；不作为默认模型。"
+        },
+        {
+          "model": "Monument aux morts, Père Lachaise photogrammetry",
+          "uid": "569879507a9a43b18bb86726f400cfc9",
+          "faces": 71143,
+          "license": "CC BY 4.0",
+          "decision": "排除：墓园内另一座独立战争纪念物，页面描述为手机快速扫描，不是联邦社墙。"
+        }
+      ],
+      "conclusion": "公开检索未发现联邦社墙本体的可核验 Sketchfab 扫描；现有公社记忆条目只展示位置不同的1909年纪念碑。"
+    },
+    {
+      "site": "伦敦·圣马丁堂与90 Long Acre",
+      "queries": [
+        "St Martin Hall Long Acre",
+        "Saint Martin Hall London 3D",
+        "Long Acre photogrammetry building"
+      ],
+      "results": [],
+      "conclusion": "未检出标题/关键词可核的圣马丁堂历史会堂扫描。在线现状 LiDAR DSM 可展示街区地表/屋顶高度，但不是已消失会堂网格。"
+    },
+    {
+      "site": "伦敦·肯宁顿公地（1848年集会）",
+      "queries": [
+        "Kennington Common 1848",
+        "Kennington Park 3D scan",
+        "Kennington Common photogrammetry"
+      ],
+      "results": [
+        {
+          "model": "Decorative Column, Neoclassical Columns",
+          "uid": "b8cd5c4046004a968d8ce1e5d374eafa",
+          "faces": 1000006,
+          "decision": "排除：通用柱式模型，不能证明来自肯宁顿公园。"
+        },
+        {
+          "model": "PETERPANFIX",
+          "uid": "d7d413d992bd4c988f2df426c22690b1",
+          "faces": 329992,
+          "decision": "排除：标题、说明和元数据未证明与肯宁顿公园有关。"
+        }
+      ],
+      "conclusion": "未发现1848年公地集会的现存三维扫描；继续使用有同期图像约束的历史空间示意，并与当代公园 LiDAR 地形和现存纪念柱扫描分开展示。"
+    },
+    {
+      "site": "圣彼得堡·斯莫尔尼学院",
+      "queries": [
+        "Smolny Institute",
+        "Smolny Hall Saint Petersburg scan"
+      ],
+      "results": [],
+      "conclusion": "本次公开模型查询没有找到可核验的斯莫尔尼主楼或大会堂扫描；现有2018年专业测绘项目记录未提供公开网格。"
+    },
+    {
+      "site": "伦敦·大英博物馆圆形阅览室",
+      "queries": [
+        "British Museum Reading Room",
+        "British Museum Reading Room 3D model download"
+      ],
+      "results": [
+        {
+          "model": "Assyrian Wall Relief",
+          "uid": "3cc01aaed28f4aaaa445f89db33f47c3",
+          "faces": 4942916,
+          "decision": "排除：馆藏浮雕，不是阅览室空间。"
+        }
+      ],
+      "official_project": "https://dev.thecdm.ca/projects/archives/british-museum-reading-room",
+      "official_project_note": "Centre for Digital Media 记录馆方团队曾为 Second Life 教学创建实际阅览室的3D数字表示；这是教育项目档案页，不是可下载的原址扫描或已确认仍可运行的3D查看器。"
+    },
+    {
+      "site": "巴黎·市政厅现状",
+      "queries": [
+        "Hôtel de Ville Paris photogrammetry",
+        "Paris Hotel de Ville 3D scan"
+      ],
+      "results": [
+        {
+          "model": "Hôtel de ville",
+          "uid": "f4fcf806935a43028c67d2a3450fd88a",
+          "faces": 406855,
+          "decision": "匹配现存重建后的巴黎市政厅摄影测量；不是1871年前旧楼。许可未由本次搜索字段确认，展馆只嵌入原作者查看器。"
+        }
+      ]
+    },
+    {
+      "site": "地点误命中·Queen’s Theatre",
+      "source": "https://losttheatres.net/queens",
+      "decision": "排除：该3D档案重建的是澳大利亚阿德莱德1841年Queen’s Theatre，不是伦敦 Long Acre 的1867年Queen’s Theatre，更不是1850—1860年的 St Martin’s Hall。两处同名不可互换。"
+    }
+  ]
+}

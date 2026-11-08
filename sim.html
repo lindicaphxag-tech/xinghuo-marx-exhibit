@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>运动扩散模拟 · 1830–1917</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<style>
+  :root{--bg:#080706;--ink:#f2e9d8;--gold:#c9a262;--red:#a8332c;--dim:#8d8175}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);
+    font:15px/1.6 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  canvas{display:block}
+  .hud{position:fixed;inset:0;pointer-events:none;z-index:5}
+  .top{position:absolute;top:0;left:0;right:0;padding:18px 26px;display:flex;justify-content:space-between;align-items:flex-start;
+    background:linear-gradient(180deg,rgba(8,7,6,.92),transparent)}
+  .brand span{font-size:11.5px;letter-spacing:.2em;color:var(--gold)}
+  .brand b{display:block;font-size:23px;margin-top:2px}
+  .year{font-size:44px;font-variant-numeric:tabular-nums;color:var(--gold);line-height:1;text-align:right}
+  .year small{display:block;font-size:11.5px;letter-spacing:.18em;color:var(--dim);margin-top:6px}
+  .panel{position:absolute;left:26px;bottom:26px;width:300px;pointer-events:auto;
+    background:rgba(12,10,9,.88);border:1px solid rgba(201,162,98,.26);border-radius:4px;padding:14px 16px}
+  .panel h4{margin:0 0 10px;font-size:12px;letter-spacing:.18em;color:var(--gold);font-weight:500}
+  .row{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:12px;color:#b3a795}
+  .row input[type=range]{flex:1;accent-color:var(--red)}
+  .row b{color:var(--ink);font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+  .btns{display:flex;gap:8px;margin-top:12px}
+  .btns button{flex:1;font:inherit;font-size:12px;padding:7px 0;border-radius:3px;cursor:pointer;
+    border:1px solid rgba(201,162,98,.34);background:transparent;color:#cfc2ae}
+  .btns button:hover{background:rgba(201,162,98,.12);color:#fff}
+  .btns button.on{background:var(--red);border-color:var(--red);color:#fff}
+  .stats{position:absolute;right:26px;bottom:26px;text-align:right;font-size:12px;color:var(--dim)}
+  .stats b{color:var(--gold);font-variant-numeric:tabular-nums;font-size:15px}
+  .back{position:fixed;left:26px;top:22px;z-index:6;font-size:12px;color:#8d8175;text-decoration:none}
+  .back:hover{color:var(--gold)}
+  .hint{position:absolute;right:26px;top:96px;text-align:right;font-size:11.5px;color:#7d7264;line-height:1.7}
+</style>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<a class="back" href="index.html">← 返回展馆</a>
+<canvas id="cv"></canvas>
+<div class="hud">
+  <div class="top">
+    <div class="brand"><span>DIFFUSION SIMULATION</span><b>运动扩散模拟 · 1830—1917</b></div>
+    <div class="year"><span id="yr">1830</span><small>当前年份</small></div>
+  </div>
+  <div class="hint">粒子＝一次行动 / 一次集会 / 一份刊物<br>越亮＝当期活动强度越高</div>
+  <aside class="panel">
+    <h4>模型参数</h4>
+    <div class="row"><label>扩散率</label><input id="spread" type="range" min="0.2" max="2" step="0.05" value="0.85"><b id="spreadV">0.85</b></div>
+    <div class="row"><label>镇压强度</label><input id="repress" type="range" min="0" max="1.5" step="0.05" value="0.4"><b id="repressV">0.40</b></div>
+    <div class="row"><label>组织化</label><input id="org" type="range" min="0" max="1" step="0.05" value="0.5"><b id="orgV">0.50</b></div>
+    <div class="btns">
+      <button id="play" class="on" type="button">暂停</button>
+      <button id="restart" type="button">重新开始</button>
+    </div>
+  </aside>
+  <div class="stats">
+    活跃城市 <b id="act">0</b><br>
+    年度事件 <b id="evt">0</b><br>
+    累计行动 <b id="total">0</b>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var cv = document.getElementById("cv");
+  var ctx = cv.getContext("2d");
+  var W = 0, H = 0, DPR = Math.min(devicePixelRatio || 1, 2);
+
+  var GEO = null, CITIES = [], EVENTS = [];
+  var YEAR0 = 1830, YEAR1 = 1917;
+  var year = YEAR0, playing = true, acc = 0;
+  var P = { spread: 0.85, repress: 0.4, org: 0.5 };
+
+  var view = { x: 0, y: 0, k: 1 };
+  var particles = [], totalActs = 0, yearEvents = 0;
+
+  /* 墨卡托 y 换算成「度」，才能与经度跨度同量纲，避免地图被压扁 */
+  function mercY(lat) { return Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360)) * 180 / Math.PI; }
+
+  function fit() {
+    var b = GEO.bbox;
+    var pad = 90;
+    var spanLon = b[2] - b[0];
+    var yTop = mercY(b[3]), yBot = mercY(b[1]);
+    var spanMerc = yTop - yBot;
+    /* X 用经度跨度、Y 用墨卡托跨度，各自算比例后取小，保证不变形 */
+    var k = Math.min((W - pad * 2) / spanLon, (H - pad * 2) / spanMerc);
+    view.k = k;
+    view.mercTop = yTop;
+    view.x = (W - spanLon * k) / 2 - b[0] * k;
+    view.y = (H - spanMerc * k) / 2;
+  }
+
+  function proj(lon, lat) {
+    var b = GEO.bbox;
+    return {
+      x: view.x + (lon - b[0]) * view.k,
+      y: view.y + (view.mercTop - mercY(lat)) * view.k
+    };
+  }
+
+  function resize() {
+    W = innerWidth; H = innerHeight;
+    cv.width = W * DPR; cv.height = H * DPR;
+    cv.style.width = W + "px"; cv.style.height = H + "px";
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    if (GEO) fit();
+  }
+
+  function hash(s) {
+    var h = 2166136261;
+    for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return ((h >>> 0) % 1000) / 1000;
+  }
+
+  function initCities() {
+    var b = GEO.cities || {};
+    CITIES = Object.keys(b).map(function (id) {
+      var ll = b[id];
+      var seed = hash(id);
+      return {
+        id: id, lon: ll[0], lat: ll[1],
+        // 每个城市的“觉醒年”：工业与组织越强越早，用固定哈希保证可复现
+        onset: 1830 + Math.floor(seed * 70),
+        activity: 0, weight: 0.6 + seed * 0.9,
+        name: ({"london":"伦敦","trier":"特里尔","paris":"巴黎","lyon":"里昂","silesia":"西里西亚",
+                "brussels":"布鲁塞尔","berlin":"柏林","peterburg":"彼得格勒","geneva":"日内瓦",
+                "hague":"海牙","cologne":"科隆","vienna":"维也纳","budapest":"布达佩斯",
+                "milan":"米兰","rome":"罗马","moscow":"莫斯科"})[id] || id
+      };
+    });
+  }
+
+  function step(dt) {
+    if (!GEO) return;
+    var dYear = dt * 1.6;                 // 每秒推进约 1.6 年
+    year += dYear;
+    if (year > YEAR1) { year = YEAR1; playing = false; setPlayBtn(); }
+
+    var spread = P.spread, repress = P.repress, org = P.org;
+    CITIES.forEach(function (c) {
+      if (year >= c.onset) {
+        c.activity += dYear * (0.22 + org * 0.5) * c.weight;
+      }
+      c.activity *= (1 - 0.30 * repress * dt);
+      c.activity = Math.min(c.activity, 3.2);
+    });
+
+    // 扩散：邻近城市互相点燃
+    for (var i = 0; i < CITIES.length; i++) {
+      for (var j = i + 1; j < CITIES.length; j++) {
+        var a = CITIES[i], b2 = CITIES[j];
+        var dx = a.lon - b2.lon, dy = a.lat - b2.lat;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > 9) continue;
+        var flow = 0.055 * spread * Math.exp(-dist / 4.5);
+        if (a.activity > b2.activity) b2.activity += a.activity * flow * dt;
+        else a.activity += b2.activity * flow * dt;
+      }
+    }
+
+    // 发射粒子
+    yearEvents = 0;
+    CITIES.forEach(function (c) {
+      var rate = c.activity * 6 * (0.4 + org);
+      if (Math.random() < rate * dt) {
+        var other = CITIES[Math.floor(Math.random() * CITIES.length)];
+        particles.push({
+          x: c.lon, y: c.lat,
+          tx: other.lon, ty: other.lat,
+          t: 0, life: 1.6 + Math.random() * 1.2,
+          hue: Math.random() < 0.35 ? "gold" : "red"
+        });
+        totalActs++;
+        yearEvents++;
+        c.activity = Math.min(3.2, c.activity + 0.06);
+      }
+    });
+
+    particles.forEach(function (p) { p.t += dt / p.life; });
+    particles = particles.filter(function (p) { return p.t < 1; });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    if (!GEO) return;
+
+    // 陆地
+    GEO.countries.forEach(function (country) {
+      country.rings.forEach(function (ring) {
+        if (!ring || ring.length < 3) return;
+        ctx.beginPath();
+        for (var i = 0; i < ring.length; i++) {
+          var q = proj(ring[i][0], ring[i][1]);
+          i ? ctx.lineTo(q.x, q.y) : ctx.moveTo(q.x, q.y);
+        }
+        ctx.closePath();
+        ctx.fillStyle = "rgba(46,42,36,.72)";
+        ctx.fill();
+        ctx.strokeStyle = "rgba(150,138,112,.18)";
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      });
+    });
+
+    // 传播弧线
+    particles.forEach(function (p) {
+      var a = proj(p.x, p.y), b = proj(p.tx, p.ty);
+      var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 - Math.abs(b.x - a.x) * 0.22;
+      var t = p.t;
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.quadraticCurveTo(mx, my, b.x, b.y);
+      ctx.strokeStyle = p.hue === "gold"
+        ? "rgba(201,162,98," + (0.30 * (1 - t)) + ")"
+        : "rgba(168,51,44," + (0.34 * (1 - t)) + ")";
+      ctx.lineWidth = 1.1;
+      ctx.stroke();
+
+      var ix = (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * mx + t * t * b.x;
+      var iy = (1 - t) * (1 - t) * a.y + 2 * (1 - t) * t * my + t * t * b.y;
+      ctx.beginPath();
+      ctx.arc(ix, iy, 2.1, 0, Math.PI * 2);
+      ctx.fillStyle = p.hue === "gold" ? "rgba(255,220,150,.95)" : "rgba(230,120,100,.95)";
+      ctx.fill();
+    });
+
+    // 城市光点
+    var active = 0;
+    CITIES.forEach(function (c) {
+      var q = proj(c.lon, c.lat);
+      var v = Math.min(1, c.activity / 1.8);
+      if (c.activity > 0.08) active++;
+      if (v > 0.02) {
+        var g = ctx.createRadialGradient(q.x, q.y, 0, q.x, q.y, 26 * v + 6);
+        g.addColorStop(0, "rgba(240,200,140," + (0.55 * v) + ")");
+        g.addColorStop(1, "rgba(240,200,140,0)");
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(q.x, q.y, 26 * v + 6, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.arc(q.x, q.y, 2.2 + v * 3.4, 0, Math.PI * 2);
+      ctx.fillStyle = v > 0.55 ? "#f0c88c" : (c.activity > 0.1 ? "#c98a5a" : "rgba(140,128,108,.7)");
+      ctx.fill();
+
+      if (v > 0.2) {
+        ctx.font = "11px 'Noto Sans SC',sans-serif";
+        ctx.fillStyle = "rgba(232,220,200," + (0.35 + v * 0.5) + ")";
+        ctx.fillText(c.name, q.x + 7, q.y + 4);
+      }
+    });
+
+    document.getElementById("act").textContent = active;
+    document.getElementById("evt").textContent = yearEvents;
+    document.getElementById("total").textContent = totalActs;
+    document.getElementById("yr").textContent = Math.floor(year);
+  }
+
+  var last = 0;
+  function loop(ts) {
+    requestAnimationFrame(loop);
+    var dt = Math.min(0.05, (ts - last) / 1000 || 0.016);
+    last = ts;
+    if (playing) step(dt);
+    draw();
+  }
+
+  function setPlayBtn() {
+    var b = document.getElementById("play");
+    b.textContent = playing ? "暂停" : "继续";
+    b.classList.toggle("on", playing);
+  }
+
+  function bind() {
+    document.getElementById("play").onclick = function () { playing = !playing; setPlayBtn(); };
+    document.getElementById("restart").onclick = function () {
+      year = YEAR0; particles = []; totalActs = 0;
+      CITIES.forEach(function (c) { c.activity = 0; });
+      playing = true; setPlayBtn();
+    };
+    ["spread", "repress", "org"].forEach(function (k) {
+      var el = document.getElementById(k);
+      el.oninput = function () {
+        P[k] = Number(el.value);
+        document.getElementById(k + "V").textContent = Number(el.value).toFixed(2);
+      };
+    });
+    window.addEventListener("resize", resize);
+  }
+
+  function load() {
+    Promise.all([
+      fetch("assets/geo/europe.json").then(function (r) { return r.json(); })
+    ]).then(function (res) {
+      GEO = res[0];
+      resize();
+      initCities();
+      bind();
+      setPlayBtn();
+      requestAnimationFrame(loop);
+    }).catch(function (e) {
+      ctx.fillStyle = "#a8332c";
+      ctx.font = "16px sans-serif";
+      ctx.fillText("数据加载失败：" + e.message, 40, 60);
+    });
+  }
+
+  resize();
+  load();
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

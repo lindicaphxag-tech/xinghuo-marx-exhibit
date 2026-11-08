@@ -1,0 +1,15 @@
+/* hotspot.css —— 场景交互热点卡片 */
+.hotspot-card{
+  position:absolute;right:18px;top:18px;width:min(320px,42vw);
+  padding:16px 18px 14px;border:1px solid rgba(201,162,98,.45);border-radius:4px;
+  background:rgba(18,15,13,.94);color:#f2e9d8;
+  font:14px/1.7 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  box-shadow:0 18px 46px rgba(0,0,0,.5);backdrop-filter:blur(4px);z-index:6;
+}
+.hotspot-card h4{margin:0 0 8px;font-size:15px;font-weight:600;color:#c9a262;letter-spacing:.04em}
+.hotspot-card p{margin:0;font-size:13.5px;line-height:1.85;color:#ded0bb}
+.hotspot-close{
+  position:absolute;right:8px;top:6px;width:24px;height:24px;padding:0;
+  border:0;background:none;color:#bfae97;font-size:18px;line-height:1;cursor:pointer;
+}
+.hotspot-close:hover{color:#f2e9d8}

@@ -1,0 +1,145 @@
+{
+  "subject": "Smolny Institute main building, present-day exterior",
+  "method": "COLMAP / pycolmap 4.2.1 SIFT feature extraction, exhaustive pair matching and incremental mapping; 17 legal, locally cached 960–1920 px exterior photos from 2011, 2017, 2019, 2023 and 2026; CPU exploratory run.",
+  "input_images": 17,
+  "registered_images": 2,
+  "verified_image_pairs": 21,
+  "verified_pair_inliers": 3020,
+  "connected_images": 12,
+  "sparse_points": 31,
+  "result": "A larger, licensed photo set was evaluated. COLMAP formed 21 geometrically verified pairs and a 12-image correspondence component, but incremental reconstruction retained only 2 images and 31 sparse points. The two registered images do not provide a multi-sided building survey; no complete or defensible facade mesh was produced. The photographs remain dated exterior evidence, and the scene retains an explicitly labeled source-constrained reconstruction. Local candidate thumbnails and attribution metadata are stored in candidate-photos/ and candidate-photos.json.",
+  "input_sets": [
+    {
+      "author": "GAlexandrova",
+      "date": "2017-04-28",
+      "license": "CC BY-SA 4.0",
+      "images": [
+        {
+          "file": "smolny-main-2017-front-01.jpg",
+          "title": "5381. St. Petersburg. Smolny.jpg",
+          "label": "主立面角度 1",
+          "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny.jpg",
+          "local_path": "assets/scenes/sources/smolny-institute/smolny-main-2017-front-01.jpg"
+        },
+        {
+          "file": "smolny-main-2017-front-02.jpg",
+          "title": "5381. St. Petersburg. Smolny (2).jpg",
+          "label": "主立面角度 2",
+          "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny_(2).jpg",
+          "local_path": "assets/scenes/sources/smolny-institute/smolny-main-2017-front-02.jpg"
+        },
+        {
+          "file": "smolny-main-2017-side-01.jpg",
+          "title": "5381. St. Petersburg. Smolny (3).jpg",
+          "label": "侧向立面角度 1",
+          "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny_(3).jpg",
+          "local_path": "assets/scenes/sources/smolny-institute/smolny-main-2017-side-01.jpg"
+        },
+        {
+          "file": "smolny-main-2017-side-02.jpg",
+          "title": "5381. St. Petersburg. Smolny (4).jpg",
+          "label": "侧向立面角度 2",
+          "source_url": "https://commons.wikimedia.org/wiki/File:5381._St._Petersburg._Smolny_(4).jpg",
+          "local_path": "assets/scenes/sources/smolny-institute/smolny-main-2017-side-02.jpg"
+        }
+      ]
+    },
+    {
+      "author": "Александровы АГ",
+      "date": "2023-06-10",
+      "license": "CC BY-SA 4.0",
+      "images": [
+        "0410Ca. Saint Petersburg. Main building of the Smolny Institute.jpg",
+        "0415Ca. Saint Petersburg. Smolny Institute.jpg"
+      ]
+    },
+    {
+      "author": "Александровы АГ",
+      "date": "2026-03-22",
+      "license": "CC BY-SA 4.0",
+      "images": [
+        "0431Ha. Saint Petersburg. Main building of the Smolny Institute.jpg",
+        "0680Ha. Saint Petersburg. Main building of the Smolny Institute.jpg"
+      ]
+    }
+  ],
+  "license_note": "All photo sets are available under CC BY-SA 4.0 on Wikimedia Commons. They are displayed with credits and source links. No derived mesh is redistributed because the reconstruction failed.",
+  "assessment_date": "2026-11-01",
+  "supplemental_sets": [
+    {
+      "date": "2011-03-12 and 2011-04-24",
+      "authors": "MartinPutz; Flying Russian",
+      "license": "CC BY-SA 3.0",
+      "images": 4
+    },
+    {
+      "date": "2017-04-28",
+      "author": "GAlexandrova",
+      "license": "CC BY-SA 4.0",
+      "images": 1
+    },
+    {
+      "date": "2019-06-08",
+      "author": "Kora27",
+      "license": "CC BY-SA 4.0",
+      "images": 2
+    },
+    {
+      "date": "2023-06-10",
+      "author": "Александровы АГ",
+      "license": "CC BY-SA 4.0",
+      "images": 2
+    },
+    {
+      "date": "2026-03-22",
+      "author": "Александровы АГ",
+      "license": "CC BY-SA 4.0",
+      "images": 2
+    },
+    {
+      "date": "2026-05-03 and 2026-05-17",
+      "authors": "Екатерина Борисова; Aleksandrovy AG",
+      "license": "CC BY-SA 4.0",
+      "images": 2
+    }
+  ],
+  "source_manifest": "assets/scenes/sources/smolny-institute/candidate-photos.json",
+  "follow_up_runs": [
+    {
+      "date": "2026-11-01",
+      "software": "COLMAP / pycolmap 4.2.1",
+      "camera_mode": "AUTO",
+      "input_images": 19,
+      "added_images": [
+        {
+          "file": "smolny-main-side-2022-01.jpg",
+          "date": "2022-07-26",
+          "author": "Никонико962",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%B0_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_2022_01.jpg",
+          "local_path": "assets/scenes/sources/smolny-institute/smolny-main-side-2022-01.jpg"
+        },
+        {
+          "file": "smolny-main-side-2022-02.jpg",
+          "date": "2022-07-26",
+          "author": "Никонико962",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B0%D1%81%D0%B0%D0%B4_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81%D0%B0_%D0%A1%D0%BC%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%D0%B0_2022_02.jpg",
+          "local_path": "assets/scenes/sources/smolny-institute/smolny-main-side-2022-02.jpg"
+        }
+      ],
+      "result": {
+        "registered_images": 2,
+        "sparse_points": 31,
+        "registered_image_files": [
+          "36e99848dc.jpg",
+          "446465ad90.jpg"
+        ],
+        "new_images_registered": false,
+        "new_pair_verified_inliers": 56,
+        "pair_only_initialization_models": 0
+      },
+      "interpretation": "Adding two same-day side/end-facade photos did not improve reconstruction. They form a geometrically verified pair (56 inliers), but forced pair-only initialization with relaxed thresholds produced zero models; the 19-image AUTO run still registered only the same two earlier images and 31 sparse points. No publishable full or partial mesh was produced. The two photos remain licensed current-exterior evidence only, not 1917 evidence or scans."
+    }
+  ]
+}

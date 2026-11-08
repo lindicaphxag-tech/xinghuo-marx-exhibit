@@ -1,0 +1,22 @@
+{
+  "item_id": "first_international_site_current_dsm",
+  "site": "90 Long Acre, London WC2E 9RA; current site of the former St Martin’s Hall / Queen’s Theatre block",
+  "dataset": "Environment Agency LiDAR Composite DSM (FZ_DSM), 1m",
+  "source_cog": "https://data.source.coop/rebalance-earth/ea-dem/FZ_DSM/DEFLATE/TQ38sw_FZ_DSM_1m.tif",
+  "source_catalog": "https://data.source.coop/rebalance-earth/ea-dem/ea-lidar-fz-dsm-1m.json",
+  "official_dataset": "https://environment.data.gov.uk/dataset/9ba4d5ac-d596-445a-9056-dae3ddec0178",
+  "license": "Open Government Licence v3.0",
+  "producer": "Environment Agency",
+  "crs": "EPSG:27700",
+  "vertical_datum": "Ordnance Datum Newlyn",
+  "grid_reference_center": [
+    530313,
+    181149
+  ],
+  "display_extent_m": 600,
+  "source_resolution_m": 1,
+  "mesh_sampling_m": 2,
+  "vertical_exaggeration": 1,
+  "limitations": "DSM models roof/canopy tops, not building facades, textures, interiors, or historic geometry. Historical footprint location is approximate and should be refined against cadastral/large-scale historical mapping.",
+  "processing_script": "scripts/build_st_martins_dsm.py"
+}

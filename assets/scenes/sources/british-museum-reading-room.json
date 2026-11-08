@@ -1,0 +1,29 @@
+{
+  "item_id": "marx_reading_room",
+  "source": "https://commons.wikimedia.org/wiki/File:The_interior_of_the_Reading_Room_of_the_British_Museum.jpg",
+  "author": "Robert-brook",
+  "capture_date": "2025-01-11",
+  "license": "CC0 1.0",
+  "dimensions": "2048 × 1536",
+  "camera_coordinates": "51.519347, -0.126808",
+  "local_downloaded": false,
+  "use": "当代阅览室空间形制参照；不得描述为历史扫描或马克思时代图像。",
+  "panorama_2006": {
+    "source": "https://commons.wikimedia.org/wiki/File:British_Museum_Reading_Room_Panorama_Feb_2006.jpg",
+    "author": "Diliff",
+    "date": "circa 2006",
+    "dimensions": "4996 × 1701",
+    "description": "Near-180-degree interior panorama stitched from 2×5 photographs",
+    "licenses": [
+      "CC BY-SA 3.0",
+      "CC BY 2.5"
+    ],
+    "web_asset": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/British_Museum_Reading_Room_Panorama_Feb_2006.jpg/1280px-British_Museum_Reading_Room_Panorama_Feb_2006.jpg",
+    "period_note": "2006 post-use view; not Marx-era furnishing or scan"
+  },
+  "google_street_view": {
+    "url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=51.519347,-0.126808&heading=337&pitch=0&fov=80",
+    "official_reference": "https://www.britishmuseum.org/about-us/british-museum-story/architecture/great-court",
+    "note": "Official Great Court virtual-tour reference; Google panorama point coverage/availability may change."
+  }
+}

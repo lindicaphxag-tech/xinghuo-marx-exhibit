@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>开放三维模型 · 机械与道具</title>
+<style>
+  :root{--bg:#12100e;--panel:#1b1815;--line:#332d26;--fg:#efe7de;--dim:#a2968a;--red:#c8453c;--gold:#c9a227}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.65 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  header{padding:20px 28px 14px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  h1{margin:0;font-size:19px}
+  h1 span{color:var(--red)}
+  .sub{color:var(--dim);font-size:13px}
+  a{color:var(--gold);text-decoration:none}
+  main{display:grid;grid-template-columns:minmax(0,1fr) 300px}
+  @media(max-width:920px){main{grid-template-columns:1fr}}
+  .stage{position:relative;background:radial-gradient(circle at 50% 42%,#1d1916,#0b0a09 72%)}
+  canvas{display:block;width:100%;height:560px}
+  .hint{position:absolute;left:14px;bottom:10px;font-size:12px;color:rgba(255,255,255,.4)}
+  aside{border-left:1px solid var(--line);padding:16px;overflow-y:auto;height:calc(100vh - 78px)}
+  .card{display:flex;gap:10px;padding:7px;border-radius:6px;cursor:pointer;border:1px solid transparent}
+  .card:hover{background:#221d19}
+  .card.on{border-color:var(--red);background:#241c19}
+  .card img{width:54px;height:54px;object-fit:contain;background:#0e0c0a;border-radius:4px}
+  .card div{min-width:0}
+  .card b{display:block;font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .card small{display:block;font-size:11px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .meta{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--dim);min-height:80px}
+  .meta b{color:var(--fg);font-size:14px;display:block;margin-bottom:6px}
+</style>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<header>
+  <h1>开放三维模型 <span>·</span> 机械与道具</h1>
+  <div class="sub">38 件 · Sketchfab 开放许可（CC0 / CC BY / CC BY-SA）· 已减面与贴图降采样｜<a href="index.html">← 主展馆</a></div>
+</header>
+<main>
+  <div class="stage">
+    <canvas id="view"></canvas>
+    <div class="hint">拖动旋转 · 滚轮缩放 · 右侧点选模型</div>
+  </div>
+  <aside>
+    <div id="list"></div>
+    <div class="meta" id="meta">点选右侧任意模型载入。</div>
+  </aside>
+</main>
+<script src="assets/vendor/three-r147/three.min.js"></script>
+<script src="assets/vendor/three-r147/GLTFLoader.js"></script>
+<script src="assets/vendor/three-r147/OrbitControls.js"></script>
+<script>
+(function(){
+  "use strict";
+  var canvas=document.getElementById("view");
+  if(!canvas||typeof THREE==="undefined"){return;}
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(canvas.clientWidth,canvas.clientHeight,false);
+  if("outputColorSpace" in renderer) renderer.outputColorSpace=THREE.SRGBColorSpace;
+  else if("outputEncoding" in renderer) renderer.outputEncoding=THREE.sRGBEncoding;
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(45,canvas.clientWidth/canvas.clientHeight,0.01,5000);
+  camera.position.set(2,1.6,3);
+  var controls=new THREE.OrbitControls(camera,canvas);
+  controls.enableDamping=true; controls.dampingFactor=.08;
+  scene.add(new THREE.HemisphereLight(0xffffff,0x33302c,1.1));
+  var d1=new THREE.DirectionalLight(0xfff2dd,1.5); d1.position.set(3,5,4); scene.add(d1);
+  var d2=new THREE.DirectionalLight(0x88aaff,.5); d2.position.set(-4,-2,-3); scene.add(d2);
+  var clock=new THREE.Clock(), current=null, loader=new THREE.GLTFLoader(), listEl=document.getElementById("list");
+
+  function frame(obj){
+    var box=new THREE.Box3().setFromObject(obj);
+    var c=box.getCenter(new THREE.Vector3()), s=box.getSize(new THREE.Vector3());
+    var r=Math.max(s.x,s.y,s.z)||1;
+    obj.position.sub(c);
+    camera.position.set(r*1.2,r*0.9,r*1.6);
+    camera.near=r/100; camera.far=r*100; camera.updateProjectionMatrix();
+    controls.target.set(0,0,0); controls.update();
+  }
+
+  function load(it,el){
+    document.getElementById("meta").innerHTML="<b>"+it.name+"</b>"+it.usage+"<br>作者："+(it.author||"—")+"<br>许可："+it.license+"<br>建议位置："+(it.chapter||"—");
+    Array.prototype.forEach.call(listEl.children,function(x){x.classList.remove("on");});
+    el.classList.add("on");
+    if(current){scene.remove(current); current=null;}
+    loader.load(it.model,function(g){
+      current=g.scene; scene.add(current); frame(current);
+    },undefined,function(){
+      document.getElementById("meta").innerHTML="<b>"+it.name+"</b>载入失败，请通过本地 http 服务访问。";
+    });
+  }
+
+  fetch("assets/manifests/sketchfab.json").then(function(r){return r.json();}).then(function(d){
+    d.items.forEach(function(it,i){
+      var c=document.createElement("div");
+      c.className="card";
+      var era=(function(u){u=(u||"")+" "+(it.name||"");
+   if(/纺|机|steam|engine|loom|mule|press/i.test(u))return "19 世纪工业";
+   if(/旗|banner|传单|海报/i.test(u))return "19 世纪宣传";
+   return "时期未标注";})(it.usage);
+c.innerHTML='<img src="'+it.preview+'" alt=""><div><b>'+it.name+'</b><small>开放模型 · '+(it.usage||"器具")+' · '+era+'</small><small>'+it.license+'</small></div>';
+      c.onclick=function(){load(it,c);};
+      listEl.appendChild(c);
+      if(i===0) setTimeout(function(){load(it,c);},150);
+    });
+  }).catch(function(e){document.getElementById("meta").textContent="sketchfab.json 加载失败："+e.message;});
+
+  function tick(){requestAnimationFrame(tick);controls.update();renderer.render(scene,camera);}
+  tick();
+  addEventListener("resize",function(){
+    camera.aspect=canvas.clientWidth/canvas.clientHeight;camera.updateProjectionMatrix();
+    renderer.setSize(canvas.clientWidth,canvas.clientHeight,false);
+  });
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

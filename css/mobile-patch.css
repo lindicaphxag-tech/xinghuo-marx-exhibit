@@ -1,0 +1,52 @@
+/* mobile-patch.css — 小屏最后一公里补丁（不覆盖主样式，只兜底） */
+html { -webkit-text-size-adjust: 100%; }
+canvas, video, img { max-width: 100%; height: auto; }
+
+/* 顶部进度条 */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+  background: linear-gradient(90deg, #b3202a, #e8a040);
+  z-index: 9999; transition: width .1s linear;
+  box-shadow: 0 0 8px rgba(179,32,42,.6);
+}
+
+/* 小屏：正文呼吸、表格横滚、canvas 不溢出 */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  .hero-inner { width: 100%; }
+  .hero h1 { max-width: none; font-size: clamp(36px, 9.5vw, 42px); }
+  .hero .sub { max-width: 100%; font-size: 14px; }
+  .chapter-head h2 { font-size: 24px !important; }
+  .chapter-head p.lede { font-size: 14px !important; }
+  /* 表格容器可横滑 */
+  .table-wrap, table { display: block; max-width: 100%; overflow-x: auto; }
+  /* 按钮组纵向堆叠 */
+  .hero-actions { flex-direction: column; gap: 8px; padding: 0 16px; }
+  .hero-actions .btn { width: 100%; text-align: center; }
+  /* 章节问题框 */
+  .chapter-question { margin: 12px 0; padding: 10px 12px; font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .topbar .brand { font-size: 14px; }
+  .topbar .meta span { display: none; }
+  h1 { font-size: 26px; }
+  .door { padding: 18px; min-height: 120px; }
+}
+
+/* 减少动态偏好：进度条也别动画 */
+@media (prefers-reduced-motion: reduce) {
+  #scroll-progress { transition: none; }
+}
+
+/* 打印：只留正文，去掉导航/按钮/3D */
+@media print {
+  #side-nav, .city-rail, #cmdk, #scroll-progress, .hero-actions, .topbar,
+  button, .fab, [data-goto] { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .hero { min-height: auto !important; padding: 20px 0 !important; }
+  canvas, .hero-bg { display: none !important; }
+  section { page-break-inside: avoid; }
+  a { color: #000 !important; text-decoration: underline; }
+  a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 10px; color: #666; }
+}

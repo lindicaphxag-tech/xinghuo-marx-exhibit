@@ -1,0 +1,25 @@
+{
+  "item_id": "mytholme_mill_current_dsm",
+  "site": "Mytholme Mill, Saddleworth; OSGB36 / British National Grid SD 99483 06291",
+  "dataset": "Environment Agency LiDAR Composite DSM (FZ_DSM), 1m",
+  "source_cog": "https://data.source.coop/rebalance-earth/ea-dem/FZ_DSM/DEFLATE/SD99ne_FZ_DSM_1m.tif",
+  "source_catalog": "https://data.source.coop/rebalance-earth/ea-dem/ea-lidar-fz-dsm-1m.json",
+  "official_dataset": "https://environment.data.gov.uk/dataset/9ba4d5ac-d596-445a-9056-dae3ddec0178",
+  "license": "Open Government Licence v3.0",
+  "producer": "Environment Agency",
+  "host": "Source Cooperative / Rebalance Earth",
+  "crs": "EPSG:27700",
+  "vertical_datum": "Ordnance Datum Newlyn",
+  "grid_reference_center": [
+    399483,
+    406291
+  ],
+  "display_extent_m": 600,
+  "source_resolution_m": 1,
+  "mesh_sampling_m": 2,
+  "vertical_exaggeration": 1,
+  "limitations": "DSM shows top surfaces (roofs, canopy and terrain), not facades, interiors or textures. Contemporary data, not the mill in 1779 and not the 2017 photogrammetry capture.",
+  "location_reference": "https://www.lawtonsofsaddleworth.net/saddleworth-placenames-locations.html",
+  "related_archaeology": "https://www.castleshawarchaeology.co.uk/research.htm",
+  "processing_script": "scripts/build_mytholme_dsm.py"
+}

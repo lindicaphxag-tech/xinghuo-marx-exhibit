@@ -1,0 +1,15 @@
+{
+  "item_id": "memory_archive_hall",
+  "title": "Quarenghi smolny.jpg",
+  "artist": "Giacomo Quarenghi (1744–1817)",
+  "date": "c. 1806–1808",
+  "institution": "State Hermitage Museum, Saint Petersburg",
+  "inventory_number": "ОР-9648",
+  "medium": "Pen, brush, ink and watercolor on paper; 28.2 × 45.2 cm",
+  "depicted_content": "Central part of the main façade and a wall detail/plan; not a complete floor plan or full-building elevation.",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Quarenghi_smolny.jpg",
+  "museum_source": "https://www.hermitagemuseum.org/wps/portal/hermitage/digital-collection/02.+Drawings/266076/?lng=ru",
+  "license": "Public Domain Mark 1.0 (faithful reproduction of public-domain artwork)",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "use_in_model": "Constrains central portico/façade details only. It does not establish the complete building geometry, 1917 interior, or a site scan."
+}

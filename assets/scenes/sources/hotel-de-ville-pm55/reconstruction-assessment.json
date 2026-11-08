@@ -1,0 +1,47 @@
+{
+  "object": "Musée Carnavalet PM55 bronze relief model of the pre-1871 Hôtel de Ville",
+  "method": "COLMAP 4.2.1 SIFT feature extraction and exhaustive pair matching; source photos reduced to a maximum side of 1600 px.",
+  "input_images": 47,
+  "registered_images": 4,
+  "sparse_points": 515,
+  "result": "Insufficient image registration and sparse coverage for a complete facade/courtyard mesh. Dense patch-match was unavailable because this Windows build reports CUDA unavailable. No reconstruction mesh was produced or represented as 3D.",
+  "additional_attempts": [
+    {
+      "date": "2026-11-02",
+      "method": "COLMAP Python 4.2.1; 47 source photographs; per-image camera models; CPU SIFT extraction at maximum image side 3600 px with up to 20000 features; guided exhaustive matching.",
+      "extraction_result": "All 47 photographs completed feature extraction.",
+      "matching_result": "The process aborted during COLMAP Faiss SIMD detection even with FAISS_SIMD_LEVEL=NONE and FAISS_OPT_LEVEL=generic set before Python startup. It produced only 7 of the 1081 expected pair rows before termination; no pair network or mapping result could be evaluated. This bundled Faiss build did not honor the dynamic-dispatch fallback documented by upstream Faiss.",
+      "model_result": "No sparse reconstruction or mesh was produced. This is an environment-level matcher failure and does not establish that the source photographs are intrinsically unusable; it also does not justify publishing a scan.",
+      "temporary_data": "The intermediate database was inspected for match-table counts and then removed; no intermediate model data are retained."
+    }
+  ],
+  "registered_views": [
+    "LPDP_56735-16.jpg",
+    "LPDP_56735-17.jpg",
+    "LPDP_56736-1.jpg",
+    "LPDP_56736-2.jpg"
+  ],
+  "license": "Source photographs CC0; the resulting photogrammetry experiment is not published as a building mesh.",
+  "pm57_photogrammetry": {
+    "object": "Musée Carnavalet PM57 wooden scale model of the pre-1871 Hôtel de Ville (approx. 1860)",
+    "method": "COLMAP 4.2.1; 22 CC0 museum photographs, maximum image side 1600 px, three CPU threads, exhaustive matching and incremental mapping.",
+    "input_images": 22,
+    "registered_images": 10,
+    "sparse_points": 2886,
+    "stable_points_track_length_at_least_3": 2818,
+    "result": "The registered views reconstruct only a narrow partial region and do not cover the whole model. The point-cloud bounding-box aspect ratio does not match the documented 32 × 42.5 × 29 cm model, so this is not published as a complete mesh or used to replace the historical building reconstruction. Dense PatchMatch was not available in this Windows COLMAP build because CUDA was unavailable.",
+    "registered_views": [
+      "LPDP_74395-16.jpg",
+      "LPDP_74395-15.jpg",
+      "LPDP_71738-30.jpg",
+      "LPDP_74395-19.jpg",
+      "LPDP_74395-18.jpg",
+      "LPDP_74395-17.jpg",
+      "LPDP_74398-3.jpg",
+      "LPDP_74395-14.jpg",
+      "LPDP_74395-13.jpg",
+      "LPDP_74395-28.jpg"
+    ],
+    "license": "Source photographs are CC0 Paris Musées. The incomplete reconstruction is an internal assessment only; no model is redistributed."
+  }
+}

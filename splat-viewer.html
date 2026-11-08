@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f2eee4"><title>实景扫描工作台 · 星火与道路</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<style>
+:root{color-scheme:light;--ink:#26281f;--muted:#67675e;--paper:#f2eee4;--line:#d5cdbc;--red:#9d4a32;--green:#416552}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Segoe UI","Microsoft YaHei",sans-serif}.top{display:flex;justify-content:space-between;align-items:center;padding:16px clamp(18px,4vw,56px);border-bottom:1px solid var(--line)}a{color:#7f3927}.brand{font-family:Georgia,"SimSun",serif;font-size:20px}.top a{font-size:14px}.layout{max-width:1440px;margin:auto;padding:28px clamp(16px,3vw,42px) 54px}.intro{display:flex;gap:40px;align-items:end;justify-content:space-between;margin-bottom:20px}.eyebrow{letter-spacing:.14em;color:var(--green);font-size:12px;font-weight:700}.intro h1{font:clamp(32px,5vw,56px)/1.15 Georgia,"SimSun",serif;margin:7px 0 10px}.intro p{color:var(--muted);max-width:760px;margin:0}.badge{border:1px solid var(--line);padding:9px 13px;white-space:nowrap;color:var(--green);font-size:13px}.viewer{position:relative;height:min(65vh,680px);min-height:380px;background:radial-gradient(ellipse at 50% 45%,#303a37,#18221f 75%);overflow:hidden;border:1px solid #c8c0ae;box-shadow:0 18px 50px #3d33201c}.viewer canvas{display:block;width:100%;height:100%;outline:none}.empty{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;pointer-events:none;color:#f2eee4}.empty[hidden]{display:none}.empty-card{max-width:520px}.empty-icon{font-size:56px;color:#dbad68}.empty h2{font:28px Georgia,"SimSun",serif;margin:8px 0}.empty p{color:#d4d3c9;margin:6px auto 18px}.load-btn{pointer-events:auto;display:inline-block;background:#e8c88f;color:#302719;text-decoration:none;padding:11px 18px;border-radius:2px;font-weight:700;cursor:pointer}.file-input{position:absolute;width:1px;height:1px;opacity:0}.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 14px;background:#e8e2d5;border:1px solid var(--line);border-top:0}.status{flex:1;min-width:220px;color:var(--muted);font-size:14px}.bar button,.bar a{background:#f6f3eb;border:1px solid #cfc6b5;color:var(--ink);padding:8px 12px;font:inherit;font-size:14px;text-decoration:none;cursor:pointer}.bar button:disabled{opacity:.45;cursor:default}.hint{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:30px}.card{background:#f8f5ed;border:1px solid var(--line);padding:22px}.card h2{font:24px Georgia,"SimSun",serif;margin:0 0 10px}.card p,.card li{color:#55564d}.steps{counter-reset:step;list-style:none;padding:0;margin:14px 0}.steps li{counter-increment:step;padding:0 0 14px 40px;position:relative}.steps li:before{content:counter(step,decimal-leading-zero);position:absolute;left:0;color:var(--red);font-weight:700}.steps strong{color:var(--ink)}.note{border-left:3px solid #b67845;padding:10px 14px;background:#f1e8d8;color:#544633;font-size:14px}.formats{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.formats span{border:1px solid var(--line);padding:4px 8px;color:#53685e;font-size:12px}.footer{margin-top:24px;color:#777366;font-size:13px}.drop-active:after{content:"松开鼠标导入空间文件";position:absolute;inset:12px;border:2px dashed #edca89;background:#101714bb;color:#fff;display:grid;place-items:center;font-size:24px;pointer-events:none}@media(max-width:760px){.intro{display:block}.badge{display:inline-block;margin-top:15px}.viewer{height:55vh;min-height:340px}.grid{grid-template-columns:1fr}.bar{gap:8px}.status{flex-basis:100%}}
+</style>
+<style>.resource-list{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}.resource-list h3{font-size:16px;margin:0 0 7px}.resource-list a{display:block;padding:10px 0;border-bottom:1px solid #e4ded2;text-decoration:none}.resource-list a strong{display:block;font-size:14px;color:#74452d}.resource-list a span{display:block;margin-top:3px;color:#67675e;font-size:13px;line-height:1.5}.resource-list a:hover strong{text-decoration:underline}</style>
+<script type="importmap">{"imports":{"three":"./assets/vendor/three-r180/build/three.module.js","three/addons/":"./assets/vendor/three-r180/examples/jsm/","@sparkjsdev/spark":"./assets/vendor/spark-2.4.0/spark.module.min.js"}}</script>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<header class="top"><div class="brand">星火与道路 <span style="color:#9d4a32">·</span> 实景扫描工作台</div><a href="index.html#artifacts">← 返回文物与历史空间</a></header>
+<main class="layout">
+  <div class="intro"><div><div class="eyebrow">SPATIAL RECORD · DIGITAL RECONSTRUCTION</div><h1>让历史空间可被重新进入</h1><p>载入经实地影像重建的高斯泼溅模型，在浏览器中环绕观察。适用于现存遗址、建筑内部与采集现场；历史复原模型必须另有史料依据并明确标注推演部分。</p></div><div class="badge">离线可用 · 文件留在本机</div></div>
+  <section class="viewer" id="viewer" aria-label="三维空间查看器"><canvas id="canvas" aria-label="鼠标拖动旋转，滚轮缩放，右键平移"></canvas><div class="empty" id="empty"><div class="empty-card"><div class="empty-icon">✳</div><h2>载入一份空间扫描</h2><p>选择或拖入 Gaussian Splat 文件。模型只在本机浏览器处理，不会上传。</p><label class="load-btn" for="file">选择空间文件</label></div></div></section>
+  <input class="file-input" id="file" type="file" accept=".ply,.spz,.sog,.splat,.ksplat,.rad,.zip,application/octet-stream">
+  <div class="bar"><button id="choose">打开文件</button><button id="reset" disabled>重置视角</button><button id="clear" disabled>卸载模型</button><span class="status" id="status" role="status" aria-live="polite">等待导入 · 拖动旋转，滚轮缩放，右键拖动平移</span><span class="hint" id="filename"></span></div>
+  <div class="grid">
+    <section class="card"><h2>从现场采集到可漫游空间</h2><ol class="steps"><li><strong>采集。</strong>覆盖入口、全景和局部细节，慢速行走并保持影像清晰；避免玻璃反光、快速转动和强动态人群。采集历史建筑时记录机位与尺度参照。</li><li><strong>重建。</strong>使用 Nerfstudio Splatfacto 等开源流程训练 Gaussian Splat；需有兼容显卡和足量显存。用 SuperSplat 检查、裁剪、优化并导出 PLY / SPZ / SOG。</li><li><strong>导入。</strong>将导出文件拖入上方查看器。对模型调整方向或比例后，重新导出并保留原始采集、处理参数、日期、授权和来源记录。</li><li><strong>编目。</strong>说明模型是实地扫描、基于照片的重建，还是历史推演；记录拍摄地点、时间、坐标精度、缺损、不可见区域和处理步骤。</li></ol><div class="formats"><span>PLY</span><span>SPZ</span><span>SOG</span><span>SPLAT</span><span>KSPLAT</span><span>RAD</span></div></section>
+    <section class="card"><h2>实测与复原要分清</h2><p>高斯泼溅呈现的是采集影像可见的表面，不自动证明空间在历史时期的样貌。对已消失的 19 世纪场景，建议以地图、照片、建筑图纸、考古记录和文字材料建立可追溯的模型，并把推测区域单独标识。</p><div class="note"><strong>目前展馆没有随附的遗址扫描文件。</strong>我已找到可直接查阅的巴黎公社相关数字材料；但其中扫描的是现存墓碑/重建后的建筑，不能冒充 1871 年毁坏前的历史空间。</div>
+      <div class="resource-list"><h3>已核实的空间与史料入口</h3>
+        <a href="https://zenodo.org/records/10269782" target="_blank" rel="noopener noreferrer"><strong>拉雪兹神父公墓纪念碑 · 手机摄影测量扫描（GLB，8.3 MB）</strong><span>可从 Zenodo 记录下载导入本页。它是公墓纪念碑现状扫描，不是 1871 年“联邦墙”本体；记录的再分发许可字段未明确，故只提供原始记录入口，不把模型复制进展馆。</span></a>
+        <a href="https://sketchfab.com/3d-models/hotel-de-ville-f4fcf806935a43028c67d2a3450fd88a" target="_blank" rel="noopener noreferrer"><strong>巴黎市政厅 · 摄影测量模型</strong><span>Sketchfab 标注由 Agisoft Metashape 上传并带有 photogrammetry / 3dscan 标签。现存市政厅是 1871 年焚毁后重建的建筑，适合了解遗址现状与空间位置，不代表公社时期旧市政厅。</span></a>
+        <a href="https://sketchfab.com/3d-models/mytholme-mill-saddleworth-3d-photogrammetry-e1716754f3c241ce8685248241d9d2db" target="_blank" rel="noopener noreferrer"><strong>Mytholme Mill · 1779 年水力毛纺厂遗址摄影测量</strong><span>2017 年考古发掘前的三维摄影测量模型，Sketchfab 标注 CC BY-NC-ND；可作工业空间观察和课堂外链，许可不允许商业使用或改编，故不内嵌改造。</span></a>
+        <a href="https://sketchfab.com/3d-models/owings-upper-mill-a1a3a91609a240cca3b0218ac22200b1" target="_blank" rel="noopener noreferrer"><strong>Owings Upper Mill · 1790 年代磨坊航拍摄影测量</strong><span>923 张无人机影像经 Metashape 处理，Sketchfab 标注 CC BY；这是巴尔的摩郡现存磨坊的实测外观，可作为早期工业空间的比较案例。</span></a>
+        <a href="https://archives.paris.fr/offre-pedagogique/ressources-pedagogiques/la-commune-de-paris" target="_blank" rel="noopener noreferrer"><strong>巴黎档案馆 · 1871 年巴黎地图与公社史料</strong><span>官方教育资源提供 1871 年巴黎地图、时间线、档案文件、版画、照片与平面图；可作为历史空间复原的地理与事件依据。</span></a>
+        <a href="https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/hotel-de-ville-etat-actuel" target="_blank" rel="noopener noreferrer"><strong>卡纳瓦莱博物馆 · 1871 年后市政厅模型档案</strong><span>馆藏记录说明该模型为 1871 年后现状，且关联 1882 年重建；可用于核对重建后的建筑形制，不应用来伪装旧建筑。</span></a>
+        <a href="https://www.bnf.fr/fr/commemorer-la-commune-de-paris" target="_blank" rel="noopener noreferrer"><strong>法国国家图书馆 · 巴黎公社数字档案导览</strong><span>可进入 Gallica 查阅《公报》、版画、照片、传单与当事人文本，补足三维模型无法表达的政治语境。</span></a>
+        <a href="https://openheritage3d.org/" target="_blank" rel="noopener noreferrer"><strong>OpenHeritage3D · 文化遗产 LiDAR / 摄影测量数据</strong><span>开放数据仓库，可按遗产地点查找原始点云和摄影测量数据；原始站点数据较大，下载前需核对每个项目的权限和文件格式。</span></a>
+      </div>
+      <p style="margin-top:16px"><a href="docs/空间实景重建工作流.md">查看完整采集、重建与编目工作流 →</a></p></section>
+  </div>
+  <p class="footer">查看器：Three.js r180 + Spark 2.4.0（独立页面，和展馆 Three.js r147 隔离）。本地浏览不上传所选文件。大型模型的加载速度取决于显卡、内存和文件大小。</p>
+</main>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { SparkRenderer, SplatMesh } from '@sparkjsdev/spark';
+
+const canvas=document.querySelector('#canvas'), viewer=document.querySelector('#viewer'), fileInput=document.querySelector('#file');
+const status=document.querySelector('#status'), filename=document.querySelector('#filename'), empty=document.querySelector('#empty');
+const resetButton=document.querySelector('#reset'), clearButton=document.querySelector('#clear');
+const scene=new THREE.Scene(); scene.background=new THREE.Color('#1b2522');
+const camera=new THREE.PerspectiveCamera(45,1,.01,10000); camera.position.set(0,1.2,4);
+const renderer=new THREE.WebGLRenderer({canvas,antialias:false,alpha:false}); renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2)); renderer.setSize(viewer.clientWidth,viewer.clientHeight,false);
+const controls=new OrbitControls(camera,canvas); controls.enableDamping=true; controls.dampingFactor=.07; controls.target.set(0,0,0);
+const splatRenderer=new SparkRenderer({renderer}); scene.add(splatRenderer);
+let model=null,frame=0;
+function resize(){const w=viewer.clientWidth,h=viewer.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/Math.max(h,1);camera.updateProjectionMatrix();}
+new ResizeObserver(resize).observe(viewer);
+function animate(){frame=requestAnimationFrame(animate);controls.update();renderer.render(scene,camera);}
+animate();
+function setStatus(message){status.textContent=message;}
+function fitModel(mesh){const box=mesh.getBoundingBox();if(!box||box.isEmpty())return;const center=box.getCenter(new THREE.Vector3());const size=box.getSize(new THREE.Vector3());const radius=Math.max(size.length()*.5,.1);controls.target.copy(center);camera.position.copy(center).add(new THREE.Vector3(radius*1.9,radius*1.15,radius*2.4));camera.near=Math.max(radius/10000,.001);camera.far=Math.max(radius*100,100);camera.updateProjectionMatrix();controls.minDistance=radius*.03;controls.maxDistance=radius*30;controls.update();}
+async function loadFile(file){if(!file)return;const ext=file.name.split('.').pop().toLowerCase();if(!['ply','spz','sog','splat','ksplat','rad','zip'].includes(ext)){setStatus('不支持此文件类型。请选择 PLY、SPZ、SOG、SPLAT、KSPLAT、RAD 或 ZIP。');return;}
+ setStatus('正在读取 '+file.name+' …');filename.textContent='';
+ try{const bytes=await file.arrayBuffer();if(model){scene.remove(model);model.dispose?.();model=null;}
+  model=new SplatMesh({fileBytes:bytes,fileName:file.name});await model.initialized;scene.add(model);fitModel(model);empty.hidden=true;resetButton.disabled=false;clearButton.disabled=false;filename.textContent=file.name;setStatus('已载入 · '+(bytes.byteLength/1048576).toFixed(1)+' MB · 文件仅在本机处理');
+ }catch(error){console.error(error);if(model){scene.remove(model);model.dispose?.();model=null;}setStatus('载入失败：'+(error?.message||'文件格式无法解析')+'。请检查文件完整性，或先用 SuperSplat 转为 PLY / SPZ / SOG。');}
+}
+document.querySelector('#choose').addEventListener('click',()=>fileInput.click());fileInput.addEventListener('change',()=>loadFile(fileInput.files?.[0]));
+document.querySelector('#reset').addEventListener('click',()=>{if(model)fitModel(model);});
+document.querySelector('#clear').addEventListener('click',()=>{if(model){scene.remove(model);model.dispose?.();model=null;}empty.hidden=false;resetButton.disabled=true;clearButton.disabled=true;filename.textContent='';setStatus('模型已卸载 · 文件未上传或保存到服务器');fileInput.value='';});
+viewer.addEventListener('dragover',e=>{e.preventDefault();viewer.classList.add('drop-active');});viewer.addEventListener('dragleave',e=>{if(!viewer.contains(e.relatedTarget))viewer.classList.remove('drop-active');});viewer.addEventListener('drop',e=>{e.preventDefault();viewer.classList.remove('drop-active');loadFile(e.dataTransfer.files?.[0]);});
+window.addEventListener('error',e=>{if(!model)setStatus('查看器初始化异常：'+e.message+'。请通过“启动展馆.ps1”使用本地 HTTP 地址打开。');});
+</script>
+<script src="js/back.js?v=1"></script>
+</body></html>

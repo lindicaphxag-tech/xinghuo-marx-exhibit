@@ -1,0 +1,414 @@
+{
+  "schema": "1.0",
+  "title": "The Bee-Hive :",
+  "publisher": "British Library",
+  "license": "CC0 1.0",
+  "sourceUrl": "https://bl.iro.bl.uk/entities/product/6f05315c-e2bf-4d66-bfdb-145036f29d51",
+  "doi": "10.23636/dth2-z430",
+  "coverageNote": "Selected digitized issues from 1862 and 1872 only; not a complete run and no issue-page facsimile images are included.",
+  "sourceFiles": [
+    {
+      "year": 1862,
+      "file": "the-bee-hive-1862-plaintext.zip",
+      "sha256": "2C3EDDD464C788B69BAD5B731EB1E119BFED4BCC31538404D626D3659B0E209B"
+    },
+    {
+      "year": 1872,
+      "file": "the-bee-hive-1872-plaintext.zip",
+      "sha256": "23F7D81219DB0FBA219BC8CC79724C18044C95A8D1D021EE3FCF4B5E4D240B03"
+    }
+  ],
+  "issues": [
+    {
+      "date": "1862-10-04",
+      "year": 1862,
+      "articleCount": 94,
+      "file": "1862-10-04.json"
+    },
+    {
+      "date": "1862-10-11",
+      "year": 1862,
+      "articleCount": 95,
+      "file": "1862-10-11.json"
+    },
+    {
+      "date": "1862-10-18",
+      "year": 1862,
+      "articleCount": 102,
+      "file": "1862-10-18.json"
+    },
+    {
+      "date": "1862-10-25",
+      "year": 1862,
+      "articleCount": 106,
+      "file": "1862-10-25.json"
+    },
+    {
+      "date": "1862-11-01",
+      "year": 1862,
+      "articleCount": 99,
+      "file": "1862-11-01.json"
+    },
+    {
+      "date": "1862-11-08",
+      "year": 1862,
+      "articleCount": 106,
+      "file": "1862-11-08.json"
+    },
+    {
+      "date": "1862-11-15",
+      "year": 1862,
+      "articleCount": 99,
+      "file": "1862-11-15.json"
+    },
+    {
+      "date": "1862-11-22",
+      "year": 1862,
+      "articleCount": 107,
+      "file": "1862-11-22.json"
+    },
+    {
+      "date": "1862-11-29",
+      "year": 1862,
+      "articleCount": 106,
+      "file": "1862-11-29.json"
+    },
+    {
+      "date": "1862-12-06",
+      "year": 1862,
+      "articleCount": 82,
+      "file": "1862-12-06.json"
+    },
+    {
+      "date": "1862-12-13",
+      "year": 1862,
+      "articleCount": 101,
+      "file": "1862-12-13.json"
+    },
+    {
+      "date": "1862-12-20",
+      "year": 1862,
+      "articleCount": 96,
+      "file": "1862-12-20.json"
+    },
+    {
+      "date": "1862-12-27",
+      "year": 1862,
+      "articleCount": 113,
+      "file": "1862-12-27.json"
+    },
+    {
+      "date": "1872-01-06",
+      "year": 1872,
+      "articleCount": 68,
+      "file": "1872-01-06.json"
+    },
+    {
+      "date": "1872-01-13",
+      "year": 1872,
+      "articleCount": 71,
+      "file": "1872-01-13.json"
+    },
+    {
+      "date": "1872-01-20",
+      "year": 1872,
+      "articleCount": 53,
+      "file": "1872-01-20.json"
+    },
+    {
+      "date": "1872-01-27",
+      "year": 1872,
+      "articleCount": 67,
+      "file": "1872-01-27.json"
+    },
+    {
+      "date": "1872-02-03",
+      "year": 1872,
+      "articleCount": 68,
+      "file": "1872-02-03.json"
+    },
+    {
+      "date": "1872-02-10",
+      "year": 1872,
+      "articleCount": 65,
+      "file": "1872-02-10.json"
+    },
+    {
+      "date": "1872-02-17",
+      "year": 1872,
+      "articleCount": 59,
+      "file": "1872-02-17.json"
+    },
+    {
+      "date": "1872-02-24",
+      "year": 1872,
+      "articleCount": 59,
+      "file": "1872-02-24.json"
+    },
+    {
+      "date": "1872-03-02",
+      "year": 1872,
+      "articleCount": 75,
+      "file": "1872-03-02.json"
+    },
+    {
+      "date": "1872-03-09",
+      "year": 1872,
+      "articleCount": 79,
+      "file": "1872-03-09.json"
+    },
+    {
+      "date": "1872-03-16",
+      "year": 1872,
+      "articleCount": 62,
+      "file": "1872-03-16.json"
+    },
+    {
+      "date": "1872-03-23",
+      "year": 1872,
+      "articleCount": 54,
+      "file": "1872-03-23.json"
+    },
+    {
+      "date": "1872-03-30",
+      "year": 1872,
+      "articleCount": 52,
+      "file": "1872-03-30.json"
+    },
+    {
+      "date": "1872-04-06",
+      "year": 1872,
+      "articleCount": 60,
+      "file": "1872-04-06.json"
+    },
+    {
+      "date": "1872-04-13",
+      "year": 1872,
+      "articleCount": 56,
+      "file": "1872-04-13.json"
+    },
+    {
+      "date": "1872-04-20",
+      "year": 1872,
+      "articleCount": 54,
+      "file": "1872-04-20.json"
+    },
+    {
+      "date": "1872-04-27",
+      "year": 1872,
+      "articleCount": 60,
+      "file": "1872-04-27.json"
+    },
+    {
+      "date": "1872-05-04",
+      "year": 1872,
+      "articleCount": 59,
+      "file": "1872-05-04.json"
+    },
+    {
+      "date": "1872-05-11",
+      "year": 1872,
+      "articleCount": 71,
+      "file": "1872-05-11.json"
+    },
+    {
+      "date": "1872-05-18",
+      "year": 1872,
+      "articleCount": 60,
+      "file": "1872-05-18.json"
+    },
+    {
+      "date": "1872-05-25",
+      "year": 1872,
+      "articleCount": 45,
+      "file": "1872-05-25.json"
+    },
+    {
+      "date": "1872-06-01",
+      "year": 1872,
+      "articleCount": 47,
+      "file": "1872-06-01.json"
+    },
+    {
+      "date": "1872-06-08",
+      "year": 1872,
+      "articleCount": 51,
+      "file": "1872-06-08.json"
+    },
+    {
+      "date": "1872-06-15",
+      "year": 1872,
+      "articleCount": 54,
+      "file": "1872-06-15.json"
+    },
+    {
+      "date": "1872-06-22",
+      "year": 1872,
+      "articleCount": 66,
+      "file": "1872-06-22.json"
+    },
+    {
+      "date": "1872-06-29",
+      "year": 1872,
+      "articleCount": 74,
+      "file": "1872-06-29.json"
+    },
+    {
+      "date": "1872-07-06",
+      "year": 1872,
+      "articleCount": 69,
+      "file": "1872-07-06.json"
+    },
+    {
+      "date": "1872-07-13",
+      "year": 1872,
+      "articleCount": 65,
+      "file": "1872-07-13.json"
+    },
+    {
+      "date": "1872-07-20",
+      "year": 1872,
+      "articleCount": 72,
+      "file": "1872-07-20.json"
+    },
+    {
+      "date": "1872-07-27",
+      "year": 1872,
+      "articleCount": 80,
+      "file": "1872-07-27.json"
+    },
+    {
+      "date": "1872-08-03",
+      "year": 1872,
+      "articleCount": 75,
+      "file": "1872-08-03.json"
+    },
+    {
+      "date": "1872-08-10",
+      "year": 1872,
+      "articleCount": 65,
+      "file": "1872-08-10.json"
+    },
+    {
+      "date": "1872-08-17",
+      "year": 1872,
+      "articleCount": 88,
+      "file": "1872-08-17.json"
+    },
+    {
+      "date": "1872-08-24",
+      "year": 1872,
+      "articleCount": 63,
+      "file": "1872-08-24.json"
+    },
+    {
+      "date": "1872-08-31",
+      "year": 1872,
+      "articleCount": 72,
+      "file": "1872-08-31.json"
+    },
+    {
+      "date": "1872-09-07",
+      "year": 1872,
+      "articleCount": 68,
+      "file": "1872-09-07.json"
+    },
+    {
+      "date": "1872-09-14",
+      "year": 1872,
+      "articleCount": 71,
+      "file": "1872-09-14.json"
+    },
+    {
+      "date": "1872-09-21",
+      "year": 1872,
+      "articleCount": 67,
+      "file": "1872-09-21.json"
+    },
+    {
+      "date": "1872-09-28",
+      "year": 1872,
+      "articleCount": 62,
+      "file": "1872-09-28.json"
+    },
+    {
+      "date": "1872-10-05",
+      "year": 1872,
+      "articleCount": 71,
+      "file": "1872-10-05.json"
+    },
+    {
+      "date": "1872-10-12",
+      "year": 1872,
+      "articleCount": 81,
+      "file": "1872-10-12.json"
+    },
+    {
+      "date": "1872-10-19",
+      "year": 1872,
+      "articleCount": 69,
+      "file": "1872-10-19.json"
+    },
+    {
+      "date": "1872-10-26",
+      "year": 1872,
+      "articleCount": 75,
+      "file": "1872-10-26.json"
+    },
+    {
+      "date": "1872-11-02",
+      "year": 1872,
+      "articleCount": 71,
+      "file": "1872-11-02.json"
+    },
+    {
+      "date": "1872-11-09",
+      "year": 1872,
+      "articleCount": 68,
+      "file": "1872-11-09.json"
+    },
+    {
+      "date": "1872-11-16",
+      "year": 1872,
+      "articleCount": 75,
+      "file": "1872-11-16.json"
+    },
+    {
+      "date": "1872-11-23",
+      "year": 1872,
+      "articleCount": 87,
+      "file": "1872-11-23.json"
+    },
+    {
+      "date": "1872-11-30",
+      "year": 1872,
+      "articleCount": 77,
+      "file": "1872-11-30.json"
+    },
+    {
+      "date": "1872-12-07",
+      "year": 1872,
+      "articleCount": 64,
+      "file": "1872-12-07.json"
+    },
+    {
+      "date": "1872-12-14",
+      "year": 1872,
+      "articleCount": 73,
+      "file": "1872-12-14.json"
+    },
+    {
+      "date": "1872-12-21",
+      "year": 1872,
+      "articleCount": 78,
+      "file": "1872-12-21.json"
+    },
+    {
+      "date": "1872-12-28",
+      "year": 1872,
+      "articleCount": 79,
+      "file": "1872-12-28.json"
+    }
+  ],
+  "articleCount": 4780
+}

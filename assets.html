@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="工人运动时空叙事展馆的源图、数字文献、三维模型、历史空间与交互记录目录。">
+  <title>档案与展品目录 · 星火与道路</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/assets.css?v=quality-evidence11">
+  <script src="js/assets.js?v=quality-evidence11" defer></script>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+  <header class="catalog-top">
+    <a class="wordmark" href="index.html">星火与道路 <span>档案目录</span></a>
+    <nav aria-label="主导航">
+      <a href="index.html">回到主展馆</a>
+      <a href="scenes.html">历史空间证据</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="catalog-intro" aria-labelledby="catalog-title">
+      <div class="intro-copy">
+        <p class="archive-mark">展品清册　/　来源与方法</p>
+        <h1 id="catalog-title">图像、物件<br>与历史路径</h1>
+    <p class="intro-note">每条记录都有稳定编号，能追到本地文件、章节、制作方法与来源。原件可读的文献直达数字馆藏；绘画、照片和藏品影像会明确标作档案图像，不再误导为整本书或原刊。</p>
+      </div>
+      <dl class="catalog-stats" id="catalog-stats" aria-label="目录统计">
+        <div><dt>清册记录</dt><dd id="stat-total">—</dd></div>
+        <div><dt>源图</dt><dd id="stat-image">—</dd></div>
+        <div><dt>三维模型</dt><dd id="stat-model">—</dd></div>
+        <div><dt>场景与空间模型</dt><dd id="stat-scene">—</dd></div>
+        <div><dt>交互记录</dt><dd id="stat-interaction">—</dd></div>
+      </dl>
+    </section>
+
+    <section class="catalog-controls" aria-label="筛选档案">
+      <label class="search-field">
+        <span>搜索名称、年代、作者或描述</span>
+        <input id="catalog-search" type="search" autocomplete="off" placeholder="例如：巴黎公社、1871、Lewis Hine">
+      </label>
+      <label class="quality-field" id="quality-field">
+        <span>模型状态</span>
+        <select id="quality-filter">
+          <option value="all">所有模型</option>
+          <option value="ok">可作体量展示</option>
+          <option value="flat">薄片样例</option>
+          <option value="fail">失败样例</option>
+        </select>
+      </label>
+      <div class="filter-list" id="catalog-filters" role="group" aria-label="记录类型"></div>
+      <p class="catalog-count" id="catalog-count" aria-live="polite">读取目录中…</p>
+    </section>
+
+    <section id="catalog-results" class="catalog-results" aria-label="展品与交互记录"></section>
+    <p class="catalog-empty" id="catalog-empty" hidden>没有符合条件的记录。换个词或重置筛选。</p>
+  </main>
+
+  <footer class="catalog-foot">
+    <p>图像授权按各自来源页记录。CC BY / CC BY-SA 素材公开使用时须保留作者、许可与来源链接。</p>
+    <p>63 个三维模型中含 7 个薄片样例与 8 个失败样例；目录会将其作为方法演示标出，不把它们包装成实测文物。</p>
+    <p><a href="docs/项目落地路线.md">查看制作路线</a> · <a href="docs/实物拍摄采集SOP.md">查看实测采集 SOP</a></p>
+  </footer>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

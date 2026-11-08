@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三维知识图谱 · 人物 / 组织 / 报刊</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<style>
+  :root{--ink:#f2e9d8;--gold:#c9a262;--red:#a8332c;--bg:#080706;--dim:#8d8175}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);
+    font:15px/1.6 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  canvas{display:block}
+  .hud{position:fixed;inset:0;pointer-events:none;z-index:5}
+  .top{position:absolute;top:0;left:0;right:0;padding:18px 26px;display:flex;justify-content:space-between;
+    align-items:flex-start;background:linear-gradient(180deg,rgba(8,7,6,.9),transparent)}
+  .brand b{display:block;font-size:24px;letter-spacing:.04em}
+  .brand span{font-size:11.5px;letter-spacing:.2em;color:var(--gold)}
+  .ctrl{pointer-events:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .ctrl label{font-size:12px;color:var(--dim)}
+  .ctrl input[type=range]{width:150px;accent-color:var(--red)}
+  .ctrl button{font:inherit;font-size:12px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid rgba(201,162,98,.32);background:transparent;color:#cfc2ae}
+  .ctrl button:hover{color:#fff;border-color:var(--gold)}
+  .ctrl button.on{background:var(--red);border-color:var(--red);color:#fff}
+  .panel{position:absolute;right:24px;top:96px;width:300px;padding:16px 18px;background:rgba(14,12,10,.9);
+    border:1px solid rgba(201,162,98,.28);border-radius:4px;pointer-events:auto;display:none}
+  .panel.on{display:block}
+  .panel h3{margin:0 0 6px;font-size:16px}
+  .panel .kind{font-size:11.5px;color:var(--gold);letter-spacing:.12em;margin-bottom:8px}
+  .panel p{margin:0 0 10px;font-size:12.5px;color:#b3a795;line-height:1.7}
+  .panel .rel{font-size:12px;color:#cfc2ae;border-top:1px solid rgba(201,162,98,.18);padding-top:8px}
+  .panel .rel b{color:var(--gold);font-weight:500}
+  .legend{position:absolute;left:26px;bottom:26px;font-size:12px;color:var(--dim);pointer-events:auto}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+  .hint{position:absolute;right:26px;bottom:26px;font-size:11.5px;color:#7d7264;text-align:right}
+  .back{position:fixed;left:26px;bottom:74px;z-index:6;font-size:12px;color:#8d8175;text-decoration:none;letter-spacing:.1em}
+  .back:hover{color:var(--gold)}
+</style>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<a class="back" href="index.html">← 返回展馆</a>
+<a class="back" style="left:auto;right:26px" href="sim.html">扩散模拟 →</a>
+<div class="hud">
+  <div class="top">
+    <div class="brand"><span>3D KNOWLEDGE GRAPH</span><b>三维知识图谱</b></div>
+    <div class="ctrl">
+      <label for="yr">年代 ≤ <b id="yrv">1917</b></label>
+      <input id="yr" type="range" min="1818" max="1917" value="1917" step="1">
+      <button id="spin" class="on" type="button">自动旋转</button>
+      <button id="reset" type="button">重置视角</button>
+    </div>
+  </div>
+  <aside class="panel" id="panel">
+    <h3 id="pTitle"></h3>
+    <div class="kind" id="pKind"></div>
+    <p id="pDesc"></p>
+    <div class="rel" id="pRel"></div>
+  </aside>
+  <div class="legend" id="legend"></div>
+  <div class="hint">拖动旋转 · 滚轮缩放 · 点击节点看档案<br>数据：40 节点 / 48 条关系</div>
+</div>
+
+<script src="assets/vendor/three-r147/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/data/data-cities.js"></script>
+<script src="js/data/data-net-meta.js"></script>
+<script src="js/data/data-net-nodes-a.js"></script>
+<script src="js/data/data-net-nodes-b.js"></script>
+<script src="js/data/data-net-nodes-c.js"></script>
+<script src="js/data/data-net-nodes-d.js"></script>
+<script src="js/data/data-net-nodes-e.js"></script>
+<script src="js/data/data-net-edges-a.js"></script>
+<script src="js/data/data-net-edges-b.js"></script>
+<script src="js/data/data-net-edges-c.js"></script>
+<script>
+(function () {
+  "use strict";
+  var N = window.HS_DATA.network;
+  var CITY = {};
+  (window.HS_DATA.cities || []).forEach(function (c) { CITY[c.id] = c; });
+
+  var W = innerWidth, H = innerHeight;
+  var renderer, scene, camera, raycaster = new THREE.Raycaster(), pointer = new THREE.Vector2();
+  var nodes = [], edges = [], nodeObjs = [], edgeObjs = [], labelObjs = [];
+  var autoSpin = true, year = 1917, selected = null, hovered = null;
+  var GROUP_COLOR = { person: 0xd9433f, org: 0xc89b5a, press: 0x5e7180 };
+  var GROUP_LABEL = { person: "人物", org: "组织", press: "报刊" };
+
+  function init() {
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setSize(W, H);
+    renderer.setClearColor(0x080706, 1);
+    document.body.appendChild(renderer.domElement);
+
+    scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x080706, 0.0075);
+    camera = new THREE.PerspectiveCamera(55, W / H, 0.1, 800);
+    camera.position.set(0, 16, 118);
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+    var d1 = new THREE.DirectionalLight(0xffe6bd, 1.1); d1.position.set(30, 50, 40); scene.add(d1);
+    var d2 = new THREE.DirectionalLight(0x8fb0c8, 0.5); d2.position.set(-40, -20, -30); scene.add(d2);
+
+    build();
+    buildDomLabels();
+    bind();
+    animate();
+  }
+
+  function build() {
+    nodes = N.nodes.map(function (n, i) {
+      var phi = Math.acos(1 - 2 * (i + 0.5) / N.nodes.length);
+      var theta = Math.PI * (1 + Math.sqrt(5)) * i;
+      var r = 34 + (i % 5) * 6;
+      return {
+        id: n.id, label: n.label, group: n.group, era: n.era, city: n.city, desc: n.desc,
+        x: Math.sin(phi) * Math.cos(theta) * r,
+        y: Math.cos(phi) * r * 0.72,
+        z: Math.sin(phi) * Math.sin(theta) * r,
+        vx: 0, vy: 0, vz: 0
+      };
+    });
+    var map = {};
+    nodes.forEach(function (n) { map[n.id] = n; });
+
+    var sphere = new THREE.SphereGeometry(1, 14, 12);
+    nodes.forEach(function (n) {
+      var size = n.group === "org" ? 2.1 : n.group === "person" ? 1.7 : 1.4;
+      var mat = new THREE.MeshStandardMaterial({
+        color: GROUP_COLOR[n.group] || 0xc9a262,
+        emissive: GROUP_COLOR[n.group] || 0xc9a262,
+        emissiveIntensity: 0.55, roughness: 0.55, metalness: 0.15
+      });
+      var m = new THREE.Mesh(sphere, mat);
+      m.scale.setScalar(size);
+      m.position.set(n.x, n.y, n.z);
+      m.userData.node = n;
+      scene.add(m);
+      nodeObjs.push(m);
+    });
+
+    edges = N.edges.map(function (e) {
+      return { a: map[e.a], b: map[e.b], type: e.type };
+    }).filter(function (e) { return e.a && e.b; });
+
+    var eg = new THREE.BufferGeometry();
+    var pos = new Float32Array(edges.length * 6);
+    eg.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+    var em = new THREE.LineBasicMaterial({ color: 0x8a7346, transparent: true, opacity: 0.32 });
+    var lines = new THREE.LineSegments(eg, em);
+    scene.add(lines);
+    window.__lines = lines;
+  }
+
+  var labelWrap = null;
+
+  function buildDomLabels() {
+    labelWrap = document.createElement("div");
+    labelWrap.id = "labels";
+    labelWrap.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:4";
+    document.body.appendChild(labelWrap);
+    nodes.forEach(function (n) {
+      var el = document.createElement("span");
+      el.textContent = n.label;
+      el.style.cssText = "position:absolute;transform:translate(-50%,-50%);font-size:11.5px;" +
+        "letter-spacing:.04em;white-space:nowrap;padding:2px 6px;border-radius:2px;" +
+        "background:rgba(8,7,6,.55);color:" +
+        (n.group === "person" ? "#e8c9c4" : n.group === "org" ? "#e0cba6" : "#b9c6cf") +
+        ";transition:opacity .2s";
+      el.userData = { node: n };
+      labelWrap.appendChild(el);
+      labelObjs.push(el);
+    });
+  }
+
+  var _v = new THREE.Vector3();
+  function updateDomLabels() {
+    if (!labelWrap) return;
+    labelObjs.forEach(function (el) {
+      var n = el.userData.node;
+      if (n.era > year) { el.style.display = "none"; return; }
+      _v.set(n.x * 1.02, n.y * 1.02 + 2.6, n.z * 1.02).project(camera);
+      if (_v.z > 1) { el.style.display = "none"; return; }
+      el.style.display = "block";
+      el.style.left = ((_v.x * 0.5 + 0.5) * W) + "px";
+      el.style.top = ((-_v.y * 0.5 + 0.5) * H) + "px";
+      el.style.fontSize = (selected === n ? 13 : 11.5) + "px";
+      el.style.color = selected === n ? "#fff" : "";
+    });
+  }
+
+  function bind() {
+    var el = renderer.domElement;
+    var drag = false, lx = 0, ly = 0, rx = 0, ry = 0, dist = 118;
+
+    el.addEventListener("pointerdown", function (e) { drag = true; lx = e.clientX; ly = e.clientY; });
+    window.addEventListener("pointerup", function () { drag = false; });
+    window.addEventListener("pointermove", function (e) {
+      if (!drag) return;
+      ry += (e.clientX - lx) * 0.005;
+      rx += (e.clientY - ly) * 0.004;
+      rx = Math.max(-1.2, Math.min(1.2, rx));
+      lx = e.clientX; ly = e.clientY;
+    });
+    el.addEventListener("wheel", function (e) {
+      e.preventDefault();
+      dist = Math.max(45, Math.min(260, dist + e.deltaY * 0.1));
+    }, { passive: false });
+
+    el.addEventListener("click", function (e) {
+      pointer.set((e.clientX / W) * 2 - 1, -(e.clientY / H) * 2 + 1);
+      raycaster.setFromCamera(pointer, camera);
+      var hits = raycaster.intersectObjects(nodeObjs, false);
+      if (hits.length) showNode(hits[0].object.userData.node);
+      else hidePanel();
+    });
+
+    document.getElementById("yr").addEventListener("input", function () {
+      year = Number(this.value);
+      document.getElementById("yrv").textContent = year;
+      applyYear();
+    });
+    document.getElementById("spin").addEventListener("click", function () {
+      autoSpin = !autoSpin;
+      this.classList.toggle("on", autoSpin);
+    });
+    document.getElementById("reset").addEventListener("click", function () {
+      rx = 0; ry = 0; dist = 118;
+      camera.position.set(0, 16, dist);
+    });
+    window.__view = {
+      get rx() { return rx; }, set rx(v) { rx = v; },
+      get ry() { return ry; }, set ry(v) { ry = v; },
+      get dist() { return dist; }, set dist(v) { dist = v; }
+    };
+    window.addEventListener("resize", function () {
+      W = innerWidth; H = innerHeight;
+      camera.aspect = W / H; camera.updateProjectionMatrix();
+      renderer.setSize(W, H);
+    });
+  }
+
+  function applyYear() {
+    nodeObjs.forEach(function (m) {
+      var n = m.userData.node;
+      var vis = n.era <= year;
+      m.visible = vis;
+      m.material.opacity = vis ? 1 : 0.12;
+    });
+    if (selected && selected.era > year) hidePanel();
+    labelObjs.forEach(function (el) {
+      var n = el.userData.node;
+      el.style.opacity = n.era <= year ? 0.92 : 0.06;
+    });
+    document.getElementById("legend").innerHTML =
+      Object.keys(GROUP_LABEL).map(function (k) {
+        var c = "#" + GROUP_COLOR[k].toString(16).padStart(6, "0");
+        return '<i style="background:' + c + '"></i>' + GROUP_LABEL[k];
+      }).join("　") + "　·　显示 " + nodeObjs.filter(function (m) { return m.userData.node.era <= year; }).length + " 个节点";
+  }
+
+  function showNode(n) {
+    selected = n;
+    document.getElementById("panel").classList.add("on");
+    document.getElementById("pTitle").textContent = n.label;
+    document.getElementById("pKind").textContent = (GROUP_LABEL[n.group] || "") + (n.era ? " · " + n.era : "");
+    document.getElementById("pDesc").textContent = n.desc;
+    var rel = edges.filter(function (e) { return e.a === n || e.b === n; });
+    document.getElementById("pRel").innerHTML = rel.length
+      ? "<b>直接关联 " + rel.length + " 条</b><br>" + rel.slice(0, 8).map(function (e) {
+          var other = e.a === n ? e.b : e.a;
+          return "· " + other.label + "（" + (N.edgeLabel[e.type] || e.type) + "）";
+        }).join("<br>")
+      : "没有编码的直接关联";
+  }
+  function hidePanel() {
+    selected = null;
+    document.getElementById("panel").classList.remove("on");
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    if (autoSpin && window.__view) window.__view.ry += 0.0016;
+    var v = window.__view || { rx: 0, ry: 0, dist: 118 };
+    camera.position.x = Math.sin(v.ry) * Math.cos(v.rx) * v.dist;
+    camera.position.y = 16 + Math.sin(v.rx) * v.dist * 0.55;
+    camera.position.z = Math.cos(v.ry) * Math.cos(v.rx) * v.dist;
+    camera.lookAt(0, 0, 0);
+
+    // 连线跟随节点
+    if (window.__lines) {
+      var pos = window.__lines.geometry.attributes.position.array;
+      edges.forEach(function (e, i) {
+        pos[i * 6 + 0] = e.a.x; pos[i * 6 + 1] = e.a.y; pos[i * 6 + 2] = e.a.z;
+        pos[i * 6 + 3] = e.b.x; pos[i * 6 + 4] = e.b.y; pos[i * 6 + 5] = e.b.z;
+      });
+      window.__lines.geometry.attributes.position.needsUpdate = true;
+    }
+
+    // 选中节点呼吸
+    var t = performance.now() * 0.001;
+    nodeObjs.forEach(function (m, i) {
+      var k = 1 + Math.sin(t * 2 + i) * 0.04;
+      m.scale.setScalar((m.userData.node.group === "org" ? 2.1 : m.userData.node.group === "person" ? 1.7 : 1.4) * k);
+    });
+
+    updateDomLabels();
+    renderer.render(scene, camera);
+  }
+
+  init();
+  applyYear();
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

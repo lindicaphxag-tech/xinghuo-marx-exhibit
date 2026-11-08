@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#a83332">
+<meta property="og:title" content="星火与道路 · 工人运动时空叙事">
+<meta property="og:description" content="1831—1917 工人运动数字展馆：沿街垒、报刊、车间与阅览室重走工人阶级组织起来的道路。">
+<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星火与道路 · 工人运动时空叙事</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/shuttle.css?v=shuttle1">
+<link rel="stylesheet" href="css/main.css?v=design-system-mobile-nav-20261102">
+<link rel="stylesheet" href="css/redesign.css?v=guided-tour-20261103">
+<link rel="stylesheet" href="css/method-tour.css?v=history-method-20261103">
+<link rel="stylesheet" href="css/mobile-patch.css?v=6">
+<script>if(location.search.indexOf("classic")>-1){document.querySelectorAll('[href*="redesign.css"]').forEach(function(e){e.remove()});}</script>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+
+<style>
+  .entry-toggle{font:inherit;font-size:12px;letter-spacing:.06em;padding:6px 12px;border-radius:999px;
+    border:1px solid rgba(201,162,98,.34);background:transparent;color:#e8dcc6;cursor:pointer}
+  .entry-toggle:hover{border-color:#c9a262;color:#fff;background:rgba(201,162,98,.12)}
+  .entry-toggle span{display:inline-block;transition:transform .2s}
+  .entry-toggle[aria-expanded="true"] span{transform:rotate(180deg)}
+
+  .entry-panel{position:fixed;right:22px;top:58px;z-index:9000;width:min(560px,calc(100vw - 44px));
+    background:rgba(14,12,10,.97);border:1px solid rgba(201,162,98,.3);border-radius:8px;
+    box-shadow:0 26px 70px rgba(0,0,0,.62);padding:14px 16px 16px;backdrop-filter:blur(14px)}
+  .entry-panel[hidden]{display:none}
+  .entry-panel-title{margin:0 0 10px;font-size:11px;letter-spacing:.2em;color:#c9a262;display:flex;gap:10px;align-items:baseline}
+  .entry-panel-title span{color:#6f6558;letter-spacing:.08em;font-size:10.5px}
+  .entry-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .entry-grid a{display:flex;flex-direction:column;gap:1px;padding:8px 10px;border-radius:5px;
+    text-decoration:none;border:1px solid transparent}
+  .entry-grid a:hover{background:rgba(201,162,98,.1);border-color:rgba(201,162,98,.32)}
+  .entry-grid b{font-size:13px;color:#f2e9d8;font-weight:500}
+  .entry-grid em{font-style:normal;font-size:11px;color:#8d8175}
+  @media(max-width:620px){.entry-grid{grid-template-columns:1fr}.entry-panel{right:12px}}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#toc">跳到展馆导览</a>
+
+<header class="topbar">
+  <div class="brand">星火与道路 <em>·</em> 工人运动时空叙事</div>
+  <div class="meta">
+    <span>1831 — 1917 · 思想形成追溯至 1818</span>
+    <span>沉浸式宣讲数字展馆</span>
+    <a href="showcase.html" class="topbar-guide">展示模式</a>
+    <a href="#toc" class="topbar-guide">学习路线</a>
+    <button type="button" class="entry-toggle" id="entry-toggle" aria-expanded="false" aria-controls="entry-panel">全部入口 <span>▾</span></button>
+  </div>
+</header>
+
+
+<div class="entry-panel" id="entry-panel" hidden>
+  <p class="entry-panel-title">专题入口 <span>13 个空间</span></p>
+  <div class="entry-grid">
+      <a href="video-tour.html"><b>观看完整自动讲解视频</b><em>12 分钟，全片旁白</em></a>
+      <a href="enter.html"><b>三种入口 · 先选走法</b><em>按参观时长选</em></a>
+      <a href="scenes-3d.html"><b>进入九场景漫游</b><em>3D 场景 + 热点</em></a>
+      <a href="assets.html"><b>档案目录与展品</b><em>272 条可查</em></a>
+      <a href="reader.html"><b>翻阅公版书刊</b><em>9 册逐页</em></a>
+      <a href="open-3d.html"><b>开放三维机械库</b><em>38 件模型</em></a>
+      <a href="kinetic.html"><b>星火长廊</b><em>202 张史料环廊</em></a>
+      <a href="wall.html"><b>史料墙</b><em>202 张平铺</em></a>
+      <a href="notices.html"><b>报纸的另一面</b><em>广告与启事 · 7 条</em></a>
+      <a href="clips.html"><b>影像与声音</b><em>9 段可播放</em></a>
+      <a href="graph3d.html"><b>三维知识图谱</b><em>40 节点</em></a>
+      <a href="sim.html"><b>运动扩散模拟</b><em>1830–1917</em></a>
+      <a href="compare.html"><b>依据与复原对照</b><em>63 组</em></a>
+      <a href="compare-docs.html"><b>文献并排比较</b><em>9 册并读</em></a>
+  </div>
+</div>
+
+<nav class="side-nav" id="side-nav" aria-label="章节导航"></nav>
+
+<!-- ===== 序章：星火地球 ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <canvas id="hero-globe"></canvas>
+  <div class="hero-inner">
+    <div class="eyebrow">星火与道路 · 工人运动时空叙事</div>
+    <h1>分散的工人，<br><span class="red">如何成为一场运动？</span></h1>
+    <p class="sub">从 1831 年里昂街垒走到 1917 年彼得格勒。沿着城市、组织、报刊与行动，走进工人运动如何跨越地方，成为改变时代的力量。</p>
+    <div class="hero-actions">
+      <button class="btn primary" data-tour-start>开始四层自动导览 · 约 3 分钟</button>
+      <button class="btn" data-goto="mapstory">自由进入叙事</button>
+      <a class="btn ghost" href="video-tour.html">观看完整讲解视频</a>
+    </div>
+    <p class="hero-tour-note">自动推进 · 生产条件 → 理论自觉 → 组织实践 → 认识方法</p>
+  </div>
+  <div class="hero-scroll">SCROLL · 向下展开卷宗</div>
+</section>
+
+<!-- ===== 卷宗目录 ===== -->
+<section class="section" id="toc">
+  <div class="chapter-head reveal">
+    <div class="kicker">ARCHIVE INDEX · 卷宗目录</div>
+    <h2>选择你的参观方式</h2>
+    <p class="lede">自动导览不按事件清单往前赶，而是从生产条件出发，追踪理论如何形成、如何进入组织实践，以及历史认识如何继续开放。</p>
+  </div>
+  <div class="totem-grid reveal" id="totem-grid"></div>
+  <div class="learning-routes reveal" aria-labelledby="routes-title">
+    <div class="routes-heading"><p class="kicker">三种读法</p><h3 id="routes-title">从一段历史开始，再顺着证据追下去</h3><p>每条路线约 10–15 分钟。随时可跳转，展品和史料页都能回到主线。</p></div>
+    <div class="route-list">
+      <article class="route-card"><span>01 · 历史怎样展开</span><h4>从街头抗争到政治组织</h4><p>沿里昂、宪章运动、第一国际、巴黎公社到 1917 年，比较组织形式如何变化。</p><button type="button" data-goto="mapstory">从叙事地图开始</button></article>
+      <article class="route-card"><span>02 · 观点怎样留下证据</span><h4>打开原文和报刊</h4><p>读《共产党宣言》初版，再对照《新青年》与其他刊物期号，观察思想如何进入公共讨论。</p><button type="button" data-goto="relic">从原始文献开始</button></article>
+      <article class="route-card"><span>03 · 制度怎样经受现实</span><h4>比较行动、制度与结果</h4><p>沿巴黎公社的日期切片查看法令、行动地点和战争压力，区分制度主张与实际执行。</p><button type="button" data-goto="commune">从 1871 年开始</button></article>
+    </div>
+    <details class="evidence-guide"><summary>如何判断展品上的内容属于史料、历史背景还是视觉解释？</summary><div class="evidence-guide-grid">
+      <p><strong>E1 · 原始材料</strong><br>当时出版的书报、文书、照片或馆藏扫描。优先追到来源机构与原件页面；本馆当前没有历史场景的实测扫描。</p>
+      <p><strong>E2 · 多源佐证</strong><br>由多个可追溯来源相互支持的历史信息。证据等级表示依据类型，不代表内容重要性或可信度的简单分数。</p>
+      <p><strong>E3 · 有据阐释</strong><br>依据单张图像、文字记载或可靠图纸形成的解释，保留不确定性，不将推断伪装成实测。</p>
+      <p><strong>E4 · 推断性复原</strong><br>单图生成模型默认以线框呈现；点击可查看实体化渲染，但显示方式不会提升证据等级。它是帮助理解的思想模型，不是历史实物。</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ===== 卷一：滚动叙事地图 ===== -->
+<section class="section alt" id="mapstory">
+  <div class="inner">
+    <div class="chapter-head reveal">
+      <div class="kicker">VOL.01 · SCROLL STORY MAP</div>
+      <h2>滚动叙事地图 <span class="stamp">主线</span></h2>
+      <p class="lede">向下滚动，地图镜头随叙事分节移动；每一节聚焦一座城市并显示一个历史现场。金色行进点只在新增章节时沿新路段移动，抵达本章地点后停下，表示历史主线推进；地图使用真实海岸线与国界（Natural Earth 110m），墨卡托投影；城市位置为真实经纬度，历史事件的具体发生点仍属示意。</p>
+    </div>
+    <div class="map-stage reveal">
+      <div class="map-side" id="map-side">
+        <div class="map-scroll-hint">沿时间推进 · 左侧故事驱动右侧地图</div>
+      </div>
+      <div class="map-canvas-wrap">
+        <canvas id="map-canvas"></canvas>
+        <div class="map-legend" id="map-legend"></div>
+        <section class="paris-detail" id="paris-detail" aria-label="巴黎公社历史地图细节" hidden>
+          <header class="paris-detail-head">
+            <div><span class="map-detail-kicker">PARIS · 1871</span><h3>一座城市，三种历史现场</h3></div>
+            <span class="map-detail-note">位置关系示意 · 非测绘复原<br>窄屏可横向浏览地图</span>
+          </header>
+          <div class="paris-phase-tabs" role="tablist" aria-label="选择巴黎公社历史阶段">
+            <button type="button" class="active" data-map-phase="uprising" role="tab" aria-selected="true">3月18日 · 起义</button>
+            <button type="button" data-map-phase="commune" role="tab" aria-selected="false">3—5月 · 治理</button>
+            <button type="button" data-map-phase="week" role="tab" aria-selected="false">5月21—28日 · 流血周</button>
+          </div>
+          <div class="paris-map-body">
+            <svg class="paris-schematic" viewBox="0 0 760 470" role="img" aria-label="巴黎公社事件地点关系示意图">
+              <path class="paris-city-shape" d="M95 78 Q178 30 278 58 L392 42 Q550 52 643 116 L682 218 Q666 330 590 398 L460 430 L306 408 L166 424 L73 344 L54 218 Z"/>
+              <path class="paris-district" d="M110 145 Q210 104 300 120 T500 106 T640 160 M75 226 Q210 196 328 220 T680 217 M83 310 Q200 278 334 306 T625 300 M210 58 Q190 180 215 405 M340 56 Q320 198 345 416 M470 70 Q450 192 482 424 M580 100 Q550 220 590 380"/>
+              <path class="paris-seine" d="M72 265 C165 230 212 294 298 270 S420 226 483 270 S594 312 680 257"/>
+              <text class="paris-map-label" x="352" y="259">塞纳河</text><text class="paris-map-label soft" x="256" y="96">蒙马特高地</text>
+              <g class="paris-point" data-site="montmartre" data-phases="uprising" tabindex="0" role="button" aria-label="蒙马特高地，3月18日起义导火索"><circle cx="258" cy="106" r="8"/><text x="274" y="110">蒙马特高地</text></g>
+              <g class="paris-point" data-site="hotel" data-phases="uprising commune week" tabindex="0" role="button" aria-label="市政厅，中央委员会和公社委员会所在地"><circle cx="410" cy="245" r="8"/><text x="426" y="249">市政厅</text></g>
+              <g class="paris-point" data-site="tuileries" data-phases="week" tabindex="0" role="button" aria-label="杜伊勒里宫，1871年5月23日焚毁"><circle cx="347" cy="237" r="7"/><text x="270" y="230">杜伊勒里宫</text></g>
+              <g class="paris-point" data-site="pere" data-phases="week" tabindex="0" role="button" aria-label="拉雪兹神父公墓，流血周末期战斗地点"><circle cx="590" cy="324" r="7"/><text x="604" y="328">拉雪兹神父公墓</text></g>
+              <g class="paris-point" data-site="buttes" data-phases="week" tabindex="0" role="button" aria-label="肖蒙山丘公园，最后抵抗地点之一"><circle cx="535" cy="163" r="7"/><text x="549" y="167">肖蒙山丘</text></g>
+              <g class="paris-point" data-site="fontaine" data-phases="week" tabindex="0" role="button" aria-label="芳丹欧鲁瓦街，最后街垒纪念地点"><circle cx="486" cy="300" r="7"/><text x="500" y="304">芳丹欧鲁瓦街</text></g>
+              <g class="paris-point" data-site="cailles" data-phases="commune week" tabindex="0" role="button" aria-label="比耶夫尔山丘，重要防守据点"><circle cx="316" cy="360" r="7"/><text x="228" y="378">比耶夫尔山丘</text></g>
+            </svg>
+            <aside class="paris-site-card" id="paris-site-card" aria-live="polite">
+              <span class="site-date" id="paris-site-date">1871年3月18日</span>
+              <h4 id="paris-site-title">蒙马特高地</h4>
+              <p id="paris-site-copy">政府军试图收缴国民自卫军火炮，现场民众与士兵发生接触，成为巴黎起义的导火索。选择地图上的地点，查看它在不同阶段的作用。</p>
+              <a id="paris-site-source" href="https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/troisieme-republique/la-commune-de-paris" target="_blank" rel="noopener noreferrer">史料依据：法国国民议会 ↗</a>
+            </aside>
+          </div>
+          <footer class="paris-detail-foot">地图表现事件地点与城区关系；路线仅在有明确史料依据时呈现。</footer>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 卷二：巨型文本遗迹 ===== -->
+<section class="section" id="relic">
+  <div class="chapter-head reveal">
+    <div class="kicker">VOL.02 · TEXT RELIC</div>
+    <h2>巨型文本遗迹</h2>
+    <p class="lede">《共产党宣言》作为可进入的文本空间：切换定稿、删改、旁注时，文字显影对应文本版本之间的差异；四种语言的并置追踪口号传播；选择年代，词云显示相关概念的历史关注变化。原刊扫描入口与史料说明另列，便于区分原文、策展解释和视觉表达。</p>
+  </div>
+  <div class="relic-layout reveal">
+    <div>
+      <details class="manifest-complete" open>
+        <summary>1848 年伦敦初版 · 完整原件数字副本（23页）</summary>
+        <p>巴塞尔大学图书馆保存的 1848 年伦敦德文初版数字副本，共 23 页。点击下方入口可在原馆藏阅读器翻页、缩放；在线馆藏需连接互联网。扫描许可：Public Domain Mark。</p>
+        <figure class="manifest-cover"><img src="assets/sources/03_文献与初版书籍/01_manifest_1848_cover.jpg" alt="《共产党宣言》1848年伦敦初版封面扫描"><figcaption>伦敦初版封面 · Karl Marx、Friedrich Engels · Public Domain Mark</figcaption></figure>
+        <a class="manifest-open" href="https://www.e-rara.ch/bau_1/download/pdf/19116320" target="_blank" rel="noopener noreferrer">打开巴塞尔大学馆藏完整扫描（PDF） ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Manifest_der_kom_Partei_1848-1.djvu" target="_blank" rel="noopener noreferrer">打开完整扫描的 Wikimedia 书籍阅读器 ↗</a>
+        <a href="https://www.e-rara.ch/bau_1/content/titleinfo/19116320" target="_blank" rel="noopener noreferrer">巴塞尔大学图书馆书目记录与使用说明</a>
+      </details>
+      <div class="manuscript">
+        <div class="ms-img"></div>
+        <div class="ms-tabs" id="ms-tabs"></div>
+        <div class="ms-body" id="ms-body"></div>
+      </div>
+      <div class="polyglot" id="polyglot"></div>
+      <div class="relic-reader" id="relic-reader">
+        <div class="rr-head">
+          <p class="rr-kicker">READ INLINE · 在线阅读</p>
+          <h3>原文与译文对读</h3>
+          <p class="rr-sub">左为 1848 年伦敦版德文原文（公有领域），右为本项目自译；下方是逐句批注。不需要跳转到外部站点。</p>
+        </div>
+        <div class="rr-tabs" id="rr-tabs"></div>
+        <div class="rr-pane" id="rr-pane"></div>
+        <p class="rr-note" id="rr-note"></p>
+      </div>
+    </div>
+    <div class="wordcloud-wrap">
+      <div class="wc-eras" id="wc-eras"></div>
+      <canvas id="wordcloud"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 卷三：运动神经网络 ===== -->
+<section class="section alt" id="network">
+  <div class="inner">
+    <div class="chapter-head reveal">
+      <div class="kicker">VOL.03 · SOCIAL NETWORK</div>
+      <h2>运动神经网络</h2>
+      <p class="lede">人物、组织与报刊构成一张随年代生长的关系网。可按关系社区、实体类型、年代阶段或城市切换聚类；节点名称常显，选中节点查看相邻关系，年代轴筛选网络发展。切换聚类时节点只短暂归位，之后停住，方便比较各类关系结构。</p>
+    </div>
+    <div class="net-stage reveal">
+      <canvas id="network-canvas"></canvas>
+      <aside class="net-side">
+        <div class="net-controls" aria-label="网络视图控制">
+          <button type="button" id="net-zoom-out" aria-label="缩小网络">−</button>
+          <button type="button" id="net-zoom-in" aria-label="放大网络">＋</button>
+          <button type="button" id="net-fit">重置视图</button>
+        </div>
+        <label class="net-search-label" for="net-cluster">聚类方式</label>
+        <select class="net-search net-cluster" id="net-cluster">
+          <option value="community">关系社区 · 力导向</option>
+          <option value="type" selected>实体类型 · 人物 / 组织 / 报刊</option>
+          <option value="era">年代阶段 · 革命与组织演变</option>
+          <option value="city">活动城市 · 地理分布</option>
+          <option value="geo">真实地理 · 按经纬度定位</option>
+        </select>
+        <h3 id="net-node-title">节点与关系档案</h3>
+        <p class="desc" id="net-node-desc">点击任意节点，查看人物、组织或报刊档案；右侧显示与主线地图的对应城市。</p>
+        <div class="net-relations" id="net-relations" aria-label="当前节点的直接关系"></div>
+        <div class="net-legend" id="net-legend"></div>
+        <div class="net-scale" id="net-scale"></div>
+        <label class="net-search-label" for="net-search">搜索人物、组织、报刊</label>
+        <input class="net-search" id="net-search" type="search" placeholder="例如：卢森堡、第一国际">
+        <div class="net-directory-heading">节点名称目录 · 可滚动</div>
+        <div class="net-directory" id="net-directory" aria-label="关系网络节点目录"></div>
+        <div class="net-timeline">
+          <label>年代筛选 · 仅显示该年之前已出现的节点</label>
+          <input type="range" id="net-year" min="1760" max="1917" value="1917" step="1">
+          <div class="yr" id="net-year-label">1917</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 卷四：三维报刊档案馆 ===== -->
+<section class="section" id="press">
+  <div class="chapter-head reveal">
+    <div class="kicker">VOL.04 · PRESS ARCHIVE</div>
+    <h2>三维报刊档案馆</h2>
+    <p class="lede">左侧选择报刊；《新青年》可沿真实卷期与原刊扫描胶卷拖动探索。居中的封面表示当前期号，点击后阅读原刊、查看目录与主题文章。封面聚焦只用于标明阅读位置，不替代史料信息；未找到扫描的期号会明确标注缺期，不以示意图替代。</p>
+  </div>
+  <div class="reveal">
+    <div class="press-layout">
+      <div class="press-index-column">
+        <div class="press-index-note">报刊目录 · 7 种 <span>选择刊物后查看扫描期号或本地全文数据</span></div>
+        <div class="press-strip" id="press-strip"></div>
+      </div>
+      <div class="press-detail" id="press-detail"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 卷五：阶级平行宇宙 ===== -->
+<section class="section alt" id="classroom">
+  <div class="inner">
+    <div class="chapter-head reveal">
+      <div class="kicker">VOL.05 · TWO WORLDS</div>
+      <h2>阶级平行宇宙</h2>
+      <p class="lede">拖动中央分割线，在同一时代的两种现实之间切换：一侧是占有生产资料的人，一侧是出卖劳动力的人。对照为历史结构性示意，具体工时与工资以国别史料为准。</p>
+    </div>
+    <div class="split-stage reveal" id="split-stage">
+      <div class="split-side left">
+        <img src="assets/img/salon.jpg" alt="19世纪资产阶级沙龙">
+        <div class="overlay"></div>
+        <div class="split-label" id="left-label"></div>
+        <div class="split-items" id="left-items"></div>
+      </div>
+      <div class="split-side right">
+        <img src="assets/img/factory.jpg" alt="19世纪纺织车间">
+        <div class="overlay"></div>
+        <div class="split-label" id="right-label"></div>
+        <div class="split-items" id="right-items"></div>
+      </div>
+      <div class="split-divider" id="split-divider" role="separator" aria-label="拖动比较两种社会现实" aria-orientation="vertical" aria-valuemin="15" aria-valuemax="85" aria-valuenow="50" tabindex="0"></div>
+    </div>
+    <p class="note-line" id="class-note"></p>
+    <div class="class-more reveal" id="class-more">
+      <div class="class-more-head">
+        <p class="kicker">MORE DIMENSIONS · 再看八个维度</p>
+        <h3>同一条街的两侧：把对照铺开</h3>
+      </div>
+      <div class="class-more-table" id="class-more-table"></div>
+      <p class="class-more-note" id="class-more-note"></p>
+    </div>
+    <style>
+      .class-more{margin-top:46px}
+      .class-more-head h3{margin:6px 0 14px;font-size:clamp(1.05rem,.98rem+.4vw,1.35rem);color:#241f1a}
+      .class-more-table{display:grid;grid-template-columns:1fr 150px 1fr;gap:0;
+        border-top:1px solid rgba(90,70,40,.22)}
+      .class-more-table .row{display:contents}
+      .class-more-table .cell{padding:14px 16px;border-bottom:1px solid rgba(90,70,40,.12);
+        font-size:13.5px;line-height:1.75;color:#3f372f}
+      .class-more-table .cell.l{text-align:right;background:rgba(0,0,0,.025)}
+      .class-more-table .cell.r{background:rgba(168,51,44,.055)}
+      .class-more-table .dim{padding:14px 10px;border-bottom:1px solid rgba(201,162,98,.12);
+        text-align:center;font-family:var(--mono,monospace);font-size:11.5px;letter-spacing:.06em;color:#9a6b12;font-weight:600}
+      .class-more-note{margin-top:12px;font-size:11.5px;color:#6d6357;line-height:1.7}
+      @media(max-width:860px){
+        .class-more-table{grid-template-columns:1fr}
+        .class-more-table .cell.l{text-align:left}
+        .class-more-table .dim{border-bottom:0;padding-top:6px}
+      }
+    </style>
+  </div>
+</section>
+
+<!-- ===== 卷六：巴黎公社剧场 ===== -->
+<section class="section" id="commune">
+  <div class="chapter-head reveal">
+    <div class="kicker">VOL.06 · PARIS COMMUNE 1871</div>
+    <h2>巴黎公社时序数字剧场</h2>
+    <p class="lede">从 3 月 18 日到 5 月 28 日，七十二天被整理为七个有记载的时间片。手动选日或启动播放后，地点、法令和事件说明同步更新；切片切换时扩散的红圈标出新激活地点，红点代表该片段有记载的行动地点，不表示战斗强度。每片附有开放问题，引导比较公社的制度实践与战争压力。</p>
+  </div>
+  <div class="commune-stage reveal">
+    <canvas id="commune-canvas"></canvas>
+    <aside class="commune-side">
+      <div class="commune-date-range" id="commune-range"></div>
+      <div class="commune-map-note" id="commune-map-note" aria-live="polite"></div>
+        <div class="history-playback" id="commune-playback" aria-label="巴黎公社历史进程播放控制">
+          <div class="history-playback-controls">
+            <button type="button" id="commune-prev" aria-label="上一个时间片">上一步</button>
+            <button type="button" id="commune-play" aria-pressed="false">按时间顺序播放</button>
+            <button type="button" id="commune-next" aria-label="下一个时间片">下一步</button>
+            <span id="commune-step" aria-live="polite">1 / 7</span>
+          </div>
+          <div class="history-progress" aria-hidden="true"><span id="commune-progress"></span></div>
+          <p>每 5 秒推进一个有记载的节点；地点与法令随日期更新，可暂停细读。</p>
+        </div>
+      <div class="commune-slices" id="commune-slices"></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== 卷七：声音史诗层 ===== -->
+<section class="section alt" id="sound">
+  <div class="inner">
+    <div class="chapter-head reveal">
+      <div class="kicker">VOL.07 · SOUND EPIC</div>
+      <h2>声音史诗层</h2>
+      <p class="lede">环境声场由浏览器实时合成，默认静默、由用户开启；宣言节选使用系统语音逐句朗诵，文字随播放高亮。声音是背景，不抢占视觉主线。</p>
+    </div>
+    <div class="sound-stage reveal">
+      <div class="sound-panel">
+        <h3>环境声场 · 印刷机与集会低频</h3>
+        <div class="sound-controls">
+          <button class="btn" id="sound-toggle">开启声场</button>
+          <span class="sound-state" id="sound-state">当前静默</span>
+        </div>
+        <canvas id="wave-canvas"></canvas>
+        <p class="sound-hint">波形实时反映合成声场的振幅；静默时保持基线。声场包含印刷节奏脉冲、低频集会嗡鸣与轻微白噪，可随时关闭；朗读文字按句高亮，便于把听到的内容和原文对应起来。</p>
+      </div>
+      <div class="sound-panel">
+        <h3>朗诵轨道 · 《宣言》节选</h3>
+        <div class="script-track" id="script-track"></div>
+        <p class="sound-hint">点击任意一句开始朗读；朗读由浏览器内置语音完成，无外部音频文件。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 卷八：时间河流 ===== -->
+<section class="section" id="river">
+  <div class="chapter-head reveal">
+    <div class="kicker">VOL.08 · RIVER OF TIME</div>
+    <h2>时间河流</h2>
+    <p class="lede">这条时间河流讲述工人运动如何从城市抗争走向跨国组织，再进入革命与政党政治。横向严格按年代排列，节点是转折事件；选择或播放时，金色行进点从前一事件移到后一事件，显示组织与政治实践如何跨越时间。</p>
+  </div>
+  <div class="river-playback" aria-label="工人运动历史进程播放控制">
+    <div class="history-playback-controls">
+      <button type="button" id="river-prev" aria-label="上一个历史节点">上一步</button>
+      <button type="button" id="river-play" aria-pressed="false">播放历史演进</button>
+      <button type="button" id="river-next" aria-label="下一个历史节点">下一步</button>
+      <span id="river-step" aria-live="polite">1 / 14</span>
+    </div>
+    <div class="history-progress" aria-hidden="true"><span id="river-progress"></span></div>
+    <p>金色行进点连接相邻转折；位置间距按真实年份比例绘制。每个节点停留 4 秒，阅读事件后可暂停或继续。</p>
+  </div>
+  <div class="river-wrap reveal">
+    <canvas id="river-canvas"></canvas>
+  </div>
+  <div class="river-detail" id="river-detail" aria-live="polite"></div>
+  <div class="river-events" id="river-events" aria-label="时间河流事件目录"></div>
+  <div class="river-year-axis" aria-label="按年代定位"><button type="button" data-river-year="1818">1818</button><button type="button" data-river-year="1848">1848</button><button type="button" data-river-year="1871">1871</button><button type="button" data-river-year="1889">1889</button><button type="button" data-river-year="1917">1917</button></div>
+</section>
+
+<!-- ===== 卷九：罢工浪潮热力 ===== -->
+<section class="section alt" id="heat">
+  <div class="inner">
+    <div class="chapter-head reveal">
+      <div class="kicker">VOL.09 · MOVEMENT EVENT MAP</div>
+      <h2>工人运动年代事件地图</h2>
+      <p class="lede">选择年代，观察工人行动、组织和革命事件如何分布在不同城市。光晕用于引导视线，数字等级是本展的策展标记，不是统一口径的罢工次数、参与人数或跨国统计指数。</p>
+    </div>
+    <div class="heat-stage reveal">
+      <canvas id="heat-canvas"></canvas>
+      <aside class="heat-side">
+        <h3>年代切片</h3>
+        <p>选择年代后，地图在相邻切片之间过渡。用右侧事件目录或地图亮点打开每条记录；半径和亮度只表示策展分级，不代表罢工次数、参与人数或真实地理范围。</p>
+        <details class="heat-method"><summary>查看强度分级方法</summary><p><strong>1–2 级：</strong>局部行动或背景线索；<strong>3 级：</strong>持续的城市动员或组织活动；<strong>4 级：</strong>跨地区扩散或多个组织参与；<strong>5 级：</strong>本展认定的阶段性转折。等级根据事件作用、传播范围和持续性作策展判断，不是统一口径的罢工统计，不能用来比较各国真实规模。</p></details>
+        <div class="heat-eras" id="heat-eras"></div>
+        <div class="heat-detail" id="heat-detail" aria-live="polite"></div>
+        <h4 class="heat-events-heading">本年代纳入的事件</h4>
+        <div class="heat-events" id="heat-events" role="group" aria-label="当前年代事件目录"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 卷十：文物与历史空间三维厅 ===== -->
+<section class="section alt" id="artifacts">
+  <div class="inner">
+    <div class="chapter-head reveal">
+      <div class="kicker">VOL.10 · ARTIFACT SCAN</div>
+      <h2>文物与历史空间</h2>
+      <p class="lede">逐处区分现存遗址扫描、现存建筑扫描、当代地形底图与已消失场景的史料约束复原。沿同址证据时间切片浏览复原与现状；巴黎点云可扩展到街区、城区和区域尺度。各期模型独立加载并保留来源，不把资料缺失年代伪造成连续动画。</p>
+    <p class="artifact-scan-cta"><a href="splat-viewer.html">进入高保真实景扫描工作台 →</a><span>导入遗址实拍重建的 Gaussian Splat（PLY / SPZ / SOG 等）；没有扫描文件时可先查看采集与复原流程。</span></p>
+    <p class="artifact-scan-cta"><a href="large-world.html">进入全国尺度 3D Tiles 空间工作台 →</a><span>按视点加载全国多城市建筑索引或东京千代田区街区模型，查看全国、城市与街区的尺度关系。现状模型仅作空间参照，不冒充历史复原。</span></p>
+    </div>
+
+    <div class="artifact-stage reveal">
+      <div class="artifact-modes" role="tablist" aria-label="选择三维内容类型">
+        <button type="button" class="on" data-artifact-mode="artifacts" role="tab" aria-selected="true">文物模型</button>
+        <button type="button" data-artifact-mode="scenes" role="tab" aria-selected="false">历史空间 <span>16</span></button>
+      </div>
+      <div class="artifact-view" id="artifact-view">
+        <canvas id="artifact-canvas"></canvas>
+        <div class="artifact-external-viewer" id="artifact-external-viewer" hidden></div>
+        <div class="artifact-evidence" id="artifact-evidence" hidden></div>
+        <button type="button" class="artifact-wire-toggle" id="artifact-wire-toggle" hidden aria-pressed="true" title="改变显示方式不会提高 E4 模型的证据等级">查看实体化复原 · E4</button>
+        <button type="button" class="artifact-reset" id="artifact-reset">重置视角</button>
+        <div class="artifact-camera-tools" id="artifact-camera-tools" role="group" aria-label="历史空间视角预设" hidden>
+          <button type="button" data-camera-preset="default" aria-pressed="true">斜视</button>
+          <button type="button" data-camera-preset="top" aria-pressed="false">俯视</button>
+          <button type="button" data-camera-preset="close" aria-pressed="false">近景</button>
+        </div>
+        <button type="button" class="artifact-pair-switch" id="artifact-pair-switch" hidden></button>
+        <div class="artifact-hint">左键拖动旋转 · 右键拖动平移 · 滚轮缩放</div>
+      </div>
+      <aside class="artifact-side">
+        <div class="artifact-rail" id="artifact-rail"></div>
+        <div class="artifact-caption" id="artifact-caption">
+          <h3>选择一件文物或历史空间</h3>
+          <p class="artifact-meta">三维交互展厅</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+<!-- ===== 终章：开放的历史光丝 ===== -->
+<section class="section" id="monument">
+  <div class="chapter-head reveal">
+    <div class="kicker">FINALE · OPEN THREADS</div>
+    <h2>历史仍在延伸</h2>
+    <p class="lede">从城市里的劳动者，到跨越国界的组织与思想，历史由无数人的行动共同塑造。光丝从共同的历史现场向不同方向延伸；最后留下的问题，交给今天的观众继续追问。</p>
+  </div>
+  <div id="monument-stage" class="monument-stage reveal">
+    <canvas id="monument-canvas"></canvas>
+      <div class="monument-caption">
+      <h2>历史不是封存的答案，而是仍在延伸的关系</h2>
+      <p>城市、组织、文本与行动在这里交织成开放的历史关系。它不替历史盖棺定论，而是把问题留给新的实践：哪些关系延续了，哪些条件改变了，新的联合又如何形成？</p>
+      <p class="finale-quote" style="border-left:3px solid #b3202a;padding:8px 14px;margin:14px 0;color:#e8d0a8;font-style:italic">「无产阶级在这个革命中失去的只是锁链。他们获得的将是整个世界。」<cite style="display:block;margin-top:6px;font-size:12px;color:#a89070;font-style:normal">——《共产党宣言》，1848</cite></p>
+      <div class="finale-actions"><button type="button" data-tour-start>重新播放四层自动导览</button><a href="assets.html">从档案与展品继续探索</a><a href="scenes.html">进入历史空间</a><a href="video-tour.html">观看完整讲解视频</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 尾页：说明与合规 ===== -->
+<footer class="colophon">
+  <div class="colophon-inner">
+    <h2>编纂说明 · 史料边界 · 技术来源</h2>
+    <div class="colophon-grid">
+      <div>
+        <h4>内容边界</h4>
+        <ul>
+          <li>事件日期、人物与组织关系依据公认历史记载整理。</li>
+          <li>地图坐标为欧洲示意，非精确地理投影。</li>
+          <li>阶级对照为结构性示意，不提供未经溯源的精确统计值。</li>
+          <li>热力强度为事件分布的视觉编码，非量化指数。</li>
+        </ul>
+      </div>
+      <div>
+        <h4>素材与合规</h4>
+        <ul>
+          <li>场景氛围图为 AI 生成的 19 世纪风格概念插画，不对应真实藏品。</li>
+          <li>本页面仅用于非营利宣讲与教学演示。</li>
+          <li>73 张源图、63 个单图推断模型、18 份文献与场景素材的逐项署名见档案目录。</li>
+          <li>博物馆藏品三维重建须遵守馆藏单位数据授权要求。</li>
+        </ul>
+      </div>
+      <div>
+        <h4>技术栈</h4>
+        <ul>
+          <li>原生 HTML / CSS / JavaScript，无构建框架。</li>
+          <li>Three.js r147 用于序章地球与终章开放光丝粒子。</li>
+          <li>Canvas 2D 承担地图、网络、词云、河流与热力视图。</li>
+          <li>环境音由 Web Audio API 实时合成；朗诵调用浏览器语音。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<dialog class="press-reader" id="press-reader" aria-labelledby="press-reader-title">
+  <div class="press-reader-toolbar">
+    <div><span class="press-reader-label">原刊扫描阅览</span><h2 id="press-reader-title" data-reader-title>选择期号</h2></div>
+    <div class="press-reader-tools" aria-label="扫描阅读控制">
+      <button type="button" data-reader-prev aria-label="上一页">上一页</button>
+      <label><span class="sr-only">当前页</span><input type="number" data-reader-page value="1" min="1" aria-label="输入页码"></label>
+      <span data-reader-total>/ —</span>
+      <button type="button" data-reader-next aria-label="下一页">下一页</button>
+      <button type="button" data-reader-zoom-out aria-label="缩小">−</button>
+      <span data-reader-zoom>适合页面</span>
+      <button type="button" data-reader-zoom-in aria-label="放大">＋</button>
+      <a data-reader-fallback href="#" target="_blank" rel="noopener noreferrer">新窗口打开原件</a>
+      <button type="button" data-reader-close aria-label="关闭原刊阅览器">关闭</button>
+    </div>
+  </div>
+  <div class="press-reader-stage" data-reader-stage>
+    <div class="press-reader-status" data-reader-status role="status" aria-live="polite">正在准备扫描阅读器…</div>
+    <canvas id="press-reader-page" aria-label="原刊扫描页面"></canvas>
+  </div>
+</dialog>
+
+<script src="assets/vendor/three-r147/three.min.js"></script>
+<script src="assets/vendor/three-r147/OrbitControls.js"></script>
+
+<script src="js/data.js"></script>
+<script src="js/data/data-cities.js?v=feedback2"></script>
+<script src="js/data/data-story-a.js"></script>
+<script src="js/data/data-story-b.js"></script>
+<script src="js/data/data-story-c.js"></script>
+<script src="js/data/data-story-d.js"></script>
+<script src="js/data/data-story-e.js"></script>
+<script src="js/data/data-net-meta.js"></script>
+<script src="js/data/data-net-nodes-a.js"></script>
+<script src="js/data/data-net-nodes-b.js"></script>
+<script src="js/data/data-net-nodes-c.js"></script>
+<script src="js/data/data-net-nodes-d.js"></script>
+<script src="js/data/data-net-edges-a.js"></script>
+<script src="js/data/data-net-edges-b.js"></script>
+<script src="js/data/data-net-nodes-e.js?v=feedback2"></script>
+<script src="js/data/data-net-edges-c.js?v=feedback2"></script>
+<script src="js/data/data-press-a.js?v=archive-source-audit1"></script>
+<script src="js/data/data-press-b.js?v=local-issue-reader-20261102"></script>
+<script src="js/data/data-press-issues.js?v=archive-room6"></script>
+<script src="js/data/data-annotations.js?v=1"></script>
+<script src="js/data/data-relic-a.js"></script>
+<script src="js/data/data-relic-b.js"></script>
+<script src="js/data/data-relic-c.js"></script>
+<script src="js/data/data-relic-reader.js?v=1"></script>
+<script src="js/data/data-class-a.js"></script>
+<script src="js/data/data-class-b.js"></script>
+<script src="js/data/data-commune-a.js?v=feedback2"></script>
+<script src="js/data/data-commune-b.js?v=feedback2"></script>
+<script src="js/data/data-river.js?v=feedback2"></script>
+<script src="js/data/data-heat.js?v=whole-exhibit-upgrade1"></script>
+<script src="js/data/data-modules.js?v=whole-exhibit-upgrade1"></script>
+<script src="js/data/data-sources.js?v=source-portal-20261102"></script>
+
+<script src="js/main.js?v=guided-tour-20261103"></script>
+<script src="js/scenes/hero-globe.js?v=intent1"></script>
+<script src="js/scenes/map-story.js?v=paris-map1"></script>
+<script src="js/scenes/relic.js?v=archive-room5"></script>
+<script src="js/scenes/network.js?v=whole-exhibit-upgrade1"></script>
+<script src="assets/vendor/gsap/gsap.min.js"></script>
+<script src="assets/vendor/embla/embla-carousel.umd.js"></script>
+<script src="js/scenes/press.js?v=local-issue-reader-20261102"></script>
+<script src="js/scenes/classroom.js?v=archive-room6"></script>
+<script src="js/scenes/commune.js?v=intent4"></script>
+<script src="js/scenes/sound.js"></script>
+<script src="js/scenes/river.js?v=archive-room9"></script>
+<script src="js/scenes/heat.js?v=whole-exhibit-upgrade1"></script>
+<script src="assets/vendor/three-r147/GLTFLoader.js"></script>
+<script src="js/scenes/artifacts.js?v=e4-wireframe-20261103"></script>
+<script src="js/scenes/monument.js?v=intent1"></script>
+<script src="js/design-pass.js?v=designpass-20261102"></script>
+<script src="js/command-palette.js"></script>
+<script src="js/progress-bar.js"></script>
+<script src="js/pwa-register.js"></script>
+<div id="shuttle"></div>
+<script src="js/shuttle.js?v=shuttle1"></script>
+<script src="js/back.js?v=1"></script>
+
+<script>
+(function () {
+  var btn = document.getElementById("entry-toggle");
+  var panel = document.getElementById("entry-panel");
+  if (!btn || !panel) return;
+  function close() { panel.hidden = true; btn.setAttribute("aria-expanded", "false"); }
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    var open = panel.hidden;
+    panel.hidden = !open;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.addEventListener("click", function (e) {
+    if (!panel.hidden && !panel.contains(e.target) && e.target !== btn) close();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+})();
+</script>
+
+<script src="js/ui-chrome.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>报刊的另一面 · 广告与启事</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+<style>
+  :root{--bg:#0c0a09;--ink:#f2e9d8;--dim:#8d8175;--gold:#c9a262;--red:#a8332c;--line:rgba(201,162,98,.16)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  a{color:var(--gold);text-decoration:none}
+  header{padding:22px 34px 14px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:20px}
+  h1 small{display:block;font-size:11.5px;letter-spacing:.22em;color:var(--gold);margin-bottom:6px;font-weight:400}
+  .sub{color:var(--dim);font-size:12.5px;margin-top:8px;max-width:960px;line-height:1.8}
+  main{padding:20px 34px 80px;max-width:1180px}
+  .item{border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin-bottom:14px;background:rgba(255,246,228,.02)}
+  .item .date{font-family:ui-monospace,monospace;font-size:11.5px;letter-spacing:.14em;color:#e0524a}
+  .item h3{margin:4px 0 8px;font-size:17px}
+  .ocr{font-family:Georgia,"Times New Roman",serif;font-size:13px;line-height:1.7;color:#b7ab99;
+    background:rgba(0,0,0,.28);border-left:2px solid rgba(201,162,98,.4);padding:9px 12px;border-radius:3px;
+    max-height:120px;overflow:auto}
+  .ocr::before{content:"OCR 原文（未校勘）";display:block;font-family:inherit;font-size:10px;
+    letter-spacing:.14em;color:#6f6558;margin-bottom:5px}
+  .note{margin-top:10px;display:flex;gap:9px;font-size:13px;line-height:1.8;color:#ded3c1}
+  .note-tag{flex:0 0 auto;font-size:10px;padding:1px 7px;height:18px;display:inline-flex;align-items:center;
+    border-radius:2px;background:rgba(168,51,44,.18);color:#f0bdb8}
+  .tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+  .tags span{font-size:10.5px;padding:1px 8px;border-radius:999px;border:1px solid rgba(201,162,98,.26);color:#a2957f}
+  .foot{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:#6f6558;line-height:1.8}
+</style>
+</head>
+<body>
+<header>
+  <h1><small>THE OTHER SIDE OF THE PAPER</small>报刊的另一面 · 广告与启事</h1>
+  <p class="sub">正刊之外，报纸还有广告、启事、会议通告、互助会通知。这些「边角料」记录的是工人日常：会费多少、救济能不能领、工会在哪开会、哪家厂在招人。以下 7 条从《蜂房报》4,780 篇 OCR 中筛出，每条附编者批注。</p>
+</header>
+<main id="list"></main>
+
+<script>
+(function () {
+  "use strict";
+  fetch("assets/manifests/notices-curated.json?v=1").then(function (r) { return r.json(); }).then(function (d) {
+    var list = document.getElementById("list");
+    list.innerHTML = d.items.map(function (x) {
+      return '<article class="item">' +
+        '<div class="date">' + x.date + "</div>" +
+        "<h3>" + x.title + "</h3>" +
+        '<div class="ocr">' + x.text.replace(/</g, "&lt;") + "</div>" +
+        '<div class="note"><span class="note-tag">编者批注</span><span>' + x.note + "</span></div>" +
+        '<div class="tags">' + (x.tags || []).map(function (t) { return "<span>" + t + "</span>"; }).join("") + "</div>" +
+      "</article>";
+    }).join("") +
+    '<p class="foot">来源：' + d.source + "。OCR 未校勘，引用前请回查原刊页面；批注为本项目编写。</p>";
+  }).catch(function (e) {
+    document.getElementById("list").innerHTML = '<p style="color:#8d8175">数据加载失败：' + e + "</p>";
+  });
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

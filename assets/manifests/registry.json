@@ -1,0 +1,5019 @@
+{
+ "schema": "v1.0",
+ "generated": "2026-10-31",
+ "items": [
+  {
+   "id": "statue_trier",
+   "title": "特里尔马克思铜像",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1245,
+   "thumbnail": "assets/models/preview/statue_trier_thumb.png",
+   "model": "assets/models/statue_trier.glb",
+   "source": [
+    "吴为山，2018，CC BY-SA 3.0，Wikimedia Commons"
+   ],
+   "is_flagship": true,
+   "description": "基座与衣纹可辨，面部受单图限制偏糊。"
+  },
+  {
+   "id": "statue_trier_side",
+   "title": "特里尔铜像 · 侧视",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1568,
+   "thumbnail": "assets/models/preview/statue_trier_side_thumb.png",
+   "model": "assets/models/statue_trier_side.glb",
+   "source": [
+    "同上，另一种角度输入"
+   ],
+   "is_flagship": true,
+   "description": "两次生成结果不同，正好说明单图重建的不确定性。"
+  },
+  {
+   "id": "bust_trier",
+   "title": "特里尔马克思胸像",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3409,
+   "thumbnail": "assets/models/preview/bust_trier_thumb.png",
+   "model": "assets/models/bust_trier.glb",
+   "source": [
+    "CC BY-SA 3.0，Wikimedia Commons"
+   ],
+   "is_flagship": true,
+   "description": "胡须与肩线清晰，面部为推测。"
+  },
+  {
+   "id": "bust_cc0",
+   "title": "马克思胸像（CC0）",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.6316,
+   "thumbnail": "assets/models/preview/bust_cc0_thumb.png",
+   "model": "assets/models/bust_cc0.glb",
+   "source": [
+    "CC0，Wikimedia Commons"
+   ],
+   "is_flagship": true,
+   "description": "人像与基座被「糊」成一体，适合远景。"
+  },
+  {
+   "id": "forum_berlin",
+   "title": "柏林马恩纪念像",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1416,
+   "thumbnail": "assets/models/preview/forum_berlin_thumb.png",
+   "model": "assets/models/forum_berlin.glb",
+   "source": [
+    "Ludwig Engelhardt 设计，1986；CC BY 2.0"
+   ],
+   "is_flagship": true,
+   "description": "双人坐像，体量关系正确，细节靠猜。"
+  },
+  {
+   "id": "monument_berlin",
+   "title": "柏林马恩纪念像 · 特写",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3068,
+   "thumbnail": "assets/models/preview/monument_berlin_thumb.png",
+   "model": "assets/models/monument_berlin.glb",
+   "source": [
+    "CC BY-SA 4.0，Dosseman"
+   ],
+   "is_flagship": true,
+   "description": "竖幅输入，模型被拉成高瘦。"
+  },
+  {
+   "id": "statue_shanghai",
+   "title": "上海复兴公园马恩雕像",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.5351,
+   "thumbnail": "assets/models/preview/statue_shanghai_thumb.png",
+   "model": "assets/models/statue_shanghai.glb",
+   "source": [
+    "Wikimedia Commons"
+   ],
+   "is_flagship": true,
+   "description": "中国在地文物，园区背景被当成雕塑的一部分。"
+  },
+  {
+   "id": "statue_shanghai2",
+   "title": "上海马恩雕像 · 另一视角",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.4807,
+   "thumbnail": "assets/models/preview/statue_shanghai2_thumb.png",
+   "model": "assets/models/statue_shanghai2.glb",
+   "source": [
+    "Wikimedia Commons"
+   ],
+   "is_flagship": true,
+   "description": "同一组雕像的不同输入对比。"
+  },
+  {
+   "id": "marx_house",
+   "title": "特里尔马克思故居",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.0105,
+   "thumbnail": "assets/models/preview/marx_house_thumb.png",
+   "model": "assets/models/marx_house.glb",
+   "source": [
+    "CC BY-SA 4.0，Leiflive"
+   ],
+   "is_flagship": false,
+   "description": "实测填充率 0.011，模型塌成一片薄板 —— 建筑单立面照片不适合单图重建。"
+  },
+  {
+   "id": "memorial_library",
+   "title": "伦敦马克思纪念图书馆",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1386,
+   "thumbnail": "assets/models/preview/memorial_library_thumb.png",
+   "model": "assets/models/memorial_library.glb",
+   "source": [
+    "Wikimedia Commons"
+   ],
+   "is_flagship": false,
+   "description": "街道狭窄，输入只有一立面。"
+  },
+  {
+   "id": "mur_federes",
+   "title": "拉雪兹神父公墓公社社员墙",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.6396,
+   "thumbnail": "assets/models/preview/mur_federes_thumb.png",
+   "model": "assets/models/mur_federes.glb",
+   "source": [
+    "CC BY-SA 3.0，Lionel Allorge"
+   ],
+   "is_flagship": false,
+   "description": "墙面与铭牌可辨；浮雕起伏被抹平。"
+  },
+  {
+   "id": "kapital_1867",
+   "title": "《资本论》1867 初版",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "flat",
+   "fill": 0.0198,
+   "thumbnail": "assets/models/preview/kapital_1867_thumb.png",
+   "model": "assets/models/kapital_1867.glb",
+   "source": [
+    "公有领域"
+   ],
+   "is_flagship": false,
+   "description": "填充率 0.020，书页被压成一块薄片，只有书脊还立着。"
+  },
+  {
+   "id": "ait_card",
+   "title": "第一国际会员证",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "flat",
+   "fill": 0.1131,
+   "thumbnail": "assets/models/preview/ait_card_thumb.png",
+   "model": "assets/models/ait_card.glb",
+   "source": [
+    "公有领域"
+   ],
+   "is_flagship": false,
+   "description": "厚度仅 0.074，等于给纸片做了个浮雕；文献类应当直接扫描而非建模。"
+  },
+  {
+   "id": "milrevkom",
+   "title": "军事革命委员会公告",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1448,
+   "thumbnail": "assets/models/preview/milrevkom_thumb.png",
+   "model": "assets/models/milrevkom.glb",
+   "source": [
+    "公有领域"
+   ],
+   "is_flagship": false,
+   "description": "同上：文献类不适合单图重建。"
+  },
+  {
+   "id": "union_banner",
+   "title": "伦敦工会旗",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1383,
+   "thumbnail": "assets/models/preview/union_banner_thumb.png",
+   "model": "assets/models/union_banner.glb",
+   "source": [
+    "CC BY-SA 2.0"
+   ],
+   "is_flagship": false,
+   "description": "布幔形态勉强成立，旗面文字不可读。"
+  },
+  {
+   "id": "barricade_vendome",
+   "title": "1871 旺多姆广场街垒",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3564,
+   "thumbnail": "assets/models/preview/barricade_vendome_thumb.png",
+   "model": "assets/models/barricade_vendome.glb",
+   "source": [
+    "公有领域"
+   ],
+   "is_flagship": false,
+   "description": "历史照片输入：把二维影像「立」成了舞台布景。"
+  },
+  {
+   "id": "manifest",
+   "title": "《宣言》初版（失败样例）",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.005,
+   "thumbnail": "assets/models/preview/manifest_thumb.png",
+   "model": "assets/models/manifest.glb",
+   "source": [
+    "公有领域"
+   ],
+   "is_flagship": false,
+   "description": "退化为一堆漂浮碎面，作为反例保留。"
+  },
+  {
+   "id": "s01",
+   "title": "trier statue detail head",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.5939,
+   "thumbnail": "assets/models/preview/s01_thumb.png",
+   "model": "assets/models/s01.glb",
+   "source": [
+    "Parvolus · CC BY 3.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s02",
+   "title": "trier statue detail cloak",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.6115,
+   "thumbnail": "assets/models/preview/s02_thumb.png",
+   "model": "assets/models/s02.glb",
+   "source": [
+    "Parvolus · CC BY 3.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s03",
+   "title": "trier bust",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3409,
+   "thumbnail": "assets/models/preview/s03_thumb.png",
+   "model": "assets/models/s03.glb",
+   "source": [
+    "Ferran Cornellà · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s04",
+   "title": "portrait 1875",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3683,
+   "thumbnail": "assets/models/preview/s04_thumb.png",
+   "model": "assets/models/s04.glb",
+   "source": [
+    "John Jabez Edwin Mayall · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s05",
+   "title": "portrait 1861",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1749,
+   "thumbnail": "assets/models/preview/s05_thumb.png",
+   "model": "assets/models/s05.glb",
+   "source": [
+    "Richard Beard · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s06",
+   "title": "first international founding",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2664,
+   "thumbnail": "assets/models/preview/s06_thumb.png",
+   "model": "assets/models/s06.glb",
+   "source": [
+    "Unknown authorUnknown author · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s07",
+   "title": "st martins hall",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.8925,
+   "thumbnail": "assets/models/preview/s07_thumb.png",
+   "model": "assets/models/s07.glb",
+   "source": [
+    "Numerous Engravings · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s08",
+   "title": "neue rheinische office",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2839,
+   "thumbnail": "assets/models/preview/s08_thumb.png",
+   "model": "assets/models/s08.glb",
+   "source": [
+    "Vasily Perov · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s09",
+   "title": "commune elections 1871",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1987,
+   "thumbnail": "assets/models/preview/s09_thumb.png",
+   "model": "assets/models/s09.glb",
+   "source": [
+    "Commune de Paris · CC0"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s10",
+   "title": "commune barricades",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "flat",
+   "fill": 0.1332,
+   "thumbnail": "assets/models/preview/s10_thumb.png",
+   "model": "assets/models/s10.glb",
+   "source": [
+    "Pouazity3 · CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "偏平，更像浮雕片。"
+  },
+  {
+   "id": "s11",
+   "title": "vendome column 1871",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.0118,
+   "thumbnail": "assets/models/preview/s11_thumb.png",
+   "model": "assets/models/s11.glb",
+   "source": [
+    "Unknown authorUnknown author · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "塌成薄板/碎面，仅作反例。"
+  },
+  {
+   "id": "s12",
+   "title": "barricade castiglione",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "flat",
+   "fill": 0.0913,
+   "thumbnail": "assets/models/preview/s12_thumb.png",
+   "model": "assets/models/s12.glb",
+   "source": [
+    "Attribué à Braquehais, Auguste Bruno (Di · CC0"
+   ],
+   "is_flagship": false,
+   "description": "偏平，更像浮雕片。"
+  },
+  {
+   "id": "s13",
+   "title": "barricade devambez",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2623,
+   "thumbnail": "assets/models/preview/s13_thumb.png",
+   "model": "assets/models/s13.glb",
+   "source": [
+    "André Devambez · CC0"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s14",
+   "title": "manifest 1848 titlepage",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.0169,
+   "thumbnail": "assets/models/preview/s14_thumb.png",
+   "model": "assets/models/s14.glb",
+   "source": [
+    "Karl Marx, Friedrich Engels · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "塌成薄板/碎面，仅作反例。"
+  },
+  {
+   "id": "s15",
+   "title": "manifest first page",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.6562,
+   "thumbnail": "assets/models/preview/s15_thumb.png",
+   "model": "assets/models/s15.glb",
+   "source": [
+    "Friedrich Engels, Karl Marx · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s16",
+   "title": "manifest english 1850",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.9096,
+   "thumbnail": "assets/models/preview/s16_thumb.png",
+   "model": "assets/models/s16.glb",
+   "source": [
+    "Karl Marx · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s17",
+   "title": "kapital band1 cover",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.8096,
+   "thumbnail": "assets/models/preview/s17_thumb.png",
+   "model": "assets/models/s17.glb",
+   "source": [
+    "Karl Marx · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s18",
+   "title": "neue rheinische zeitung",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.9591,
+   "thumbnail": "assets/models/preview/s18_thumb.png",
+   "model": "assets/models/s18.glb",
+   "source": [
+    "Stefan Kühn · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s19",
+   "title": "neue rheinische zeitung n",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.7728,
+   "thumbnail": "assets/models/preview/s19_thumb.png",
+   "model": "assets/models/s19.glb",
+   "source": [
+    "de:Benutzer:Stefan Kühn · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s20",
+   "title": "manifest senate house",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.7331,
+   "thumbnail": "assets/models/preview/s20_thumb.png",
+   "model": "assets/models/s20.glb",
+   "source": [
+    "themostinept · CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s21",
+   "title": "manifest multilang hangzhou",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "flat",
+   "fill": 0.1209,
+   "thumbnail": "assets/models/preview/s21_thumb.png",
+   "model": "assets/models/s21.glb",
+   "source": [
+    "User:CatOnMars · CC BY 4.0"
+   ],
+   "is_flagship": false,
+   "description": "偏平，更像浮雕片。"
+  },
+  {
+   "id": "s22",
+   "title": "mur des federes b",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.7933,
+   "thumbnail": "assets/models/preview/s22_thumb.png",
+   "model": "assets/models/s22.glb",
+   "source": [
+    "Lionel Allorge · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s23",
+   "title": "mur des federes c",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.0791,
+   "thumbnail": "assets/models/preview/s23_thumb.png",
+   "model": "assets/models/s23.glb",
+   "source": [
+    "Lionel Allorge · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "塌成薄板/碎面，仅作反例。"
+  },
+  {
+   "id": "s24",
+   "title": "russia stamp 2018",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2189,
+   "thumbnail": "assets/models/preview/s24_thumb.png",
+   "model": "assets/models/s24.glb",
+   "source": [
+    "Почта России · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s25",
+   "title": "marx house entry",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.0443,
+   "thumbnail": "assets/models/preview/s25_thumb.png",
+   "model": "assets/models/s25.glb",
+   "source": [
+    "hellojed · CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "塌成薄板/碎面，仅作反例。"
+  },
+  {
+   "id": "s26",
+   "title": "marx house courtyard",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.026,
+   "thumbnail": "assets/models/preview/s26_thumb.png",
+   "model": "assets/models/s26.glb",
+   "source": [
+    "No machine-readable author provided. Ani · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "塌成薄板/碎面，仅作反例。"
+  },
+  {
+   "id": "s27",
+   "title": "marx house 2014",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.6317,
+   "thumbnail": "assets/models/preview/s27_thumb.png",
+   "model": "assets/models/s27.glb",
+   "source": [
+    "Berthold Werner · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s28",
+   "title": "bm reading room panorama",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.4923,
+   "thumbnail": "assets/models/preview/s28_thumb.png",
+   "model": "assets/models/s28.glb",
+   "source": [
+    "Diliff · CC BY 2.5"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s29",
+   "title": "bm reading desk m14",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3629,
+   "thumbnail": "assets/models/preview/s29_thumb.png",
+   "model": "assets/models/s29.glb",
+   "source": [
+    "Bobulous · CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s30",
+   "title": "marx memorial library interior",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.6013,
+   "thumbnail": "assets/models/preview/s30_thumb.png",
+   "model": "assets/models/s30.glb",
+   "source": [
+    "Ben Sutherland from Crystal Palace, Lond · CC BY 2.0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s31",
+   "title": "AddieCard05282vLewisHine",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2408,
+   "thumbnail": "assets/models/preview/s31_thumb.png",
+   "model": "assets/models/s31.glb",
+   "source": [
+    "E. F. Brown · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s32",
+   "title": "Breaker Boys 1",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3357,
+   "thumbnail": "assets/models/preview/s32_thumb.png",
+   "model": "assets/models/s32.glb",
+   "source": [
+    "Lewis Hine · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s33",
+   "title": "Child Labor on Mill",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "flat",
+   "fill": 0.1452,
+   "thumbnail": "assets/models/preview/s33_thumb.png",
+   "model": "assets/models/s33.glb",
+   "source": [
+    "Lewis Hine · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "偏平，更像浮雕片。"
+  },
+  {
+   "id": "s34",
+   "title": "Child laborer",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2231,
+   "thumbnail": "assets/models/preview/s34_thumb.png",
+   "model": "assets/models/s34.glb",
+   "source": [
+    "Lewis W. Hine for the National Child Lab · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s35",
+   "title": "Spinning Woollen Yarn at the C.W.S. Batley Mills",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.296,
+   "thumbnail": "assets/models/preview/s35_thumb.png",
+   "model": "assets/models/s35.glb",
+   "source": [
+    "Unknown authorUnknown author · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s36",
+   "title": "Thomas Lewis portrait",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2463,
+   "thumbnail": "assets/models/preview/s36_thumb.png",
+   "model": "assets/models/s36.glb",
+   "source": [
+    "Unknown authorUnknown author · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s37",
+   "title": "View of spinning frames which were tended by some very",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.8529,
+   "thumbnail": "assets/models/preview/s37_thumb.png",
+   "model": "assets/models/s37.glb",
+   "source": [
+    "Hine, Lewis Wickes; National Child Labor · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s38",
+   "title": "Barricade sous la Commune  place Blanche  D.3132 2",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.7226,
+   "thumbnail": "assets/models/preview/s38_thumb.png",
+   "model": "assets/models/s38.glb",
+   "source": [
+    "Arnaud-Durbec, Jean-Baptiste-François (M · CC0"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s39",
+   "title": "Chartist meeting  Kennington Common",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.3309,
+   "thumbnail": "assets/models/preview/s39_thumb.png",
+   "model": "assets/models/s39.glb",
+   "source": [
+    "William Edward Kilburn · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s40",
+   "title": "Chartist meeting on Kennington Common by William Edward Kilb",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "flat",
+   "fill": 0.1393,
+   "thumbnail": "assets/models/preview/s40_thumb.png",
+   "model": "assets/models/s40.glb",
+   "source": [
+    "William Edward Kilburn (1818 - 1891) Det · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "偏平，更像浮雕片。"
+  },
+  {
+   "id": "s41",
+   "title": "William Edward Kilburn - View of the Great Chartist Meeting",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2104,
+   "thumbnail": "assets/models/preview/s41_thumb.png",
+   "model": "assets/models/s41.glb",
+   "source": [
+    "William Edward Kilburn (1818 - 1891) Det · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s42",
+   "title": "Lenin and socialist reconstruction Design for poster - Gusta",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.723,
+   "thumbnail": "assets/models/preview/s42_thumb.png",
+   "model": "assets/models/s42.glb",
+   "source": [
+    "Gustavs Klucis · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "体量充实，轮廓可信。"
+  },
+  {
+   "id": "s44",
+   "title": "Algemene staking in Engeland 1926  SFA022820540",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1873,
+   "thumbnail": "assets/models/preview/s44_thumb.png",
+   "model": "assets/models/s44.glb",
+   "source": [
+    "Unknown authorUnknown author · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s45",
+   "title": "Algemene staking in Engeland 1926  SFA022820541",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.2415,
+   "thumbnail": "assets/models/preview/s45_thumb.png",
+   "model": "assets/models/s45.glb",
+   "source": [
+    "Unknown authorUnknown author · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s46",
+   "title": "Pachis May Day on Corfu 1888 National Gallery - Co",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": 0.1552,
+   "thumbnail": "assets/models/preview/s46_thumb.png",
+   "model": "assets/models/s46.glb",
+   "source": [
+    "未署名 · 待核"
+   ],
+   "is_flagship": false,
+   "description": "轮廓成立，细节为推断。"
+  },
+  {
+   "id": "s47",
+   "title": "Demonstration of the War Invalids  Petrograd  April 191",
+   "type": "model",
+   "chapter": 10,
+   "asset_format": "glb",
+   "production_method": "single_image_generation",
+   "evidence_type": "E4",
+   "quality": "fail",
+   "fill": 0.0114,
+   "thumbnail": "assets/models/preview/s47_thumb.png",
+   "model": "assets/models/s47.glb",
+   "source": [
+    "未署名 · 待核"
+   ],
+   "is_flagship": false,
+   "description": "塌成薄板/碎面，仅作反例。"
+  },
+  {
+   "id": "img001",
+   "title": "01 trier statue front",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/01_trier_statue_front.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Trier_Karl_Marx_Statue_BW_2018-05-12_16-41-31.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "特里尔马克思铜像（吴为山作，2018）正面全身，用于雕像多视角重建与尺度参考"
+  },
+  {
+   "id": "img002",
+   "title": "02 trier statue wolf",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/02_trier_statue_wolf.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl-Marx-Statue_Trier.jpg",
+    "CC BY-SA 3.0 de"
+   ],
+   "is_flagship": false,
+   "description": "同一雕像侧前方高分辨率(4611x8000)，适合作为摄影测量主序列"
+  },
+  {
+   "id": "img003",
+   "title": "03 trier statue detail head",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/03_trier_statue_detail_head.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl-Marx-Statue_in_Trier_by_Wu_Weishan_(Detail).jpg",
+    "CC BY 3.0"
+   ],
+   "is_flagship": false,
+   "description": "头部/面部细节，可用于面部拓扑与纹理校准"
+  },
+  {
+   "id": "img004",
+   "title": "04 trier statue detail cloak",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/04_trier_statue_detail_cloak.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl-Marx-Statue_in_Trier_by_Wu_Weishan_(Detail_2).jpg",
+    "CC BY 3.0"
+   ],
+   "is_flagship": false,
+   "description": "衣纹与手持书卷细节"
+  },
+  {
+   "id": "img005",
+   "title": "05 berlin marx engels forum",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/05_berlin_marx_engels_forum.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Marx-Engels_Forum.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "柏林马克思-恩格斯纪念像（1986）群像全景"
+  },
+  {
+   "id": "img006",
+   "title": "06 berlin marx engels monument",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/06_berlin_marx_engels_monument.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Berlin_Marx_Engels_monument_0382.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "纪念像竖幅高清（5268x7902），可用于人物轮廓提取"
+  },
+  {
+   "id": "img007",
+   "title": "07 trier bust",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/07_trier_bust.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl_Marx_bust_in_Trier.JPG",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "特里尔马克思胸像，小而独立的文物级重建对象"
+  },
+  {
+   "id": "img008",
+   "title": "08 bust cc0",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/08_bust_cc0.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Busto_de_Karl_Marx_2.jpg",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "CC0 胸像（拉美），无授权障碍的练习用重建对象"
+  },
+  {
+   "id": "img009",
+   "title": "09 shanghai fuxing park",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/09_shanghai_fuxing_park.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Sculpture_of_Marx_and_Engels_in_Fuxing_Park,_Shanghai.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "上海复兴公园马克思恩格斯雕像（中国在地文物）"
+  },
+  {
+   "id": "img010",
+   "title": "10 shanghai marx engels",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/10_shanghai_marx_engels.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Marx_et_Engels_%C3%A0_Shanghai.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "上海马恩雕像另一视角"
+  },
+  {
+   "id": "img011",
+   "title": "11 portrait 1875",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "png",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/11_portrait_1875.png",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "1875年伦敦梅奥尔摄影，雕像面部还原的权威图像依据"
+  },
+  {
+   "id": "img012",
+   "title": "12 portrait 1861",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/12_portrait_1861.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl_Marx_1861-1_V02-1.1_cropped.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "1861年比尔德摄影，中年马克思形象依据"
+  },
+  {
+   "id": "img013",
+   "title": "01 first international founding",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/01_first_international_founding.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:International-founding-1864.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "1864年9月28日圣马丁堂第一国际成立大会（历史版画，PD），宣讲场景的核心图像史料"
+  },
+  {
+   "id": "img014",
+   "title": "02 st martins hall",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/02_st_martins_hall.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:St_Martin%27s_Hall.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "圣马丁堂建筑外观版画，可作虚拟重建的立面依据"
+  },
+  {
+   "id": "img015",
+   "title": "04 neue rheinische office",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/04_neue_rheinische_office.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl_Marx_at_the_editorial_office_of_the_Neue_Rheinische_Zeitung.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "《新莱茵报》编辑部场景绘画（PD）"
+  },
+  {
+   "id": "img016",
+   "title": "05 commune elections 1871",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/05_commune_elections_1871.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Commune_de_Paris,_Comit%C3%A9_Central,_%C3%89lections_%C3%A0_la_Commune,_25_mars_1871.jpg",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "巴黎公社选举（1871），工人革命场景绘画"
+  },
+  {
+   "id": "img017",
+   "title": "06 commune barricades",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/06_commune_barricades.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Paris-commune-liberty-on-the-barricades.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "巴黎公社街垒战斗绘画"
+  },
+  {
+   "id": "img018",
+   "title": "07 vendome column 1871",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/07_vendome_column_1871.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:1871_destruction_of_the_Vendome_Column.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "1871年旺多姆圆柱拆除，公社象征性事件影像"
+  },
+  {
+   "id": "img019",
+   "title": "08 barricade castiglione",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/08_barricade_castiglione.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:La_Commune_1871._Barricade_rue_de_Castiglione,_1er_arrondissement,_Paris._PH20145.jpg",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "巴黎卡斯蒂廖内街街垒，场景道具与空间参考"
+  },
+  {
+   "id": "img020",
+   "title": "09 barricade devambez",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/02_宣讲场景绘画/09_barricade_devambez.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Barricade-the-paris-commune-may-1871-andre-devambez-677166a1.jpg",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "德瓦姆贝兹《街垒》绘画，人物与工事布局参考"
+  },
+  {
+   "id": "img021",
+   "title": "01 manifest 1848 cover",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/01_manifest_1848_cover.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Manifest_der_kommunistischen_Partei_(Marx)_001.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "《共产党宣言》1848年伦敦德文初版封面（23页本），可作书籍三维重建与翻页动画主体"
+  },
+  {
+   "id": "img022",
+   "title": "02 manifest 1848 titlepage",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/02_manifest_1848_titlepage.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Manifest_der_kommunistischen_Partei_(Marx)_p_001.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "初版扉页（书名页）高清，文字与版式考据依据"
+  },
+  {
+   "id": "img023",
+   "title": "03 manifest first page",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "png",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/03_manifest_first_page.png",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Communist-manifesto.png",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "《宣言》正文首页，用于贴图与版式复原"
+  },
+  {
+   "id": "img024",
+   "title": "04 manifest english 1850",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/04_manifest_english_1850.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Manifesto_of_the_Communist_Party-1.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "英译本早期版本封面，展示传播链"
+  },
+  {
+   "id": "img025",
+   "title": "05 kapital 1867 zurich",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/05_kapital_1867_zurich.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Zentralbibliothek_Z%C3%BCrich_Das_Kapital_Marx_1867.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "《资本论》第一卷1867年汉堡初版（苏黎世中央图书馆藏）"
+  },
+  {
+   "id": "img026",
+   "title": "06 kapital band1 cover",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/06_kapital_band1_cover.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Das_Kapital._Kritik_der_politischen_%C3%96konomie._Band_1.pdf",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "《资本论》第一卷书影（PDF首页，取封面页）"
+  },
+  {
+   "id": "img027",
+   "title": "07 neue rheinische zeitung",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/07_neue_rheinische_zeitung.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Neue_Rheinische_Zeitung.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "《新莱茵报》1848年创刊号实物照片，马克思主编的工人革命机关报"
+  },
+  {
+   "id": "img028",
+   "title": "08 neue rheinische zeitung n",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/08_neue_rheinische_zeitung_n.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Neue_Rheinische_Zeitung_N.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "《新莱茵报》另一期实物，可作报刊纸张与印刷工艺还原参考"
+  },
+  {
+   "id": "img029",
+   "title": "09 manifest senate house",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/09_manifest_senate_house.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:The_Communist_Manifesto,_Senate_House_Library_17th_June_2025.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "伦敦大学 Senate House 藏《宣言》实物陈列照，展陈与灯光参考"
+  },
+  {
+   "id": "img030",
+   "title": "10 manifest multilang hangzhou",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/03_文献与初版书籍/10_manifest_multilang_hangzhou.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Communist_Manifesto_in_Various_Languages,_Hangzhou_National_Archives_05.jpg",
+    "CC BY 4.0"
+   ],
+   "is_flagship": false,
+   "description": "杭州国家版本馆多语种《宣言》展陈（CC BY 4.0），中国在地版本谱系"
+  },
+  {
+   "id": "img031",
+   "title": "01 mur des federes a",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/04_工人运动纪念物/01_mur_des_federes_a.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Mur_des_F%C3%A9d%C3%A9r%C3%A9s_2011_02.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "拉雪兹神父公墓公社社员墙，墙面浮雕与铭文的3D重建对象"
+  },
+  {
+   "id": "img032",
+   "title": "02 mur des federes b",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/04_工人运动纪念物/02_mur_des_federes_b.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Mur_des_F%C3%A9d%C3%A9r%C3%A9s_2011_04.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "社员墙另一视角，可组多视序列"
+  },
+  {
+   "id": "img033",
+   "title": "03 mur des federes c",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/04_工人运动纪念物/03_mur_des_federes_c.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Mur_des_F%C3%A9d%C3%A9r%C3%A9s_2011_08.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "社员墙铭牌特写"
+  },
+  {
+   "id": "img034",
+   "title": "04 ait membership card",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/04_工人运动纪念物/04_ait_membership_card.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Carn%C3%A9_de_tip%C3%B3grafo_de_la_AIT_de_Pablo_Iglesias_Posse.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "第一国际（AIT）会员证/排字工证件，纸质文物三维重建样本"
+  },
+  {
+   "id": "img035",
+   "title": "06 russia stamp 2018",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "png",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/04_工人运动纪念物/06_russia_stamp_2018.png",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Stamp_of_Russia_-_2018_-_2342_-_Karl_Marx_-_sheet.png",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "俄罗斯2018年马克思诞辰200周年整版邮票"
+  },
+  {
+   "id": "img036",
+   "title": "01 marx house summer",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/01_marx_house_summer.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl-Marx-Haus_Trier_Sommer_2018.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "特里尔马克思故居（1818年出生地）外观，建筑级重建对象"
+  },
+  {
+   "id": "img037",
+   "title": "02 marx house entry",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/02_marx_house_entry.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Karl_Marx_House_Trier,_Entry_Room.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "故居门厅内景，室内场景重建与展陈复刻"
+  },
+  {
+   "id": "img038",
+   "title": "03 marx house courtyard",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/03_marx_house_courtyard.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Marx_Haus_Innenhof.JPG",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "故居内院，可做小范围场景重建"
+  },
+  {
+   "id": "img039",
+   "title": "04 marx house 2014",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/04_marx_house_2014.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Trier_BW_2014-06-21_11-11-49.jpg",
+    "CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "故居正面全景（Berthold Werner），立面测绘参考"
+  },
+  {
+   "id": "img040",
+   "title": "05 bm reading room panorama",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/05_bm_reading_room_panorama.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:British_Museum_Reading_Room_Panorama_Feb_2006.jpg",
+    "CC BY 2.5"
+   ],
+   "is_flagship": false,
+   "description": "大英博物馆圆形阅览室全景，马克思写作《资本论》的空间"
+  },
+  {
+   "id": "img041",
+   "title": "06 bm reading desk m14",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/06_bm_reading_desk_m14.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:British_Museum_Reading_Room,_reading_desk_M14.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "阅览室读者座位（M14），‘马克思的座位’叙事道具"
+  },
+  {
+   "id": "img042",
+   "title": "07 marx memorial library",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/07_marx_memorial_library.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Marx_Memorial_Library_37a_Clerkenwell_Green.jpg",
+    "CC BY-SA 2.0"
+   ],
+   "is_flagship": false,
+   "description": "伦敦马克思纪念图书馆（Clerkenwell Green），工人教育运动旧址"
+  },
+  {
+   "id": "img043",
+   "title": "08 marx memorial library interior",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/05_场地与旧址/08_marx_memorial_library_interior.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Marx_Memorial_Library_interior_(16376557670).jpg",
+    "CC BY 2.0"
+   ],
+   "is_flagship": false,
+   "description": "图书馆内景（列宁曾在此办报），室内重建参考"
+  },
+  {
+   "id": "img044",
+   "title": "AddieCard05282vLewisHine",
+   "type": "image",
+   "chapter": 2,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/06_工厂与童工/AddieCard05282vLewisHine.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:AddieCard05282vLewisHine.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（工厂与童工）"
+  },
+  {
+   "id": "img045",
+   "title": "Breaker Boys 1",
+   "type": "image",
+   "chapter": 2,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/06_工厂与童工/Breaker_Boys_1.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Breaker_Boys_1.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（工厂与童工）"
+  },
+  {
+   "id": "img046",
+   "title": "Child Labor on Mill",
+   "type": "image",
+   "chapter": 2,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/06_工厂与童工/Child_Labor_on_Mill.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Child_Labor_on_Mill.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（工厂与童工）"
+  },
+  {
+   "id": "img047",
+   "title": "Child laborer",
+   "type": "image",
+   "chapter": 2,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/06_工厂与童工/Child_laborer.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Child_laborer.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（工厂与童工）"
+  },
+  {
+   "id": "img048",
+   "title": "Spinning Woollen Yarn at the C.W.S. Batley Mills",
+   "type": "image",
+   "chapter": 2,
+   "asset_format": "png",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/06_工厂与童工/Spinning_Woollen_Yarn_at_the_C.W.S._Batley_Mills.png",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Spinning_Woollen_Yarn_at_the_C.W.S._Batley_Mills.png",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（工厂与童工）"
+  },
+  {
+   "id": "img049",
+   "title": "Thomas Lewis portrait",
+   "type": "image",
+   "chapter": 2,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/06_工厂与童工/Thomas_Lewis_portrait.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Thomas_Lewis_portrait.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（工厂与童工）"
+  },
+  {
+   "id": "img050",
+   "title": "View of spinning frames which were tended by some very ",
+   "type": "image",
+   "chapter": 2,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/06_工厂与童工/View_of_spinning_frames_which_were_tended_by_some_very_.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:View_of_spinning_frames_which_were_tended_by_some_very_young_workers_apparently_eight_to_ten._The_superintendent_refused_permission_to_photograph_the_workers._Kosciusko_Cotton_Mill._LOC_nclc.02881.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（工厂与童工）"
+  },
+  {
+   "id": "img051",
+   "title": "Barricade place Vendome Commune Paris 1871",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/07_罢工与街垒/Barricade_place_Vendome_Commune_Paris_1871.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Barricade_place_Vendome_Commune_Paris_1871.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（罢工与街垒）"
+  },
+  {
+   "id": "img052",
+   "title": "Barricade sous la Commune  place Blanche  D.3132 2 ",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/07_罢工与街垒/Barricade_sous_la_Commune__place_Blanche__D.3132_2_.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Barricade_sous_la_Commune,_place_Blanche,_D.3132(2).jpg",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（罢工与街垒）"
+  },
+  {
+   "id": "img053",
+   "title": "Central London   trade union banner  Piccadilly - geogr",
+   "type": "image",
+   "chapter": 3,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/08_组织与媒介/Central_London___trade_union_banner__Piccadilly_-_geogr.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Central_London_,_trade_union_banner,_Piccadilly_-_geograph.org.uk_-_7203647.jpg",
+    "CC BY-SA 2.0"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（组织与媒介）"
+  },
+  {
+   "id": "img054",
+   "title": "Chartist meeting  Kennington Common",
+   "type": "image",
+   "chapter": 3,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/08_组织与媒介/Chartist_meeting__Kennington_Common.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Chartist_meeting,_Kennington_Common.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（组织与媒介）"
+  },
+  {
+   "id": "img055",
+   "title": "Chartist meeting on Kennington Common by William Edward Kilb",
+   "type": "image",
+   "chapter": 3,
+   "asset_format": "png",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/08_组织与媒介/Chartist_meeting_on_Kennington_Common_by_William_Edward_Kilb.png",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Chartist_meeting_on_Kennington_Common_by_William_Edward_Kilburn_1848_-_restoration1.png",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（组织与媒介）"
+  },
+  {
+   "id": "img056",
+   "title": "William Edward Kilburn - View of the Great Chartist Meeting ",
+   "type": "image",
+   "chapter": 3,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/08_组织与媒介/William_Edward_Kilburn_-_View_of_the_Great_Chartist_Meeting_.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:William_Edward_Kilburn_-_View_of_the_Great_Chartist_Meeting_on_Kennington_Common_-_Google_Art_Project.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（组织与媒介）"
+  },
+  {
+   "id": "img057",
+   "title": "Lenin and socialist reconstruction Design for poster - Gusta",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/09_纪念与传播/Lenin_and_socialist_reconstruction_Design_for_poster_-_Gusta.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Lenin_and_socialist_reconstruction_Design_for_poster_-_Gustavs_Klucis.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（纪念与传播）"
+  },
+  {
+   "id": "img058",
+   "title": "19170704 Riot on Nevsky prosp Petrograd",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/10_俄国革命/19170704_Riot_on_Nevsky_prosp_Petrograd.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:19170704_Riot_on_Nevsky_prosp_Petrograd.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（俄国革命）"
+  },
+  {
+   "id": "img059",
+   "title": "Milrevkom proclamation",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/10_俄国革命/Milrevkom_proclamation.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Milrevkom_proclamation.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（俄国革命）"
+  },
+  {
+   "id": "img060",
+   "title": "Algemene staking in Engeland 1926  SFA022820540",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/07_罢工与街垒/Algemene_staking_in_Engeland_1926__SFA022820540.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Algemene_staking_in_Engeland_1926,_SFA022820540.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（罢工与街垒）"
+  },
+  {
+   "id": "img061",
+   "title": "Algemene staking in Engeland 1926  SFA022820541",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/07_罢工与街垒/Algemene_staking_in_Engeland_1926__SFA022820541.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Algemene_staking_in_Engeland_1926,_SFA022820541.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（罢工与街垒）"
+  },
+  {
+   "id": "img062",
+   "title": "1878 Pachis May Day on Corfu 1888 National Gallery - Co",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/09_纪念与传播/1878_Pachis_May_Day_on_Corfu_1888_National_Gallery_-_Co.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/w/index.php?search=1878%20Pachis%20May%20Day%20on%20Corfu%201888%20National%20Gallery%20-%20Co",
+    "待核"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（纪念与传播）"
+  },
+  {
+   "id": "img063",
+   "title": "Demonstration of the War Invalids  Petrograd  April 191",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/10_俄国革命/Demonstration_of_the_War_Invalids__Petrograd__April_191.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/w/index.php?search=Demonstration%20of%20the%20War%20Invalids%20%20Petrograd%20%20April%20191",
+    "待核"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（俄国革命）"
+  },
+  {
+   "id": "img064",
+   "title": "07 trier bust",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/01_马克思形象与雕像/07_trier_bust.JPG",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Catalogue_of_the_collection_of_United_States_coins_of_Mrs._John_S._Griffith_..._(04-05-1895)_(IA_catalogueofcolle00fros_12).pdf",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（马克思形象与雕像）"
+  },
+  {
+   "id": "img065",
+   "title": "Conrad von Rappard - Litho nach Philipp Winterwerb",
+   "type": "image",
+   "chapter": 4,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/11_1848革命/Conrad_von_Rappard_-_Litho_nach_Philipp_Winterwerb.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Conrad_von_Rappard_-_Litho_nach_Philipp_Winterwerb_1848-49.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（1848革命）"
+  },
+  {
+   "id": "img066",
+   "title": "Image Germania  painting ",
+   "type": "image",
+   "chapter": 4,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/11_1848革命/Image_Germania__painting_.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Heiligengrabe,_Kloster_Stift_zum_Heiligengrabe,_Heiliggrabkapelle_--_2017_--_0015-21.jpg",
+    "CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（1848革命）"
+  },
+  {
+   "id": "img067",
+   "title": "Wien Museum Online Sammlung 21153 2 1-2",
+   "type": "image",
+   "chapter": 4,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/11_1848革命/Wien_Museum_Online_Sammlung_21153_2_1-2.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Wien_Museum_Online_Sammlung_21153_2_1-2.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（1848革命）"
+  },
+  {
+   "id": "img068",
+   "title": "Strike pickets LCCN2014684501",
+   "type": "image",
+   "chapter": 3,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/13_罢工与工会/Strike_pickets_LCCN2014684501.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Strike_pickets_LCCN2014684501.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（罢工与工会）"
+  },
+  {
+   "id": "img069",
+   "title": "Strike pickets LCCN2014684502",
+   "type": "image",
+   "chapter": 3,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/13_罢工与工会/Strike_pickets_LCCN2014684502.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Strike_pickets_LCCN2014684502.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（罢工与工会）"
+  },
+  {
+   "id": "img070",
+   "title": "Women Picket during Ladies Tailors Strike  02-1910",
+   "type": "image",
+   "chapter": 3,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/13_罢工与工会/Women_Picket_during_Ladies_Tailors_Strike__02-1910.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Women_Picket_during_Ladies_Tailors_Strike,_02-1910_(11192045794).jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（罢工与工会）"
+  },
+  {
+   "id": "img071",
+   "title": "19170704 Riot on Nevsky prosp Petrograd",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/15_俄国革命/19170704_Riot_on_Nevsky_prosp_Petrograd.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:19170704_Riot_on_Nevsky_prosp_Petrograd.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（俄国革命）"
+  },
+  {
+   "id": "img072",
+   "title": "Milrevkom proclamation",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/15_俄国革命/Milrevkom_proclamation.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Milrevkom_proclamation.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（俄国革命）"
+  },
+  {
+   "id": "img073",
+   "title": "Stormningen av vinterpalatset",
+   "type": "image",
+   "chapter": 11,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/15_俄国革命/Stormningen_av_vinterpalatset.jpg",
+   "model": "",
+   "source": [
+    "https://commons.wikimedia.org/wiki/File:Stormningen_av_vinterpalatset.jpg",
+    "Public domain"
+   ],
+   "is_flagship": false,
+   "description": "扩展素材（俄国革命）"
+  },
+  {
+   "id": "img074",
+   "title": "manifesto of the communist party mar p00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/manifesto_of_the_communist_party_mar_p00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/manifesto-of-the-communist-party-marx-engles",
+    "公有领域 / 依各馆藏"
+   ],
+   "is_flagship": false,
+   "description": "共产党宣言（英译影印）"
+  },
+  {
+   "id": "img075",
+   "title": "manifesto of the communist party mar p06",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/manifesto_of_the_communist_party_mar_p06.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/manifesto-of-the-communist-party-marx-engles",
+    "公有领域 / 依各馆藏"
+   ],
+   "is_flagship": false,
+   "description": "共产党宣言（英译影印）"
+  },
+  {
+   "id": "img076",
+   "title": "manifesto of the communist party mar p12",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/manifesto_of_the_communist_party_mar_p12.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/manifesto-of-the-communist-party-marx-engles",
+    "公有领域 / 依各馆藏"
+   ],
+   "is_flagship": false,
+   "description": "共产党宣言（英译影印）"
+  },
+  {
+   "id": "img077",
+   "title": "PrinciplesOfCommunismengelsOriginalD p00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/PrinciplesOfCommunismengelsOriginalD_p00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/PrinciplesOfCommunismengelsOriginalDraftOfTheCommunistManifesto",
+    "公有领域 / 依各馆藏"
+   ],
+   "is_flagship": false,
+   "description": "共产主义原理（宣言初稿）"
+  },
+  {
+   "id": "img078",
+   "title": "PrinciplesOfCommunismengelsOriginalD p06",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/PrinciplesOfCommunismengelsOriginalD_p06.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/PrinciplesOfCommunismengelsOriginalDraftOfTheCommunistManifesto",
+    "公有领域 / 依各馆藏"
+   ],
+   "is_flagship": false,
+   "description": "共产主义原理（宣言初稿）"
+  },
+  {
+   "id": "img079",
+   "title": "PrinciplesOfCommunismengelsOriginalD p12",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/PrinciplesOfCommunismengelsOriginalD_p12.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/PrinciplesOfCommunismengelsOriginalDraftOfTheCommunistManifesto",
+    "公有领域 / 依各馆藏"
+   ],
+   "is_flagship": false,
+   "description": "共产主义原理（宣言初稿）"
+  },
+  {
+   "id": "img080",
+   "title": "cma 115858",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_115858.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1936.570",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "The Barricade, First Stone"
+  },
+  {
+   "id": "img081",
+   "title": "cma 115856",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_115856.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1936.569",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "The Barricade, Second Stone"
+  },
+  {
+   "id": "img082",
+   "title": "cma 104343",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_104343.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1922.479",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "The Wine Press"
+  },
+  {
+   "id": "img083",
+   "title": "cma 324441",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_324441.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/2019.33",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "Sculptura in Aes, The Workshop of an Engraver"
+  },
+  {
+   "id": "img084",
+   "title": "cma 164815",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_164815.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/2006.194.16",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "Art of the Lithograph: Printing Press"
+  },
+  {
+   "id": "img085",
+   "title": "cma 126085",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_126085.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1948.303",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "Dr. Gachet"
+  },
+  {
+   "id": "img086",
+   "title": "cma 157643",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_157643.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1995.15",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "Young Woman (possibly a Sex Worker) with a Man (recto); Youn"
+  },
+  {
+   "id": "img087",
+   "title": "cma 129221",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_129221.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1952.113",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "The Laundress"
+  },
+  {
+   "id": "img088",
+   "title": "cma 106093",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_106093.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1924.198",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "The Stubble Field"
+  },
+  {
+   "id": "img089",
+   "title": "cma 113310",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/18_克利夫兰美术馆/cma_113310.jpg",
+   "model": "",
+   "source": [
+    "https://www.clevelandart.org/art/1932.320",
+    "CC0"
+   ],
+   "is_flagship": false,
+   "description": "Working Woman with Blue Shawl"
+  },
+  {
+   "id": "img090",
+   "title": "rumsey 1",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/19_历史地图/rumsey_1.jpg",
+   "model": "",
+   "source": [
+    "https://www.davidrumsey.com/publications/reproductions?webImageUrl=https%3A%2F%2Fmedia.davidrumsey.com%2FMediaManager%2Fsrvr%3Fmediafile%3D%2FSize4%2FRUMSEY%7E8%7E1%2F190%2F10727000.jpg",
+    "CC BY-NC-SA"
+   ],
+   "is_flagship": false,
+   "description": "历史地图（巴黎 1871 检索）"
+  },
+  {
+   "id": "img091",
+   "title": "rumsey 2",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/19_历史地图/rumsey_2.jpg",
+   "model": "",
+   "source": [
+    "https://media.davidrumsey.com/MediaManager/srvr?mediafile=/Size4/RUMSEY~8~1/190/10727000.jpg",
+    "CC BY-NC-SA"
+   ],
+   "is_flagship": false,
+   "description": "历史地图（巴黎 1871 检索）"
+  },
+  {
+   "id": "img092",
+   "title": "rumsey 3",
+   "type": "image",
+   "chapter": 1,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/19_历史地图/rumsey_3.jpg",
+   "model": "",
+   "source": [
+    "https://www.davidrumsey.com/rumsey/Size2/RUMSEY~8~1/190/10727000.jpg",
+    "CC BY-NC-SA"
+   ],
+   "is_flagship": false,
+   "description": "历史地图（巴黎 1871 检索）"
+  },
+  {
+   "id": "img093",
+   "title": "sc 0001281204 00000001704012 20190 n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/sc_0001281204_00000001704012_20190_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/sc_0001281204_00000001704012_201902",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Marxian economics : a popular introduction to the three volu"
+  },
+  {
+   "id": "img094",
+   "title": "sc 0001281204 00000001704012 20190 n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/sc_0001281204_00000001704012_20190_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/sc_0001281204_00000001704012_201902",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Marxian economics : a popular introduction to the three volu"
+  },
+  {
+   "id": "img095",
+   "title": "sc 0001281204 00000001704012 20190 n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/sc_0001281204_00000001704012_20190_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/sc_0001281204_00000001704012_201902",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Marxian economics : a popular introduction to the three volu"
+  },
+  {
+   "id": "img096",
+   "title": "39020025220479 capitalacritiqu n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/39020025220479_capitalacritiqu_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/39020025220479-capitalacritiqu",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Capital : a critique of political economy"
+  },
+  {
+   "id": "img097",
+   "title": "39020025220479 capitalacritiqu n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/39020025220479_capitalacritiqu_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/39020025220479-capitalacritiqu",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Capital : a critique of political economy"
+  },
+  {
+   "id": "img098",
+   "title": "39020025220479 capitalacritiqu n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/39020025220479_capitalacritiqu_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/39020025220479-capitalacritiqu",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Capital : a critique of political economy"
+  },
+  {
+   "id": "img099",
+   "title": "the translation of karl marxs capi n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/the_translation_of_karl_marxs_capi_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/the-translation-of-karl-marxs-capital-.-.-.-.-p.-b.-struve-editor",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Translation Of Karl Marx's Capital Капитал Критика Полит"
+  },
+  {
+   "id": "img100",
+   "title": "the translation of karl marxs capi n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/the_translation_of_karl_marxs_capi_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/the-translation-of-karl-marxs-capital-.-.-.-.-p.-b.-struve-editor",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Translation Of Karl Marx's Capital Капитал Критика Полит"
+  },
+  {
+   "id": "img101",
+   "title": "the translation of karl marxs capi n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/the_translation_of_karl_marxs_capi_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/the-translation-of-karl-marxs-capital-.-.-.-.-p.-b.-struve-editor",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Translation Of Karl Marx's Capital Капитал Критика Полит"
+  },
+  {
+   "id": "img102",
+   "title": "paaoma n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/paaoma_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/paaoma",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Pääoma I"
+  },
+  {
+   "id": "img103",
+   "title": "paaoma n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/paaoma_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/paaoma",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Pääoma I"
+  },
+  {
+   "id": "img104",
+   "title": "paaoma n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/paaoma_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/paaoma",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Pääoma I"
+  },
+  {
+   "id": "img105",
+   "title": "dosapialdaskapit01marx n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/dosapialdaskapit01marx_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/dosapialdaskapit01marx",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Dos apial = Das Kapital : rii fun der poliisher eonomie"
+  },
+  {
+   "id": "img106",
+   "title": "dosapialdaskapit01marx n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/dosapialdaskapit01marx_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/dosapialdaskapit01marx",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Dos apial = Das Kapital : rii fun der poliisher eonomie"
+  },
+  {
+   "id": "img107",
+   "title": "dosapialdaskapit01marx n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/dosapialdaskapit01marx_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/dosapialdaskapit01marx",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Dos apial = Das Kapital : rii fun der poliisher eonomie"
+  },
+  {
+   "id": "img108",
+   "title": "owenlibrary marx capital ii 1 n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/owenlibrary_marx_capital_ii_1_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/owenlibrary_marx_capital-ii-1",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Capital: A Critique of Political Economy, Volume 2"
+  },
+  {
+   "id": "img109",
+   "title": "owenlibrary marx capital ii 1 n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/owenlibrary_marx_capital_ii_1_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/owenlibrary_marx_capital-ii-1",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Capital: A Critique of Political Economy, Volume 2"
+  },
+  {
+   "id": "img110",
+   "title": "owenlibrary marx capital ii 1 n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/owenlibrary_marx_capital_ii_1_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/owenlibrary_marx_capital-ii-1",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "Capital: A Critique of Political Economy, Volume 2"
+  },
+  {
+   "id": "img111",
+   "title": "the communist manifesto 202507 n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/the_communist_manifesto_202507_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/the-communist-manifesto_202507",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Communist Manifesto (1910 Kerr Edition): Authorized Engl"
+  },
+  {
+   "id": "img112",
+   "title": "the communist manifesto 202507 n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/the_communist_manifesto_202507_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/the-communist-manifesto_202507",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Communist Manifesto (1910 Kerr Edition): Authorized Engl"
+  },
+  {
+   "id": "img113",
+   "title": "the communist manifesto 202507 n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/the_communist_manifesto_202507_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/the-communist-manifesto_202507",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Communist Manifesto (1910 Kerr Edition): Authorized Engl"
+  },
+  {
+   "id": "img114",
+   "title": "manifesto of the communist party l n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/manifesto_of_the_communist_party_l_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/manifesto-of-the-communist-party-light",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "MANIFESTO OF THE COMMUNIST PARTY ( Lite)"
+  },
+  {
+   "id": "img115",
+   "title": "manifesto of the communist party l n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/manifesto_of_the_communist_party_l_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/manifesto-of-the-communist-party-light",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "MANIFESTO OF THE COMMUNIST PARTY ( Lite)"
+  },
+  {
+   "id": "img116",
+   "title": "manifesto of the communist party l n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/manifesto_of_the_communist_party_l_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/manifesto-of-the-communist-party-light",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "MANIFESTO OF THE COMMUNIST PARTY ( Lite)"
+  },
+  {
+   "id": "img117",
+   "title": "commie book n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/commie_book_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/commie-book",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Communist Manifesto PDF"
+  },
+  {
+   "id": "img118",
+   "title": "commie book n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/commie_book_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/commie-book",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Communist Manifesto PDF"
+  },
+  {
+   "id": "img119",
+   "title": "commie book n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/commie_book_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/commie-book",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "The Communist Manifesto PDF"
+  },
+  {
+   "id": "img120",
+   "title": "heimin shimbun no 5 1903 12 13 n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_5_1903_12_13_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-5-1903-12-13",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1903.12.13 No. 5"
+  },
+  {
+   "id": "img121",
+   "title": "heimin shimbun no 5 1903 12 13 n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_5_1903_12_13_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-5-1903-12-13",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1903.12.13 No. 5"
+  },
+  {
+   "id": "img122",
+   "title": "heimin shimbun no 5 1903 12 13 n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_5_1903_12_13_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-5-1903-12-13",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1903.12.13 No. 5"
+  },
+  {
+   "id": "img123",
+   "title": "heimin shimbun no 10 1904 01 17 n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_10_1904_01_17_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-10-1904-01-17",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1904.01.17 No. 10"
+  },
+  {
+   "id": "img124",
+   "title": "heimin shimbun no 10 1904 01 17 n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_10_1904_01_17_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-10-1904-01-17",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1904.01.17 No. 10"
+  },
+  {
+   "id": "img125",
+   "title": "heimin shimbun no 10 1904 01 17 n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_10_1904_01_17_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-10-1904-01-17",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1904.01.17 No. 10"
+  },
+  {
+   "id": "img126",
+   "title": "heimin shimbun no 31 1904 06 12 n00",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_31_1904_06_12_n00.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-31-1904-06-12",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1904.06.12 No. 31"
+  },
+  {
+   "id": "img127",
+   "title": "heimin shimbun no 31 1904 06 12 n08",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_31_1904_06_12_n08.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-31-1904-06-12",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1904.06.12 No. 31"
+  },
+  {
+   "id": "img128",
+   "title": "heimin shimbun no 31 1904 06 12 n16",
+   "type": "image",
+   "chapter": 5,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/17_互联网档案馆_文献/heimin_shimbun_no_31_1904_06_12_n16.jpg",
+   "model": "",
+   "source": [
+    "https://archive.org/details/heimin-shimbun-no-31-1904-06-12",
+    "Public Domain（公版扫描）"
+   ],
+   "is_flagship": false,
+   "description": "週刊平民新聞 1904.06.12 No. 31"
+  },
+  {
+   "id": "img129",
+   "title": "eur tributions9540",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/21_Europeana/eur_tributions9540.jpg",
+   "model": "",
+   "source": [
+    "https://www.europeana.eu/item/2020601/https___1914_1918_europeana_eu_contributions_9540",
+    "http://creativecommons.org/licenses/by-sa/3.0/"
+   ],
+   "is_flagship": false,
+   "description": "FRBDIC_39 Citation pour services rendus en 1915 d'Henri Lach"
+  },
+  {
+   "id": "img130",
+   "title": "eur 200579uutwsuwr",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/21_Europeana/eur_200579uutwsuwr.jpg",
+   "model": "",
+   "source": [
+    "https://www.europeana.eu/item/9200579/uutwsuwr",
+    "http://creativecommons.org/licenses/by/4.0/"
+   ],
+   "is_flagship": false,
+   "description": "Engineering: a printing press. Lithograph by Martin and Hood"
+  },
+  {
+   "id": "img131",
+   "title": "eur 200579haa5w4vx",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/21_Europeana/eur_200579haa5w4vx.jpg",
+   "model": "",
+   "source": [
+    "https://www.europeana.eu/item/9200579/haa5w4vx",
+    "http://creativecommons.org/licenses/by/4.0/"
+   ],
+   "is_flagship": false,
+   "description": "Printing: a three-quarter view of a press, with a composing "
+  },
+  {
+   "id": "img132",
+   "title": "eur 200579e957jtkc",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/21_Europeana/eur_200579e957jtkc.jpg",
+   "model": "",
+   "source": [
+    "https://www.europeana.eu/item/9200579/e957jtkc",
+    "http://creativecommons.org/licenses/by/4.0/"
+   ],
+   "is_flagship": false,
+   "description": "Printing: a three-quarter view of a press. Engraving by W. L"
+  },
+  {
+   "id": "img133",
+   "title": "eur 200579pn9tvb8z",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/21_Europeana/eur_200579pn9tvb8z.jpg",
+   "model": "",
+   "source": [
+    "https://www.europeana.eu/item/9200579/pn9tvb8z",
+    "http://creativecommons.org/licenses/by/4.0/"
+   ],
+   "is_flagship": false,
+   "description": "Many types of printing press, with details of their mechanis"
+  },
+  {
+   "id": "img134",
+   "title": "eur 200579jgb7qajt",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/21_Europeana/eur_200579jgb7qajt.jpg",
+   "model": "",
+   "source": [
+    "https://www.europeana.eu/item/9200579/jgb7qajt",
+    "http://creativecommons.org/licenses/by/4.0/"
+   ],
+   "is_flagship": false,
+   "description": "Printing: section and details of the Bramah numerator press "
+  },
+  {
+   "id": "img135",
+   "title": "eur 200579tgcepx2z",
+   "type": "image",
+   "chapter": 6,
+   "asset_format": "jpg",
+   "production_method": "digitized_historical_image",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "工人革命的马克思宣讲_文物3D重建/02_素材图片/21_Europeana/eur_200579tgcepx2z.jpg",
+   "model": "",
+   "source": [
+    "https://www.europeana.eu/item/9200579/tgcepx2z",
+    "http://creativecommons.org/licenses/by/4.0/"
+   ],
+   "is_flagship": false,
+   "description": "Karl Friedrich Heinrich Marx. Lithograph."
+  },
+  {
+   "id": "book_manifest_1848_cover",
+   "title": "manifest 1848 cover",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/01_manifest_1848_cover.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Karl Marx, Friedrich Engels · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_manifest_1848_titlepage",
+   "title": "manifest 1848 titlepage",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/02_manifest_1848_titlepage.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Karl Marx, Friedrich Engels · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_manifest_first_page",
+   "title": "manifest first page",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/03_manifest_first_page.png",
+   "model": "scene:archive",
+   "source": [
+    "Friedrich Engels, Karl Marx · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_manifest_english_1850",
+   "title": "manifest english 1850",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/04_manifest_english_1850.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Karl Marx · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_kapital_1867_zurich",
+   "title": "kapital 1867 zurich",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/05_kapital_1867_zurich.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Zentralbibliothek Zürich · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_kapital_band1_cover",
+   "title": "kapital band1 cover",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/06_kapital_band1_cover.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Karl Marx · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_neue_rheinische_zeitung",
+   "title": "neue rheinische zeitung",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/07_neue_rheinische_zeitung.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Stefan Kühn · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_neue_rheinische_zeitung_n",
+   "title": "neue rheinische zeitung n",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/08_neue_rheinische_zeitung_n.jpg",
+   "model": "scene:archive",
+   "source": [
+    "de:Benutzer:Stefan Kühn · CC BY-SA 3.0"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_manifest_senate_house",
+   "title": "manifest senate house",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/09_manifest_senate_house.jpg",
+   "model": "scene:archive",
+   "source": [
+    "themostinept · CC BY-SA 4.0"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_manifest_multilang_hangzhou",
+   "title": "manifest multilang hangzhou",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/10_manifest_multilang_hangzhou.jpg",
+   "model": "scene:archive",
+   "source": [
+    "User:CatOnMars · CC BY 4.0"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_pachis_may_day_on_corfu_1888_national_ga",
+   "title": "Pachis May Day on Corfu 1888 National Gallery - Co",
+   "type": "document",
+   "chapter": 11,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/1878_Pachis_May_Day_on_Corfu_1888_National_Gallery_-_Co.jpg",
+   "model": "scene:archive",
+   "source": [
+    "未署名 · 待核"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_lenin_and_socialist_reconstruction_desig",
+   "title": "Lenin and socialist reconstruction Design for poster - Gusta",
+   "type": "document",
+   "chapter": 11,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/Lenin_and_socialist_reconstruction_Design_for_poster_-_Gusta.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Gustavs Klucis · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_strike_pickets_lccn2014684501",
+   "title": "Strike pickets LCCN2014684501",
+   "type": "document",
+   "chapter": 3,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/Strike_pickets_LCCN2014684501.jpg",
+   "model": "scene:archive",
+   "source": [
+    "未署名 · 待核"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_strike_pickets_lccn2014684502",
+   "title": "Strike pickets LCCN2014684502",
+   "type": "document",
+   "chapter": 3,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/Strike_pickets_LCCN2014684502.jpg",
+   "model": "scene:archive",
+   "source": [
+    "未署名 · 待核"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_women_picket_during_ladies_tailors_strik",
+   "title": "Women Picket during Ladies Tailors Strike  02-1910",
+   "type": "document",
+   "chapter": 3,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/Women_Picket_during_Ladies_Tailors_Strike__02-1910.jpg",
+   "model": "scene:archive",
+   "source": [
+    "未署名 · 待核"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_ait_membership_card",
+   "title": "ait membership card",
+   "type": "document",
+   "chapter": 3,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/04_ait_membership_card.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Juan José Morato Caldeiro · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_russia_stamp_2018",
+   "title": "russia stamp 2018",
+   "type": "document",
+   "chapter": 9,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/06_russia_stamp_2018.png",
+   "model": "scene:archive",
+   "source": [
+    "Почта России · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_milrevkom_proclamation",
+   "title": "Milrevkom proclamation",
+   "type": "document",
+   "chapter": 11,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/Milrevkom_proclamation.jpg",
+   "model": "scene:archive",
+   "source": [
+    "w:Vladimir Lenin · Public domain"
+   ],
+   "is_flagship": false,
+   "description": "封面与版式来自馆藏扫描；三维书本为参数化生成，非实物复刻。"
+  },
+  {
+   "id": "book_ia_39020025220479_capitalacriti",
+   "title": "Capital: A Critique of Political Economy",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_39020025220479_capitalacriti.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_dosapialdaskapit01marx",
+   "title": "《资本论》意第绪语译本",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_dosapialdaskapit01marx.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_heimin_shimbun_no_10_1904_01",
+   "title": "《週刊平民新聞》1904-01-17 第 10 号",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_heimin_shimbun_no_10_1904_01.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_heimin_shimbun_no_31_1904_06",
+   "title": "《週刊平民新聞》1904-06-12 第 31 号",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_heimin_shimbun_no_31_1904_06.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_heimin_shimbun_no_5_1903_12_",
+   "title": "《週刊平民新聞》1903-12-13 第 5 号",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_heimin_shimbun_no_5_1903_12_.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_manifesto_of_the_communist_p",
+   "title": "《共产党宣言》（简编本）",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_manifesto_of_the_communist_p.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_owenlibrary_marx_capital_ii_",
+   "title": "《资本论》第二卷（Owen Library 藏）",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_owenlibrary_marx_capital_ii_.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_paaoma",
+   "title": "《资本论》芬兰语译本 Pääoma",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_paaoma.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "book_ia_the_communist_manifesto_2025",
+   "title": "《共产党宣言》1910 Kerr 版",
+   "type": "document",
+   "chapter": 5,
+   "asset_format": "procedural",
+   "production_method": "parametric_book",
+   "evidence_type": "E3",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/documents/covers/ia_the_communist_manifesto_2025.jpg",
+   "model": "scene:archive",
+   "source": [
+    "Internet Archive 公版扫描"
+   ],
+   "is_flagship": false,
+   "description": "来自 Internet Archive 的书页扫描，共 3 页；封面为卷首或书衣。"
+  },
+  {
+   "id": "scene_factory",
+   "title": "01 工业革命工厂",
+   "type": "scene",
+   "chapter": 2,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_plaza",
+   "title": "02 巴黎公社广场",
+   "type": "scene",
+   "chapter": 6,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_shikumen",
+   "title": "03 上海工人街区",
+   "type": "scene",
+   "chapter": 9,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_press",
+   "title": "04 经典文献印刷工坊",
+   "type": "scene",
+   "chapter": 4,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_hall",
+   "title": "05 工人集会大厅",
+   "type": "scene",
+   "chapter": 3,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_street",
+   "title": "06 革命街垒街区",
+   "type": "scene",
+   "chapter": 6,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_study",
+   "title": "07 历史人物书房",
+   "type": "scene",
+   "chapter": 8,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_memorial",
+   "title": "08 历史纪念空间",
+   "type": "scene",
+   "chapter": 11,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "scene_archive",
+   "title": "09 数字档案厅",
+   "type": "scene",
+   "chapter": 11,
+   "asset_format": "webgl",
+   "production_method": "procedural_scene",
+   "evidence_type": "E4",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "",
+   "model": "scenes.html",
+   "source": [],
+   "is_flagship": false,
+   "description": "程序化场景，非实测"
+  },
+  {
+   "id": "sf_0af8fcfe",
+   "title": "Mule jenny (spinning mule)",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/0af8fcfed7b2455e83d1947d8f6a1f59.png",
+   "model": "assets/models/sketchfab_web/0af8fcfed7b2455e83d1947d8f6a1f59.glb",
+   "source": [
+    "tine · CC Attribution-ShareAlike"
+   ],
+   "is_flagship": false,
+   "description": "纺纱机（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_10c09713",
+   "title": "Minecraft Anvil",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/10c09713b2d140c1b104b1b3adbd1e66.png",
+   "model": "assets/models/sketchfab_web/10c09713b2d140c1b104b1b3adbd1e66.glb",
+   "source": [
+    "TheCollerroller · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "铁砧 · 锻造（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_12d91558",
+   "title": "Cobblestones",
+   "type": "model",
+   "chapter": 6,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/12d91558d0d44357a7ce10d0722f77fc.png",
+   "model": "assets/models/sketchfab_web/12d91558d0d44357a7ce10d0722f77fc.glb",
+   "source": [
+    "william.dahm · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "石板路 · 街景（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_17562d27",
+   "title": "lectern",
+   "type": "model",
+   "chapter": 3,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/17562d27f70b4b4a834cd778cd5e6c06.png",
+   "model": "assets/models/sketchfab_web/17562d27f70b4b4a834cd778cd5e6c06.glb",
+   "source": [
+    "distant_voices · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "讲台 · 宣讲（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_1b464109",
+   "title": "Chester Telegraph Relay",
+   "type": "model",
+   "chapter": 5,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/1b464109b4df435a959fd2cae00da1e4.png",
+   "model": "assets/models/sketchfab_web/1b464109b4df435a959fd2cae00da1e4.glb",
+   "source": [
+    "Smithsonian · CC0 Public Domain"
+   ],
+   "is_flagship": false,
+   "description": "电报 · 通信（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_1bd631c4",
+   "title": "LowPoly Steam Locomotive",
+   "type": "model",
+   "chapter": 3,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/1bd631c4c82d4635828b9a4803371069.png",
+   "model": "assets/models/sketchfab_web/1bd631c4c82d4635828b9a4803371069.glb",
+   "source": [
+    "AzureRod · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "蒸汽机车 · 交通（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_2f80891c",
+   "title": "Printing Press",
+   "type": "model",
+   "chapter": 4,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/2f80891c2e494134822db52136f5450c.png",
+   "model": "assets/models/sketchfab_web/2f80891c2e494134822db52136f5450c.glb",
+   "source": [
+    "amethyst · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "印刷机 · 报刊工坊（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_2fea1f71",
+   "title": "wooden bench Wooden chair- 15MB",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/2fea1f718c14460882014d80b4b64ccd.png",
+   "model": "assets/models/sketchfab_web/2fea1f718c14460882014d80b4b64ccd.glb",
+   "source": [
+    "ahmagh2e · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "木椅 · 集会大厅（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_314b5db6",
+   "title": "Minecraft Lectern",
+   "type": "model",
+   "chapter": 3,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/314b5db612014113b82e5cd3ab4574d1.png",
+   "model": "assets/models/sketchfab_web/314b5db612014113b82e5cd3ab4574d1.glb",
+   "source": [
+    "TheCollerroller · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "讲台 · 宣讲（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_3349676e",
+   "title": "Minecraft Cobblestone",
+   "type": "model",
+   "chapter": 6,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/3349676ef9a24d42b7621d8db83f1900.png",
+   "model": "assets/models/sketchfab_web/3349676ef9a24d42b7621d8db83f1900.glb",
+   "source": [
+    "TheCollerroller · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "石板路 · 街景（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_36e57c23",
+   "title": "Model of the Watt Steam Engine with animation",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/36e57c231b6546b7bdd19bf4dba8063d.png",
+   "model": "assets/models/sketchfab_web/36e57c231b6546b7bdd19bf4dba8063d.glb",
+   "source": [
+    "WirtualneMuzeaMalopolski · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "蒸汽机 · 工业革命（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_3810f538",
+   "title": "Vandercook Letter Press Printing Press",
+   "type": "model",
+   "chapter": 4,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/3810f538665c4acca4007f71414efc48.png",
+   "model": "assets/models/sketchfab_web/3810f538665c4acca4007f71414efc48.glb",
+   "source": [
+    "scbenoit · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "印刷机 · 报刊工坊（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_3e93fc27",
+   "title": "loom",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/3e93fc2716d540a58e6a7726a687f433.png",
+   "model": "assets/models/sketchfab_web/3e93fc2716d540a58e6a7726a687f433.glb",
+   "source": [
+    "jbryk · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "织机 · 纺织厂（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_4b11b76f",
+   "title": "Blacksmith's Anvil",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/4b11b76fe069496ebd8ccd98f7d37ade.png",
+   "model": "assets/models/sketchfab_web/4b11b76fe069496ebd8ccd98f7d37ade.glb",
+   "source": [
+    "m4rcu5j4ck50n · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "铁砧 · 锻造（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_658832f4",
+   "title": "[ Minecraft ] Antique loom - Low Poly",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/658832f4ddc042979bc4e9076cc6358c.png",
+   "model": "assets/models/sketchfab_web/658832f4ddc042979bc4e9076cc6358c.glb",
+   "source": [
+    "HashtagLoulou · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "织机 · 纺织厂（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_6952fe37",
+   "title": "Old Oil Lamp",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/6952fe3768324ed4843a4a3c9a6888ad.png",
+   "model": "assets/models/sketchfab_web/6952fe3768324ed4843a4a3c9a6888ad.glb",
+   "source": [
+    "LACooper · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "油灯 · 室内（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_81f2128f",
+   "title": "Perk Machines",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/81f2128f7fd949878e73ed3aa8c4efba.png",
+   "model": "assets/models/sketchfab_web/81f2128f7fd949878e73ed3aa8c4efba.glb",
+   "source": [
+    "facultymanbruce · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "纺纱机（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_84117c94",
+   "title": "Greco-Roman loom",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/84117c94c0d1445a897009ff94585dc8.png",
+   "model": "assets/models/sketchfab_web/84117c94c0d1445a897009ff94585dc8.glb",
+   "source": [
+    "AlbertGregl · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "织机 · 纺织厂（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_87aef8ad",
+   "title": "Wooden writing desk with props",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/87aef8adf8bd4f3a9d0e2aabc912ee3d.png",
+   "model": "assets/models/sketchfab_web/87aef8adf8bd4f3a9d0e2aabc912ee3d.glb",
+   "source": [
+    "shuvalov.di · CC Attribution-ShareAlike"
+   ],
+   "is_flagship": false,
+   "description": "木椅 · 集会大厅（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_8b0e7d3a",
+   "title": "The Hand",
+   "type": "model",
+   "chapter": 5,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/8b0e7d3a1b4d4dbb8ec788c3e4c5f1ed.png",
+   "model": "assets/models/sketchfab_web/8b0e7d3a1b4d4dbb8ec788c3e4c5f1ed.glb",
+   "source": [
+    "rokimaruX · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "手摇印刷机（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_943e447e",
+   "title": "HallOfTheKing\"One Hand\" #MedievalFantasyScene",
+   "type": "model",
+   "chapter": 5,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/943e447e1a3b4b6a98b6c8d7e63bf167.png",
+   "model": "assets/models/sketchfab_web/943e447e1a3b4b6a98b6c8d7e63bf167.glb",
+   "source": [
+    "DT7 · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "手摇印刷机（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_970427a0",
+   "title": "Anvil Nature Morte",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/970427a0aff3465689ac509f4fde9d94.png",
+   "model": "assets/models/sketchfab_web/970427a0aff3465689ac509f4fde9d94.glb",
+   "source": [
+    "crazyshroomz · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "铁砧 · 锻造（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_985f973e",
+   "title": "Mors Telegraph",
+   "type": "model",
+   "chapter": 5,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/985f973e876143e48d93f58b1988f0ce.png",
+   "model": "assets/models/sketchfab_web/985f973e876143e48d93f58b1988f0ce.glb",
+   "source": [
+    "carlcapu9 · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "电报 · 通信（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_9d12d811",
+   "title": "Lowpoly oil paintings",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/9d12d811003b440582d4de46d35a3d1d.png",
+   "model": "assets/models/sketchfab_web/9d12d811003b440582d4de46d35a3d1d.glb",
+   "source": [
+    "tamminen · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "画框 · 展板（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_a24bcb6b",
+   "title": "2018.281 Peacock Table Lamp",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/a24bcb6b7a2e448fad661004f403ae12.png",
+   "model": "assets/models/sketchfab_web/a24bcb6b7a2e448fad661004f403ae12.glb",
+   "source": [
+    "clevelandart · CC0 Public Domain"
+   ],
+   "is_flagship": false,
+   "description": "油灯 · 室内（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_a5b108e3",
+   "title": "Morse-Vail Telegraph Key",
+   "type": "model",
+   "chapter": 5,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/a5b108e3132d46b696c36310c2314ed8.png",
+   "model": "assets/models/sketchfab_web/a5b108e3132d46b696c36310c2314ed8.glb",
+   "source": [
+    "Smithsonian · CC0 Public Domain"
+   ],
+   "is_flagship": false,
+   "description": "电报 · 通信（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_a70ea353",
+   "title": "cobblestone ground - lowpoly",
+   "type": "model",
+   "chapter": 6,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/a70ea3530a004baebe6c33c29cebe1de.png",
+   "model": "assets/models/sketchfab_web/a70ea3530a004baebe6c33c29cebe1de.glb",
+   "source": [
+    "spleen.vision · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "石板路 · 街景（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_b091005f",
+   "title": "Screen Printing Press",
+   "type": "model",
+   "chapter": 4,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/b091005f6c1a46f59a6f019c24c3e1a0.png",
+   "model": "assets/models/sketchfab_web/b091005f6c1a46f59a6f019c24c3e1a0.glb",
+   "source": [
+    "loeguardo86g · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "印刷机 · 报刊工坊（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_c2ac2b3c",
+   "title": "Steam engine",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/c2ac2b3c366b4354ba34507fb16103f3.png",
+   "model": "assets/models/sketchfab_web/c2ac2b3c366b4354ba34507fb16103f3.glb",
+   "source": [
+    "takeboncog · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "蒸汽机 · 工业革命（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_c932f616",
+   "title": "Victorian Brass Oil Lamp",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/c932f6165fef40029c3f18afe19b9934.png",
+   "model": "assets/models/sketchfab_web/c932f6165fef40029c3f18afe19b9934.glb",
+   "source": [
+    "tijerin_art · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "油灯 · 室内（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_ca840661",
+   "title": "Oil painting frame-Freepoly.org",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/ca8406619c5647199851058e34ff6501.png",
+   "model": "assets/models/sketchfab_web/ca8406619c5647199851058e34ff6501.glb",
+   "source": [
+    "blackrray · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "画框 · 展板（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_cdf7e415",
+   "title": "BR 01 german steam locomotive",
+   "type": "model",
+   "chapter": 3,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/cdf7e415aa75441897c0b5dfb384302f.png",
+   "model": "assets/models/sketchfab_web/cdf7e415aa75441897c0b5dfb384302f.glb",
+   "source": [
+    "tomm8 · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "蒸汽机车 · 交通（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_d44852d4",
+   "title": "Lectern",
+   "type": "model",
+   "chapter": 3,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/d44852d465c34d67ad4a72de95a8e6e3.png",
+   "model": "assets/models/sketchfab_web/d44852d465c34d67ad4a72de95a8e6e3.glb",
+   "source": [
+    "ibellinc · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "讲台 · 宣讲（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_dc1797a6",
+   "title": "Steam Engine",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/dc1797a6d49e4629bf8ca668bd76e0d0.png",
+   "model": "assets/models/sketchfab_web/dc1797a6d49e4629bf8ca668bd76e0d0.glb",
+   "source": [
+    "robmcrosby · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "蒸汽机 · 工业革命（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_dec352c0",
+   "title": "Steyerdorf Steam Locomotive Train",
+   "type": "model",
+   "chapter": 3,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/dec352c0d8884d439dd14d9f2d3ddfde.png",
+   "model": "assets/models/sketchfab_web/dec352c0d8884d439dd14d9f2d3ddfde.glb",
+   "source": [
+    "Adityakm · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "蒸汽机车 · 交通（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_e83663ab",
+   "title": "The Haas-Galinha Press",
+   "type": "model",
+   "chapter": 5,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/e83663ab61294ebfac897c92a200dfef.png",
+   "model": "assets/models/sketchfab_web/e83663ab61294ebfac897c92a200dfef.glb",
+   "source": [
+    "diogoflt · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "手摇印刷机（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_ed264d4c",
+   "title": "Dandy's world Ichor Machine",
+   "type": "model",
+   "chapter": 2,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/ed264d4c851c46a28ddf719746a47391.png",
+   "model": "assets/models/sketchfab_web/ed264d4c851c46a28ddf719746a47391.glb",
+   "source": [
+    "lambcute · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "纺纱机（Sketchfab 开放许可，已减面）"
+  },
+  {
+   "id": "sf_f49ef941",
+   "title": "Wooden Chair - 9MB",
+   "type": "model",
+   "chapter": 0,
+   "asset_format": "glb",
+   "production_method": "open_3d_model",
+   "evidence_type": "E2",
+   "quality": "ok",
+   "fill": "",
+   "thumbnail": "assets/models/sketchfab_preview/f49ef941f78b47d4b401a4191d0d7fdc.png",
+   "model": "assets/models/sketchfab_web/f49ef941f78b47d4b401a4191d0d7fdc.glb",
+   "source": [
+    "ahmagh2e · CC Attribution"
+   ],
+   "is_flagship": false,
+   "description": "木椅 · 集会大厅（Sketchfab 开放许可，已减面）"
+  }
+ ]
+}

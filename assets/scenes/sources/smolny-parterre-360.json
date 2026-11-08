@@ -1,0 +1,21 @@
+{
+  "item_id": "memory_archive_hall",
+  "subject": "Parterre Garden of Smolny Institute, 360-degree panorama",
+  "photographer": "Artem Svetlov",
+  "capture_date": "2016-06-04",
+  "coordinates_wgs84": [
+    59.946636,
+    30.393703
+  ],
+  "original_dimensions": "5376x2688",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Parterre_Garden_of_Smolny_Institute_2016-06_1465028778.jpg",
+  "direct_image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Parterre_Garden_of_Smolny_Institute_2016-06_1465028778.jpg",
+  "display": "smolny-panorama.html",
+  "limitations": "Current 2016 garden panorama only. It is not a 3D mesh, building scan, interior panorama, or a representation of the 1917 revolution headquarters.",
+  "display_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Parterre_Garden_of_Smolny_Institute_2016-06_1465028778.jpg/1920px-Parterre_Garden_of_Smolny_Institute_2016-06_1465028778.jpg",
+  "local_display_image": "assets/scenes/smolny-parterre-360.jpg",
+  "local_display_dimensions": "1920x960",
+  "local_derivative_note": "Locally cached 1920px thumbnail from Wikimedia Commons for reliable viewing; the full original remains available at source_page."
+}

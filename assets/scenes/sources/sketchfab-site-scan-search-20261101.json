@@ -1,0 +1,107 @@
+{
+  "title": "逐址复核公开 Sketchfab 模型检索结果",
+  "checked_at": "2026-11-01",
+  "method": "Sketchfab 官方公开 REST API v3，搜索模型标题与常见地名变体；逐条排除同名异地、相邻建筑及无关结果。检索仅覆盖该平台的公开索引，不能证明全互联网不存在其他模型。",
+  "api": "https://api.sketchfab.com/v3/search?type=models&q=",
+  "queries": [
+    {
+      "query": "Smolny Institute Saint Petersburg",
+      "results": [],
+      "decision": "未检出目标主楼扫描。"
+    },
+    {
+      "query": "Smolny",
+      "results": [
+        {
+          "name": "Смольный собор",
+          "uid": "c221927e0c2e4b34a21f274c1f4e8e48",
+          "face_count": 1234643,
+          "is_downloadable": false,
+          "decision": "排除：对象为相邻斯莫尔尼大教堂，不是斯莫尔尼学院主楼。"
+        },
+        {
+          "name": "Bronze medal of 1835",
+          "uid": "d1ab9c3d8d2342cf963eccbb484790c7",
+          "face_count": 454742,
+          "is_downloadable": false,
+          "decision": "排除：奖章，与目标建筑无关。"
+        }
+      ]
+    },
+    {
+      "query": "St Martins Hall Long Acre",
+      "results": [],
+      "decision": "未检出目标旧会堂的公开扫描。"
+    },
+    {
+      "query": "St Martins Hall",
+      "results": [
+        {
+          "name": "St. Stanislaus (St. Martin of Tours?)",
+          "uid": "b558c99bb6c442dfb1cf23419d45a73c",
+          "face_count": 999886,
+          "decision": "排除：异地宗教雕像。"
+        },
+        {
+          "name": "Marton Hall Main House Complete",
+          "uid": "cfce710737ac4ccba20bbc55ce924478",
+          "face_count": 126770,
+          "decision": "排除：异地 Marton Hall。"
+        }
+      ]
+    },
+    {
+      "query": "Shanghai Machine Weaving Bureau",
+      "results": [],
+      "decision": "未检出目标历史厂房扫描。"
+    },
+    {
+      "query": "Shanghai textile factory 1889",
+      "results": [],
+      "decision": "未检出目标旧址扫描。"
+    },
+    {
+      "query": "British Museum Reading Room",
+      "results": [
+        {
+          "name": "Assyrian Wall Relief",
+          "uid": "3cc01aaed28f4aaaa445f89db33f47c3",
+          "face_count": 4942916,
+          "decision": "排除：无关馆藏浮雕。"
+        }
+      ],
+      "decision": "未检出目标阅览室室内扫描。"
+    },
+    {
+      "query": "Père Lachaise monument revolutions",
+      "results": [
+        {
+          "name": "Monument to the victims of the revolutions",
+          "uid": "7e54deda45b3492fbb1d6ca780bb15c7",
+          "face_count": 449931,
+          "vertex_count": 293227,
+          "license": "CC BY 4.0",
+          "is_downloadable": true,
+          "decision": "保留：作者 Antoine Dresen 的目标纪念碑摄影测量扫描；为同题公开结果中面数最低者。"
+        },
+        {
+          "name": "Victimes des Révolutions (Victims of Revolutions)",
+          "uid": "2a16d71b1df74ff5a3297b5c6203d478",
+          "face_count": 1871725,
+          "decision": "不替换：同名扫描更重；未发现比保留项更适合低负载展示的证据。"
+        },
+        {
+          "name": "Victimes des Révolutions (high res)",
+          "uid": "308e0f320acb42b184e58301c9fc328f",
+          "face_count": 5459153,
+          "decision": "不替换：高分辨率版本显著更重。"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "搜索结果只反映本次 API 索引与查询词；不代表已穷尽其他平台、馆藏系统或非公开项目。",
+    "Sketchfab 下载端点需要授权令牌；展馆采用公开嵌入，不抓取或复制网格。",
+    "面数最低的可核实扫描仍在低性能预览设备上触发平台的过重提示；切换更重扫描不会解决性能问题。"
+  ]
+}

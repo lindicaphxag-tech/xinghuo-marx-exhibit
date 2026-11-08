@@ -1,0 +1,44 @@
+{
+  "subject": "St Martin's Hall / St Martin's Music Hall, 89 Long Acre, London",
+  "historical_event": "Founding meeting of the International Working Men's Association, 28 September 1864",
+  "architect": "William H. Westmacott",
+  "source_texts": [
+    {
+      "date": "1850-02-16",
+      "publication": "The Builder",
+      "url": "https://victorianlondon.org/buildings/stmartinsmusichall.htm",
+      "claims_used": [
+        "Original site parcel approximately 149 by 61 ft",
+        "Great Hall intended at approximately 121 by 55 by 40 ft",
+        "Partially completed room opened in February 1850"
+      ]
+    },
+    {
+      "date": "1853-11-26",
+      "publication": "The Builder",
+      "url": "https://www.arthurlloyd.co.uk/QueensLongacre.htm",
+      "claims_used": [
+        "Completed Great Hall: 121 ft 6 in by 55 ft 5 in by 40 ft",
+        "East-end platform, west-end gallery and galleries on part of the long sides",
+        "Flat central ceiling with sloped sides and timber panels",
+        "Ground-floor lower hall 51 by 40 ft",
+        "Library 32 by 29 ft",
+        "Two classrooms 31 by 19 ft and 26 by 19 ft",
+        "A corridor extended along the building",
+        "Entrance hall 44 by 22 ft",
+        "The full account also describes additional offices and rooms"
+      ]
+    },
+    {
+      "date": "1867",
+      "publication": "John Timbs, Curiosities of London",
+      "url": "https://victorianlondon.org/buildings/stmartinsmusichall.htm",
+      "claims_used": [
+        "The 1853 hall was later restored after fire and used as a music hall"
+      ]
+    }
+  ],
+  "model_method": "Historical reconstruction at 0.1 model unit per foot. The Great Hall is on the upper level, using dimensions and spatial features described for the 1853 completed building; selected reported ground-level rooms are included. Their plan arrangement is schematic.",
+  "uncertainty": "No verified complete 1853 floor plan has been located. Lower-floor room adjacencies, corridor and entrance-hall placements and stair geometry are schematic. The reported secretary office, ticket office and mezzanine ladies room are not yet modelled because reliable dimensions and plan locations are unavailable. Seating and people are not claimed to reproduce the 1864 event.",
+  "license": "The project-authored geometry is an interpretive reconstruction based on cited historical text. Referenced archival engravings are linked separately with their own rights and credits; no unlicensed 1853 image has been copied into the project."
+}

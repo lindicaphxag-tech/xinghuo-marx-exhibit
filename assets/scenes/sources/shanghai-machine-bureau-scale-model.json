@@ -1,0 +1,21 @@
+{
+  "item_id": "shanghai_machine_weaving_bureau",
+  "asset": "上海纺织博物馆机器织布制造局模型.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%B5%B7%E7%BA%BA%E7%BB%87%E5%8D%9A%E7%89%A9%E9%A6%86%E6%9C%BA%E5%99%A8%E7%BB%87%E5%B8%83%E5%88%B6%E9%80%A0%E5%B1%80%E6%A8%A1%E5%9E%8B.jpg",
+  "direct_file": "https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%8A%E6%B5%B7%E7%BA%BA%E7%BB%87%E5%8D%9A%E7%89%A9%E9%A6%86%E6%9C%BA%E5%99%A8%E7%BB%87%E5%B8%83%E5%88%B6%E9%80%A0%E5%B1%80%E6%A8%A1%E5%9E%8B.jpg",
+  "local_copy": "assets/scenes/sources/shanghai-machine-bureau-scale-model.jpg",
+  "local_copy_dimensions_px": [
+    1280,
+    851
+  ],
+  "local_copy_sha256": "1d4b8a2754b292678a0bfb40ac7be0c135da75c61650727934e91d0173330c06",
+  "author": "Coolmanjackey",
+  "captured": "2013-08-03",
+  "dimensions_px": [
+    3008,
+    2000
+  ],
+  "license": "CC BY-SA 3.0",
+  "use": "Single-view visual reference photograph of a physical museum scale model; local copy resized from the original for reliable display. It is not a survey of the historical factory and is not sufficient for photogrammetric reconstruction. The entrance-gate geometry in shanghai_machine_weaving_bureau.glb is a simplified interpretive adaptation of this view; attribute the source and keep the adaptation under CC BY-SA 3.0 or a compatible license.",
+  "restrictions": "Credit the photographer, link to the license, and mark changes. Any adaptation must use CC BY-SA 3.0 or compatible terms."
+}

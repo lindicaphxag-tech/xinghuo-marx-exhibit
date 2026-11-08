@@ -1,0 +1,1464 @@
+{
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest",
+    "@type": "sc:Manifest",
+    "label": "L'H\u00f4tel de Ville avant 1871",
+    "metadata": [
+        {
+            "label": "Autres titres",
+            "value": [
+                "L'H\u00f4tel de Ville avant 1871 (Nom d'usage)"
+            ]
+        },
+        {
+            "label": "Auteur",
+            "value": [
+                "Lavastre, Jean-Baptiste-Fortun\u00e9"
+            ]
+        },
+        {
+            "label": "D\u00e9nomination",
+            "value": "Maquette"
+        },
+        {
+            "label": "Type d'objet",
+            "value": "Maquette"
+        },
+        {
+            "label": "Date de production",
+            "value": "<div class=\"pm-date-precision\">\n      <span class=\"precision\">Entre</span>\n  \n                            <span class=\"year\">1857</span>\n        \n                          <span class=\"precision\">et</span>\n              \n                          <span class=\"year\">1869</span>\n            </div>\n"
+        },
+        {
+            "label": "Datation en si\u00e8cle",
+            "value": "3e quart du 19e si\u00e8cle"
+        },
+        {
+            "label": "\u00c9poque/P\u00e9riode",
+            "value": "Second Empire (1852-1870) (France)"
+        },
+        {
+            "label": "Description",
+            "value": [
+                "<p>Maquette en bronze.</p>\n"
+            ]
+        },
+        {
+            "label": "Description iconographique",
+            "value": [
+                "<p>L'H\u00f4tel de Ville avant 1871, 4e arrondissement. Plan-relief (maquette). Edifice sur plan rectangulaire, huit pavillons, trois cours int\u00e9rieures dont l'une vitr\u00e9e, jardin qui borde le quai, grille autour de l'\u00e9difice.</p>\n"
+            ]
+        },
+        {
+            "label": "Dimensions",
+            "value": [
+                "Oeuvre - Hauteur 25 cm",
+                "Oeuvre - Largeur 83 cm",
+                "Oeuvre - Profondeur 47 cm",
+                "Oeuvre - Poids (type dimension) 19 kg"
+            ]
+        },
+        {
+            "label": "Mat\u00e9riaux et techniques",
+            "value": "Bronze"
+        },
+        {
+            "label": "Date d\u2019acquisition",
+            "value": "<div class=\"pm-date-precision\">\n  \n                      <span class=\"month\">3</span>\n        <span class=\"separator-month-year\">\u2013</span>\n                    <span class=\"year\">1901</span>\n        \n  </div>\n"
+        },
+        {
+            "label": "Mode d'acquisition",
+            "value": "Don manuel"
+        },
+        {
+            "label": "Num\u00e9ro d\u2019inventaire",
+            "value": "PM55"
+        },
+        {
+            "label": "Institution",
+            "value": "Mus\u00e9e Carnavalet, Histoire de Paris"
+        },
+        {
+            "label": "Catalogue des \u0153uvres de Paris Mus\u00e9es",
+            "value": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/l-hotel-de-ville-avant-1871"
+        }
+    ],
+    "thumbnail": {
+        "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/thumbnail/collections/atoms/images/CAR/lpdp_56735-17.jpg?itok=2lXtcgro",
+        "@type": "dctypes:Image",
+        "height": 158,
+        "width": 300
+    },
+    "logo": {
+        "@id": "https://apicollections.parismusees.paris.fr/themes/custom/pm8/logo.svg"
+    },
+    "sequences": [
+        {
+            "@type": "sc:Sequence",
+            "canvases": [
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-17",
+                    "@type": "sc:Canvas",
+                    "height": 2020,
+                    "width": 3840,
+                    "label": "LPDP_56735-17",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-17",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-17.jpg?itok=-HOYJqkK",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-2",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2889,
+                    "label": "LPDP_56735-2",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-2",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-2.jpg?itok=EaQM5vHI",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-3",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2806,
+                    "label": "LPDP_56735-3",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-3",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-3.jpg?itok=q8AIBJmV",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-4",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2995,
+                    "label": "LPDP_56735-4",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-4",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-4.jpg?itok=aI8MRCnT",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-5",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 3210,
+                    "label": "LPDP_56735-5",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-5",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-5.jpg?itok=txqysZFl",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-6",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2943,
+                    "label": "LPDP_56735-6",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-6",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-6.jpg?itok=83VRAOAg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-7",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 3119,
+                    "label": "LPDP_56735-7",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-7",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-7.jpg?itok=Ft8RXf6G",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-8",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1764,
+                    "label": "LPDP_56735-8",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-8",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-8.jpg?itok=LR5Pw4nK",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-9",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1866,
+                    "label": "LPDP_56735-9",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-9",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-9.jpg?itok=0gAG7lhc",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-10",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1807,
+                    "label": "LPDP_56735-10",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-10",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-10.jpg?itok=qc5LpdGz",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-11",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1961,
+                    "label": "LPDP_56735-11",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-11",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-11.jpg?itok=Slr3oSJq",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-12",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1969,
+                    "label": "LPDP_56735-12",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-12",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-12.jpg?itok=CjDCIxip",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-13",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1818,
+                    "label": "LPDP_56735-13",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-13",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-13.jpg?itok=fNwwdYum",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-14",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1806,
+                    "label": "LPDP_56735-14",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-14",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-14.jpg?itok=ynOfS59u",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-15",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2979,
+                    "label": "LPDP_56735-15",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-15",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-15.jpg?itok=xGxbnHed",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-16",
+                    "@type": "sc:Canvas",
+                    "height": 1973,
+                    "width": 3840,
+                    "label": "LPDP_56735-16",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-16",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-16.jpg?itok=T2Y57j_b",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-1",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2889,
+                    "label": "LPDP_56735-1",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-1",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56735-1.jpg?itok=MvMJpyxr",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-18",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2076,
+                    "label": "LPDP_56735-18",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-18",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-18.jpg?itok=93i3dYqw",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-19",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 3315,
+                    "label": "LPDP_56735-19",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-19",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-19.jpg?itok=UhS27uxR",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-20",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2941,
+                    "label": "LPDP_56735-20",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56735-20",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56735-20.jpg?itok=Yt_gtDd2",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-1",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1615,
+                    "label": "LPDP_56736-1",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-1",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-1.jpg?itok=4IMKIo9u",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-2",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1690,
+                    "label": "LPDP_56736-2",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-2",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-2.jpg?itok=iGbE0hjI",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-3",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2889,
+                    "label": "LPDP_56736-3",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-3",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-3.jpg?itok=UcbpebYe",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-4",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1708,
+                    "label": "LPDP_56736-4",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-4",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-4.jpg?itok=PTiuy-4P",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-5",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1702,
+                    "label": "LPDP_56736-5",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-5",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-5.jpg?itok=Frhl9dG5",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-6",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2942,
+                    "label": "LPDP_56736-6",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-6",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-6.jpg?itok=j3xdKIEO",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-7",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2934,
+                    "label": "LPDP_56736-7",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-7",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-7.jpg?itok=ThY8QWGW",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-8",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2889,
+                    "label": "LPDP_56736-8",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-8",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-8.jpg?itok=rgzkewB9",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-9",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2949,
+                    "label": "LPDP_56736-9",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-9",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-9.jpg?itok=Z9qbdPSP",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-10",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2871,
+                    "label": "LPDP_56736-10",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-10",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-10.jpg?itok=qdSCBdlD",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-11",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2701,
+                    "label": "LPDP_56736-11",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-11",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-11.jpg?itok=I5b563sk",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-12",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1617,
+                    "label": "LPDP_56736-12",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-12",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-12.jpg?itok=-F0-5kwk",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-13",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2743,
+                    "label": "LPDP_56736-13",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-13",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-13.jpg?itok=u-r20PXV",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-14",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2889,
+                    "label": "LPDP_56736-14",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-14",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-14.jpg?itok=fDFlVfUP",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-15",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2889,
+                    "label": "LPDP_56736-15",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-15",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-15.jpg?itok=LTW9uRSZ",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-16",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2934,
+                    "label": "LPDP_56736-16",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-16",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-16.jpg?itok=NRrnaXHN",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-17",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1618,
+                    "label": "LPDP_56736-17",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-17",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-17.jpg?itok=VbaLuSBJ",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-18",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2967,
+                    "label": "LPDP_56736-18",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-18",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56736-18.jpg?itok=3IJI9v0Z",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-19",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2841,
+                    "label": "LPDP_56736-19",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56736-19",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56736-19.jpg?itok=9Lv2eofB",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-1",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 3498,
+                    "label": "LPDP_56737-1",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-1",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56737-1.jpg?itok=Fs3qGuiH",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-2",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1663,
+                    "label": "LPDP_56737-2",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-2",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56737-2.jpg?itok=17piusIn",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-3",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2984,
+                    "label": "LPDP_56737-3",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-3",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56737-3.jpg?itok=0E9L5_5A",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-4",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 3099,
+                    "label": "LPDP_56737-4",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-4",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56737-4.jpg?itok=iyrUKp79",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-5",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1634,
+                    "label": "LPDP_56737-5",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-5",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56737-5.jpg?itok=HabBkxTA",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-6",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1593,
+                    "label": "LPDP_56737-6",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-6",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56737-6.jpg?itok=s16LngHV",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-7",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 2889,
+                    "label": "LPDP_56737-7",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56737-7",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/56737-7.jpg?itok=EJ9U6Jxv",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@id": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56740-1",
+                    "@type": "sc:Canvas",
+                    "height": 2160,
+                    "width": 1605,
+                    "label": "LPDP_56740-1",
+                    "metadata": [
+                        {
+                            "label": "Droits",
+                            "value": "CC0 Paris Mus\u00e9es / Mus\u00e9e Carnavalet - Histoire de Paris"
+                        },
+                        {
+                            "label": "Copyright",
+                            "value": "https://creativecommons.org/publicdomain/zero/1.0/"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://apicollections.parismusees.paris.fr/iiif/320034696/manifest/canvas/LPDP_56740-1",
+                            "resource": {
+                                "@id": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_56740-1.jpg?itok=NShiXTch",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

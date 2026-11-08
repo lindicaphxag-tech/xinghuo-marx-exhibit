@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>史料墙 · 135 张真实档案图像</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<style>
+  :root{--bg:#0c0a09;--ink:#f2e9d8;--dim:#8d8175;--gold:#c9a262;--red:#a8332c;--line:rgba(201,162,98,.18)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  a{color:var(--gold);text-decoration:none}
+  header{position:sticky;top:0;z-index:9;padding:16px 26px;background:rgba(12,10,9,.94);
+    border-bottom:1px solid var(--line);backdrop-filter:blur(8px);
+    display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  h1{margin:0;font-size:19px;font-weight:600}
+  h1 small{display:block;font-size:11.5px;letter-spacing:.2em;color:var(--gold);margin-bottom:4px;font-weight:400}
+  .tools{display:flex;gap:6px;flex-wrap:wrap}
+  .tools button{font:inherit;font-size:12px;padding:6px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--line);background:transparent;color:var(--dim);letter-spacing:.05em}
+  .tools button:hover{color:var(--ink);border-color:rgba(201,162,98,.55)}
+  .tools button.on{background:var(--red);border-color:var(--red);color:#fff}
+  .era-bar{display:flex;gap:6px;flex-wrap:wrap;padding:0 26px 10px;border-bottom:1px solid var(--line);
+    background:rgba(12,10,9,.94);position:sticky;top:64px;z-index:8}
+  .era-bar button{font:inherit;font-size:11.5px;padding:5px 11px;border-radius:999px;cursor:pointer;
+    border:1px solid rgba(201,162,98,.2);background:transparent;color:#8d8175;letter-spacing:.04em}
+  .era-bar button:hover{color:#f2e9d8;border-color:rgba(201,162,98,.5)}
+  .era-bar button.on{background:rgba(201,162,98,.18);border-color:var(--gold);color:var(--gold)}
+  .count{font-size:12px;color:var(--dim)}
+  .count b{color:var(--gold);font-size:15px;font-variant-numeric:tabular-nums}
+  .grid{columns:5 190px;column-gap:10px;padding:14px 20px 60px}
+  @media(max-width:900px){.grid{columns:3 140px}}
+  figure{margin:0 0 10px;break-inside:avoid;position:relative;background:#151210;overflow:hidden}
+  figure img{width:100%;display:block;filter:grayscale(.28) brightness(.86);transition:filter .3s,transform .5s}
+  figure:hover img{filter:none;transform:scale(1.04)}
+  figure figcaption{position:absolute;inset:auto 0 0 0;padding:8px 10px;font-size:11px;line-height:1.5;
+    color:#e6dccb;background:linear-gradient(0deg,rgba(8,7,6,.94),rgba(8,7,6,0));opacity:0;transition:.25s}
+  figure:hover figcaption{opacity:1}
+  figure figcaption b{display:block;color:var(--gold);font-weight:600;margin-bottom:2px}
+  .hidden{display:none}
+  .group{padding:6px 20px 0}
+  .group h2{margin:26px 0 10px;font-size:13px;font-weight:500;letter-spacing:.22em;color:var(--gold);
+    display:flex;align-items:baseline;gap:12px}
+  .group h2 em{font-style:normal;font-size:11.5px;letter-spacing:.1em;color:var(--dim)}
+  .group h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(201,162,98,.28),transparent)}
+  .group .grid{padding:0 0 10px;columns:5 190px;column-gap:10px}
+  @media(max-width:900px){.group .grid{columns:3 140px}}
+  .foot{padding:0 26px 40px;font-size:12px;color:var(--dim);max-width:900px}
+  .lb{position:fixed;inset:0;background:rgba(6,5,4,.95);display:none;z-index:20;padding:30px;overflow:auto}
+  .lb.on{display:grid;place-items:center}
+  .lb-grid{display:grid;grid-template-columns:minmax(0,1fr) 392px;gap:24px;align-items:start;
+  width:94vw;max-width:1560px}
+.lb img{display:block;width:100%;max-height:82vh;object-fit:contain;
+  box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb .meta.det{margin-top:0;text-align:left;max-height:82vh;overflow:auto;padding-right:6px;
+  font-size:13px;color:#cbbfae}
+@media(max-width:1080px){.lb-grid{grid-template-columns:1fr}.lb .meta.det{max-height:none}}
+  .lb .meta{margin-top:16px;text-align:center;font-size:13px;color:#cbbfae;max-width:760px}
+  .lb .meta b{color:var(--gold)}
+  .lb .close{position:fixed;right:20px;top:16px;font-size:28px;color:#cbbfae;background:none;border:0;cursor:pointer}
+
+  /* 打开单图后的详细解释面板 */
+  .det-head{display:flex;gap:10px;align-items:baseline;margin-bottom:6px}
+  .det-place{font-size:11px;letter-spacing:.16em;color:#c9a262}
+  .det-era{font-size:11px;letter-spacing:.10em;color:#7d6d55}
+  .det h3{margin:0 0 8px;font-size:17px;line-height:1.4}
+  .det-lead{margin:0 0 12px;font-size:13.5px;line-height:1.8;color:#cfc3b0}
+  .det-sec{margin:0 0 11px}
+  .det-sec b{display:block;font-size:11px;letter-spacing:.14em;color:#8a5f0e;margin-bottom:4px;font-weight:500}
+  .det-sec p{margin:0;font-size:12.5px;line-height:1.78;color:#b8ac99}
+  .det-rel{margin:14px 0 10px}
+  .det-rel b{display:block;font-size:11px;letter-spacing:.14em;color:#8a5f0e;margin-bottom:7px;font-weight:500}
+  .det-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .det-thumbs button{padding:0;border:1px solid rgba(201,162,98,.25);background:none;cursor:pointer;
+    border-radius:3px;overflow:hidden;text-align:left}
+  .det-thumbs button:hover{border-color:#c9a262}
+  .det-thumbs img{display:block;width:100%;height:62px;object-fit:cover}
+  .det-thumbs span{display:block;font-size:9.5px;color:#8d8175;padding:3px 4px;white-space:nowrap;
+    overflow:hidden;text-overflow:ellipsis}
+  .det-src{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;padding-top:10px;
+    border-top:1px solid rgba(201,162,98,.16);font-size:11px;color:#6f6558}
+  .det-src a{color:#c9a262}
+</style>
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+
+  <style>
+    /* 图像批注：在图上拖一个框，写下批注，存本地 */
+    #lbStage{position:relative;display:inline-block;max-width:92vw}
+    #annLayer{position:absolute;inset:0;cursor:crosshair}
+    .ann-box{position:absolute;border:1.5px solid #e0524a;background:rgba(224,82,74,.12);
+      border-radius:2px;pointer-events:auto}
+    .ann-box span{position:absolute;left:0;top:-19px;font-size:10px;background:#e0524a;color:#fff;
+      padding:1px 5px;border-radius:2px;white-space:nowrap}
+    .ann-tip{position:fixed;left:50%;bottom:64px;transform:translateX(-50%);z-index:9999;
+      background:rgba(12,10,9,.94);border:1px solid rgba(201,162,98,.3);color:#e8dcc6;
+      padding:7px 14px;border-radius:999px;font-size:12px}
+  </style>
+<script src="js/image-detail.js?v=1"></script>
+</head>
+<body>
+<header>
+  <h1><small>ARCHIVE WALL · 真实档案图像</small>史料墙 <span class="count">· 当前 <b id="n">0</b> / <b id="total">0</b> 张</span></h1>
+  <div class="tools" id="filters"></div>
+</header>
+<div class="era-bar" id="erabar"></div>
+<div id="grid"></div>
+<p class="foot">全部图像来自 Internet Archive、Wikimedia Commons、Cleveland Museum of Art、Europeana 等开放来源，逐张记录作者、日期与许可。点击任意一张放大并查看出处；悬停可看标题与授权。</p>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="查看原图">
+  <button class="close" id="lbClose" aria-label="关闭">×</button>
+  <div class="lb-grid">
+    <div id="lbStage"><img id="lbImg" alt=""></div>
+    <div class="meta det" id="lbMeta"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var TOPICS = [
+    { id: "all", name: "全部", test: function () { return true; } },
+    { id: "figure", name: "形象与雕像", test: function (f) { return /形象|雕像|纪念物/.test(f); } },
+    { id: "doc", name: "文献与版本", test: function (f) { return /文献|书籍|档案馆/.test(f); } },
+    { id: "scene", name: "场景绘画", test: function (f) { return /宣讲场景|绘画/.test(f); } },
+    { id: "place", name: "场地与旧址", test: function (f) { return /场地|旧址|历史地图/.test(f); } },
+    { id: "labour", name: "工厂与罢工", test: function (f) { return /工厂|童工|罢工|街垒|工会/.test(f); } },
+    { id: "rev", name: "革命与组织", test: function (f) { return /革命|组织|媒介|传播|俄国/.test(f); } },
+    { id: "art", name: "馆藏艺术品", test: function (f) { return /克利夫兰|Europeana/.test(f); } }
+  ];
+  var items = [], current = "all", currentEra = "all";
+  var grid = document.getElementById("grid");
+  var lb = document.getElementById("lb");
+
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  var GROUP_ORDER = ["形象与雕像", "文献与版本", "场景绘画", "场地与旧址", "工厂与罢工", "革命与组织", "馆藏艺术品", "其他"];
+
+  /* 按分类分组渲染：同类相邻，组内先竖版后横版，读起来整齐 */
+  function render() {
+    var t = TOPICS.filter(function (x) { return x.id === current; })[0] || TOPICS[0];
+    var shown = 0;
+    var buckets = {};
+    items.forEach(function (it, i) {
+      if (!t.test(it.folder || "")) return;
+      if (currentEra !== "all" && (it.era || "") !== currentEra) return;
+      shown++;
+      var g = it.group || "其他";
+      (buckets[g] = buckets[g] || []).push({ it: it, i: i });
+    });
+
+    var html = GROUP_ORDER.filter(function (g) { return buckets[g]; }).map(function (g) {
+      var list = buckets[g];
+      var figs = list.map(function (o) {
+        var it = o.it;
+        return '<figure data-i="' + o.i + '">' +
+          '<img loading="lazy" src="' + esc(it.src) + '" alt="' + esc((it.title || "").slice(0, 60)) + '">' +
+          "<figcaption><b>" + esc(it.title || "") + "</b>" +
+          (it.desc ? esc(it.desc) + "<br>" : "") +
+          esc((it.author ? it.author + " · " : "") + (it.license || "")) + "</figcaption></figure>";
+      }).join("");
+      return '<section class="group"><h2>' + esc(g) + " <em>" + list.length + " 张</em></h2>" +
+        '<div class="grid">' + figs + "</div></section>";
+    }).join("");
+
+    grid.innerHTML = html || '<p class="foot">该主题下暂无图像。</p>';
+    document.getElementById("n").textContent = shown;
+    var tot = document.getElementById("total");
+    if (tot) tot.textContent = items.length;
+  }
+
+  function buildEraBar() {
+    var box = document.getElementById("erabar");
+    if (!box) return;
+    var count = {};
+    items.forEach(function (it) { var e = it.era || "时期未标注"; count[e] = (count[e] || 0) + 1; });
+    var list = Object.keys(count).sort(function (a, b) { return count[b] - count[a]; }).slice(0, 10);
+    var html = '<button type="button" data-era="all" class="on">全部时间</button>' +
+      list.map(function (e) {
+        return '<button type="button" data-era="' + esc(e) + '">' + esc(e) + " · " + count[e] + "</button>";
+      }).join("");
+    box.innerHTML = html;
+    Array.prototype.forEach.call(box.querySelectorAll("button"), function (b) {
+      b.onclick = function () {
+        currentEra = b.getAttribute("data-era");
+        Array.prototype.forEach.call(box.querySelectorAll("button"), function (x) {
+          x.classList.toggle("on", x === b);
+        });
+        render();
+      };
+    });
+  }
+
+  function buildFilters() {
+    var box = document.getElementById("filters");
+    box.innerHTML = TOPICS.map(function (t, i) {
+      return '<button type="button" data-topic="' + t.id + '"' + (i === 0 ? ' class="on"' : "") + ">" + t.name + "</button>";
+    }).join("");
+    Array.prototype.forEach.call(box.querySelectorAll("button"), function (b) {
+      b.onclick = function () {
+        current = b.getAttribute("data-topic");
+        Array.prototype.forEach.call(box.querySelectorAll("button"), function (x) { x.classList.toggle("on", x === b); });
+        render();
+      };
+    });
+  }
+
+  grid.addEventListener("click", function (e) {
+    var fig = e.target.closest("figure");
+    if (!fig) return;
+    var it = items[Number(fig.getAttribute("data-i"))];
+    if (!it) return;
+    document.getElementById("lbImg").src = it.src;
+    (function () {
+      var d = window.HSImageDetail ? window.HSImageDetail.build(it, items) : null;
+      var box = document.getElementById("lbMeta");
+      box.classList.add("det");
+      if (d) {
+        box.innerHTML = d.html;
+        Array.prototype.forEach.call(box.querySelectorAll("[data-rel]"), function (b, k) {
+          b.onclick = function () {
+            var target = d.related[k];
+            var ni = items.indexOf(target);
+            if (ni >= 0) openLb(ni);
+          };
+        });
+      } else {
+        box.textContent = (it.title || "") + "　" + (it.desc || "");
+      }
+    })();
+
+    lb.classList.add("on");
+  });
+  document.getElementById("lbClose").onclick = function () { lb.classList.remove("on"); };
+  lb.addEventListener("click", function (e) { if (e.target === lb) lb.classList.remove("on"); });
+  window.addEventListener("keydown", function (e) { if (e.key === "Escape") lb.classList.remove("on"); });
+
+  fetch("assets/manifests/images.json?v=e3").then(function (r) { return r.json(); }).then(function (d) {
+    items = d.items || [];
+    buildFilters();
+    buildEraBar();
+    render();
+  }).catch(function (e) {
+    grid.innerHTML = '<p style="color:#a8332c">清单加载失败：' + e.message + "</p>";
+  });
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+
+<script>
+/* 图像框选批注：拖拽画框 → 输入文字 → 存 localStorage；可导出 JSON */
+(function () {
+  var KEY = "xinghuo.ann.v1";
+  var store = {};
+  try { store = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { store = {}; }
+
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+
+  function currentKey() {
+    var img = document.querySelector("#lb img");
+    return img ? img.getAttribute("src") : null;
+  }
+
+  function paintBoxes(layer, key) {
+    layer.querySelectorAll(".ann-box").forEach(function (b) { b.remove(); });
+    (store[key] || []).forEach(function (a, i) {
+      var d = document.createElement("div");
+      d.className = "ann-box";
+      d.style.left = a.x + "%"; d.style.top = a.y + "%";
+      d.style.width = a.w + "%"; d.style.height = a.h + "%";
+      d.innerHTML = "<span>" + (i + 1) + " · " + a.text.replace(/</g, "&lt;") + "</span>";
+      d.title = a.text + "（点击删除）";
+      d.onclick = function (ev) {
+        ev.stopPropagation();
+        if (!confirm("删除这条批注？\n\n" + a.text)) return;
+        store[key].splice(i, 1); save(); paintBoxes(layer, key);
+      };
+      layer.appendChild(d);
+    });
+  }
+
+  function bind() {
+    var lb = document.getElementById("lb");
+    if (!lb) return;
+    var stage = document.querySelector("#lbStage");
+    var img = document.querySelector("#lb img");
+    if (!stage || !img) return;
+
+    var layer = document.getElementById("annLayer");
+    if (!layer) {
+      layer = document.createElement("div");
+      layer.id = "annLayer";
+      stage.appendChild(layer);
+    }
+    var key = currentKey();
+    if (key) paintBoxes(layer, key);
+
+    var start = null, ghost = null;
+    layer.onmousedown = function (e) {
+      e.preventDefault();
+      var r = layer.getBoundingClientRect();
+      start = { x: e.clientX - r.left, y: e.clientY - r.top, r: r };
+      ghost = document.createElement("div");
+      ghost.className = "ann-box";
+      layer.appendChild(ghost);
+    };
+    layer.onmousemove = function (e) {
+      if (!start || !ghost) return;
+      var x = Math.min(Math.max(e.clientX - start.r.left, 0), start.r.width);
+      var y = Math.min(Math.max(e.clientY - start.r.top, 0), start.r.height);
+      ghost.style.left = Math.min(x, start.x) + "px";
+      ghost.style.top = Math.min(y, start.y) + "px";
+      ghost.style.width = Math.abs(x - start.x) + "px";
+      ghost.style.height = Math.abs(y - start.y) + "px";
+    };
+    layer.onmouseup = function (e) {
+      if (!start || !ghost) return;
+      var r = start.r, x = Math.min(Math.max(e.clientX - r.left, 0), r.width),
+          y = Math.min(Math.max(e.clientY - r.top, 0), r.height);
+      var w = Math.abs(x - start.x), h = Math.abs(y - start.y);
+      var px = Math.min(x, start.x), py = Math.min(y, start.y);
+      ghost.remove(); ghost = null; start = null;
+      if (w < 12 || h < 12) return;
+      var text = prompt("这条批注写什么？（例：这张照片里的童工年龄与工厂名，可与恩格斯 1845 年调查对读）");
+      if (!text) { paintBoxes(layer, currentKey()); return; }
+      var key2 = currentKey();
+      store[key2] = store[key2] || [];
+      store[key2].push({
+        x: +(px / r.width * 100).toFixed(2), y: +(py / r.height * 100).toFixed(2),
+        w: +(w / r.width * 100).toFixed(2), h: +(h / r.height * 100).toFixed(2),
+        text: text
+      });
+      save();
+      paintBoxes(layer, key2);
+    };
+
+    if (!document.getElementById("annHint")) {
+      var tip = document.createElement("div");
+      tip.id = "annHint"; tip.className = "ann-tip";
+      tip.textContent = "在图上拖一个框即可批注 · 点框可删除";
+      document.body.appendChild(tip);
+      setTimeout(function () { tip.style.transition = "opacity .6s"; tip.style.opacity = "0";
+        setTimeout(function(){ tip.remove(); }, 700); }, 5200);
+    }
+  }
+
+  /* 灯箱每次打开/换图后重新绑定 */
+  var mo = setInterval(function () {
+    var lb = document.getElementById("lb");
+    if (lb && getComputedStyle(lb).display !== "none") bind();
+  }, 500);
+})();
+</script>
+
+</body>
+</html>

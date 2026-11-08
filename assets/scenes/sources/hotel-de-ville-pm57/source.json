@@ -1,0 +1,173 @@
+{
+  "title": "Paris City Hall scale model",
+  "inventory": "PM57",
+  "maker": "Andre Morillon",
+  "date": "circa 1860",
+  "dimensions_cm": {
+    "height": 32,
+    "width": 42.5,
+    "depth": 29
+  },
+  "institution": "Musee Carnavalet / Paris Musees",
+  "license": "CC0",
+  "credit": "CC0 Paris Musees / Musee Carnavalet - Histoire de Paris",
+  "record": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/modele-reduit-de-l-hotel-de-ville-de-paris",
+  "iiif_manifest": "https://apicollections.parismusees.paris.fr/iiif/320034701/manifest",
+  "downloaded": "2026-11-01",
+  "images": [
+    {
+      "label": "LPDP_71738-30",
+      "file": "LPDP_71738-30.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_71738-30.jpg?itok=BJMSBbtM",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-13",
+      "file": "LPDP_74395-13.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-13.jpg?itok=8MMS7mS3",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-14",
+      "file": "LPDP_74395-14.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-14.jpg?itok=CzAk9tYq",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-15",
+      "file": "LPDP_74395-15.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-15.jpg?itok=PyRDEjiX",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-16",
+      "file": "LPDP_74395-16.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-16.jpg?itok=l1vvjlJc",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-17",
+      "file": "LPDP_74395-17.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-17.jpg?itok=vffSnkwf",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-18",
+      "file": "LPDP_74395-18.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-18.jpg?itok=vOW9uT1U",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-19",
+      "file": "LPDP_74395-19.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-19.jpg?itok=C0G74qon",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-20",
+      "file": "LPDP_74395-20.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-20.jpg?itok=x35XAHgy",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-22",
+      "file": "LPDP_74395-22.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-22.jpg?itok=fCI9SOLA",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-23",
+      "file": "LPDP_74395-23.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-23.jpg?itok=rdC3isd8",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-24",
+      "file": "LPDP_74395-24.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-24.jpg?itok=f9YnCAoN",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-25",
+      "file": "LPDP_74395-25.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-25.jpg?itok=jSI_I7hT",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-26",
+      "file": "LPDP_74395-26.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-26.jpg?itok=nk9J-d0a",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-27",
+      "file": "LPDP_74395-27.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-27.jpg?itok=IWa_ND1r",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-28",
+      "file": "LPDP_74395-28.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-28.jpg?itok=n2m_pL4B",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-29",
+      "file": "LPDP_74395-29.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-29.jpg?itok=hBDvblnU",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-30",
+      "file": "LPDP_74395-30.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-30.jpg?itok=sbdK8_uS",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74395-31",
+      "file": "LPDP_74395-31.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74395-31.jpg?itok=hAfmmMn4",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74398-1",
+      "file": "LPDP_74398-1.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74398-1.jpg?itok=yBbHBGfS",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74398-2",
+      "file": "LPDP_74398-2.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74398-2.jpg?itok=aMFd00XQ",
+      "width": null,
+      "height": null
+    },
+    {
+      "label": "LPDP_74398-3",
+      "file": "LPDP_74398-3.jpg",
+      "url": "https://apicollections.parismusees.paris.fr/sites/default/files/styles/4k/collections/atoms/images/CAR/lpdp_74398-3.jpg?itok=qu63jmtj",
+      "width": null,
+      "height": null
+    }
+  ]
+}

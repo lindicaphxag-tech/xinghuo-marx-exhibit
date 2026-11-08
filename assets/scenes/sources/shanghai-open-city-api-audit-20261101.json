@@ -1,0 +1,17 @@
+{
+  "title": "上海开放城市三维服务接口核验",
+  "checked_at": "2026-11-01",
+  "official_announcement": "https://ghzyj.sh.gov.cn/gzdt/20261008/e3a3cfa9c88542828e582a2bb5bbf378.html",
+  "public_portal": "https://mwsk.sensetime-inc.com/",
+  "service_root": "https://yyxk.sggs.sh.cn/iserver/services/3D-QingXieWS/rest/realspace.json",
+  "scene_catalog": "https://yyxk.sggs.sh.cn/iserver/services/3D-QingXieWS/rest/realspace/scenes.json",
+  "dataset_catalog": "https://yyxk.sggs.sh.cn/iserver/services/3D-QingXieWS/rest/realspace/datas.json",
+  "findings": [
+    "公开 REST 服务可读取，根目录声明一个名为 QingXie 的三维场景。",
+    "数据目录返回 13 个具名数据集；本次未发现杨浦、杨树浦路、1900号、机器织布局或上海城市全域底图的数据条目。",
+    "本次不能从公开服务目录确认杨树浦路1900号模型资源、精确相机中心、建筑级别、倾斜摄影覆盖范围或对应历史影像。",
+    "门户公告说明其城市底座提供分级模型能力，但能力说明不能证明任一具体旧址在场，也不能证明存在1889年机器织布局实扫。"
+  ],
+  "decision": "保留门户作为当代上海三维底座的外部检索入口；不直接嵌入 QingXie 场景，不下载或镜像资源，不将接口或邻近杨树浦电厂模型标作机器织布局旧址扫描。",
+  "limitations": "目录核验仅覆盖上述公开 REST 资源列表及其场景入口，不代表平台登录后的其他数据空间不存在相关数据；未执行未授权接口调用。若平台后续公开该点位的可浏览链接或发布可复用模型，应重新核对空间范围、采集时间、来源和许可后再接入。"
+}

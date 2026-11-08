@@ -1,0 +1,26 @@
+{
+  "item_id": "british_museum_current_dsm",
+  "site": "British Museum, London; 500 m square centered at British National Grid 530057, 181716",
+  "dataset": "Environment Agency National LiDAR Programme First Return Digital Surface Model (FZ_DSM), 1 m",
+  "source_tiles": [
+    "TQ28se_FZ_DSM_1m.tif",
+    "TQ38sw_FZ_DSM_1m.tif"
+  ],
+  "source_cog_urls": [
+    "https://data.source.coop/rebalance-earth/ea-dem/FZ_DSM/DEFLATE/TQ28se_FZ_DSM_1m.tif",
+    "https://data.source.coop/rebalance-earth/ea-dem/FZ_DSM/DEFLATE/TQ38sw_FZ_DSM_1m.tif"
+  ],
+  "official_dataset": "https://ckan.publishing.service.gov.uk/dataset/national-lidar-programme",
+  "survey_portal": "https://environment.data.gov.uk/survey",
+  "license": "Open Government Licence v3.0",
+  "producer": "Environment Agency",
+  "crs": "EPSG:27700",
+  "vertical_datum": "Ordnance Datum Newlyn",
+  "display_extent_m": 500,
+  "source_resolution_m": 1,
+  "mesh_sampling_m": 2,
+  "vertical_exaggeration": 1,
+  "survey_date": "Composite source; the acquisition date varies by tile and is not asserted for this crop.",
+  "processing_script": "scripts/build_british_museum_dsm.py",
+  "limitations": "First Return DSM captures ground, buildings and vegetation top surfaces. It does not contain vertical facades, photographic texture, or interior geometry. It represents current conditions, not the historic Reading Room interior."
+}

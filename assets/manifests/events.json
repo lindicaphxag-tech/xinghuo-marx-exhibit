@@ -1,0 +1,149 @@
+{
+ "note": "历史事件表：把事件与章节、展品、文献、三维场景串成一条可跳转的标识链",
+ "events": [
+  {
+   "id": "trier-1818",
+   "year": 1818,
+   "title": "特里尔：思想的起点",
+   "place": "特里尔",
+   "section": "mapstory",
+   "artifact": "statue_trier",
+   "doc": "manifest_multilang_hangzhou",
+   "scene": "factory",
+   "note": "1818 年 5 月 5 日，马克思出生于特里尔。今天的布吕肯街 10 号与黑城门前的铜像，是这座城市留下的两处坐标。",
+   "reader_doc": "",
+   "nodes": [
+    "marx"
+   ]
+  },
+  {
+   "id": "paris-1844",
+   "year": 1844,
+   "title": "巴黎：与恩格斯相遇",
+   "place": "巴黎",
+   "section": "network",
+   "artifact": "bust_cc0",
+   "doc": "manifest_first_page",
+   "scene": "study",
+   "note": "1844 年夏，马克思与恩格斯在巴黎开始合作；此前《德法年鉴》上的文章已把哲学批判转向政治经济学批判。",
+   "reader_doc": "",
+   "nodes": [
+    "marx",
+    "engels"
+   ]
+  },
+  {
+   "id": "manifesto-1848",
+   "year": 1848,
+   "title": "《共产党宣言》出版",
+   "place": "伦敦",
+   "section": "relic",
+   "artifact": "manifest",
+   "doc": "manifest_1848_cover",
+   "scene": "press",
+   "note": "1848 年 2 月，23 页的德文小册子在伦敦印刷。它把此前的纲领浓缩为一句判断：至今一切社会的历史都是阶级斗争的历史。",
+   "reader_doc": "ia_manifesto_of_the_communist_p",
+   "nodes": [
+    "marx",
+    "engels",
+    "league"
+   ]
+  },
+  {
+   "id": "revolution-1848",
+   "year": 1848,
+   "title": "1848 年革命浪潮",
+   "place": "欧洲",
+   "section": "mapstory",
+   "artifact": "",
+   "doc": "neue_rheinische_zeitung",
+   "scene": "street",
+   "note": "从巴黎到维也纳、柏林，街垒在数周内蔓延。同年 6 月《新莱茵报》在科隆创刊，马克思任主编。",
+   "reader_doc": "",
+   "nodes": [
+    "marx",
+    "rhein"
+   ]
+  },
+  {
+   "id": "international-1864",
+   "year": 1864,
+   "title": "第一国际成立",
+   "place": "伦敦",
+   "section": "network",
+   "artifact": "union_banner",
+   "doc": "manifest_english_1850",
+   "scene": "hall",
+   "note": "1864 年 9 月，各国工人代表在伦敦圣马丁堂集会，决定成立国际工人协会。组织第一次跨越国界。",
+   "reader_doc": "",
+   "nodes": [
+    "intern1",
+    "marx",
+    "engels"
+   ]
+  },
+  {
+   "id": "kapital-1867",
+   "year": 1867,
+   "title": "《资本论》第一卷",
+   "place": "汉堡",
+   "section": "relic",
+   "artifact": "kapital_1867",
+   "doc": "kapital_1867_zurich",
+   "scene": "study",
+   "note": "1867 年 9 月，《资本论》第一卷在汉堡出版。商品、价值、剩余价值与积累，构成了此后工人运动的理论坐标。",
+   "reader_doc": "ia_dosapialdaskapit01marx",
+   "nodes": [
+    "marx"
+   ]
+  },
+  {
+   "id": "commune-1871",
+   "year": 1871,
+   "title": "巴黎公社",
+   "place": "巴黎",
+   "section": "commune",
+   "artifact": "mur_federes",
+   "doc": "neue_rheinische_zeitung_n",
+   "scene": "plaza",
+   "note": "1871 年 3 月 18 日至 5 月 28 日，七十二天。公社以法令、选举与街区组织回答一个问题：城市能否自我治理。",
+   "reader_doc": "ia_39020025220479_capitalacriti",
+   "nodes": [
+    "commune",
+    "marx",
+    "lafargue"
+   ]
+  },
+  {
+   "id": "new-youth-1915",
+   "year": 1915,
+   "title": "《新青年》与新文化运动",
+   "place": "上海",
+   "section": "press",
+   "artifact": "",
+   "doc": "manifest_multilang_hangzhou",
+   "scene": "shikumen",
+   "note": "1915 年 9 月《青年杂志》在上海创刊，后改名《新青年》。思想传播第一次进入中文公共讨论。",
+   "reader_doc": "ia_heimin_shimbun_no_10_1904_01",
+   "nodes": [
+    "lenin"
+   ]
+  },
+  {
+   "id": "october-1917",
+   "year": 1917,
+   "title": "十月革命",
+   "place": "彼得格勒",
+   "section": "river",
+   "artifact": "",
+   "doc": "manifest_senate_house",
+   "scene": "memorial",
+   "note": "1917 年 11 月 7 日，冬宫被占领。史书写下终点，也写下二十世纪工人运动新的分岔。",
+   "reader_doc": "ia_heimin_shimbun_no_5_1903_12_",
+   "nodes": [
+    "lenin",
+    "bolshevik"
+   ]
+  }
+ ]
+}

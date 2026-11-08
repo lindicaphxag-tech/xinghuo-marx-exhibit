@@ -1,0 +1,38 @@
+Licence lidar-viewer 1.0
+=======================
+
+Copyright (c) 2026 simulateur-toiture.fr
+
+La permission est accordée, gratuitement, à toute personne obtenant une copie
+de ce logiciel et des fichiers de documentation associés, d'utiliser, copier,
+modifier, fusionner, publier, distribuer, sous-licencier et/ou vendre des
+copies du logiciel, y compris sans limitation dans un produit commercial, sous
+les conditions suivantes :
+
+1. ATTRIBUTION. Toute reproduction du logiciel, sous forme de code source ou
+   de binaire compilé, distribuée ou déployée sur un site web, doit conserver
+   le crédit vers https://www.simulateur-toiture.fr affiché par la visionneuse
+   (option `credit`, activée par défaut). Le crédit doit rester visible et
+   cliquable ; il peut être discret, mais ne doit être ni masqué, ni rendu
+   inopérant, ni remplacé.
+
+2. CONSERVATION DES MENTIONS. L'avis de copyright ci-dessus et la présente
+   licence doivent être inclus dans toutes les copies ou parties substantielles
+   du logiciel, ainsi que le fichier NOTICE.
+
+3. DONNÉES TIERCES. Les données LiDAR HD utilisées par le logiciel sont
+   produites par l'IGN et diffusées en open data (licence Etalab 2.0). Elles ne
+   sont pas couvertes par la présente licence. Toute publication dérivée doit
+   en citer la source.
+
+DÉROGATION. L'exigence d'attribution (point 1) peut être levée sur demande
+écrite pour un usage éducatif, de recherche ou associatif. Contact :
+https://www.simulateur-toiture.fr
+
+LE LOGICIEL EST FOURNI « EN L'ÉTAT », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU
+IMPLICITE, Y COMPRIS MAIS SANS S'Y LIMITER LES GARANTIES DE QUALITÉ
+MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER ET D'ABSENCE DE CONTREFAÇON.
+EN AUCUN CAS LES AUTEURS OU TITULAIRES DU COPYRIGHT NE POURRONT ÊTRE TENUS
+RESPONSABLES DE TOUTE RÉCLAMATION, DOMMAGE OU AUTRE RESPONSABILITÉ, QUE CE SOIT
+DANS LE CADRE D'UN CONTRAT, D'UN DÉLIT OU AUTRE, DÉCOULANT DE OU EN RELATION
+AVEC LE LOGICIEL OU SON UTILISATION.

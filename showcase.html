@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>展示模式 · 星火与道路</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<style>
+  :root{--bg:#0d0b0a;--ink:#f4ecdc;--dim:#9a8d7c;--gold:#c9a262;--red:#a8332c;--line:rgba(201,162,98,.2)}
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.75 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;overflow:hidden}
+  #deck{position:relative;height:100vh;width:100vw;overflow:hidden}
+  .slide{position:absolute;inset:0;display:none;padding:44px 56px 70px;overflow:auto}
+  .slide.on{display:block;animation:fade .45s cubic-bezier(.22,.61,.36,1)}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  .k{font-size:11px;letter-spacing:.26em;color:var(--gold);margin:0 0 10px}
+  h1{font-size:clamp(2rem,1.2rem+4vw,4.6rem);line-height:1.1;margin:0 0 18px;font-weight:600}
+  h1 em{font-style:normal;color:#e0524a}
+  h2{font-size:clamp(1.5rem,1rem+2.2vw,2.8rem);margin:0 0 10px;line-height:1.2}
+  .yr{font-family:ui-monospace,monospace;font-size:14px;letter-spacing:.2em;color:#e0524a;margin-bottom:8px}
+  .lead{max-width:74ch;color:#cfc3b0;font-size:15px}
+
+  .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:26px}
+  .nums div{border:1px solid var(--line);padding:14px 16px;border-radius:4px}
+  .nums b{display:block;font-size:30px;color:#fff;line-height:1.1}
+  .nums span{font-size:11.5px;color:var(--dim);letter-spacing:.08em}
+
+  .two{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;margin-top:18px}
+  @media(max-width:980px){.two{grid-template-columns:1fr}}
+  .facts{border-left:2px solid var(--red);padding-left:14px}
+  .facts dt{font-family:ui-monospace,monospace;font-size:11px;color:var(--gold);letter-spacing:.1em;margin-top:9px}
+  .facts dd{margin:2px 0 0;font-size:14px;color:#e2d8c8;line-height:1.7}
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .figs figure{margin:0;overflow:hidden;border:1px solid var(--line)}
+  .figs img{display:block;width:100%;height:140px;object-fit:cover;filter:saturate(.95)}
+  .figs figcaption{font-size:10px;color:#8d8175;padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:7px;margin-top:16px}
+  .grid figure{margin:0;overflow:hidden;border:1px solid var(--line);position:relative}
+  .grid img{display:block;width:100%;height:110px;object-fit:cover}
+  .grid figcaption{position:absolute;inset:auto 0 0 0;font-size:9.5px;padding:3px 5px;color:#e8ddcb;
+    background:linear-gradient(transparent,rgba(0,0,0,.82));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .notes{display:grid;gap:9px;margin-top:12px}
+  .note{display:flex;gap:9px;font-size:13px;color:#d9cebc;line-height:1.7}
+  .tag{flex:0 0 auto;font-size:10px;padding:1px 6px;border-radius:2px;height:18px;display:inline-flex;align-items:center}
+  .t1{background:rgba(201,162,98,.2);color:#e6cfa2}
+  .t2{background:rgba(168,51,44,.22);color:#f0bdb8}
+
+  footer{position:fixed;left:0;right:0;bottom:0;height:46px;display:flex;align-items:center;gap:14px;
+    padding:0 22px;background:rgba(10,9,8,.92);border-top:1px solid var(--line);backdrop-filter:blur(8px);z-index:9}
+  footer .bar{flex:1;height:3px;background:rgba(201,162,98,.16);border-radius:2px;overflow:hidden}
+  footer .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#7d241f,#c9a262);transition:width .3s}
+  footer button{font:inherit;font-size:12px;padding:5px 12px;border-radius:999px;cursor:pointer;
+    border:1px solid rgba(201,162,98,.3);background:transparent;color:#c9bda8}
+  footer button:hover{border-color:var(--gold);color:#fff}
+  footer .idx{font-family:ui-monospace,monospace;font-size:12px;color:#8d8175;min-width:64px;text-align:center}
+</style>
+</head>
+<body>
+<div id="deck"></div>
+
+<footer>
+  <button id="prev">← 上一步</button>
+  <span class="idx" id="idx">01 / 01</span>
+  <button id="next">下一步 →</button>
+  <div class="bar"><i id="bar"></i></div>
+  <span style="font-size:11px;color:#6f6558">← → / 空格 翻页　·　Esc 返回</span>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var slides = [];
+  var deck = document.getElementById("deck");
+
+  function el(html) { var d = document.createElement("div"); d.innerHTML = html; return d.firstElementChild; }
+  function add(node) { slides.push(node); deck.appendChild(node); }
+
+  /* ---------- 1 封面 ---------- */
+  add(el('<section class="slide on">' +
+    '<p class="k">展示模式 · PRESENTATION DECK</p>' +
+    '<h1>分散的工人，<br><em>如何成为一场运动？</em></h1>' +
+    '<p class="lead">1831 年里昂街垒 → 1917 年彼得格勒。本页把全馆的实证材料集中到一处：每一章的事件时间、可核对数字、原文与档案图，全部同屏可讲。</p>' +
+    '<div class="nums" id="nums"></div></section>'));
+
+  var numsEl = document.getElementById("nums");
+  var STATS = [];
+
+  function renderStats() {
+    numsEl.innerHTML = STATS.map(function (s) {
+      return "<div><b>" + s.n + "</b><span>" + s.label + "</span></div>";
+    }).join("");
+  }
+
+  /* ---------- 数据 ---------- */
+  Promise.all([
+    fetch("assets/manifests/story-facts.json?v=2").then(function (r) { return r.json(); }).catch(function () { return {}; }),
+    fetch("assets/manifests/images.json?v=e4").then(function (r) { return r.json(); }).catch(function () { return {}; }),
+    fetch("assets/manifests/pages.json").then(function (r) { return r.json(); }).catch(function () { return {}; }),
+    fetch("assets/models/models.json").then(function (r) { return r.json(); }).catch(function () { return {}; })
+  ]).then(function (res) {
+    var facts = res[0].chapters || {};
+    var imgs = (res[1].items || []);
+    var docs = (res[2].items || []);
+    var models = (res[3].items || []).filter(function (m) { return m.quality === "ok"; });
+
+    STATS = [
+      { n: imgs.length, label: "档案图像" },
+      { n: docs.length, label: "公版书刊" },
+      { n: models.length, label: "三维模型" },
+      { n: Object.keys(facts).length, label: "叙事章节" },
+      { n: 7, label: "历史报刊" }
+    ];
+    renderStats();
+
+    /* ---------- 章节页 ---------- */
+    var CH = [
+      ["ch-lyon", "里昂织工", "1831 · 1834"], ["ch-charter", "宪章运动", "1838 – 1848"],
+      ["ch-silesia", "西里西亚纺织工人起义", "1844"], ["ch-marx-origin", "思想的形成", "1818 – 1844"],
+      ["ch-league", "共产主义者同盟", "1847"], ["ch-manifesto", "《共产党宣言》", "1848"],
+      ["ch-1848", "欧洲革命浪潮", "1848"], ["ch-first-international", "第一国际", "1864"],
+      ["ch-commune", "巴黎公社", "1871"], ["ch-second-international", "第二国际", "1889"],
+      ["ch-bolshevik", "布尔什维克的形成", "1903"], ["ch-october", "十月革命", "1917"]
+    ];
+    var placeOf = {
+      "ch-lyon": ["巴黎"], "ch-charter": ["伦敦"], "ch-silesia": ["工业区"], "ch-marx-origin": ["特里尔"],
+      "ch-league": ["伦敦"], "ch-manifesto": ["伦敦"], "ch-1848": ["巴黎"], "ch-first-international": ["伦敦"],
+      "ch-commune": ["巴黎"], "ch-second-international": ["巴黎"], "ch-bolshevik": ["俄国"], "ch-october": ["俄国"]
+    };
+    CH.forEach(function (row) {
+      var f = facts[row[0]];
+      if (!f) return;
+      var picks = [];
+      (placeOf[row[0]] || []).forEach(function (pl) {
+        imgs.filter(function (it) { return it.place === pl; }).slice(0, 4).forEach(function (it) { picks.push(it); });
+      });
+      add(el('<section class="slide">' +
+        '<p class="yr">' + row[2] + "</p>" +
+        "<h2>" + row[1] + "</h2>" +
+        '<div class="two">' +
+          '<dl class="facts">' + (f.hard || []).map(function (h) {
+            return "<dt>" + h.k + "</dt><dd>" + h.v + "</dd>";
+          }).join("") + "</dl>" +
+          '<div class="figs">' + picks.slice(0, 4).map(function (it) {
+            return '<figure><img src="' + (it.ring || it.src) + '" alt=""><figcaption>' + (it.title || "") + "</figcaption></figure>";
+          }).join("") + "</div>" +
+        "</div></section>"));
+    });
+
+    /* ---------- 图像墙 ---------- */
+    add(el('<section class="slide"><p class="k">ARCHIVE · 档案图像</p>' +
+      "<h2>" + imgs.length + " 张可核验图像</h2>" +
+      '<p class="lead">全部为原图（短边 ≥600px），每张带「地点 · 内容 · 时间」与授权信息。</p>' +
+      '<div class="grid">' + imgs.slice(0, 96).map(function (it) {
+        return '<figure><img src="' + (it.ring || it.src) + '" alt="" loading="lazy"><figcaption>' + (it.desc || it.title || "") + "</figcaption></figure>";
+      }).join("") + "</div></section>"));
+
+    /* ---------- 文献 ---------- */
+    add(el('<section class="slide"><p class="k">DOCUMENTS · 公版书刊</p>' +
+      "<h2>" + docs.length + " 种可翻页文献</h2>" +
+      '<p class="lead">全部来自 Internet Archive 公版扫描，阅读室支持滚轮缩放与拖动（OpenSeadragon）。</p>' +
+      '<div class="grid">' + docs.map(function (d) {
+        return '<figure><img src="' + d.cover + '" alt="" loading="lazy"><figcaption>' + (d.title || "") + " · " + (d.year || "") + "</figcaption></figure>";
+      }).join("") + "</div></section>"));
+
+    /* ---------- 模型 ---------- */
+    add(el('<section class="slide"><p class="k">MODELS · 三维复原</p>' +
+      "<h2>" + models.length + " 件几何完整的模型</h2>" +
+      '<p class="lead">均为单图推断（E4），展示为帮助理解的解释工具，不是实测扫描。</p>' +
+      '<div class="grid">' + models.slice(0, 48).map(function (m) {
+        var pv = "assets/models/preview/" + (m.id || "") + ".png";
+        return '<figure><img src="' + pv + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"><figcaption>' + (m.name || "") + "</figcaption></figure>";
+      }).join("") + "</div></section>"));
+
+    /* ---------- 口径 ---------- */
+    add(el('<section class="slide"><p class="k">SOURCES · 口径与来源</p>' +
+      "<h2>这些材料从哪来</h2>" +
+      '<div class="notes">' +
+        '<div class="note"><span class="tag t1">E1</span><span>原始材料：当时出版的书报与馆藏扫描（Internet Archive、克利夫兰美术馆、Europeana、Wikimedia Commons）。</span></div>' +
+        '<div class="note"><span class="tag t1">E3</span><span>有据阐释：依据单张图像或文字记载做出的解释，保留不确定性。</span></div>' +
+        '<div class="note"><span class="tag t2">E4</span><span>推断性复原：单图生成模型；几何完整不等于史实准确。</span></div>' +
+        '<div class="note"><span class="tag t2">注意</span><span>本馆没有一处历史场景的实测三维扫描，E1 三维条目为 0。</span></div>' +
+      "</div></section>"));
+
+  }).catch(function () {});
+
+  /* ---------- 导航 ---------- */
+  var i = 0;
+  function show(k) {
+    if (!slides.length) return;
+    i = Math.max(0, Math.min(slides.length - 1, k));
+    slides.forEach(function (s, n) { s.classList.toggle("on", n === i); });
+    document.getElementById("idx").textContent = String(i + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
+    document.getElementById("bar").style.width = ((i + 1) / slides.length * 100) + "%";
+  }
+  document.getElementById("next").onclick = function () { show(i + 1); };
+  document.getElementById("prev").onclick = function () { show(i - 1); };
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") { e.preventDefault(); show(i + 1); }
+    if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); show(i - 1); }
+    if (e.key === "Home") { show(0); }
+    if (e.key === "End") { show(slides.length - 1); }
+    if (e.key === "Escape") { location.href = "index.html"; }
+  });
+  var t = 0;
+  window.addEventListener("load", function () { setTimeout(function () { show(0); }, 300); });
+
+  /* 数据到位后重建索引（幻灯片是异步追加的） */
+  var raf = setInterval(function () {
+    if (slides.length > 1) { clearInterval(raf); show(0); }
+  }, 200);
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+</body>
+</html>

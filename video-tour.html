@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="约三分钟自动讲解：从生产条件、理论自觉和组织实践，到证据层级与开放历史。">
+  <title>四层自动导览 · 星火与道路</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="video-tour.css">
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body class="video-tour-page">
+  <main class="video-tour-wrap">
+    <a class="video-tour-back" href="index.html">← 回到数字展馆</a>
+    <p class="video-tour-kicker">A guided history in four layers · 约 3 分钟</p>
+    <h1>从劳动现场到开放历史</h1>
+    <p class="video-tour-lede">这段讲解随网站自动推进：先从生产条件和现实矛盾出发，再看理论如何形成、进入组织实践，最后回到史料边界与仍在延伸的历史问题。点击下方章节可跳转，也可让视频连续播放。</p>
+    <div class="video-tour-player">
+      <video id="method-video" controls playsinline preload="metadata" poster="video/历史唯物主义_四层自动导览_封面.png">
+        <source src="video/历史唯物主义_四层自动导览.mp4" type="video/mp4">
+        <track kind="subtitles" src="video/历史唯物主义_四层自动导览.vtt" srclang="zh-CN" label="简体中文字幕" default>
+        您的浏览器不支持 HTML 视频，请下载 MP4 文件观看。
+      </video>
+    </div>
+    <div class="video-tour-actions">
+      <a href="video/历史唯物主义_四层自动导览.mp4" download>下载 MP4 视频</a>
+      <a href="video/历史唯物主义_四层自动导览.srt" download>下载逐句字幕</a>
+      <a href="video/method_tour_script.json" download>下载讲解脚本</a>
+    </div>
+    <h2>按四层逻辑跳转</h2>
+    <nav class="video-tour-chapters" aria-label="视频章节">
+      <button type="button" data-time="0"><strong>第一层 · 00:00</strong>生产条件与现实矛盾</button>
+      <button type="button" data-time="40"><strong>第二层 · 00:40</strong>理论自觉与共同认识</button>
+      <button type="button" data-time="99"><strong>第三层 · 01:39</strong>组织实践与历史经验</button>
+      <button type="button" data-time="140"><strong>第四层 · 02:20</strong>证据层级与开放历史</button>
+    </nav>
+    <h2>讲解文稿</h2>
+    <details><summary>第一层 · 生产条件与现实矛盾</summary>
+      <p>我们先不从伟人或结论出发，而从生产现场出发。机器大工业把原本分散的劳动者聚在同一过程里，也重新安排劳动时间、城市空间和生计；新的生产力和旧有关系之间的张力，先以日常处境显现。</p>
+      <p>里昂织工的反抗说明，生计冲突可以转成集体行动；但共同处境不会自动长成共同意识。我们在这里看到的是历史条件，不是预先写好的必然剧本。</p>
+    </details>
+    <details><summary>第二层 · 理论自觉与共同认识</summary>
+      <p>理论从这些具体矛盾和政治争论中形成。把《共产党宣言》与相关文本、不同版本并读，观众可以追问：哪些经验被概括，哪些概念在传播与争论中被重新解释？</p>
+      <p>阶级关系先存在于现实生产关系中，理论不会凭空创造阶级。不同城市的劳动者通过交往、组织和共同斗争，逐渐把各自经验理解为相互关联的处境，从自在走向自为。</p>
+      <p>报刊和翻译把思想带过城市边界。卷期和版面让传播不再是抽象箭头：我们能看到何时出版、如何编辑、读者在怎样的语境中接触这些文本。传播自身也是历史实践。</p>
+    </details>
+    <details><summary>第三层 · 组织实践与历史经验</summary>
+      <p>巴黎公社不是理论自动胜利，也不只是悲壮终章。跟着时间切片查看制度主张、组织行动和战争压力：思想进入城市治理的试验，也在现实条件中暴露边界，留下经验与教训。</p>
+      <p>罢工热度图把运动放回空间与时间。峰值、扩散与中断并非同一种趋势；组织能力、国家压力和地方差异会改变行动结果。历史的矛盾在反复实践中发展，而不是沿直线前进。</p>
+    </details>
+    <details><summary>第四层 · 证据层级与开放历史</summary>
+      <p>进入展品与空间时，请看它的证据标记。原始材料、可靠图像、单图推断复原的存在方式不同。当前馆内没有历史场景的实测扫描；推断模型用于帮助理解，轮廓和纹理不等于真实文物。</p>
+      <p>历史没有在展馆里结束。材料可以新增，解释可以被争论，实践会带来新的问题。最后留下的不是固定结论，而是继续观察现实关系、检验认识并参与行动的方法。</p>
+    </details>
+  </main>
+  <script>
+    const video = document.getElementById('method-video');
+    document.querySelectorAll('[data-time]').forEach(button => {
+      button.addEventListener('click', () => {
+        video.currentTime = Number(button.dataset.time);
+        video.play();
+      });
+    });
+  </script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "item_id": "marx_reading_room",
+  "title": "British Museum Reading Room · educational 3D representation",
+  "project_record": "https://dev.thecdm.ca/projects/archives/british-museum-reading-room",
+  "attribution": "British Museum team; project archived by Centre for Digital Media",
+  "representation_type": "institutional 3D representation; scan method not stated",
+  "license": "Not stated on the project record; link to the original only",
+  "local_copy": false,
+  "use": "Optional external 3D reference for the room's spatial form. Do not describe it as a photogrammetry scan or as Marx-era furnishing.",
+  "related_scan_search": {
+    "record": "https://newart.city/catalog/museum-of-computational-image-artefacts-remote-access-room",
+    "finding": "A catalogue entry documents photogrammetry and LiDAR of British Museum Room 18, acquired 2022.",
+    "exclusion_reason": "Room 18 is not the Round Reading Room. The public record does not provide a downloadable room mesh or an explicit reuse license. It is retained only as a search lead and is not embedded, copied, or labeled as a scan of the Round Reading Room.",
+    "checked": "2026-11-03"
+  }
+}

@@ -1,0 +1,17 @@
+lidar-viewer
+============
+
+Visionneuse de nuages de points LiDAR HD, développée pour
+https://www.simulateur-toiture.fr — le simulateur de mesure de toiture.
+
+DÉPENDANCES TIERCES
+-------------------
+- copc (MIT)         lecture des fichiers COPC en HTTP Range
+- laz-perf (Apache-2.0 / LGPL)  décompression LAZ, compilé en WebAssembly
+- proj4 (MIT)        changements de repère (WGS84 → Lambert-93 et DROM)
+
+DONNÉES
+-------
+LiDAR HD © IGN — https://geoservices.ign.fr/lidarhd
+Diffusé en open data sous licence Etalab 2.0.
+Service d'interrogation : Géoplateforme (data.geopf.fr), sans authentification.

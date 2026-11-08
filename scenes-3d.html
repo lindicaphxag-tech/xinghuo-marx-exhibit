@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>九个历史空间 · 三维漫游</title>
+<style>
+  :root{--bg:#0e0c0b;--panel:#1b1714;--line:#332c26;--fg:#efe7de;--dim:#a89a8c;--red:#d9433f;--gold:#c9a227}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  header{padding:24px 30px 16px;border-bottom:1px solid var(--line)}
+  h1{margin:0 0 6px;font-size:21px}
+  h1 span{color:var(--red)}
+  .sub{color:var(--dim);font-size:13px}
+  a{color:var(--gold);text-decoration:none}
+  main{display:grid;grid-template-columns:minmax(0,1fr) 300px;min-height:calc(100vh - 92px)}
+  @media(max-width:900px){main{grid-template-columns:1fr}}
+  .stage{position:relative;background:radial-gradient(circle at 50% 40%,#191512,#0a0908 70%)}
+  canvas{display:block;width:100%;height:100%;min-height:540px}
+  .hint{position:absolute;left:16px;bottom:12px;font-size:12px;color:rgba(255,255,255,.4)}
+  aside{border-left:1px solid var(--line);padding:18px 20px;background:var(--panel)}
+  .tabs{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+  .tabs button{padding:9px 11px;background:transparent;border:1px solid rgba(255,255,255,.12);
+    color:rgba(255,255,255,.72);border-radius:3px;font:inherit;font-size:13px;text-align:left;cursor:pointer}
+  .tabs button:hover{color:#fff;border-color:rgba(217,67,63,.6)}
+  .tabs button.on{color:#fff;border-color:var(--red);background:rgba(217,67,63,.12)}
+  #scene-info h3{margin:0 0 8px;font-size:15px}
+  #scene-info p{font-size:12.5px;color:var(--dim);margin:0}
+  .note{font-size:12px;color:#8b7f73;border-left:2px solid var(--gold);padding-left:10px;margin-top:16px}
+</style>
+<link rel="stylesheet" href="css/hotspot.css?v=hs1">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+</head>
+<body>
+<header>
+  <h1>九个历史空间 <span>·</span> 三维漫游</h1>
+  <span class="mode-badge" style="display:inline-block;margin-right:10px;padding:2px 9px;border:1px solid rgba(201,162,98,.6);border-radius:3px;font-size:11px;letter-spacing:.12em;color:#c9a262">场景模式 · 深色沉浸</span><div class="sub">程序化几何 + Canvas 纹理 + 真实封面文献｜<a href="index.html">← 主展馆</a>｜<a href="scenes.html">空间证据目录</a></div>
+</header>
+<main>
+  <div class="stage">
+    <canvas id="scene-canvas"></canvas>
+    <div class="hint">拖动旋转 · 滚轮缩放 · 右侧切换空间</div>
+  </div>
+  <aside>
+    <div class="tabs" id="scene-tabs"></div>
+    <div id="scene-info"></div>
+    <div class="note">九个空间均为依据史料复原的空间示意：建筑体量、机械形态、街垒布局来自历史图像与通行叙述，不是实测扫描。档案厅里的书封面则是真实的公版扫描件。</div>
+  </aside>
+</main>
+<script src="assets/vendor/three-r147/three.min.js"></script>
+<script src="assets/vendor/three-r147/OrbitControls.js"></script>
+<script src="js/scenes/scenes.js?v=era2"></script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+</body>
+</html>

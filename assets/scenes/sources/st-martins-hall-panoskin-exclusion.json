@@ -1,0 +1,18 @@
+{
+  "title": "同名 St Martin's Hall 360 导览排除记录",
+  "checked": "2026-11-01",
+  "candidate_url": "https://viewer.panoskin.com/?tour=62446adcc2df4f27f49f10de",
+  "candidate_title": "St Martin's Hall - 360 Virtual Tour",
+  "verified_location": {
+    "address": "1315 Bluff St, Pittsburgh, PA 15219, United States",
+    "latitude": 40.43529,
+    "longitude": -79.98788
+  },
+  "finding": "该360导览记录的是匹兹堡一处现用的 St Martin's Hall（页面内含 Game Room、Co-Working、Studio 等现代空间），不是伦敦 Long Acre 已拆改的历史圣马丁堂。",
+  "decision": "排除，不嵌入展馆，不作为历史会堂扫描或旧址现状资料。",
+  "verification_method": "读取公开导览页面内嵌元数据中的地址、坐标、楼层/场景名称；不依赖页面标题推断地点。",
+  "source_links": [
+    "https://viewer.panoskin.com/?tour=62446adcc2df4f27f49f10de",
+    "https://www.londonpicturearchive.org.uk/view-item?i=309134"
+  ]
+}

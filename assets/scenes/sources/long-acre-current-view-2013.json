@@ -1,0 +1,21 @@
+{
+  "item_id": "first_international_printshop",
+  "subject": "90 Long Acre and former police station from Bow Street",
+  "photographer": "Robert Lamb",
+  "capture_date": "2013-01-13",
+  "coordinates_camera_wgs84": [
+    51.513154,
+    -0.12207
+  ],
+  "coordinates_subject_wgs84": [
+    51.513611,
+    -0.122627
+  ],
+  "original_dimensions": "3456x2592",
+  "local_thumbnail": "assets/scenes/90-long-acre-bow-street-2013.jpg",
+  "local_thumbnail_dimensions": "1280px wide",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:View_of_90_Long_Acre_and_the_former_police_station_from_Bow_Street_-_geograph.org.uk_-_3294856.jpg",
+  "attribution": "View of 90 Long Acre and the former police station from Bow Street by Robert Lamb, via Geograph Britain and Ireland; resized thumbnail. Share adaptations under CC BY-SA 2.0."
+}

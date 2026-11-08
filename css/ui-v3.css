@@ -1,0 +1,158 @@
+/* ==========================================================================
+   ui-v3.css —— 全站界面升级层
+   借鉴：open-props 的 token 体系、modern-css-reset 的基础重置、
+        View Transitions API 的页面转场、scroll-driven animations 的进场
+   只做「精修」：字体、间距、焦点、动效、滚动条、细节质感；不改版面结构。
+   ========================================================================== */
+
+:root {
+  /* 色板：档案馆纸色 + 金属金 + 血锈红 */
+  --ui-paper:   #f2e9d8;
+  --ui-paper-2: #e6dac4;
+  --ui-ink:     #14110f;
+  --ui-ink-2:   #1b1714;
+  --ui-muted:   #8d8175;
+  --ui-gold:    #c9a262;
+  --ui-gold-2:  #a8854b;
+  --ui-red:     #a8332c;
+  --ui-red-2:   #7d241f;
+  --ui-line:    rgba(201, 162, 98, .18);
+  --ui-line-2:  rgba(201, 162, 98, .34);
+
+  /* 间距阶（open-props 思路） */
+  --s-1: .25rem;  --s-2: .5rem;   --s-3: .75rem;
+  --s-4: 1rem;    --s-5: 1.5rem;  --s-6: 2rem;
+  --s-7: 3rem;    --s-8: 4.5rem;
+
+  /* 字号：全站流体排版 */
+  --t-xs: clamp(.72rem, .70rem + .10vw, .78rem);
+  --t-sm: clamp(.82rem, .79rem + .15vw, .90rem);
+  --t-md: clamp(.95rem, .92rem + .18vw, 1.05rem);
+  --t-lg: clamp(1.12rem, 1.04rem + .40vw, 1.35rem);
+  --t-xl: clamp(1.45rem, 1.25rem + .90vw, 2.10rem);
+  --t-2xl: clamp(2.0rem, 1.55rem + 2.0vw, 3.60rem);
+  --t-3xl: clamp(2.8rem, 1.9rem + 3.8vw, 5.60rem);
+
+  --ui-radius: 6px;
+  --ui-shadow-1: 0 1px 2px rgba(0,0,0,.35);
+  --ui-shadow-2: 0 8px 24px rgba(0,0,0,.38);
+  --ui-shadow-3: 0 24px 60px rgba(0,0,0,.5);
+  --ui-ease: cubic-bezier(.22,.61,.36,1);
+}
+
+/* ---------- 基础：更顺的字距与行高 ---------- */
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-size: var(--t-md);
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern" 1, "liga" 1, "palt" 1;
+}
+h1, h2, h3, h4 { line-height: 1.28; letter-spacing: .01em; }
+p { text-wrap: pretty; }
+h1, h2 { text-wrap: balance; }
+
+/* ---------- 焦点可见性：键盘用户能看清在哪 ---------- */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--ui-gold);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+a, button, [role="button"], input, select, summary { transition: color .18s var(--ui-ease), background-color .18s var(--ui-ease), border-color .18s var(--ui-ease), transform .18s var(--ui-ease); }
+
+/* ---------- 按钮与胶囊：统一手感 ---------- */
+button, .btn, [role="button"] {
+  border-radius: 999px;
+  font-size: var(--t-sm);
+  letter-spacing: .02em;
+}
+button:hover, .btn:hover, [role="button"]:hover { transform: translateY(-1px); }
+button:active, .btn:active { transform: translateY(0) scale(.99); }
+
+/* ---------- 卡片：抬起 + 金边呼吸 ---------- */
+.card, .clip, .group figure, .story-card, .artifact,
+.net-person, .press-card, .entry {
+  transition: transform .28s var(--ui-ease), box-shadow .28s var(--ui-ease),
+              border-color .28s var(--ui-ease), background-color .28s var(--ui-ease);
+}
+.card:hover, .clip:hover, .entry:hover {
+  border-color: var(--ui-line-2);
+  box-shadow: var(--ui-shadow-2);
+}
+
+/* ---------- 滚动条 ---------- */
+* { scrollbar-width: thin; scrollbar-color: var(--ui-gold-2) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--ui-gold-2), #6d5730);
+  border-radius: 99px; border: 2px solid transparent; background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--ui-gold); background-clip: content-box; }
+
+/* ---------- 选中文字 ---------- */
+::selection { background: rgba(168, 51, 44, .35); color: #fff; }
+
+/* ---------- 滚动进场：CSS 滚动驱动动画（Chrome 115+） ---------- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal, section > h2, .entry {
+      animation: ui-rise .9s var(--ui-ease) both;
+      animation-timeline: view();
+      animation-range: entry 8% cover 26%;
+    }
+  }
+}
+@keyframes ui-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- 页面转场（View Transitions） ---------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: ui-fade-out .28s var(--ui-ease) both; }
+::view-transition-new(root) { animation: ui-fade-in .34s var(--ui-ease) both; }
+@keyframes ui-fade-out { to { opacity: 0; transform: scale(.995); } }
+@keyframes ui-fade-in  { from { opacity: 0; transform: scale(1.005); } }
+
+/* ---------- 图像质感 ---------- */
+img { image-rendering: auto; }
+.group figure img, .clip img { transition: filter .4s var(--ui-ease), transform .6s var(--ui-ease); }
+
+/* ---------- 深色页面的纸张纹理 ---------- */
+body::before {
+  content: "";
+  position: fixed; inset: 0; pointer-events: none; z-index: 1;
+  opacity: .035; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)'/></svg>");
+}
+
+/* ---------- 键盘提示：跳到正文 ---------- */
+.skip-link:focus {
+  position: fixed; left: 12px; top: 12px; z-index: 9999;
+  padding: 10px 16px; background: var(--ui-red); color: #fff; border-radius: 4px;
+}
+
+/* ---------- 减少动态偏好 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- 打印：去掉装饰 ---------- */
+@media print {
+  body::before, .skip-link, .back { display: none !important; }
+  body { background: #fff; color: #000; }
+}
+
+
+/* 全屏阅读层打开时，隐藏顶部导航与返回，避免挡住关闭按钮 */
+body.reader-open .uibar,
+body.reader-open .backchip,
+body.reader-open .uiprogress { display: none !important; }
