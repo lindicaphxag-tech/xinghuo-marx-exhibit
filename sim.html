@@ -36,6 +36,10 @@
   .hint{position:absolute;right:26px;top:96px;text-align:right;font-size:11.5px;color:#7d7264;line-height:1.7}
 </style>
 <link rel="stylesheet" href="css/ui-v3.css?v=2">
+<link rel="stylesheet" href="css/calligraphy.css?v=2">
+<link rel="stylesheet" href="css/gallery-v2.css?v=1">
+<link rel="stylesheet" href="css/font-theme.css?v=1">
+<link rel="stylesheet" href="css/unify.css?v=1">
 </head>
 <body>
 <a class="back" href="index.html">← 返回展馆</a>
@@ -233,6 +237,7 @@
     var active = 0;
     CITIES.forEach(function (c) {
       var q = proj(c.lon, c.lat);
+      c._sx = q.x; c._sy = q.y;
       var v = Math.min(1, c.activity / 1.8);
       if (c.activity > 0.08) active++;
       if (v > 0.02) {
@@ -315,5 +320,64 @@
 </script>
 <script src="js/ui-chrome.js?v=2"></script>
 <script src="js/back.js?v=1"></script>
+<div id="simCard" style="position:fixed;right:22px;top:96px;z-index:60;display:none;width:300px;
+  background:rgba(12,10,9,.94);border:1px solid rgba(201,162,98,.34);border-radius:6px;padding:14px 16px;
+  color:#e8dcc6;font:13px/1.7 'Noto Sans SC','Microsoft YaHei',system-ui,sans-serif;backdrop-filter:blur(10px)"></div>
+<script>
+/* simCard：点击地图上的城市，弹出该城的参数卡 */
+(function () {
+  var card = document.getElementById("simCard");
+  if (!card) return;
+  function show(x, y, name, year, extra) {
+    card.innerHTML = "<b style=\"color:#c9a262;font-size:11px;letter-spacing:.16em\">CITY RECORD · 城市记录</b>" +
+      "<div style=\"font-size:16px;margin:4px 0 6px\">" + name + "</div>" +
+      "<div style=\"color:#9d9182;font-size:12px\">活跃年份：" + year + "</div>" +
+      (extra ? "<div style=\"margin-top:6px;color:#c9a262;font-size:12px\">" + extra + "</div>" : "");
+    card.style.display = "block";
+    card.style.left = Math.min(window.innerWidth - 330, x + 14) + "px";
+    card.style.top = Math.max(70, y - 20) + "px";
+    card.style.right = "auto";
+  }
+  window.__simShowCard = show;
+  document.addEventListener("click", function (e) {
+    if (card.contains(e.target)) return;
+    if (!e.target.closest("canvas")) card.style.display = "none";
+  });
+})();
+</script>
+<script>
+/* 参数卡：点击地图上的城市，显示该城的记录 */
+(function () {
+  var cv = document.getElementById("cv");
+  if (!cv) return;
+  var nameCache = {};
+  function label(c) {
+    if (nameCache[c.id]) return nameCache[c.id];
+    var n = c.name || c.label || c.id;
+    nameCache[c.id] = n;
+    return n;
+  }
+  cv.style.cursor = "crosshair";
+  cv.addEventListener("click", function (e) {
+    var r = cv.getBoundingClientRect();
+    var x = (e.clientX - r.left) * (cv.width / r.width);
+    var y = (e.clientY - r.top) * (cv.height / r.height);
+    var best = null, bd = 1e9;
+    CITIES.forEach(function (c) {
+      if (c._sx == null) return;
+      var d = (c._sx - x) * (c._sx - x) + (c._sy - y) * (c._sy - y);
+      if (d < bd) { bd = d; best = c; }
+    });
+    if (!best || bd > 60 * 60) return;
+    if (window.__simShowCard) {
+      var first = (best.years && best.years[0]) ? best.years[0] : (best.year || "—");
+      var last = (best.years && best.years.length) ? best.years[best.years.length - 1] : "";
+      window.__simShowCard(e.clientX, e.clientY, label(best), first + (last && last !== first ? "–" + last : ""),
+        best.note || "");
+    }
+  });
+})();
+</script>
+<script src="js/font-theme.js?v=1"></script>
 </body>
 </html>

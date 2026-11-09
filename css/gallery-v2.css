@@ -1,0 +1,304 @@
+/* gallery-v2.css —— 展示层升级：节奏、画框、切换
+   目标：像展厅而不是像长网页。
+   1) 统一的间距与字号阶梯（8px 基准）
+   2) 图像统一画框（比例、去饱和、聚焦复原）
+   3) 章节过渡（淡入 + 轻微上移，纯 CSS）
+   4) 展区进度轨（由 zone-ribbon.js 注入） */
+
+:root{
+  /* 间距阶梯 */
+  --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:72px; --s8:96px;
+  /* 字号阶梯（rem 相对 16px） */
+  --t-kicker:12px; --t-cap:13px; --t-body:19px; --t-lead:22px; --t-h4:22px; --t-h3:28px; --t-h2:clamp(34px,3.8vw,52px);
+  /* 画框 */
+  --frame-bg:#0e0c0a;
+  --frame-line:rgba(232,223,200,.16);
+  --frame-line-hover:rgba(200,155,90,.55);
+  --dim:grayscale(.55) brightness(.82) contrast(1.02);
+  --lit:grayscale(0) brightness(1) contrast(1);
+}
+
+/* ---------- 1. 节奏：让每节像一面展墙 ---------- */
+.section{
+  padding-block:var(--s8) var(--s7);
+}
+.section + .section{ border-top:1px solid var(--line); }
+.chapter-head{ margin-bottom:var(--s6); max-width:min(900px,78ch); }
+.chapter-head .kicker{
+  font-size:var(--t-kicker); letter-spacing:.24em; text-transform:uppercase;
+  display:flex; align-items:center; gap:var(--s2); margin-bottom:var(--s3);
+}
+.chapter-head .kicker::before{ width:28px; height:1px; background:currentColor; opacity:.55; }
+.chapter-head h2{
+  font-size:var(--t-h2); line-height:1.22; margin:0 0 var(--s3);
+  letter-spacing:.01em;
+}
+.chapter-head .lede{
+  font-size:var(--t-lead); line-height:1.85; color:var(--text-secondary);
+  max-width:62ch;
+}
+
+/* ---------- 2. 图像画框 ---------- */
+.frame,
+.press-cover,
+.map-stage,
+.relic-stage,
+.cf-card{
+  position:relative;
+  background:var(--frame-bg);
+  border:1px solid var(--frame-line);
+  overflow:hidden;
+}
+.frame img,
+.gallery img{
+  display:block; width:100%; height:100%; object-fit:cover;
+  filter:var(--dim);
+  transition:filter .55s ease, transform .8s cubic-bezier(.22,.61,.36,1);
+}
+.frame:hover img,
+.gallery figure:hover img,
+figure:hover > img{
+  filter:var(--lit);
+  transform:scale(1.015);
+}
+/* 画框下方的编号与题名 */
+.frame-cap{
+  display:flex; gap:var(--s3); align-items:baseline;
+  padding:var(--s2) 2px 0;
+  font-size:var(--t-cap); letter-spacing:.04em; color:var(--text-muted);
+}
+.frame-cap b{
+  font-family:var(--font-heavy,"PingFang SC",sans-serif);
+  color:var(--text-primary); font-weight:400;
+}
+
+/* ---------- 3. 章节与卡片的进入 ---------- */
+@supports (animation-timeline: view()){
+  .reveal{
+    animation:rise .7s linear both;
+    animation-timeline:view();
+    animation-range:entry 8% cover 26%;
+  }
+}
+@keyframes rise{
+  from{ opacity:0; transform:translateY(14px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* 图片网格统一比高 */
+.gallery{ display:grid; gap:var(--s3); }
+.gallery figure{ margin:0; }
+
+/* ---------- 4. 展示模式：切页更像换幻灯片 ---------- */
+.slide.on{ animation:slide-in .5s cubic-bezier(.22,.61,.36,1) both; }
+@keyframes slide-in{
+  from{ opacity:0; transform:translateY(10px) scale(.996); }
+  to{ opacity:1; transform:none; }
+}
+.slide h1{ letter-spacing:.005em; }
+.slide .k{
+  font-size:var(--t-kicker); letter-spacing:.26em;
+  display:flex; align-items:center; gap:var(--s2);
+}
+.slide .k::after{ content:""; flex:0 0 60px; height:1px; background:currentColor; opacity:.4; }
+.slide .lead{ font-size:var(--t-lead); line-height:1.8; max-width:72ch; }
+.nums{ gap:0; border-top:1px solid var(--line); margin-top:var(--s5); }
+.nums > div{
+  border:0; border-bottom:1px solid var(--line); border-right:1px solid var(--line);
+  padding:var(--s4) var(--s4) var(--s4) 0; border-radius:0; background:none;
+}
+.nums > div:last-child{ border-right:0; }
+.nums b{ font-size:clamp(34px,3.4vw,46px); line-height:1; letter-spacing:-.02em; }
+.nums span{ display:block; margin-top:var(--s2); letter-spacing:.14em; }
+
+/* 页脚进度条更细 */
+.pager-bar, .progress{ height:2px; }
+
+/* ---------- 5. 展区进度轨 ---------- */
+.zone-rail{
+  position:fixed; left:18px; top:50%; transform:translateY(-50%);
+  display:flex; flex-direction:column; gap:10px; z-index:60;
+  padding:12px 7px;
+  background:rgba(12,10,9,.55);
+  border:1px solid rgba(200,155,90,.22);
+  border-radius:999px;
+  backdrop-filter:blur(8px);
+}
+.zone-rail a{
+  position:relative; display:block; width:7px; height:7px; border-radius:50%;
+  border:1px solid rgba(232,223,200,.55); background:transparent;
+  transition:transform .25s, background .25s, border-color .25s;
+}
+.zone-rail a::after{
+  content:attr(data-label);
+  position:absolute; left:18px; top:50%; transform:translateY(-50%) translateX(-6px);
+  font-size:11px; letter-spacing:.12em; white-space:nowrap;
+  color:var(--paper-dim,#e0d6c2); opacity:0; pointer-events:none;
+  transition:opacity .22s, transform .22s;
+  background:rgba(12,10,9,.82); padding:3px 8px; border:1px solid rgba(200,155,90,.35);
+}
+.zone-rail a:hover::after{ opacity:1; transform:translateY(-50%) translateX(0); }
+.zone-rail a.on{
+  background:var(--brass,#c89b5a); border-color:var(--brass,#c89b5a);
+  transform:scale(1.35);
+}
+.zone-rail a.done{ border-color:rgba(200,155,90,.8); }
+@media (max-width:960px){ .zone-rail{ display:none; } }
+
+/* ---------- 6. 移动端收紧节奏 ---------- */
+@media (max-width:760px){
+  .section{ padding-block:var(--s6) var(--s5); }
+  .chapter-head{ margin-bottom:var(--s5); }
+  .chapter-head .lede{ font-size:var(--t-body); }
+}
+
+
+/* ---------- 7. 动效层：让页面“活”起来（全部 CSS，不吃性能） ---------- */
+
+/* 7.1 首屏缓慢推近（Ken Burns），只做 1.00 → 1.06，看不腻也不晕 */
+@keyframes hero-drift{
+  from{ transform:scale(1.00) translate3d(0,0,0); }
+  to{ transform:scale(1.09) translate3d(0,-1.6%,0); }
+}
+.hero-bg, #hero-globe{
+  transform-origin:50% 55%;
+  animation:hero-drift 28s ease-in-out infinite alternate;
+  will-change:transform;
+}
+
+/* 7.2 首屏文字逐行入场（不靠 JS） */
+@keyframes line-in{
+  from{ opacity:0; transform:translateY(18px); }
+  to{ opacity:1; transform:none; }
+}
+.hero-inner > *{
+  animation:line-in .9s cubic-bezier(.22,.61,.36,1) both;
+}
+.hero-inner > *:nth-child(1){ animation-delay:.05s; }
+.hero-inner > *:nth-child(2){ animation-delay:.18s; }
+.hero-inner > *:nth-child(3){ animation-delay:.30s; }
+.hero-inner > *:nth-child(4){ animation-delay:.42s; }
+.hero-inner > *:nth-child(5){ animation-delay:.54s; }
+
+/* 7.3 图片视差：随滚动轻微反向移动，制造纵深 */
+@supports (animation-timeline: view()){
+  .chapter-head + * figure img,
+  .gallery figure img,
+  .press-cover img,
+  .relic-stage img{
+    animation:parallax linear both;
+    animation-timeline:view();
+    animation-range:cover 0% cover 100%;
+  }
+}
+@keyframes parallax{
+  from{ transform:translateY(-2.4%) scale(1.03); }
+  to{ transform:translateY(2.4%) scale(1.03); }
+}
+
+/* 7.4 章节标题的细线延展 */
+@keyframes rule-grow{ from{ transform:scaleX(0); } to{ transform:scaleX(1); } }
+.chapter-head .kicker::before{
+  transform-origin:left center;
+  animation:rule-grow .8s cubic-bezier(.22,.61,.36,1) both;
+  animation-timeline:view();
+  animation-range:entry 10% cover 30%;
+}
+
+/* 7.5 卡片入场错位（同一行依次出现） */
+@supports (animation-timeline: view()){
+  .totem-grid > *, .route-card, .nums > div{
+    animation:rise .6s linear both;
+    animation-timeline:view();
+    animation-range:entry 6% cover 22%;
+  }
+  .totem-grid > *:nth-child(2n){ animation-delay:.06s; }
+  .totem-grid > *:nth-child(3n){ animation-delay:.12s; }
+}
+
+/* 7.6 尊重系统“减少动态效果” */
+@media (prefers-reduced-motion: reduce){
+  .hero-bg, #hero-globe, .hero-inner > *, .reveal,
+  .gallery figure img, .press-cover img, .relic-stage img{
+    animation:none !important;
+    transform:none !important;
+  }
+}
+
+/* 7.7 图像“落帘”入场：从下往上揭开，比淡入更有展厅感 */
+@supports (animation-timeline: view()){
+  .lineart-strip figure, .gallery figure, .press-cover, .frame{
+    animation:curtain .9s cubic-bezier(.22,.61,.36,1) both;
+    animation-timeline:view();
+    animation-range:entry 12% cover 34%;
+    will-change:clip-path;
+  }
+}
+@keyframes curtain{
+  from{ clip-path:inset(0 0 100% 0); }
+  to{ clip-path:inset(0 0 0 0); }
+}
+
+
+/* ---------- 8. 向宣传片看齐：字号、画幅、版式 ---------- */
+
+/* 8.1 正文整体放大一档（原 16.8 → 19） */
+body{ font-size:var(--t-body); }
+.section p, .section li, .lede, .chapter-card p,
+.press-flow, .det-sec p, .route-card p, .colophon li{
+  font-size:var(--t-body);
+  line-height:1.78;
+}
+.section p{ max-width:66ch; }
+.chapter-head .lede{ font-size:var(--t-lead); line-height:1.75; max-width:58ch; }
+.hero .sub{ font-size:var(--t-lead); }
+figure figcaption, .frame-cap{ font-size:var(--t-cap); line-height:1.6; }
+.kicker{ font-size:var(--t-kicker); letter-spacing:.22em; }
+button, .btn{ font-size:14px; }
+
+/* 8.2 单件页：正文与右栏都放大，右栏加宽 */
+.side{ font-size:var(--t-body); }
+.side h1{ font-size:clamp(26px,2.2vw,34px) !important; }
+.side .meta{ font-size:13.5px; }
+.side .det-sec b{ font-size:12.5px; }
+.side .det-sec p{ font-size:14.5px; line-height:1.8; }
+.wrap{ grid-template-columns:minmax(0,1fr) 520px; }
+@media (max-width:1180px){ .wrap{ grid-template-columns:1fr; } }
+
+/* 8.3 史料墙：更少列、更大图、更大字 */
+.grid, .group .grid{ columns:4 !important; column-gap:16px !important; }
+@media (max-width:1280px){ .grid, .group .grid{ columns:3 !important; } }
+@media (max-width:900px){ .grid, .group .grid{ columns:2 !important; } }
+figure figcaption{ font-size:13.5px; line-height:1.6; padding:10px 12px; }
+figure figcaption b{ font-size:13.5px; }
+.group h2{ font-size:14px; }
+.tools button, .era-bar button{ font-size:13px; padding:7px 14px; }
+
+/* 8.4 章节里的图做成“大画幅” */
+.section figure, .lineart-strip figure{ margin-block:var(--s4); }
+.section figure img{ width:100%; }
+.lineart-strip img{ height:clamp(320px, 44vh, 520px); }
+
+/* 8.5 展示模式：字更大、留白更狠，像分镜 */
+.slide{ padding:64px 72px 96px; }
+.slide .lead{ font-size:20px; line-height:1.75; max-width:64ch; }
+.slide .k{ font-size:12px; letter-spacing:.28em; }
+.nums span{ font-size:12.5px; letter-spacing:.16em; }
+.nums b{ font-size:clamp(46px,4.4vw,64px); }
+.slide h2{ font-size:clamp(30px,2.8vw,42px); }
+
+/* 8.6 展柜模式：卡片更大 */
+.cf-stage{ height:80vh; }
+
+/* 8.7 地图章节卡：正文放大 */
+.chapter-card, .map-copy{ font-size:17.5px; line-height:1.75; }
+
+/* 8.8 标题不要被窄容器挤断（中文按字换行会把词切断） */
+.chapter-head{ max-width:min(1040px, 92vw); }
+.chapter-head h2{
+  max-width:none;
+  width:auto;
+  font-size:clamp(32px, 3.4vw, 46px);
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}

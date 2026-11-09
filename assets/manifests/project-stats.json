@@ -1,0 +1,146 @@
+{
+ "images_total": 202,
+ "images_by_group": {
+  "形象与雕像": 16,
+  "文献与版本": 47,
+  "场景绘画": 8,
+  "场地与旧址": 8,
+  "工厂与罢工": 14,
+  "革命与组织": 14,
+  "馆藏艺术品": 9,
+  "三维模型": 48,
+  "开放模型": 38
+ },
+ "images_by_era": {
+  "时期未标注": 44,
+  "1818—1883": 34,
+  "1848": 32,
+  "1871": 17,
+  "1867": 17,
+  "19 世纪工业": 16,
+  "19 世纪出版": 9,
+  "1917": 9,
+  "19 世纪工人运动": 5,
+  "1838—1848": 4,
+  "1904": 3,
+  "1903": 2,
+  "1850": 1,
+  "1864": 1,
+  "1882": 1,
+  "19 世纪": 1,
+  "1890": 1,
+  "1888": 1,
+  "1915": 1,
+  "1796": 1,
+  "1909": 1,
+  "1889": 1
+ },
+ "images_by_place": {
+  "Sketchfab 开放库": 38,
+  "Internet Archive": 37,
+  "依据照片复原": 34,
+  "特里尔": 12,
+  "来源未标注": 11,
+  "巴黎": 9,
+  "克利夫兰": 8,
+  "伦敦": 7,
+  "工业区": 7,
+  "欧洲出版": 5
+ },
+ "images_license": {
+  "Public domain": 36,
+  "CC Attribution": 33,
+  "Public Domain（公版扫描）": 31,
+  "依据史料复原（E4）／原图 Public d": 23,
+  "依据史料复原（E4）／原图 CC BY-SA": 17,
+  "CC0": 13,
+  "CC BY-SA 3.0": 10,
+  "CC BY-SA 4.0": 9
+ },
+ "images_with_page": 202,
+ "images_with_author": 202,
+ "images_min_side": 600,
+ "images_ratio_portrait": 73,
+ "docs_total": 9,
+ "docs_pages": 27,
+ "models_total": 63,
+ "models_quality": {
+  "ok": 48,
+  "fail": 8,
+  "flat": 7
+ },
+ "beehive_issues": 65,
+ "beehive_articles": 4780,
+ "beehive_labour": 117,
+ "beehive_top_words": [
+  [
+   "london",
+   3595
+  ],
+  [
+   "meeting",
+   3509
+  ],
+  [
+   "great",
+   2743
+  ],
+  [
+   "street",
+   2671
+  ],
+  [
+   "working",
+   2591
+  ],
+  [
+   "society",
+   2361
+  ],
+  [
+   "present",
+   2303
+  ],
+  [
+   "hours",
+   2203
+  ],
+  [
+   "last",
+   2190
+  ],
+  [
+   "week",
+   2172
+  ],
+  [
+   "every",
+   2126
+  ],
+  [
+   "committee",
+   2102
+  ]
+ ],
+ "beehive_years": {
+  "1862": 1306,
+  "1872": 3474
+ },
+ "chapters": 12,
+ "hard_items": 41,
+ "hard_sources": 13,
+ "press_papers": 7,
+ "press_issues": 6,
+ "press_notes": 29,
+ "press_notes_kind": {
+  "线索": 11,
+  "对照": 9,
+  "存疑": 9
+ },
+ "notices": 7,
+ "lineart": 3,
+ "callout_images": 3,
+ "pages": 25,
+ "js_files": 59,
+ "js_lines": 7391
+}

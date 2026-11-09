@@ -1,0 +1,68 @@
+/* unify.css —— 全站单一字体：思源宋体
+   标题用同族 700 加粗放大，正文用同族 400，数字同族等宽对齐。
+   不再混书法体与厚体数字。原字体文件保留，但界面不再引用。 */
+
+:root{
+  --font-all:"XH Serif","Source Han Serif SC","Noto Serif SC","Songti SC",STSong,serif;
+}
+
+/* 覆盖之前的模式变量 */
+html,
+html[data-type],
+html[data-type="sans"],
+html[data-type="serif"],
+html[data-type="kai"]{
+  --font-body:var(--font-all);
+  --font-brush:var(--font-all);
+  --font-heavy:var(--font-all);
+  --font-body-sans:var(--font-all);
+  --font-body-serif:var(--font-all);
+  --font-body-kai:var(--font-all);
+}
+
+body,
+.section p, .section li, .lede, .chapter-card p,
+.press-flow, .det-sec p, .route-card p, .colophon li,
+figure figcaption, .frame-cap, .meta, .press-notes,
+.slide .lead, .side .det-sec p,
+button, .btn, .tools button, .era-bar button,
+input, textarea, select{
+  font-family:var(--font-all);
+}
+
+/* 标题：同族 700，靠字重与字号分层，不靠换字体 */
+.hero h1,
+.chapter-head h2,
+.section h2,
+.slide h1, .slide h2,
+.side h1,
+body > header h1{
+  font-family:var(--font-all) !important;
+  font-weight:700 !important;
+  letter-spacing:.005em;
+}
+
+.hero h1{ line-height:1.2; }
+.chapter-head h2{ line-height:1.3; }
+
+/* 数字：同族等宽，避免跳动 */
+#nums b, .stat b, .stats b, .kpi b,
+.count b, #n, #total,
+.hero-stats b, .meter b,
+.chapter-no, .sec-no, .toc-num, .totem-grid b,
+.dossier-date, .bh-year, .bh-num{
+  font-family:var(--font-all) !important;
+  font-weight:700 !important;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:0;
+}
+
+/* 小标签保持同族的常规字重，靠字距区分层级 */
+.kicker, .eyebrow, .slide .k{
+  font-family:var(--font-all) !important;
+  font-weight:400;
+  letter-spacing:.2em;
+}
+
+/* 切换按钮隐藏（已不需要） */
+.type-toggle{ display:none !important; }

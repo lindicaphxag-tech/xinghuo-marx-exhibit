@@ -552,6 +552,14 @@
 
   window.HS.registerScene("mapstory", {
     start: start, pause: pause, resume: resume,
+    /* 录制用：按章节序号直接切换（不滚动、不打断镜头） */
+    showChapter: function (i) {
+      if (!D.storyChapters || !D.storyChapters.length) return -1;
+      var idx = Math.max(0, Math.min(D.storyChapters.length - 1, i | 0));
+      setActive(idx);
+      return idx;
+    },
+    chapterCount: function () { return (D.storyChapters || []).length; },
     focusCity: function (cityId) {
       var i = D.storyChapters.findIndex(function (chapter) { return chapter.city === cityId || (chapter.multi || []).indexOf(cityId) >= 0; });
       if (i < 0) return;

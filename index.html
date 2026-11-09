@@ -39,6 +39,11 @@
   .entry-grid em{font-style:normal;font-size:11px;color:#8d8175}
   @media(max-width:620px){.entry-grid{grid-template-columns:1fr}.entry-panel{right:12px}}
 </style>
+<link rel="stylesheet" href="css/calligraphy.css?v=2">
+<link rel="stylesheet" href="css/gallery-v2.css?v=1">
+<script src="js/norm-img.js?v=1"></script>
+<link rel="stylesheet" href="css/font-theme.css?v=1">
+<link rel="stylesheet" href="css/unify.css?v=1">
 </head>
 <body>
 
@@ -89,7 +94,7 @@
     <div class="hero-actions">
       <button class="btn primary" data-tour-start>开始四层自动导览 · 约 3 分钟</button>
       <button class="btn" data-goto="mapstory">自由进入叙事</button>
-      <a class="btn ghost" href="video-tour.html">观看完整讲解视频</a>
+      <a class="btn ghost" href="video-tour.html">观看完整讲解视频</a><a class="btn ghost" href="video/film_v13_720p.mp4" target="_blank" rel="noopener">全馆讲解片 · 7 分 54 秒</a>
     </div>
     <p class="hero-tour-note">自动推进 · 生产条件 → 理论自觉 → 组织实践 → 认识方法</p>
   </div>
@@ -264,7 +269,29 @@
     <h2>三维报刊档案馆</h2>
     <p class="lede">左侧选择报刊；《新青年》可沿真实卷期与原刊扫描胶卷拖动探索。居中的封面表示当前期号，点击后阅读原刊、查看目录与主题文章。封面聚焦只用于标明阅读位置，不替代史料信息；未找到扫描的期号会明确标注缺期，不以示意图替代。</p>
   </div>
-  <div class="reveal">
+  <div class="press-flow" id="pressFlow">
+      <p class="pf-kicker">HOW A PAPER REACHED ITS READERS · 一份报纸要经过几道手</p>
+      <ol class="pf-track">
+        <li><b>写作</b><span>作者/通讯员</span></li>
+        <li><b>编辑</b><span>审稿与删改</span></li>
+        <li><b>排字</b><span>手工铅字排版</span></li>
+        <li><b>印刷</b><span>蒸汽机驱动印刷机</span></li>
+        <li><b>发行</b><span>书店、报摊、邮寄</span></li>
+        <li><b>读者</b><span>工人俱乐部、夜校、朗读</span></li>
+      </ol>
+      <style>
+        .press-flow{margin:24px 0 8px;padding:16px 18px;border:1px solid rgba(120,85,47,.2);background:rgba(255,255,255,.4)}
+        .pf-kicker{margin:0 0 12px;font-size:10.5px;letter-spacing:.18em;color:#8a5f0e}
+        .pf-track{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+        .pf-track li{flex:1;position:relative;padding:10px 8px 10px 14px;border-left:2px solid rgba(120,85,47,.16);
+          opacity:.34;transition:opacity .45s,border-color .45s,background .45s}
+        .pf-track li.on{opacity:1;border-left-color:#a8332c;background:rgba(168,51,44,.05)}
+        .pf-track li b{display:block;font-size:13.5px;color:#241f1a}
+        .pf-track li span{display:block;margin-top:3px;font-size:11px;color:#6d6357;line-height:1.5}
+        @media(max-width:820px){.pf-track{flex-direction:column}}
+      </style>
+    </div>
+<div class="reveal">
     <div class="press-layout">
       <div class="press-index-column">
         <div class="press-index-note">报刊目录 · 7 种 <span>选择刊物后查看扫描期号或本地全文数据</span></div>
@@ -333,8 +360,8 @@
 <section class="section" id="commune">
   <div class="chapter-head reveal">
     <div class="kicker">VOL.06 · PARIS COMMUNE 1871</div>
-    <h2>巴黎公社时序数字剧场</h2>
-    <p class="lede">从 3 月 18 日到 5 月 28 日，七十二天被整理为七个有记载的时间片。手动选日或启动播放后，地点、法令和事件说明同步更新；切片切换时扩散的红圈标出新激活地点，红点代表该片段有记载的行动地点，不表示战斗强度。每片附有开放问题，引导比较公社的制度实践与战争压力。</p>
+    <h2>七十二天 · 档案册</h2>
+    <p class="lede">七十二天被拆成七个有记载的日期。每一天配一件真实材料——选举公告、街垒版画、社员墙照片——并注明它能证明什么、不能证明什么。版画与纪念设施不是现场记录，卡片里已经写清楚。</p>
   </div>
   <div class="commune-stage reveal">
     <canvas id="commune-canvas"></canvas>
@@ -413,8 +440,8 @@
   <div class="inner">
     <div class="chapter-head reveal">
       <div class="kicker">VOL.09 · MOVEMENT EVENT MAP</div>
-      <h2>工人运动年代事件地图</h2>
-      <p class="lede">选择年代，观察工人行动、组织和革命事件如何分布在不同城市。光晕用于引导视线，数字等级是本展的策展标记，不是统一口径的罢工次数、参与人数或跨国统计指数。</p>
+      <h2>《蜂房报》里的劳资冲突</h2>
+      <p class="lede">英国图书馆以 CC0 释出的《蜂房报》1862、1872 年选集，共 4,780 篇 OCR 文本。按标题关键词筛出 117 条劳资冲突条目，1862 年 9 条、1872 年 108 条。下面的表可以直接读到原始标题，统计口径写在旁边。</p>
     </div>
     <div class="heat-stage reveal">
       <canvas id="heat-canvas"></canvas>
@@ -432,6 +459,26 @@
 </section>
 
 <!-- ===== 卷十：文物与历史空间三维厅 ===== -->
+<section class="section" id="lineart">
+  <div class="chapter-head reveal">
+    <div class="kicker">LINE DRAWING · 线稿对照</div>
+    <h2>先看轮廓，再看照片</h2>
+    <p class="lede">线稿由档案照片提取边缘生成，不是原始图纸。它的用处是把形体与比例单独拎出来：衣褶走向、基座层数、人体与台阶的尺度关系，在线稿里比在彩照里更容易比较。</p>
+  </div>
+  <div class="lineart-strip reveal">
+    <figure><img src="assets/lineart/trier_statue_line.png" alt="特里尔铜像线稿" loading="lazy"><figcaption>正面全身 · 由原照提取边缘</figcaption></figure>
+    <figure><img src="assets/lineart/trier_wolf_line.png" alt="铜像侧后方线稿" loading="lazy"><figcaption>侧后方 · 衣褶与基座</figcaption></figure>
+    <figure><img src="assets/lineart/trier_cloak_line.png" alt="衣褶细节线稿" loading="lazy"><figcaption>衣褶细节 · 铸缝与块面</figcaption></figure>
+  </div>
+  <style>
+    .lineart-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+    .lineart-strip figure{margin:0;border:1px solid rgba(120,85,47,.2);background:#f7f3ea;overflow:hidden}
+    .lineart-strip img{display:block;width:100%;height:340px;object-fit:contain;background:#f7f3ea}
+    .lineart-strip figcaption{padding:7px 10px;font-size:11.5px;color:#5d5348;border-top:1px solid rgba(120,85,47,.14)}
+    @media(max-width:820px){.lineart-strip{grid-template-columns:1fr}}
+  </style>
+</section>
+
 <section class="section alt" id="artifacts">
   <div class="inner">
     <div class="chapter-head reveal">
@@ -484,7 +531,7 @@
       <h2>历史不是封存的答案，而是仍在延伸的关系</h2>
       <p>城市、组织、文本与行动在这里交织成开放的历史关系。它不替历史盖棺定论，而是把问题留给新的实践：哪些关系延续了，哪些条件改变了，新的联合又如何形成？</p>
       <p class="finale-quote" style="border-left:3px solid #b3202a;padding:8px 14px;margin:14px 0;color:#e8d0a8;font-style:italic">「无产阶级在这个革命中失去的只是锁链。他们获得的将是整个世界。」<cite style="display:block;margin-top:6px;font-size:12px;color:#a89070;font-style:normal">——《共产党宣言》，1848</cite></p>
-      <div class="finale-actions"><button type="button" data-tour-start>重新播放四层自动导览</button><a href="assets.html">从档案与展品继续探索</a><a href="scenes.html">进入历史空间</a><a href="video-tour.html">观看完整讲解视频</a></div>
+      <div class="finale-actions"><button type="button" data-tour-start>重新播放四层自动导览</button><a href="assets.html">从档案与展品继续探索</a><a href="scenes.html">进入历史空间</a><a href="video-tour.html">观看完整讲解视频</a><a href="video/film_v13_720p.mp4" target="_blank" rel="noopener">全馆讲解片</a></div>
     </div>
   </div>
 </section>
@@ -519,6 +566,7 @@
           <li>Three.js r147 用于序章地球与终章开放光丝粒子。</li>
           <li>Canvas 2D 承担地图、网络、词云、河流与热力视图。</li>
           <li>环境音由 Web Audio API 实时合成；朗诵调用浏览器语音。</li>
+          <li>标题字体为 Aa润行体（9123，非商业使用），已按站点用字子集化后内嵌。</li>
         </ul>
       </div>
     </div>
@@ -626,5 +674,26 @@
 </script>
 
 <script src="js/ui-chrome.js?v=2"></script>
+<script>
+/* pressFlowInit：流程节点依次点亮，每 900ms 推进一格，循环 */
+(function () {
+  var box = document.getElementById("pressFlow");
+  if (!box) return;
+  var nodes = box.querySelectorAll(".pf-track li");
+  if (!nodes.length) return;
+  var k = 0;
+  function tick() {
+    Array.prototype.forEach.call(nodes, function (n, i) {
+      n.classList.toggle("on", i === k);
+    });
+    k = (k + 1) % (nodes.length + 2);   /* 末尾留两拍空场 */
+  }
+  tick();
+  setInterval(tick, 900);
+})();
+</script>
+<script src="js/zone-ribbon.js?v=1"></script>
+<script src="js/archival-replace.js?v=1"></script>
+<script src="js/font-theme.js?v=1"></script>
 </body>
 </html>

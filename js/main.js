@@ -15,7 +15,69 @@
 
   /* ---------- 章节注册表：各场景脚本在加载后登记 ---------- */
   var registry = {};
-  window.HS.registerScene = function (id, api) { registry[id] = api; window.HS.scenes[id] = api; };
+  window.HS.registerScene = function (id, api) {
+    registry[id] = api;
+    window.HS.scenes[id] = api;
+    /* 注册即接入观察：避免脚本晚于 observeScenes() 加载而永远不被启动 */
+    attachScene(id, api);
+  };
+
+  function startScene(id, api) {
+    if (!api || api._started) return;
+    api._started = true;
+    try {
+      if (typeof api.start === "function") api.start();
+    } catch (e) {
+      if (window.console) console.warn("scene start failed:", id, e && e.message);
+    }
+    /* 有些场景在 resize 里才设置画布尺寸，补一次 */
+    try { window.dispatchEvent(new Event("resize")); } catch (e) {}
+  }
+
+  function attachScene(id, api) {
+    if (!api || api._io) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+
+    if (typeof IntersectionObserver !== "undefined") {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            if (!api._started) startScene(id, api);
+            else if (typeof api.resume === "function") api.resume();
+          } else if (typeof api.pause === "function") {
+            api.pause();
+          }
+        });
+      }, { threshold: 0.08 });
+      io.observe(el);
+      api._io = io;
+    }
+
+    /* 兜底：滚动时用位置判断，防止观察器在某些布局下不触发 */
+    sceneList.push({ id: id, api: api, el: el });
+    if (!sceneWatchBound) {
+      sceneWatchBound = true;
+      var tick = false;
+      window.addEventListener("scroll", function () {
+        if (tick) return;
+        tick = true;
+        requestAnimationFrame(function () { tick = false; checkScenes(); });
+      }, { passive: true });
+      checkScenes();
+    }
+  }
+
+  var sceneList = [], sceneWatchBound = false;
+
+  function checkScenes() {
+    var vh = window.innerHeight || 800;
+    sceneList.forEach(function (s) {
+      if (s.api._started) return;
+      var r = s.el.getBoundingClientRect();
+      if (r.top < vh * 1.2 && r.bottom > -vh * 0.2) startScene(s.id, s.api);
+    });
+  }
 
   /* ---------- 极简事件总线：模块之间不直接互相引用 ---------- */
   var listeners = {};
@@ -224,6 +286,7 @@
       });
     }, { threshold: 0.08 });
     Object.keys(registry).forEach(function (id) {
+      if (registry[id] && registry[id]._io) return;   /* 已由 attachScene 接管 */
       var el = document.getElementById(id);
       if (el) io.observe(el);
     });

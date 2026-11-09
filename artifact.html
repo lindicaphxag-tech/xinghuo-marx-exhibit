@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>单件页 · 星火与道路</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/ui-v3.css?v=2">
+<script src="js/image-detail.js?v=1"></script>
+<script src="js/callouts.js?v=1"></script>
+<style>
+  :root{--bg:#0c0a09;--ink:#f2e9d8;--dim:#8d8175;--gold:#c9a262;--red:#a8332c;--line:rgba(201,162,98,.16)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 "Noto Sans SC","Microsoft YaHei",system-ui,sans-serif}
+  a{color:var(--gold);text-decoration:none}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:0;height:calc(100vh - 50px);margin-top:50px}
+  @media(max-width:1080px){.wrap{grid-template-columns:1fr;height:auto}}
+
+  .stage{position:relative;background:#080706;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .stage img{max-width:100%;max-height:100%;transition:transform .25s ease;cursor:zoom-in}
+  .stage.zoom img{cursor:zoom-out}
+  .stage-tools{position:absolute;left:18px;bottom:18px;display:flex;gap:8px;z-index:5}
+  .stage-tools button{font:inherit;font-size:12px;padding:7px 13px;border-radius:999px;cursor:pointer;
+    border:1px solid rgba(201,162,98,.3);background:rgba(12,10,9,.8);color:#e8dcc6}
+  .stage-tools button:hover{border-color:var(--gold);color:#fff}
+  .arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:64px;z-index:5;
+    border:1px solid rgba(201,162,98,.28);background:rgba(12,10,9,.7);color:#e8dcc6;font-size:24px;cursor:pointer}
+  .arrow:hover{color:#fff;border-color:var(--gold)}
+  .arrow.prev{left:14px}.arrow.next{right:14px}
+
+  .side{border-left:1px solid var(--line);padding:24px 22px 40px;overflow:auto}
+  .side .kicker{margin:0 0 6px;font-size:10.5px;letter-spacing:.2em;color:var(--gold)}
+  .side h1{margin:0 0 8px;font-size:22px;line-height:1.35}
+  .side .meta{font-size:12px;color:var(--dim);margin-bottom:16px}
+  .side .det-sec{margin:0 0 12px}
+  .side .det-sec b{display:block;font-size:11px;letter-spacing:.14em;color:#8a5f0e;margin-bottom:4px}
+  .side .det-sec p{margin:0;font-size:12.5px;line-height:1.8;color:#b8ac99}
+  .rel{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:14px 0}
+  .rel button{padding:0;border:1px solid rgba(201,162,98,.24);background:none;cursor:pointer;border-radius:3px;overflow:hidden}
+  .rel button:hover{border-color:var(--gold)}
+  .rel img{display:block;width:100%;height:58px;object-fit:cover}
+  .src{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:#6f6558;display:grid;gap:5px}
+  .navline{display:flex;gap:8px;margin-top:16px}
+  .navline button{flex:1;font:inherit;font-size:12px;padding:9px;border-radius:4px;cursor:pointer;
+    border:1px solid rgba(201,162,98,.3);background:transparent;color:#e8dcc6}
+  .navline button:hover{border-color:var(--gold);color:#fff;background:rgba(201,162,98,.1)}
+
+  /* 同类对照缩略图（与史料墙一致） */
+  .det-rel{margin:16px 0 6px}
+  .det-rel b{display:block;font-size:11px;letter-spacing:.14em;color:#8a5f0e;margin-bottom:7px;font-weight:500}
+  .det-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .det-thumbs button{padding:0;border:1px solid rgba(201,162,98,.24);background:none;cursor:pointer;border-radius:3px;overflow:hidden}
+  .det-thumbs button:hover{border-color:var(--gold)}
+  .det-thumbs img{display:block;width:100%;height:56px;object-fit:cover}
+  .det-thumbs span{display:block;font-size:9.5px;color:#8d8175;padding:3px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+</style>
+<link rel="stylesheet" href="css/calligraphy.css?v=2">
+<link rel="stylesheet" href="css/gallery-v2.css?v=1">
+<link rel="stylesheet" href="css/font-theme.css?v=1">
+<link rel="stylesheet" href="css/unify.css?v=1">
+</head>
+<body>
+<div class="wrap">
+  <section class="stage" id="stage">
+    <button class="arrow prev" id="prev" aria-label="上一件">‹</button>
+    <img id="img" alt="">
+    <button class="arrow next" id="next" aria-label="下一件">›</button>
+    <div class="stage-tools">
+      <button id="zoomBtn">放大 2×</button>
+      <button id="wallBtn">回到史料墙</button>
+    </div>
+  </section>
+  <aside class="side" id="side"></aside>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var items = [], idx = 0, zoomed = false;
+
+  function q(k) { return new URLSearchParams(location.search).get(k); }
+
+  function render() {
+    var it = items[idx];
+    if (!it) return;
+    var img = document.getElementById("img");
+    img.src = it.src;
+    img.alt = it.title || "";
+    zoomed = false;
+    document.getElementById("stage").classList.remove("zoom");
+    img.style.transform = "none";
+
+    var d = window.HSImageDetail ? window.HSImageDetail.build(it, items) : null;
+    var side = document.getElementById("side");
+    side.innerHTML =
+      '<p class="kicker">SINGLE OBJECT · 单件页</p>' +
+      "<h1>" + (it.title || "") + "</h1>" +
+      '<p class="meta">' + [it.place, it.era, it.author, it.license].filter(Boolean).join(" · ") + "</p>" +
+      (d ? d.html.replace(/<h3>.*?<\/h3>/, "").replace(/<div class="det-head">.*?<\/div>/, "")
+             .replace(/<div class="det-src">.*?<\/div>/, "") : "") +
+      '<div class="navline"><button id="p2">‹ 上一件</button><button id="n2">下一件 ›</button></div>';
+
+    // 引线标注（只对已标注过的图生效）
+    var stage = document.getElementById("stage");
+    var old = stage.querySelector(".co-layer");
+    if (old) old.remove();
+    if (window.HSCallouts) {
+      var box = document.createElement("div");
+      box.style.cssText = "position:absolute;inset:0;display:flex;align-items:center;justify-content:center";
+      // 直接把标注层挂在 stage 上，按图片实际显示区域近似
+      window.HSCallouts.attach(stage, it);
+    }
+
+    document.getElementById("p2").onclick = document.getElementById("prev").onclick = function () { go(idx - 1); };
+    document.getElementById("n2").onclick = document.getElementById("next").onclick = function () { go(idx + 1); };
+    document.querySelectorAll("#side [data-rel]").forEach(function (b, k) {
+      b.onclick = function () {
+        var target = d.related[k];
+        var ni = items.indexOf(target);
+        if (ni >= 0) go(ni);
+      };
+    });
+  }
+
+  function go(i) {
+    idx = (i + items.length) % items.length;
+    history.replaceState(null, "", "?id=" + idx);
+    render();
+  }
+
+  document.getElementById("zoomBtn").onclick = function () {
+    zoomed = !zoomed;
+    var img = document.getElementById("img");
+    img.style.transform = zoomed ? "scale(2.2)" : "none";
+    document.getElementById("stage").classList.toggle("zoom", zoomed);
+    this.textContent = zoomed ? "还原" : "放大 2×";
+  };
+  document.getElementById("wallBtn").onclick = function () { location.href = "wall.html"; };
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") go(idx + 1);
+    if (e.key === "ArrowLeft") go(idx - 1);
+    if (e.key === "Escape") location.href = "wall.html";
+  });
+
+  fetch("assets/manifests/images.json?v=e3").then(function (r) { return r.json(); }).then(function (d) {
+    items = d.items || [];
+    var start = Number(q("id") || 0);
+    idx = isNaN(start) ? 0 : Math.max(0, Math.min(items.length - 1, start));
+    render();
+  });
+})();
+</script>
+<script src="js/ui-chrome.js?v=2"></script>
+<script src="js/back.js?v=1"></script>
+<script src="js/font-theme.js?v=1"></script>
+</body>
+</html>

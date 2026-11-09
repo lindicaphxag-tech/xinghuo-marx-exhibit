@@ -41,6 +41,7 @@
     ["wall.html", "史料墙 · 202 张"],
     ["kinetic.html", "星火长廊 · 环廊"],
     ["notices.html", "报纸的另一面 · 7 条"],
+    ["artifact.html", "单件页 · 逐张精读"],
     ["clips.html", "影像与声音 · 9 段"],
     ["reader.html", "文献阅读室 · 9 册"],
     ["assets.html", "档案目录 · 272 条"],

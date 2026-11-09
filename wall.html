@@ -31,8 +31,8 @@
   .grid{columns:5 190px;column-gap:10px;padding:14px 20px 60px}
   @media(max-width:900px){.grid{columns:3 140px}}
   figure{margin:0 0 10px;break-inside:avoid;position:relative;background:#151210;overflow:hidden}
-  figure img{width:100%;display:block;filter:grayscale(.28) brightness(.86);transition:filter .3s,transform .5s}
-  figure:hover img{filter:none;transform:scale(1.04)}
+  figure img{width:100%;display:block;filter:grayscale(.35) brightness(.8) contrast(1.02);transition:filter .5s ease,transform .7s cubic-bezier(.22,.61,.36,1)}
+  figure:hover img{filter:grayscale(0) brightness(1);transform:scale(1.02)}
   figure figcaption{position:absolute;inset:auto 0 0 0;padding:8px 10px;font-size:11px;line-height:1.5;
     color:#e6dccb;background:linear-gradient(0deg,rgba(8,7,6,.94),rgba(8,7,6,0));opacity:0;transition:.25s}
   figure:hover figcaption{opacity:1}
@@ -80,6 +80,10 @@
   .det-src{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;padding-top:10px;
     border-top:1px solid rgba(201,162,98,.16);font-size:11px;color:#6f6558}
   .det-src a{color:#c9a262}
+
+  .cf-btn{font:inherit;font-size:12px;padding:6px 13px;border-radius:999px;cursor:pointer;margin-left:8px;
+    border:1px solid rgba(201,162,98,.34);background:transparent;color:#e8dcc6;letter-spacing:.04em}
+  .cf-btn:hover{border-color:#c9a262;color:#fff;background:rgba(201,162,98,.12)}
 </style>
 <link rel="stylesheet" href="css/ui-v3.css?v=2">
 
@@ -96,11 +100,19 @@
       padding:7px 14px;border-radius:999px;font-size:12px}
   </style>
 <script src="js/image-detail.js?v=1"></script>
+<script src="js/coverflow.js?v=1"></script>
+<script src="js/callouts.js?v=1"></script>
+<link rel="stylesheet" href="css/calligraphy.css?v=2">
+<link rel="stylesheet" href="css/gallery-v2.css?v=1">
+<script src="js/norm-img.js?v=1"></script>
+<link rel="stylesheet" href="css/font-theme.css?v=1">
+<link rel="stylesheet" href="css/unify.css?v=1">
 </head>
 <body>
 <header>
   <h1><small>ARCHIVE WALL · 真实档案图像</small>史料墙 <span class="count">· 当前 <b id="n">0</b> / <b id="total">0</b> 张</span></h1>
   <div class="tools" id="filters"></div>
+  <button class="cf-btn" id="cfBtn" type="button">展柜模式 ▸</button>
 </header>
 <div class="era-bar" id="erabar"></div>
 <div id="grid"></div>
@@ -108,6 +120,7 @@
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="查看原图">
   <button class="close" id="lbClose" aria-label="关闭">×</button>
+  <a class="close" id="lbSingle" href="artifact.html" style="right:74px;font-size:13px;padding:8px 12px;border:1px solid rgba(201,162,98,.35);border-radius:999px;color:#cbbfae">单件页 ↗</a>
   <div class="lb-grid">
     <div id="lbStage"><img id="lbImg" alt=""></div>
     <div class="meta det" id="lbMeta"></div>
@@ -228,6 +241,15 @@
       }
     })();
 
+    if (window.HSCallouts) {
+      var stageEl = document.getElementById("lbStage");
+      if (stageEl) {
+        stageEl.style.position = "relative";
+        window.HSCallouts.attach(stageEl, it);
+      }
+    }
+    var goBtn = document.getElementById("lbSingle");
+    if (goBtn) goBtn.onclick = function(){ location.href = "artifact.html?id=" + items.indexOf(it); };
     lb.classList.add("on");
   });
   document.getElementById("lbClose").onclick = function () { lb.classList.remove("on"); };
@@ -242,6 +264,22 @@
   }).catch(function (e) {
     grid.innerHTML = '<p style="color:#a8332c">清单加载失败：' + e.message + "</p>";
   });
+
+  /* 展柜模式：把当前筛选结果交给封面流（借鉴博物馆网站在线展厅的封面流） */
+  function openCoverflow(startIdx) {
+    if (!window.HSCoverflow) return;
+    var tt = TOPICS.filter(function (x) { return x.id === current; })[0] || TOPICS[0];
+    var list = items.filter(function (it) {
+      if (!tt.test(it.folder || "")) return false;
+      if (currentEra !== "all" && (it.era || "") !== currentEra) return false;
+      return true;
+    });
+    if (!list.length) return;
+    window.__cf = window.HSCoverflow.build(list, startIdx || 0, {});
+  }
+  window.__openCoverflow = openCoverflow;
+  var cfBtnEl = document.getElementById("cfBtn");
+  if (cfBtnEl) cfBtnEl.addEventListener("click", function () { openCoverflow(0); });
 })();
 </script>
 <script src="js/ui-chrome.js?v=2"></script>
@@ -352,5 +390,6 @@
 })();
 </script>
 
+<script src="js/font-theme.js?v=1"></script>
 </body>
 </html>

@@ -1,0 +1,85 @@
+/* 思源黑体 / 宋体（站点子集，非商业使用 OK：SIL Open Font License） */
+@font-face{
+  font-family:"XH Sans";
+  src:url("../assets/fonts/noto-sans-400.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"XH Kai";
+  src:url("../assets/fonts/lxgw-kai-400.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"XH Serif";
+  src:url("../assets/fonts/noto-serif-400.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"XH Serif";
+  src:url("../assets/fonts/noto-serif-700.ttf") format("truetype");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+
+/* font-theme.css —— 正文字体双主题（黑 / 宋），标题始终用书法体
+   默认：黑体正文（更接近宣传片字幕的观感）
+   切换：右上角「字体」按钮，localStorage 记住选择 */
+
+:root{
+  --font-body-sans:"XH Sans","Source Han Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --font-body-serif:"XH Serif","Source Han Serif SC","Songti SC","STSong",serif;
+  --font-body-kai:"XH Kai","LXGW WenKai","Kaiti SC","STKaiti","KaiTi",serif;
+  --font-body:var(--font-body-sans);
+}
+
+html[data-type="sans"]{ --font-body:var(--font-body-sans); }
+html[data-type="serif"]{ --font-body:var(--font-body-serif); }
+html[data-type="kai"]{ --font-body:var(--font-body-kai); }
+
+/* 正文统一走变量，不动标题（标题在 calligraphy.css 里指定） */
+body,
+.section p, .section li, .lede, .chapter-card p,
+.press-flow, .det-sec p, .route-card p, .colophon li,
+figure figcaption, .frame-cap, .meta, .press-notes,
+.slide .lead, .side .det-sec p{
+  font-family:var(--font-body);
+}
+
+/* 黑体正文时，行距略收、字距略开，读起来更“屏幕” */
+html[data-type="sans"] body{
+  letter-spacing:.005em;
+}
+html[data-type="sans"] .section p,
+html[data-type="sans"] .chapter-head .lede{
+  line-height:1.72;
+  letter-spacing:.012em;
+}
+
+/* 宋体正文时，字号可以略小一点，行距略大 */
+html[data-type="serif"] .section p,
+html[data-type="kai"] .section p,
+html[data-type="kai"] .section p,
+html[data-type="kai"] .chapter-head .lede{
+  line-height:1.85;
+}
+html[data-type="serif"] .chapter-head .lede{
+  line-height:1.82;
+}
+
+/* 按钮文字始终黑体，避免宋体发虚 */
+button, .btn, .tools button, .era-bar button, .zone-rail a::after{
+  font-family:var(--font-body-sans);
+}
+
+/* ---------- 切换按钮 ---------- */
+.type-toggle{
+  display:inline-flex; align-items:center; gap:6px;
+  height:26px; padding:0 11px; margin-right:8px;
+  border:1px solid rgba(232,223,200,.28); border-radius:999px;
+  background:transparent; color:#e0d6c2; font-size:12px; letter-spacing:.06em;
+  cursor:pointer; white-space:nowrap;
+  font-family:var(--font-body-sans);
+  transition:border-color .2s, color .2s, background .2s;
+}
+.type-toggle:hover{ border-color:#c89b5a; color:#fff7e7; }
+.type-toggle b{ font-weight:600; color:#c89b5a; }
+@media (max-width:820px){ .type-toggle{ display:none; } }
