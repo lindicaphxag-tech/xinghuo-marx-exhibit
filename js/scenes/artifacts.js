@@ -1,4 +1,4 @@
-/* artifacts.js — 卷十 文物与历史空间三维厅
+﻿/* artifacts.js — 卷十 文物与历史空间三维厅
  * 文物条目标明单图推断质量；空间条目加载本地史料约束复原或外部实景扫描，并展示证据边界。
  * 清单见 assets/models/models.json 与 assets/scenes/scenes.json。
  */
@@ -99,7 +99,7 @@
       controls.minDistance = 0.45;
       controls.maxDistance = 12;
       controls.autoRotate = true;          /* 进场景即缓慢环绕 */
-      controls.autoRotateSpeed = -1.6;
+      controls.autoRotateSpeed = -2.6;
       controls.addEventListener("start", function () { controls.autoRotate = false; });
       controls.target.set(0, 0, 0);
       scene.userData.controls = controls;
