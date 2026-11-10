@@ -98,7 +98,7 @@
       controls.minDistance = 0.45;
       controls.maxDistance = 12;
       controls.autoRotate = true;          /* 进场景即缓慢环绕 */
-      controls.autoRotateSpeed = 0.55;
+      controls.autoRotateSpeed = 1.6;
       controls.addEventListener("start", function () { controls.autoRotate = false; });
       controls.target.set(0, 0, 0);
       scene.userData.controls = controls;

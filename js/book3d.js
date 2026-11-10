@@ -5,7 +5,7 @@
   var host = document.getElementById("book3d");
   if (!D || !host) return;
 
-  var CHARS = 760;
+  var CHARS = 520;
 
   /* ---- 分页 ---- */
   var pages = [];
@@ -63,8 +63,8 @@
   }
 
   function paintBase() {
-    leftEl.innerHTML = s > 0 ? pageHTML(pages[s * 2 - 1], s * 2, "left").replace('class="book3d-face left"', "") : "";
-    rightEl.innerHTML = pageHTML(pages[s * 2], s * 2 + 1, "right").replace('class="book3d-face right"', "");
+    leftEl.innerHTML = pageHTML(pages[s * 2], s * 2 + 1, "left").replace('class="book3d-face left"', "");
+    rightEl.innerHTML = pageHTML(pages[s * 2 + 1], s * 2 + 2, "right").replace('class="book3d-face right"', "");
     leftEl.className = "book3d-face left";
     rightEl.className = "book3d-face right";
     meter.textContent = "跨页 " + (s + 1) + " / " + spreads +
@@ -81,15 +81,16 @@
     busy = true;
 
     /* 正翻：右页翻到左边；反翻：左页翻回右边 */
-    var target = dir > 0 ? pages[s * 2] : pages[s * 2 - 1];
-    var nextPage = dir > 0 ? pages[s * 2 + 1] : pages[s * 2 - 2];
-    var num = dir > 0 ? s * 2 + 1 : s * 2;
+    var target = dir > 0 ? pages[s * 2 + 1] : pages[s * 2];
+    var nextPage = dir > 0 ? pages[s * 2 + 2] : pages[s * 2 - 1];
+    var num = dir > 0 ? s * 2 + 2 : s * 2;
 
     frontEl.innerHTML = pageHTML(target, num, "front").replace('class="book3d-face front"', "");
     backEl.innerHTML = pageHTML(nextPage, num + (dir > 0 ? 1 : -1), "back").replace('class="book3d-face back"', "");
     frontEl.className = "book3d-face front";
     backEl.className = "book3d-face back";
 
+    leaf.style.visibility = "visible";
     leaf.style.transition = "none";
     leaf.style.transform = dir > 0 ? "rotateY(0deg)" : "rotateY(-178deg)";
     leaf.style.zIndex = "30";
@@ -106,6 +107,7 @@
       leaf.style.transition = "none";
       leaf.style.transform = "rotateY(0deg)";
       leaf.style.zIndex = "1";
+      leaf.style.visibility = "hidden";
       frontEl.innerHTML = backEl.innerHTML = "";
       busy = false;
     }, 900);
@@ -137,6 +139,22 @@
     toc.appendChild(b);
   });
 
+  /* 自动翻页：6 秒一跨，用户一操作就暂停，静置 8 秒恢复 */
+  var autoTimer = null;
+  function autoStart() {
+    if (autoTimer) return;
+    autoTimer = setInterval(function () {
+      if (s >= spreads - 1) { s = 0; paintBase(); } else { turn(1); }
+    }, 6000);
+  }
+  function autoStop() { clearInterval(autoTimer); autoTimer = null; }
+  book.addEventListener("mouseenter", autoStop);
+  book.addEventListener("pointerdown", autoStop);
+  document.addEventListener("keydown", autoStop);
+  host.addEventListener("mouseleave", function () { setTimeout(autoStart, 1500); });
+  setTimeout(autoStart, 1800);
+
+  leaf.style.visibility = "hidden";
   paintBase();
-  window.HSBook = { next: function () { turn(1); }, prev: function () { turn(-1); }, pages: pages.length };
+  window.HSBook = { start: autoStart, stop: autoStop, next: function () { turn(1); }, next: function () { turn(1); }, prev: function () { turn(-1); }, pages: pages.length };
 })();
