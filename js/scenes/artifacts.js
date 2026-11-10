@@ -51,6 +51,7 @@
     camera.position.set(0, 0.12, 2.6);
 
     renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    window.__ARTIFACT_OK = true;
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
     renderer.shadowMap.enabled = true;

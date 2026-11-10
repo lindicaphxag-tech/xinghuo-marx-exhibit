@@ -7,7 +7,12 @@
     try {
       var c = document.createElement("canvas");
       var gl = c.getContext("webgl2") || c.getContext("webgl") || c.getContext("experimental-webgl");
-      return !!gl;
+      if (gl) {
+        var lose = gl.getExtension("WEBGL_lose_context");
+        if (lose) lose.loseContext();      /* 立刻释放，别占用上下文名额 */
+        return true;
+      }
+      return false;
     } catch (e) { return false; }
   }
 
@@ -108,14 +113,16 @@
     var tries = 0;
     var t = setInterval(function () {
       tries++;
-      var bad = !HAS_WEBGL || !!window.__ARTIFACT_ERROR;
+      /* 判定：模块报错，或（探测不到 WebGL 且 6 秒内渲染器仍没建起来） */
+      var bad = !!window.__ARTIFACT_ERROR ||
+                (!window.__ARTIFACT_OK && !HAS_WEBGL && tries > 6);
       var railHas = document.querySelectorAll("#artifact-rail button").length > 0;
       if (bad) {
         graphFallback();
-        if (railHas) { buildOwnRail(); refresh(); }
+        if (window.__MODELS) { buildOwnRail(); refresh(); }
       }
-      if (tries > 40) clearInterval(t);
-    }, 700);
+      if (tries > 22) clearInterval(t);
+    }, 900);
   }
 
 
@@ -136,19 +143,8 @@
   }
 
   window.addEventListener("load", function () {
+    loadMap();
     watchdog();
-    loadMap().then(function () {
-      setTimeout(function () {
-        if (!buildOwnRail()) { setTimeout(buildOwnRail, 1200); }
-        refresh();
-      }, 1500);
-      var rail = document.getElementById("artifact-rail");
-      if (rail) {
-        rail.addEventListener("click", function () { setTimeout(refresh, 400); }, true);
-        new MutationObserver(function () { setTimeout(refresh, 300); })
-          .observe(rail, { childList: true });
-      }
-    });
   });
 
   window.HSFallback = { active: true, refresh: refresh };
