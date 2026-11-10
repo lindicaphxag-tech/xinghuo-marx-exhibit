@@ -30,11 +30,20 @@
       return function () { api.showChapter(i % n); i++; };
     },
     network: function () {
-      if (window.HSNetTour && window.HSNetTour.start) {
-        return function () {
-          if (!window.HSNetTour.isPlaying()) window.HSNetTour.start();
-        };
-      }
+      /* 两种演示交替：一边讲节点，一边轮换聚类方式 */
+      var sel0 = document.getElementById("net-cluster");
+      var tick = 0;
+      return function () {
+        tick++;
+        if (window.HSNetTour && window.HSNetTour.start && !window.HSNetTour.isPlaying()) {
+          window.HSNetTour.start();
+        }
+        if (sel0 && tick % 3 === 0 && sel0.options.length) {
+          var k = (sel0.selectedIndex + 1) % sel0.options.length;
+          sel0.selectedIndex = k;
+          sel0.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+      };
       var sel = document.getElementById("net-cluster");
       if (sel && sel.options.length) {
         var k = 0;

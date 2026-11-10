@@ -77,8 +77,9 @@
   ["wheel", "pointerdown", "keydown"].forEach(function (e) {
     host.addEventListener(e, function () { if (playing) stop(); }, { passive: true });
   });
+  /* 聚类切换由自动演示驱动，讲解不中断；只有用户主动操作才停 */
   var sel = document.getElementById("net-cluster");
-  if (sel) sel.addEventListener("change", function () { if (playing) stop(); });
+  if (sel) sel.addEventListener("change", function (e) { if (e.isTrusted && playing) stop(); });
 
   window.HSNetTour = { start: function () { start(false); }, stop: stop, isPlaying: function () { return playing; } };
 
