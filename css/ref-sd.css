@@ -1,0 +1,133 @@
+/* ref-sd.css —— 对标参考片（三星堆在线展）的展陈语言
+   墨绿近黑底 / 纹样暗纹 / 书法标题 / 细金线 / 胶囊按钮 / 朱印 */
+:root{
+  --sd-ink:#08110e;
+  --sd-ink-2:#0c1713;
+  --sd-gold:#c9a15a;
+  --sd-gold-soft:rgba(201,161,90,.34);
+  --sd-jade:#2f4f42;
+  --sd-vermilion:#96201a;
+}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  background:
+    radial-gradient(120% 90% at 50% 8%, rgba(47,79,66,.30) 0%, rgba(8,17,14,0) 62%),
+    linear-gradient(180deg,#0a1310 0%, #08110e 58%, #060d0b 100%) !important;
+}
+/* 满屏暗纹：用线描稿做底纹，压到极低透明度 */
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:url("../assets/lineart/trier_cloak_line.png");
+  background-repeat:repeat;
+  background-size:760px auto;
+  opacity:.07;
+  filter:brightness(1.6) contrast(.8);
+  mix-blend-mode:screen;
+  pointer-events:none;
+  z-index:0;
+}
+.hero-inner{ position:relative; z-index:3 }
+
+/* 书法标题图 */
+.hero-title-img{
+  display:block;
+  width:min(72vw, 900px);
+  margin:6px 0 10px -6px;
+  filter:drop-shadow(0 10px 26px rgba(0,0,0,.55));
+}
+.hero h1{ display:none !important }
+
+/* 眉标：竖排朱印 + 细线 */
+.hero .eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  color:var(--sd-gold);
+  letter-spacing:.30em;
+  font-size:12px;
+}
+.hero .eyebrow::before{
+  content:"";
+  width:26px; height:26px;
+  background:url("../assets/img/seal-xinghuo.png") center/contain no-repeat;
+  opacity:.92;
+}
+
+/* 导语 */
+.hero .sub{
+  max-width:640px;
+  color:#d8d2c6;
+  line-height:1.95;
+  font-size:17px;
+}
+
+/* 按钮：胶囊 + 三角装饰 */
+.hero-actions{ gap:12px; flex-wrap:wrap }
+.btn{
+  position:relative;
+  border-radius:999px;
+  border:1px solid var(--sd-gold-soft);
+  background:rgba(10,20,16,.55);
+  color:#e8dfcd;
+  backdrop-filter:blur(2px);
+}
+.btn:hover{ border-color:var(--sd-gold); color:#fff6e6 }
+.btn.primary{
+  background:linear-gradient(180deg,#8d1f14,#6f150e);
+  border-color:rgba(224,120,66,.55);
+  color:#fff3e2;
+  box-shadow:0 8px 26px rgba(120,24,16,.35);
+}
+/* 三角装饰 */
+.btn::before,.btn::after{
+  content:"";
+  position:absolute; top:50%;
+  width:0; height:0;
+  border-block:4px solid transparent;
+  transform:translateY(-50%);
+  opacity:.75;
+}
+.btn::before{ left:12px; border-right:5px solid currentColor }
+.btn::after{ right:12px; border-left:5px solid currentColor }
+.btn{ padding-left:26px !important; padding-right:26px !important }
+
+/* 年份竖条 */
+.hero-side-year{
+  position:absolute; right:42px; top:50%;
+  transform:translateY(-50%);
+  width:70px; opacity:.75; z-index:3;
+}
+
+/* 滚动提示 */
+.hero-scroll{ color:var(--sd-gold); letter-spacing:.34em }
+
+/* ---------- 顶部导航 ---------- */
+.topbar, .uibar{
+  background:rgba(6,13,11,.92) !important;
+  border-bottom:1px solid rgba(201,161,90,.26) !important;
+  backdrop-filter:blur(6px);
+}
+.topbar a:hover{ color:var(--sd-gold) }
+
+/* ---------- 全站底色偏墨绿 ---------- */
+body{ background:#08110e }
+.section, .wall, .vol{ background-color:#08110e }
+
+/* ---------- 章节标题旁加朱印 ---------- */
+.vol h2::after{
+  content:"";
+  display:inline-block;
+  width:20px; height:20px;
+  margin-left:12px;
+  background:url("../assets/img/seal-daolu.png") center/contain no-repeat;
+  opacity:.55;
+  vertical-align:middle;
+}
+
+/* ---------- 证据标签改成金线小签 ---------- */
+.elevel, .tier{
+  border:1px solid var(--sd-gold-soft) !important;
+  background:rgba(201,161,90,.08) !important;
+  color:var(--sd-gold) !important;
+  letter-spacing:.08em;
+}
