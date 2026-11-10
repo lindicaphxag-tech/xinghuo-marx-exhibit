@@ -198,18 +198,45 @@
 }
 
 
-/* ---------- 多语口号：逐行渐亮渐暗 ---------- */
+
+
+/* ---------- 多语口号：强对比的逐行扫光 ---------- */
 .polyglot .lang-row{
-  transition: opacity .7s ease, background-color .7s ease, transform .7s ease;
-  opacity: .46;
-  border-radius: 3px;
+  position: relative;
+  opacity: .34;
+  filter: saturate(.5) blur(.15px);
+  transform: translateX(0);
+  transition: opacity .85s ease, filter .85s ease, transform .85s ease, background .85s ease;
+  border-radius: 4px;
+  padding-left: 10px;
 }
 .polyglot .lang-row.on{
   opacity: 1;
-  background: rgba(255, 253, 248, .85);
-  transform: translateX(4px);
+  filter: none;
+  transform: translateX(6px);
+  background: linear-gradient(90deg, rgba(255,252,244,.95), rgba(255,252,244,.35) 62%, transparent);
+  box-shadow: inset 2px 0 0 var(--sec-accent, #8a5b2c);
 }
-.polyglot .lang-row.on .text{ color: #201c16 }
-.polyglot .lang-row.on .lang{ color: #8a5b2c }
-.polyglot .quote-big{ transition: opacity .7s ease }
-.polyglot.dim .quote-big{ opacity: .55 }
+.polyglot .lang-row.on .text{
+  background-image: linear-gradient(100deg,#211d17 0%,#211d17 38%,#a4681f 52%,#211d17 66%);
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: polySweep 2.6s linear infinite;
+}
+.polyglot .lang-row.on .lang{
+  color: #8a5b2c !important;
+  opacity: 1 !important;
+  font-weight: 600;
+}
+.polyglot .lang-row.on .note{ color: #6f6555 }
+@keyframes polySweep{
+  0%   { background-position: 120% 0 }
+  100% { background-position: -60% 0 }
+}
+.polyglot .quote-big{
+  transition: opacity .9s ease, letter-spacing .9s ease;
+  opacity: .42;
+}
+.polyglot.live .quote-big{ opacity: 1; letter-spacing: .01em }

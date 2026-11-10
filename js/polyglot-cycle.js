@@ -12,7 +12,7 @@
     if (!list.length) return;
     Array.prototype.forEach.call(list, function (r) { r.classList.remove("on"); });
     list[i % list.length].classList.add("on");
-    box.classList.toggle("dim", false);
+    box.classList.add("live");
     i++;
   }
 
