@@ -138,3 +138,78 @@
   display:block !important; width:auto !important; float:none !important;
   font-size:10.5px; line-height:1.55; color:#8a7c67; margin-top:6px;
 }
+
+
+/* ---------- 问题卡与入口条：去掉方框感，改成版面元素 ---------- */
+.chapter-question{
+  margin: 22px 0 0;
+  padding: 0 0 0 22px;
+  border: 0 !important;
+  border-left: 2px solid var(--sec-accent, #8a5b2c) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  max-width: 780px;
+}
+.chapter-question strong{
+  display: block;
+  font-size: 11px !important;
+  letter-spacing: .22em;
+  color: var(--sec-accent, #8a5b2c) !important;
+  font-weight: 500 !important;
+  background: none !important;
+}
+.chapter-question p{
+  margin: 8px 0 0 !important;
+  font-size: 21px !important;
+  line-height: 1.62 !important;
+  color: #241f1a !important;
+  font-family: var(--serif), "Songti SC", serif;
+}
+.chapter-source-index{
+  margin: 26px 0 0;
+  border: 0 !important;
+  background: transparent !important;
+}
+.chapter-source-index > summary{
+  display: inline-block;
+  padding: 0 0 3px;
+  font-size: 12.5px;
+  color: #6b5334;
+  border-bottom: 1px solid var(--sec-hair, rgba(120,85,47,.25));
+  cursor: pointer;
+  list-style: none;
+}
+.chapter-source-index > summary::-webkit-details-marker{ display: none }
+.chapter-source-index > summary::after{ content: " ↓"; opacity: .55 }
+.chapter-source-index[open] > summary::after{ content: " ↑" }
+
+/* 章节标题区加一枚淡卷号，弱化“全是方框”的观感 */
+.chapter-head{ position: relative }
+.chapter-head::after{
+  content: attr(data-vol) "";
+}
+#relic .chapter-head::after{
+  content: "02";
+  position: absolute; right: 6px; top: -26px;
+  font: 700 132px/1 var(--serif), serif;
+  color: rgba(138, 91, 44, .07);
+  letter-spacing: -.02em;
+  pointer-events: none;
+}
+
+
+/* ---------- 多语口号：逐行渐亮渐暗 ---------- */
+.polyglot .lang-row{
+  transition: opacity .7s ease, background-color .7s ease, transform .7s ease;
+  opacity: .46;
+  border-radius: 3px;
+}
+.polyglot .lang-row.on{
+  opacity: 1;
+  background: rgba(255, 253, 248, .85);
+  transform: translateX(4px);
+}
+.polyglot .lang-row.on .text{ color: #201c16 }
+.polyglot .lang-row.on .lang{ color: #8a5b2c }
+.polyglot .quote-big{ transition: opacity .7s ease }
+.polyglot.dim .quote-big{ opacity: .55 }

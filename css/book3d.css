@@ -1,0 +1,96 @@
+/* book3d.css —— 文献卷的 3D 翻页书 */
+.book3d-wrap{
+  --bw: 420px;           /* 单页宽 */
+  --bh: 560px;           /* 单页高 */
+  margin: 26px 0 8px;
+  display: flex; align-items: center; gap: 18px;
+}
+.book3d-stage{
+  position: relative;
+  width: calc(var(--bw) * 2);
+  height: var(--bh);
+  perspective: 2200px;
+  perspective-origin: 50% 42%;
+  flex: 0 0 auto;
+}
+.book3d-book{
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(4deg);
+}
+.book3d-face.left,
+.book3d-face.right{
+  position: absolute; top: 0; width: var(--bw); height: var(--bh);
+}
+.book3d-face.left{ left: 0 }
+.book3d-face.right{ left: 50% }
+.book3d-leaf{
+  position: absolute; top: 0; left: 50%;
+  width: var(--bw); height: var(--bh);
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform .85s cubic-bezier(.3,.05,.25,1);
+  will-change: transform;
+}
+.book3d-leaf.turned{ transform: rotateY(-178deg) }
+.book3d-face{
+  position: absolute; inset: 0;
+  backface-visibility: hidden;
+  background: linear-gradient(180deg,#fbf8f0,#f4eee0);
+  border: 1px solid rgba(120,85,47,.22);
+  padding: 34px 34px 46px;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(120,85,47,.07);
+}
+.book3d-face.back{ transform: rotateY(180deg) }
+.book3d-face .pg-head{
+  font-size: 10.5px; letter-spacing: .22em; color: #a08b6a;
+  display: flex; justify-content: space-between; margin-bottom: 14px;
+}
+.book3d-face h4{
+  margin: 0 0 12px; font-size: 17px; color: #2a241c; letter-spacing: .04em;
+}
+.book3d-face p{
+  margin: 0 0 .72em; font-size: 13.2px; line-height: 1.95;
+  color: #2f2a22; text-indent: 2em; font-family: var(--serif), "Songti SC", serif;
+}
+.book3d-face .pg-num{
+  position: absolute; bottom: 16px; left: 0; right: 0;
+  text-align: center; font-size: 11px; color: #a08b6a;
+}
+.book3d-face::after{
+  content: ""; position: absolute; top: 0; bottom: 0; width: 26px;
+  background: linear-gradient(90deg, rgba(120,85,47,.16), transparent);
+}
+.book3d-face.front::after{ right: 0; transform: scaleX(-1) }
+.book3d-face.back::after{ left: 0 }
+.book3d-spine{
+  position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+  transform: translateX(-1px);
+  background: linear-gradient(180deg, transparent, rgba(120,85,47,.35), transparent);
+  z-index: 5;
+}
+.book3d-side{
+  display: flex; flex-direction: column; gap: 8px; align-items: flex-start;
+  width: 236px; flex: 0 0 236px;
+}
+.book3d-side button{
+  font: inherit; font-size: 12.5px; padding: 7px 12px; cursor: pointer;
+  border: 1px solid rgba(120,85,47,.32); border-radius: 2px;
+  background: #fffdf8; color: #5b4a33;
+}
+.book3d-side button:hover{ border-color: #8a5b2c; color: #7a4a18 }
+.book3d-side .meter{ font-size: 11.5px; color: #8a7c67; letter-spacing: .06em }
+.book3d-toc{
+  display: flex; flex-wrap: wrap; gap: 5px; max-width: 230px; margin-top: 4px;
+}
+.book3d-toc button{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 210px }
+.book3d-toc button{
+  font-size: 11.5px; padding: 4px 8px; border-radius: 2px;
+  border: 1px solid rgba(120,85,47,.22); background: transparent; color: #6b5334; cursor: pointer;
+}
+.book3d-toc button.on{ background: #8a5b2c; border-color: #8a5b2c; color: #fff8ec }
+@media (max-width: 1100px){
+  .book3d-wrap{ flex-direction: column; align-items: flex-start }
+  .book3d-stage{ transform: scale(.82); transform-origin: left top }
+}

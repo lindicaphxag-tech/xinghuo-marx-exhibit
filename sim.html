@@ -18,6 +18,15 @@
   .brand b{display:block;font-size:23px;margin-top:2px}
   .year{position:absolute;left:26px;top:104px;font-size:44px;font-variant-numeric:tabular-nums;color:var(--gold);line-height:1;text-align:left}
   .year small{display:block;font-size:11.5px;letter-spacing:.18em;color:var(--dim);margin-top:6px}
+  .sim-caption{
+    position:absolute;left:26px;bottom:76px;max-width:360px;pointer-events:none;
+    padding:12px 16px;border-left:2px solid rgba(201,162,98,.55);
+    background:linear-gradient(90deg,rgba(10,9,8,.82),rgba(10,9,8,.35));
+    opacity:0;transform:translateY(6px);transition:opacity .45s ease,transform .45s ease;
+  }
+  .sim-caption.on{opacity:1;transform:translateY(0)}
+  .sim-caption b{display:block;font-size:13.5px;color:#e8dcc6;font-weight:600;letter-spacing:.02em}
+  .sim-caption span{display:block;margin-top:4px;font-size:11.5px;color:#a89b86;line-height:1.6}
   .panel.hidden{display:none}
   .panel-toggle{position:absolute;left:26px;bottom:26px;pointer-events:auto;font:inherit;font-size:12px;padding:6px 12px;border:1px solid rgba(201,162,98,.34);border-radius:3px;background:rgba(12,10,9,.82);color:#b3a795;cursor:pointer}
   .panel{position:absolute;left:26px;bottom:26px;width:300px;pointer-events:auto;
@@ -53,6 +62,7 @@
     <div class="year"><span id="yr">1830</span><small>当前年份</small></div>
   </div>
   <div class="hint">粒子＝一次行动 / 一次集会 / 一份刊物<br>越亮＝当期活动强度越高</div>
+  <div class="sim-caption" id="sim-caption" aria-live="polite"><b>一个光点 = 一次行动</b><span>集会、罢工、刊物出版各记一次</span></div>
   <button type="button" class="panel-toggle" id="panel-toggle">调参</button>
   <aside class="panel hidden" id="sim-panel">
     <h4>模型参数</h4>
@@ -182,6 +192,7 @@
     }
     totalActs++;
     yearEvents++;
+    if (window.SIM_CAPTION && window.SIM_CAPTION.showEvent) window.SIM_CAPTION.showEvent(e);
   }
 
   function initCities() {
@@ -375,6 +386,7 @@
       resize();
       applyEventYears();
       initCities();
+      if (window.SIM_CAPTION) window.SIM_CAPTION.setEvents(EVENTS);
       bind();
       setPlayBtn();
       requestAnimationFrame(loop);
@@ -450,5 +462,80 @@
 })();
 </script>
 <script src="js/font-theme.js?v=1"></script>
+<script>
+(function(){
+  var box = document.getElementById('sim-caption');
+  if (!box) return;
+
+  /* 时代段：没有具体事件时给的释义 */
+  var ERAS = [
+    [1830, 1847, '一个光点 = 一次行动', '手工工场、秘密结社与地方性罢工；行动多集中在城市内部'],
+    [1848, 1870, '一个光点 = 一份刊物或一次集会', '报刊、工会与流亡组织把不同城市连起来'],
+    [1871, 1899, '一个光点 = 一次罢工或一次议会行动', '政党化之后，行动开始跨越国界'],
+    [1900, 1917, '一个光点 = 一次动员', '战争与革命把边缘城市拉进主线']
+  ];
+
+  var evText = {};     /* 由事件表填充：year → {b, s} */
+  var shownKey = '';
+
+  function pick(year){
+    var y = Math.floor(year);
+    if (evText[y]) return evText[y];
+    for (var i = 0; i < ERAS.length; i++) {
+      if (y >= ERAS[i][0] && y <= ERAS[i][1]) {
+        return { b: ERAS[i][2], s: ERAS[i][3], key: 'era' + i };
+      }
+    }
+    return { b: '一个光点 = 一次行动', s: '集会、罢工、刊物出版各记一次', key: 'base' };
+  }
+
+  function apply(year){
+    var v = pick(year);
+    var key = v.key || ('ev' + year);
+    if (key === shownKey) return;
+    shownKey = key;
+    box.classList.remove('on');
+    setTimeout(function(){
+      box.querySelector('b').textContent = v.b;
+      box.querySelector('span').textContent = v.s;
+      box.classList.add('on');
+    }, 260);
+  }
+
+  var evTimer = null;
+  function showNow(v, key){
+    shownKey = key;
+    box.classList.remove('on');
+    setTimeout(function(){
+      box.querySelector('b').textContent = v.b;
+      box.querySelector('span').textContent = v.s;
+      box.classList.add('on');
+    }, 260);
+  }
+
+  window.SIM_CAPTION = {
+    showEvent: function (e) {
+      showNow({ b: e.title || '', s: (e.note || '').slice(0, 56) }, 'ev' + e.year);
+      clearTimeout(evTimer);
+      evTimer = setTimeout(function () { shownKey = ''; }, 5200);   /* 之后回到时代释义 */
+    },
+    setEvents: function (events) {
+      events.forEach(function (e) {
+        evText[Number(e.year)] = { b: e.title || '', s: (e.note || '').slice(0, 56), key: 'ev' + e.year };
+      });
+    },
+    update: apply
+  };
+
+  /* 等主脚本跑起来后接上：轮询年份元素 */
+  var last = -1;
+  setInterval(function(){
+    var el = document.getElementById('yr');
+    if (!el) return;
+    var y = parseInt(el.textContent, 10);
+    if (!isNaN(y) && y !== last) { last = y; apply(y); }
+  }, 250);
+})();
+</script>
 </body>
 </html>
