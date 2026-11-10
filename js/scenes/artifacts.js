@@ -108,7 +108,30 @@
     inited = true;
   }
 
+  /* 三维不可用时（无 WebGL / 模型加载失败）退回原始照片，保证任何机器都能看到内容 */
+  function showFallback(reason) {
+    var it = items[current] || {};
+    var stage = document.getElementById("artifact-view");
+    if (!stage) return;
+    var old = document.getElementById("artifact-fallback");
+    if (old) old.remove();
+    var src = it.source_image || (it.thumb ? BASE + it.thumb : "");
+    var box = document.createElement("div");
+    box.id = "artifact-fallback";
+    box.style.cssText = "position:absolute;inset:0;display:flex;align-items:center;justify-content:center;" +
+      "flex-direction:column;gap:10px;background:#141210;z-index:4;padding:20px;text-align:center";
+    box.innerHTML = (src ? '<img src="' + src + '" alt="' + (it.name || "") + '" ' +
+        'style="max-width:86%;max-height:80%;object-fit:contain;border:1px solid rgba(120,85,47,.25)">' : "") +
+      '<p style="margin:0;font-size:12.5px;color:#b3a795;line-height:1.7;max-width:520px">' +
+      (reason || "当前设备未能启动三维视图，已切换为原始照片。") + "</p>";
+    stage.appendChild(box);
+    if (canvas) canvas.style.display = "none";
+  }
+
   function clearModel() {
+    var fb = document.getElementById("artifact-fallback");
+    if (fb) fb.remove();
+    if (canvas) canvas.style.display = "";
     if (!group) return;
     scene.remove(group);
     group.traverse(function (o) {
@@ -1021,6 +1044,10 @@
     }
     var modelUrl = (it.type === "scene" ? "assets/scenes/" : BASE) + it.file;
     if (it.type === "scene") modelUrl += "?v=historical-site-5cd";
+    if (!renderer || !loader) {
+      showFallback("当前设备未能启动 WebGL（可在浏览器设置里开启硬件加速后重试），已切换为原始照片。");
+      return;
+    }
     var seq = ++loadSeq;
     loader.load(modelUrl, function (gltf) {
       if (seq !== loadSeq) { return; }
@@ -1034,6 +1061,7 @@
     }, undefined, function (error) {
       if (seq !== loadSeq) { return; }
       if (stage) stage.classList.remove("model-loading");
+      showFallback("三维模型未能加载（可能是网络中断或该设备不支持 WebGL），已切换为原始照片。");
       var c = document.getElementById("artifact-caption");
       if (c) {
         var warning = document.createElement("p");
@@ -1113,6 +1141,7 @@
 
   function tick() {
     raf = requestAnimationFrame(tick);
+    if (!renderer || !scene || !camera) return;
     var c = scene.userData.controls;
     if (c) c.update();
     renderer.render(scene, camera);
@@ -1128,7 +1157,9 @@
     booted = true;
     /* 先取清单，保证左侧轨道一定有内容；三维初始化失败也不影响列表 */
     loadItems(mode);
-    try { init(); } catch (e) { /* 无 WebGL 时只保留清单与文字说明 */ }
+    try { init(); } catch (e) {
+      showFallback("当前设备未能启动 WebGL（可在浏览器设置里开启硬件加速后重试），已切换为原始照片。");
+    }
   }
 
   function loadItems(nextMode) {
