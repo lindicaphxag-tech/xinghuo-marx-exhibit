@@ -30,13 +30,29 @@
       return function () { api.showChapter(i % n); i++; };
     },
     network: function () {
-      var btns = document.querySelectorAll("#network .net-controls button, #network [data-cluster]");
+      var sel = document.getElementById("net-cluster");
+      if (sel && sel.options.length) {
+        var k = 0;
+        return function () {
+          k = (k + 1) % sel.options.length;
+          sel.selectedIndex = k;
+          sel.dispatchEvent(new Event("change", { bubbles: true }));
+        };
+      }
+      var btns = document.querySelectorAll("#network [data-cluster]");
       if (!btns.length) return null;
       var i = 0;
       return function () { btns[i % btns.length].click(); i++; };
     },
     press: function () {
-      var tabs = document.querySelectorAll("#press [data-issue], #press .issue-tab, #press .press-chip");
+      if (document.querySelector("[data-reel-next]")) {
+        /* 期号面板会整块重绘，必须每次重新取按钮 */
+        return function () {
+          var n = document.querySelector("[data-reel-next]");
+          if (n) n.click();
+        };
+      }
+      var tabs = document.querySelectorAll("#press [data-issue-index]");
       if (!tabs.length) return null;
       var i = 0;
       return function () { tabs[i % tabs.length].click(); i++; };
