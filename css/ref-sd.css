@@ -131,3 +131,20 @@ body{ background:#08110e }
   color:var(--sd-gold) !important;
   letter-spacing:.08em;
 }
+
+
+/* ---------- 修复：卷二地图右侧粘性失效 ---------- */
+.map-stage{
+  overflow: visible !important;
+  align-items: start !important;
+  height: auto !important;
+  min-height: 70vh;
+}
+.map-stage .map-canvas-wrap,
+.map-canvas-wrap{
+  position: sticky !important;
+  top: 88px !important;
+  align-self: start;
+  height: min(76vh, 880px) !important;
+}
+.map-side{ height: auto !important }
