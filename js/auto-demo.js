@@ -30,34 +30,8 @@
       var i = 0;
       return function () { api.showChapter(i % n); i++; };
     },
-    network: function () {
-      var sel = document.getElementById("net-cluster");
-      if (!sel || !sel.options.length) return null;
-      var k = 0, started = false;
-      return function () {
-        if (!started && window.HSNetTour && window.HSNetTour.start) {
-          started = true;
-          if (!window.HSNetTour.isPlaying()) window.HSNetTour.start();
-        }
-        k = (sel.selectedIndex + 1) % sel.options.length;
-        sel.selectedIndex = k;
-        sel.dispatchEvent(new Event("change", { bubbles: true }));
-      };
-    },
-    press: function () {
-      /* 环形轮换：按卡片顺序走，到最后一期回到第一期 */
-      var idx = 0;
-      return function () {
-        var cards = document.querySelectorAll("#press [data-issue-index]");
-        if (!cards.length) {
-          var n = document.querySelector("[data-reel-next]");
-          if (n) n.click();
-          return;
-        }
-        idx = (idx + 1) % cards.length;
-        cards[idx].click();
-      };
-    },
+    network: function () { return null; },   /* 由 always-cycle.js 负责，每秒切换 */
+    press: function () { return null; },     /* 同上 */
     artifacts: function () {
       var api = window.HS && window.HS.artifacts;
       if (!api || !api.list || !api.selectById) return null;
