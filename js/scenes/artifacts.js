@@ -1088,8 +1088,9 @@
   function boot() {
     if (booted) return;
     booted = true;
-    init();
+    /* 先取清单，保证左侧轨道一定有内容；三维初始化失败也不影响列表 */
     loadItems(mode);
+    try { init(); } catch (e) { /* 无 WebGL 时只保留清单与文字说明 */ }
   }
 
   function loadItems(nextMode) {
