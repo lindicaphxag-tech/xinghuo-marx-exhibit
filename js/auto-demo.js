@@ -30,6 +30,11 @@
       return function () { api.showChapter(i % n); i++; };
     },
     network: function () {
+      if (window.HSNetTour && window.HSNetTour.start) {
+        return function () {
+          if (!window.HSNetTour.isPlaying()) window.HSNetTour.start();
+        };
+      }
       var sel = document.getElementById("net-cluster");
       if (sel && sel.options.length) {
         var k = 0;

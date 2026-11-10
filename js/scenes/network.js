@@ -196,6 +196,24 @@
     draw();
   }
 
+  /* 对外接口：给「自动讲解」按顺序展示节点 */
+  window.HS = window.HS || {};
+  window.HS.network = {
+    list: function () {
+      var deg = {};
+      edges.forEach(function (e) { deg[e.a.id] = (deg[e.a.id] || 0) + 1; deg[e.b.id] = (deg[e.b.id] || 0) + 1; });
+      return nodes.map(function (n) { return { id: n.id, label: n.label, group: n.group, degree: deg[n.id] || 0 }; })
+                  .sort(function (a, b) { return b.degree - a.degree; });
+    },
+    show: function (id) {
+      var n = nodeMap[id];
+      if (!n) return false;
+      showNode(n, true);
+      return true;
+    },
+    current: function () { return selected ? selected.id : null; }
+  };
+
   canvas.addEventListener("click", function (ev) {
     if (Date.now() < suppressClickUntil) { ev.preventDefault(); return; }
     var p = toWorld(toLocal(ev));

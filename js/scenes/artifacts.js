@@ -19,7 +19,7 @@
   var BASE = "assets/models/";
   var scene, camera, renderer, group = null, floor = null, loader, raf = null, running = false;
   var items = [], current = -1, inited = false, sceneView = null;
-  var e4Wireframe = true;
+  var e4Wireframe = false;   /* 默认实体化，需要时再切线框 */
   var lidarViewerInstance = null, lidarViewerScriptPromise = null;
   var timePlaybackTimer = null, timePlaybackOn = false, timePlaybackPairId = null;
   var query = new URLSearchParams(window.location.search);
@@ -97,8 +97,9 @@
       controls.dampingFactor = 0.08;
       controls.minDistance = 0.45;
       controls.maxDistance = 12;
-      controls.autoRotate = false;
-      controls.autoRotateSpeed = 0.8;
+      controls.autoRotate = true;          /* 进场景即缓慢环绕 */
+      controls.autoRotateSpeed = 0.55;
+      controls.addEventListener("start", function () { controls.autoRotate = false; });
       controls.target.set(0, 0, 0);
       scene.userData.controls = controls;
     }
@@ -845,7 +846,8 @@
     if (!items.length) return;
     current = idx;
     var it = items[idx];
-    e4Wireframe = true;
+    /* 默认实体化；如需线框，点左上角按钮切换 */
+    if (typeof e4Wireframe === "undefined") e4Wireframe = false;
     if (wireToggle) {
       wireToggle.hidden = it.type === "scene" || it.quality === "flat" || it.quality === "fail";
       syncWireToggle();
