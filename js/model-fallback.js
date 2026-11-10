@@ -11,7 +11,7 @@
     } catch (e) { return false; }
   }
 
-  if (webglOK()) { window.HSFallback = { active: false }; return; }
+  var HAS_WEBGL = webglOK();
 
   var MAP = null;   /* id → 原始照片 */
 
@@ -103,7 +103,20 @@
     return true;
   }
 
+  /* 有 WebGL 也可能渲染失败：轮询错误标记与轨道状态 */
+  function watchdog() {
+    var tries = 0;
+    var t = setInterval(function () {
+      tries++;
+      var bad = !HAS_WEBGL || !!window.__ARTIFACT_ERROR;
+      var railHas = document.querySelectorAll("#artifact-rail button").length > 0;
+      if (bad) { if (railHas) { buildOwnRail(); refresh(); } }
+      if (tries > 40) clearInterval(t);
+    }, 700);
+  }
+
   window.addEventListener("load", function () {
+    watchdog();
     loadMap().then(function () {
       setTimeout(function () {
         if (!buildOwnRail()) { setTimeout(buildOwnRail, 1200); }

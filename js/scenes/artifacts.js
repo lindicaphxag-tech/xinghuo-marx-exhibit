@@ -1045,6 +1045,7 @@
     var modelUrl = (it.type === "scene" ? "assets/scenes/" : BASE) + it.file;
     if (it.type === "scene") modelUrl += "?v=historical-site-5cd";
     if (!renderer || !loader) {
+      window.__ARTIFACT_ERROR = "webgl";
       showFallback("当前设备未能启动 WebGL（可在浏览器设置里开启硬件加速后重试），已切换为原始照片。");
       return;
     }
@@ -1061,6 +1062,7 @@
     }, undefined, function (error) {
       if (seq !== loadSeq) { return; }
       if (stage) stage.classList.remove("model-loading");
+      window.__ARTIFACT_ERROR = "model";
       showFallback("三维模型未能加载（可能是网络中断或该设备不支持 WebGL），已切换为原始照片。");
       var c = document.getElementById("artifact-caption");
       if (c) {
