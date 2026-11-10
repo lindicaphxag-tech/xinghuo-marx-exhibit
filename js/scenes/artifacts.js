@@ -1135,7 +1135,7 @@
     mode = nextMode;
     current = -1;
     clearModel();
-    var path = mode === "scenes" ? "assets/scenes/scenes.json?v=scene-audit-paris-lidar-v8" : BASE + "models.json";
+    var path = mode === "scenes" ? "assets/scenes/scenes.json?v=20261110g" : BASE + "models.json";
     fetch(path)
       .then(function (r) { if (!r.ok) throw new Error("manifest " + r.status); return r.json(); })
       .then(function (data) {
