@@ -467,73 +467,56 @@
   var box = document.getElementById('sim-caption');
   if (!box) return;
 
-  /* 时代段：没有具体事件时给的释义 */
-  var ERAS = [
-    [1830, 1847, '一个光点 = 一次行动', '手工工场、秘密结社与地方性罢工；行动多集中在城市内部'],
-    [1848, 1870, '一个光点 = 一份刊物或一次集会', '报刊、工会与流亡组织把不同城市连起来'],
-    [1871, 1899, '一个光点 = 一次罢工或一次议会行动', '政党化之后，行动开始跨越国界'],
-    [1900, 1917, '一个光点 = 一次动员', '战争与革命把边缘城市拉进主线']
-  ];
-
-  var evText = {};     /* 由事件表填充：year → {b, s} */
+  var EV = [];            /* 真实事件，按年排序 */
   var shownKey = '';
 
-  function pick(year){
-    var y = Math.floor(year);
-    if (evText[y]) return evText[y];
-    for (var i = 0; i < ERAS.length; i++) {
-      if (y >= ERAS[i][0] && y <= ERAS[i][1]) {
-        return { b: ERAS[i][2], s: ERAS[i][3], key: 'era' + i };
-      }
-    }
-    return { b: '一个光点 = 一次行动', s: '集会、罢工、刊物出版各记一次', key: 'base' };
+  function fmt(e) {
+    return e.year + ' · ' + (e.place || '') + ' · ' + String(e.title || '').replace(/^.*?：/, '');
   }
 
-  function apply(year){
-    var v = pick(year);
-    var key = v.key || ('ev' + year);
+  function render(a, b) {
+    box.innerHTML = '<b>' + a + '</b><span>' + b + '</span>';
+    box.classList.remove('on');
+    requestAnimationFrame(function(){ box.classList.add('on'); });
+  }
+
+  function apply(year) {
+    if (!EV.length) return;
+    var y = Math.floor(year);
+    var last = null, next = null;
+    for (var i = 0; i < EV.length; i++) {
+      var ey = Number(EV[i].year);
+      if (ey <= y) last = EV[i];
+      else { next = EV[i]; break; }
+    }
+    var key = (last ? last.year : 'none') + '|' + (next ? next.year : 'end');
     if (key === shownKey) return;
     shownKey = key;
-    box.classList.remove('on');
-    setTimeout(function(){
-      box.querySelector('b').textContent = v.b;
-      box.querySelector('span').textContent = v.s;
-      box.classList.add('on');
-    }, 260);
-  }
 
-  var evTimer = null;
-  function showNow(v, key){
-    shownKey = key;
-    box.classList.remove('on');
-    setTimeout(function(){
-      box.querySelector('b').textContent = v.b;
-      box.querySelector('span').textContent = v.s;
-      box.classList.add('on');
-    }, 260);
+    if (!last) {
+      render('1830—' + (next ? next.year : 1917) + ' · 暂无可考的具体事件',
+             next ? '下一条可考事件：' + fmt(next) : '');
+      return;
+    }
+    var note = (last.note || '').replace(/\s+/g, ' ').slice(0, 46);
+    var line2 = note + (next ? '　→ 下一条：' + fmt(next) : '　→ 已到 1917');
+    render(fmt(last), line2);
   }
 
   window.SIM_CAPTION = {
-    showEvent: function (e) {
-      showNow({ b: e.title || '', s: (e.note || '').slice(0, 56) }, 'ev' + e.year);
-      clearTimeout(evTimer);
-      evTimer = setTimeout(function () { shownKey = ''; }, 5200);   /* 之后回到时代释义 */
-    },
-    setEvents: function (events) {
-      events.forEach(function (e) {
-        evText[Number(e.year)] = { b: e.title || '', s: (e.note || '').slice(0, 56), key: 'ev' + e.year };
-      });
+    setEvents: function (list) {
+      EV = (list || []).slice().sort(function (a, b) { return a.year - b.year; });
+      shownKey = '';
     },
     update: apply
   };
 
-  /* 等主脚本跑起来后接上：轮询年份元素 */
-  var last = -1;
+  var lastY = -1;
   setInterval(function(){
     var el = document.getElementById('yr');
     if (!el) return;
     var y = parseInt(el.textContent, 10);
-    if (!isNaN(y) && y !== last) { last = y; apply(y); }
+    if (!isNaN(y) && y !== lastY) { lastY = y; apply(y); }
   }, 250);
 })();
 </script>
