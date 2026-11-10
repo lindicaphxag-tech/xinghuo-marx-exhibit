@@ -46,6 +46,8 @@
     /* 用户在这块里动手就停 6 秒，之后继续 */
     el.addEventListener("pointerdown", function () { pausedUntil[key] = now() + 6000; }, { passive: true });
     el.addEventListener("wheel", function () { pausedUntil[key] = now() + 4000; }, { passive: true });
+    el.addEventListener("pointerenter", function () { pausedUntil[key] = now() + 1200; }, { passive: true });
+    el.addEventListener("pointermove", function () { pausedUntil[key] = now() + 1500; }, { passive: true });
 
     if (!("IntersectionObserver" in window)) { start(key, fn); return; }
     new IntersectionObserver(function (es) {

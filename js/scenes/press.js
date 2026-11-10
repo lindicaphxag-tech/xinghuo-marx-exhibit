@@ -105,7 +105,7 @@
               var cover = issue.thumb ? '<img class="press-issue-thumb" src="' + issue.thumb + '" alt="' + p.name + " " + issue.volume + ' 原刊扫描首页" loading="lazy" referrerpolicy="no-referrer">' : '<span class="press-cover-missing">此期暂无可核验扫描<br>保留真实目录记录</span>';
               return '<div class="press-reel-slide embla__slide"><button type="button" class="press-issue-card" data-issue-index="' + i + '" aria-pressed="false">' +
                 '<span class="press-issue-date">' + issue.date + '</span>' +
-                '<span class="press-issue-cover">' + cover + '<span class="press-scan-stamp">' + (issue.thumb ? "数字原件 · 首页" : "扫描缺期") + '</span>' + (hasNotes(p.id, issue.volume || issue.date) ? '<span class="press-note-dot" title="本期有编者批注">批注</span>' : '') + '</span>' +
+                '<span class="press-issue-cover" data-label="' + issue.volume + ' · 封面需联网载入">' + cover + '<span class="press-scan-stamp">' + (issue.thumb ? "数字原件 · 首页" : "扫描缺期") + '</span>' + (hasNotes(p.id, issue.volume || issue.date) ? '<span class="press-note-dot" title="本期有编者批注">批注</span>' : '') + '</span>' +
                 '<span class="press-issue-meta"><strong>' + issue.volume + '</strong><span>' + issue.title + '</span></span>' +
               '</button></div>';
             }).join("") +
@@ -173,6 +173,17 @@
     if (!viewport || !window.EmblaCarousel) return;
     var issues = p.issues || [];
     var options = { align: "center", containScroll: false, loop: false, duration: 28, dragFree: false, skipSnaps: false };
+    /* 封面拉不到时用文字占位 */
+    Array.prototype.forEach.call(viewport.querySelectorAll(".press-issue-thumb"), function (img) {
+      img.addEventListener("error", function () {
+        img.style.display = "none";
+        if (img.parentNode) img.parentNode.classList.add("cover-missing");
+      });
+      if (img.complete && img.naturalWidth === 0) {
+        img.style.display = "none";
+        if (img.parentNode) img.parentNode.classList.add("cover-missing");
+      }
+    });
     carousel = window.EmblaCarousel(viewport, options);
     carousel.on("select", function () { updateIssue(p, carousel.selectedScrollSnap()); });
     carousel.on("init", function () { updateIssue(p, carousel.selectedScrollSnap()); });
