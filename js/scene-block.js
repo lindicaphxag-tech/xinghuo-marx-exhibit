@@ -12,9 +12,16 @@
     .then(function (r) { return r.json(); })
     .then(function (d) {
       var items = d.items || d;
-      var recon = items.filter(function (i) { return i.representation === "historical-reconstruction"; });
-      var rest = items.filter(function (i) { return i.representation !== "historical-reconstruction"; });
-      build(recon.concat(rest).slice(0, 12));
+      /* 实景扫描的市政厅广场放最前，其次复原类，最后其他 */
+      var PRIORITY = ["paris_commune_square"];
+      var first = items.filter(function (i) { return PRIORITY.indexOf(i.id) >= 0; });
+      var recon = items.filter(function (i) {
+        return PRIORITY.indexOf(i.id) < 0 && i.representation === "historical-reconstruction";
+      });
+      var rest = items.filter(function (i) {
+        return PRIORITY.indexOf(i.id) < 0 && i.representation !== "historical-reconstruction";
+      });
+      build(first.concat(recon).concat(rest).slice(0, 12));
     })
     .catch(function () { });
 
@@ -48,8 +55,15 @@
         showLocal(view, it);
       } else if (it.embedUrl) {
         stopLoop();
-        view.innerHTML = '<iframe src="' + esc(it.embedUrl) + '" title="' + esc(it.name) +
-          '" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe>';
+        view.innerHTML = '<div class="sb-loading"><i></i>正在加载三维模型…</div>' +
+          '<iframe src="' + esc(it.embedUrl) + '" title="' + esc(it.name) +
+          '" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>';
+        var fr = view.querySelector("iframe");
+        var ld = view.querySelector(".sb-loading");
+        if (fr && ld) {
+          fr.addEventListener("load", function () { ld.classList.add("hide"); });
+          setTimeout(function () { ld.classList.add("hide"); }, 9000);   /* 兜底：9 秒后撤提示 */
+        }
       } else {
         stopLoop();
         view.innerHTML = '<div class="sb-poster"><span class="glyph">' + esc(it.glyph || "▦") + '</span><p>' +
