@@ -1,0 +1,230 @@
+[
+ {
+  "file": "0af8fcfed7b2455e83d1947d8f6a1f59.glb",
+  "tris_before": 185393,
+  "tris_after": 59986,
+  "out_mb": 3.94
+ },
+ {
+  "file": "10c09713b2d140c1b104b1b3adbd1e66.glb",
+  "tris_before": 42,
+  "tris_after": 42,
+  "out_mb": 0.32
+ },
+ {
+  "file": "12d91558d0d44357a7ce10d0722f77fc.glb",
+  "tris_before": 30720,
+  "tris_after": 30720,
+  "out_mb": 4.43
+ },
+ {
+  "file": "17562d27f70b4b4a834cd778cd5e6c06.glb",
+  "tris_before": 12048,
+  "tris_after": 12048,
+  "out_mb": 2.25
+ },
+ {
+  "file": "1b464109b4df435a959fd2cae00da1e4.glb",
+  "tris_before": 150000,
+  "tris_after": 59998,
+  "out_mb": 4.61
+ },
+ {
+  "file": "1bd631c4c82d4635828b9a4803371069.glb",
+  "tris_before": 133680,
+  "tris_after": 59997,
+  "out_mb": 4.07
+ },
+ {
+  "file": "2f80891c2e494134822db52136f5450c.glb",
+  "tris_before": 16284,
+  "tris_after": 16284,
+  "out_mb": 3.22
+ },
+ {
+  "file": "2fea1f718c14460882014d80b4b64ccd.glb",
+  "tris_before": 3668,
+  "tris_after": 3668,
+  "out_mb": 4.46
+ },
+ {
+  "file": "314b5db612014113b82e5cd3ab4574d1.glb",
+  "tris_before": 32,
+  "tris_after": 32,
+  "out_mb": 0.32
+ },
+ {
+  "file": "3349676ef9a24d42b7621d8db83f1900.glb",
+  "tris_before": 12,
+  "tris_after": 12,
+  "out_mb": 0.32
+ },
+ {
+  "file": "36e57c231b6546b7bdd19bf4dba8063d.glb",
+  "tris_before": 123729,
+  "tris_after": 59890,
+  "out_mb": 9.38
+ },
+ {
+  "file": "3810f538665c4acca4007f71414efc48.glb",
+  "tris_before": 206040,
+  "tris_after": 59998,
+  "out_mb": 4.93
+ },
+ {
+  "file": "3e93fc2716d540a58e6a7726a687f433.glb",
+  "tris_before": 1260,
+  "tris_after": 1260,
+  "out_mb": 0.15
+ },
+ {
+  "file": "4b11b76fe069496ebd8ccd98f7d37ade.glb",
+  "tris_before": 31936,
+  "tris_after": 31936,
+  "out_mb": 5.92
+ },
+ {
+  "file": "658832f4ddc042979bc4e9076cc6358c.glb",
+  "tris_before": 624,
+  "tris_after": 624,
+  "out_mb": 0.08
+ },
+ {
+  "file": "6952fe3768324ed4843a4a3c9a6888ad.glb",
+  "tris_before": 90205,
+  "tris_after": 59997,
+  "out_mb": 3.76
+ },
+ {
+  "file": "81f2128f7fd949878e73ed3aa8c4efba.glb",
+  "tris_before": 14278,
+  "tris_after": 14278,
+  "out_mb": 1.24
+ },
+ {
+  "file": "84117c94c0d1445a897009ff94585dc8.glb",
+  "tris_before": 3340,
+  "tris_after": 3340,
+  "out_mb": 7.78
+ },
+ {
+  "file": "87aef8adf8bd4f3a9d0e2aabc912ee3d.glb",
+  "tris_before": 49184,
+  "tris_after": 49184,
+  "out_mb": 15.25
+ },
+ {
+  "file": "8b0e7d3a1b4d4dbb8ec788c3e4c5f1ed.glb",
+  "tris_before": 48027,
+  "tris_after": 48027,
+  "out_mb": 3.26
+ },
+ {
+  "file": "943e447e1a3b4b6a98b6c8d7e63bf167.glb",
+  "tris_before": 47937,
+  "tris_after": 47937,
+  "out_mb": 3.71
+ },
+ {
+  "file": "970427a0aff3465689ac509f4fde9d94.glb",
+  "tris_before": 9220,
+  "tris_after": 9220,
+  "out_mb": 3.99
+ },
+ {
+  "file": "985f973e876143e48d93f58b1988f0ce.glb",
+  "tris_before": 13912,
+  "tris_after": 13912,
+  "out_mb": 3.32
+ },
+ {
+  "file": "9d12d811003b440582d4de46d35a3d1d.glb",
+  "tris_before": 144,
+  "tris_after": 144,
+  "out_mb": 0.59
+ },
+ {
+  "file": "a24bcb6b7a2e448fad661004f403ae12.glb",
+  "tris_before": 59371,
+  "tris_after": 59371,
+  "out_mb": 13.67
+ },
+ {
+  "file": "a5b108e3132d46b696c36310c2314ed8.glb",
+  "tris_before": 150000,
+  "tris_after": 59997,
+  "out_mb": 4.03
+ },
+ {
+  "file": "a70ea3530a004baebe6c33c29cebe1de.glb",
+  "tris_before": 256,
+  "tris_after": 256,
+  "out_mb": 0.8
+ },
+ {
+  "file": "b091005f6c1a46f59a6f019c24c3e1a0.glb",
+  "tris_before": 47913,
+  "tris_after": 47913,
+  "out_mb": 2.44
+ },
+ {
+  "file": "c2ac2b3c366b4354ba34507fb16103f3.glb",
+  "tris_before": 68912,
+  "tris_after": 59993,
+  "out_mb": 4.93
+ },
+ {
+  "file": "c932f6165fef40029c3f18afe19b9934.glb",
+  "tris_before": 8591,
+  "tris_after": 8591,
+  "out_mb": 2.31
+ },
+ {
+  "file": "ca8406619c5647199851058e34ff6501.glb",
+  "tris_before": 2080,
+  "tris_after": 2080,
+  "out_mb": 6.82
+ },
+ {
+  "file": "cdf7e415aa75441897c0b5dfb384302f.glb",
+  "tris_before": 121942,
+  "tris_after": 59977,
+  "out_mb": 25.84
+ },
+ {
+  "file": "d44852d465c34d67ad4a72de95a8e6e3.glb",
+  "tris_before": 68938,
+  "tris_after": 59975,
+  "out_mb": 4.14
+ },
+ {
+  "file": "dc1797a6d49e4629bf8ca668bd76e0d0.glb",
+  "tris_before": 38580,
+  "tris_after": 38580,
+  "out_mb": 1.23
+ },
+ {
+  "file": "dec352c0d8884d439dd14d9f2d3ddfde.glb",
+  "tris_before": 186310,
+  "tris_after": 59989,
+  "out_mb": 2.87
+ },
+ {
+  "file": "e83663ab61294ebfac897c92a200dfef.glb",
+  "tris_before": 44985,
+  "tris_after": 44985,
+  "out_mb": 3.13
+ },
+ {
+  "file": "ed264d4c851c46a28ddf719746a47391.glb",
+  "tris_before": 6224,
+  "tris_after": 6224,
+  "out_mb": 5.78
+ },
+ {
+  "file": "f49ef941f78b47d4b401a4191d0d7fdc.glb",
+  "tris_before": 73302,
+  "tris_after": 60000,
+  "out_mb": 3.6
+ }
+]

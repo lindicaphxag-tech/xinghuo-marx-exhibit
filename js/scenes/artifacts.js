@@ -1135,7 +1135,7 @@
       })
       .catch(function () {
         var rail = document.getElementById("artifact-rail");
-        if (rail) rail.innerHTML = "<p style='color:#c9a227'>展品清单加载失败：请通过本地 http 服务打开本页。</p>";
+        if (rail) rail.innerHTML = "<p style='color:#c9a227'>展品清单未能加载，刷新页面即可重试。</p>";
       });
   }
 

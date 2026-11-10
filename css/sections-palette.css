@@ -1,0 +1,71 @@
+/* sections-palette.css —— 每个大板块一套底色与强调色，小板块再分深浅
+   目的：翻页时一眼能分辨“换卷了”，同一卷里的小节也能分层。 */
+
+:root{
+  --sec-bg: #f3eee2;
+  --sec-bg-2: #ece5d6;
+  --sec-ink: #2c2921;
+  --sec-accent: #8a5b2c;
+  --sec-hair: rgba(120, 85, 47, .18);
+}
+
+/* 每卷一套 */
+#mapstory   { --sec-bg:#f4ecda; --sec-bg-2:#e8dcc2; --sec-accent:#8a5b2c; --sec-hair:rgba(138,91,44,.22); }
+#relic      { --sec-bg:#f5efe3; --sec-bg-2:#ece2d0; --sec-accent:#96201a; --sec-hair:rgba(150,32,26,.16); }
+#network    { --sec-bg:#e7efe6; --sec-bg-2:#dbe6da; --sec-accent:#2f4f42; --sec-hair:rgba(47,79,66,.22); }
+#press      { --sec-bg:#f7f0dd; --sec-bg-2:#ece0c6; --sec-accent:#8a5b2c; --sec-hair:rgba(138,91,44,.22); }
+#classroom  { --sec-bg:#eeeede; --sec-bg-2:#e3e3cd; --sec-accent:#5d6b3a; --sec-hair:rgba(93,107,58,.22); }
+#commune    { --sec-bg:#f8e8e0; --sec-bg-2:#f0d9cd; --sec-accent:#96201a; --sec-hair:rgba(150,32,26,.22); }
+#sound      { --sec-bg:#ecebf2; --sec-bg-2:#dedce8; --sec-accent:#4a4458; --sec-hair:rgba(74,68,88,.22); }
+#river      { --sec-bg:#e6eef1; --sec-bg-2:#d8e5ea; --sec-accent:#2f4a55; --sec-hair:rgba(47,74,85,.22); }
+#heat       { --sec-bg:#e9eef4; --sec-bg-2:#dce4ee; --sec-accent:#35566b; --sec-hair:rgba(53,86,107,.22); }
+#artifacts  { --sec-bg:#f0eef0; --sec-bg-2:#e4e1e6; --sec-accent:#5a4a5e; --sec-hair:rgba(90,74,94,.22); }
+#monument   { --sec-bg:#f3f1ea; --sec-bg-2:#e8e5da; --sec-accent:#6b5a48; --sec-hair:rgba(107,90,72,.18); }
+#lineart    { --sec-bg:#f2f0ea; --sec-bg-2:#e7e4db; --sec-accent:#3f3d36; --sec-hair:rgba(63,61,54,.18); }
+
+/* 大板块底色 */
+.section{ background: var(--sec-bg) !important; color: var(--sec-ink) }
+.section.alt{ background: var(--sec-bg-2) !important }
+
+/* 小板块：同一卷里的卡片、条带用浅一档的底 */
+.section .route-card,
+.section .hard,
+.section .mf-reader,
+.section .relic-reader,
+.section .panel,
+.section .dossier-card,
+.section .bh-row{
+  background: #fffdf8;
+  border-color: var(--sec-hair);
+}
+.section .route-card:hover{ border-color: var(--sec-accent) }
+.section .mf-head, .section .mf-foot, .section .mf-nav{ background: var(--sec-bg-2) }
+
+/* 题头：小标用该卷强调色，标题下加一条同色发丝线 */
+.section .kicker{ color: var(--sec-accent); }
+.section .chapter-head h2{ color: var(--sec-ink) }
+.section .chapter-head h2::after{
+  content:""; display:block; width:54px; height:2px;
+  margin-top:12px; background: var(--sec-accent); opacity:.55;
+}
+
+/* 主按钮与小标签跟着该卷走 */
+.section .btn.primary{ background: var(--sec-accent); border-color: var(--sec-accent) }
+.section .tag, .section .chip{ border-color: var(--sec-hair); color: var(--sec-accent) }
+
+/* 卷首编号块 */
+.section .chapter-num, .section .vol-no{ color: var(--sec-accent) }
+
+
+/* 每卷顶部的强调色条与色块小标 */
+.section{ border-top: none !important }
+.section::before{
+  content:""; display:block; height:3px; width:100%;
+  background: var(--sec-accent); opacity:.42;
+  margin-bottom: 0;
+}
+.section .kicker{
+  display:inline-block; background: var(--sec-accent); color:#fff8ec;
+  padding:3px 9px; border-radius:2px; letter-spacing:.16em; font-size:11px;
+}
+.section .lede{ color:#4a463c }
