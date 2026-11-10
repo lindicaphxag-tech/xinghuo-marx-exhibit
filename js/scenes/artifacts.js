@@ -171,6 +171,49 @@
     syncWireToggle();
   });
 
+  /* 把一个模型扶正：最长轴转到 Y；再用“底部截面更宽”判断是否上下颠倒 */
+  function upright(obj) {
+    obj.updateMatrixWorld(true);
+    var box = new THREE.Box3().setFromObject(obj);
+    var s = box.getSize(new THREE.Vector3());
+    if (s.y >= s.x * 1.02 && s.y >= s.z * 1.02) { verifyUp(obj); return; }
+
+    if (s.x >= s.z) {
+      obj.rotation.z += Math.PI / 2;      // X 最长 → 绕 Z 转 90°
+    } else {
+      obj.rotation.x -= Math.PI / 2;      // Z 最长 → 绕 X 转 -90°
+    }
+    obj.updateMatrixWorld(true);
+    verifyUp(obj);
+  }
+
+  /* 若底部比顶部窄，说明头朝下，翻 180° */
+  function verifyUp(obj) {
+    var geoBox = new THREE.Box3().setFromObject(obj);
+    var min = geoBox.min.y, max = geoBox.max.y, h = max - min;
+    if (!(h > 0)) return;
+    var lowC = 0, lowN = 0, highC = 0, highN = 0;
+    var v = new THREE.Vector3();
+    obj.updateMatrixWorld(true);
+    obj.traverse(function (o) {
+      if (!o.isMesh || !o.geometry || !o.geometry.attributes.position) return;
+      var pos = o.geometry.attributes.position;
+      var step = Math.max(1, Math.floor(pos.count / 2600));
+      for (var i = 0; i < pos.count; i += step) {
+        v.fromBufferAttribute(pos, i).applyMatrix4(o.matrixWorld);
+        var d = Math.hypot(v.x, v.z);
+        var rel = (v.y - min) / h;
+        if (rel < 0.18) { lowC += d; lowN++; }
+        else if (rel > 0.82) { highC += d; highN++; }
+      }
+    });
+    if (!lowN || !highN) return;
+    if (lowC / lowN < highC / highN * 0.86) {     // 底窄上宽 → 翻了
+      obj.rotation.z += Math.PI;
+      obj.updateMatrixWorld(true);
+    }
+  }
+
   function normalize(obj) {
     obj.traverse(function (o) {
       if (o.isMesh && o.geometry) {
@@ -184,17 +227,9 @@
         });
       }
     });
-    /* Photo-to-3D statue exports may have their longest axis horizontal. */
+    /* 自动扶正：任何单图重建模型都让最长边朝上，并按“底座更宽”判断正反 */
     var isArtifact = items[current] && items[current].type !== "scene";
-    if (isArtifact && /^(statue|bust)_/i.test(items[current] && items[current].id || "")) {
-      obj.updateMatrixWorld(true);
-      var rawBox = new THREE.Box3().setFromObject(obj);
-      var rawSize = rawBox.getSize(new THREE.Vector3());
-      /* These single-photo statue reconstructions use +X as their upright axis.
-       * Their head is at +X and the plinth at -X, so +90° around Z makes them
-       * stand on +Y. The previous -90° rotation put the head below the plinth. */
-      if (rawSize.x > rawSize.y * 1.18 && rawSize.x > rawSize.z * 1.18) obj.rotation.z = Math.PI / 2;
-    }
+    if (isArtifact) upright(obj);
     var box = new THREE.Box3().setFromObject(obj);
     var size = box.getSize(new THREE.Vector3());
     var center = box.getCenter(new THREE.Vector3());
@@ -791,10 +826,11 @@
   function resetView(animate) {
     var controls = scene && scene.userData.controls;
     if (!controls) return;
-    var position = items[current] && items[current].type === "scene"
-      ? (sceneView || { x: 1.05, y: 0.78, z: 2.38 })
-      : { x: 0, y: 0.12, z: 2.6 };
-    var aim = { x: 0, y: 0, z: 0 };
+    var isScene = items[current] && items[current].type === "scene";
+    var position = isScene
+      ? (sceneView || { x: 1.05, y: 1.15, z: 2.38 })     /* 历史空间：略俯视 */
+      : { x: 0.0, y: -0.42, z: 2.42 };                    /* 雕像：略仰视 */
+    var aim = isScene ? { x: 0, y: 0.02, z: 0 } : { x: 0, y: 0.16, z: 0 };
     camera.up.set(0, 1, 0);
     if (cameraTools) Array.prototype.forEach.call(cameraTools.querySelectorAll("button"), function (button) {
       button.setAttribute("aria-pressed", String(button.getAttribute("data-camera-preset") === "default"));
