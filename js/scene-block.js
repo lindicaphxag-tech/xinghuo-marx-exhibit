@@ -149,16 +149,16 @@
       var size = box.getSize(new THREE.Vector3());
       var center = box.getCenter(new THREE.Vector3());
       var maxDim = Math.max(size.x, size.y, size.z) || 1;
-      var k = 3.4 / maxDim;
+      var k = 4.8 / maxDim;
       obj.scale.setScalar(k);
       obj.position.sub(center.clone().multiplyScalar(k));
 
       var fitted = new THREE.Box3().setFromObject(obj);
       var fs = fitted.getSize(new THREE.Vector3());
       var radius = fs.length() * 0.5;
-      var dist = radius / Math.sin(THREE.MathUtils.degToRad(camera.fov * 0.5)) * 0.78;
+      var dist = radius / Math.sin(THREE.MathUtils.degToRad(camera.fov * 0.5)) * 0.62;
       controls.target.set(0, fs.y * 0.06, 0);
-      camera.position.set(dist * 0.85, dist * 0.62, dist * 0.95);
+      camera.position.set(dist * 0.9, dist * 0.66, dist * 1.0);
       camera.lookAt(controls.target);
       controls.update();
 
