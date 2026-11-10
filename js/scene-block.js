@@ -110,7 +110,7 @@
     controls.enableDamping = true;
     controls.dampingFactor = 0.08;
     controls.autoRotate = true;
-    controls.autoRotateSpeed = -1.2;
+    controls.autoRotateSpeed = -0.45;
   }
 
   function stopLoop() {
