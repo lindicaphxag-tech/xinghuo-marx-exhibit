@@ -2,19 +2,25 @@
 .scene-block{
   display: grid;
   grid-template-columns: minmax(0,1fr) 300px;
+  align-items: stretch;
   gap: 18px;
   margin: 22px 0 30px;
 }
 .scene-block .sb-view{
   position: relative;
-  height: 520px;
-  min-height: 460px;
+  height: 100%;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
   background: #141210;
   border: 1px solid rgba(120,85,47,.18);
   overflow: hidden;
 }
 .scene-block .sb-view iframe{
-  width: 100%; height: 100%; border: 0; display: block; background: #141210;
+  width: 100%; flex: 1 1 auto; height: auto; min-height: 520px; border: 0; display: block; background: #141210;
+}
+.scene-block .sb-view canvas{
+  width: 100%; flex: 1 1 auto; height: auto; min-height: 520px; display: block; background: #141210;
 }
 .scene-block .sb-loading{
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;

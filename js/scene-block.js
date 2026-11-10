@@ -89,7 +89,7 @@
   /* ---------- 本地 GLB 渲染 ---------- */
   function initGL(view) {
     var cv = document.createElement("canvas");
-    cv.style.cssText = "width:100%;height:460px;display:block;background:#141210";
+    cv.style.cssText = "width:100%;height:100%;display:block;background:#141210";
     view.innerHTML = "";
     view.appendChild(cv);
 
@@ -120,7 +120,7 @@
 
   function resize(view) {
     if (!renderer) return;
-    var w = view.clientWidth || 800, h = 460;
+    var w = view.clientWidth || 800, h = view.clientHeight || 520;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
