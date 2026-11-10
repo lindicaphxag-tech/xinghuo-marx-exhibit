@@ -110,9 +110,29 @@
       tries++;
       var bad = !HAS_WEBGL || !!window.__ARTIFACT_ERROR;
       var railHas = document.querySelectorAll("#artifact-rail button").length > 0;
-      if (bad) { if (railHas) { buildOwnRail(); refresh(); } }
+      if (bad) {
+        graphFallback();
+        if (railHas) { buildOwnRail(); refresh(); }
+      }
       if (tries > 40) clearInterval(t);
     }, 700);
+  }
+
+
+  /* 知识图谱：没有 WebGL 时换成静态图 */
+  function graphFallback() {
+    var cv = document.getElementById("network-canvas");
+    if (!cv) return;
+    if (document.getElementById("network-fallback")) return;
+    var wrap = cv.parentNode;
+    if (!wrap) return;
+    var img = document.createElement("img");
+    img.id = "network-fallback";
+    img.src = "assets/img/network-fallback.png?v=20261110j";
+    img.alt = "知识图谱静态图";
+    img.style.cssText = "position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#141210;z-index:4";
+    wrap.appendChild(img);
+    cv.style.visibility = "hidden";
   }
 
   window.addEventListener("load", function () {
