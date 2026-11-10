@@ -18,6 +18,8 @@
   .brand b{display:block;font-size:23px;margin-top:2px}
   .year{position:absolute;left:26px;top:104px;font-size:44px;font-variant-numeric:tabular-nums;color:var(--gold);line-height:1;text-align:left}
   .year small{display:block;font-size:11.5px;letter-spacing:.18em;color:var(--dim);margin-top:6px}
+  .panel.hidden{display:none}
+  .panel-toggle{position:absolute;left:26px;bottom:26px;pointer-events:auto;font:inherit;font-size:12px;padding:6px 12px;border:1px solid rgba(201,162,98,.34);border-radius:3px;background:rgba(12,10,9,.82);color:#b3a795;cursor:pointer}
   .panel{position:absolute;left:26px;bottom:26px;width:300px;pointer-events:auto;
     background:rgba(12,10,9,.88);border:1px solid rgba(201,162,98,.26);border-radius:4px;padding:14px 16px}
   .panel h4{margin:0 0 10px;font-size:12px;letter-spacing:.18em;color:var(--gold);font-weight:500}
@@ -51,7 +53,8 @@
     <div class="year"><span id="yr">1830</span><small>当前年份</small></div>
   </div>
   <div class="hint">粒子＝一次行动 / 一次集会 / 一份刊物<br>越亮＝当期活动强度越高</div>
-  <aside class="panel">
+  <button type="button" class="panel-toggle" id="panel-toggle">调参</button>
+  <aside class="panel hidden" id="sim-panel">
     <h4>模型参数</h4>
     <div class="row"><label>扩散率</label><input id="spread" type="range" min="0.2" max="2" step="0.05" value="0.85"><b id="spreadV">0.85</b></div>
     <div class="row"><label>镇压强度</label><input id="repress" type="range" min="0" max="1.5" step="0.05" value="0.4"><b id="repressV">0.40</b></div>
@@ -61,6 +64,15 @@
       <button id="restart" type="button">重新开始</button>
     </div>
   </aside>
+  <script>
+  (function(){
+    var b=document.getElementById('panel-toggle'), p=document.getElementById('sim-panel');
+    if(b&&p) b.addEventListener('click', function(){
+      p.classList.toggle('hidden');
+      b.textContent = p.classList.contains('hidden') ? '调参' : '收起参数';
+    });
+  })();
+  </script>
   <div class="stats">
     活跃城市 <b id="act">0</b><br>
     年度事件 <b id="evt">0</b><br>
@@ -108,6 +120,12 @@
     };
   }
 
+  function loadEvents() {
+    return fetch("assets/manifests/events.json").then(function (r) { return r.json(); })
+      .then(function (d) { EVENTS = (d.events || []).slice(); })
+      .catch(function () { EVENTS = []; });
+  }
+
   function resize() {
     W = innerWidth; H = innerHeight;
     cv.width = W * DPR; cv.height = H * DPR;
@@ -122,6 +140,50 @@
     return ((h >>> 0) % 1000) / 1000;
   }
 
+  /* 真实事件表：城市觉醒年与活跃度都从 events.json 来，不再用哈希编年 */
+  var CITY_NAME = {"london":"伦敦","trier":"特里尔","paris":"巴黎","lyon":"里昂","silesia":"西里西亚",
+    "brussels":"布鲁塞尔","berlin":"柏林","peterburg":"彼得格勒","geneva":"日内瓦","hague":"海牙",
+    "cologne":"科隆","vienna":"维也纳","budapest":"布达佩斯","milan":"米兰","rome":"罗马","moscow":"莫斯科"};
+
+  function applyEventYears() {
+    var byCity = {};
+    EVENTS.forEach(function (e) {
+      var id = Object.keys(CITY_NAME).find(function (k) { return CITY_NAME[k] === e.place; });
+      if (!id) return;
+      e.cityId = id;
+      byCity[id] = byCity[id] || { first: 9999, n: 0 };
+      byCity[id].first = Math.min(byCity[id].first, Number(e.year) || 9999);
+      byCity[id].n += 1;
+    });
+    CITIES.forEach(function (c) {
+      var rec = byCity[c.id];
+      if (rec) {
+        c.onset = rec.first;                 // 该城第一次真实事件发生的年份
+        c.weight = 0.8 + rec.n * 0.5;        // 事件越多，活跃度越高
+        c.real = true;
+      } else {
+        c.onset = 1910;                      // 无独立事件记录的城市只在扩散中被动点亮
+        c.weight = 0.35;
+        c.real = false;
+      }
+      c.activity = 0;
+    });
+    EVENTS.sort(function (a, b) { return a.year - b.year; });
+  }
+
+  function fireEvent(e) {
+    var c = CITIES.find(function (x) { return x.id === e.cityId; });
+    if (!c) return;
+    c.activity = Math.min(3.2, c.activity + 2.2);
+    var targets = CITIES.filter(function (x) { return x.id !== c.id; });
+    for (var k = 0; k < 6 && targets.length; k++) {
+      var o = targets[Math.floor(Math.random() * targets.length)];
+      particles.push({ from: proj(c.lon, c.lat), to: proj(o.lon, o.lat), t: 0, speed: 0.9 + Math.random() * 0.6 });
+    }
+    totalActs++;
+    yearEvents++;
+  }
+
   function initCities() {
     var b = GEO.cities || {};
     CITIES = Object.keys(b).map(function (id) {
@@ -129,9 +191,8 @@
       var seed = hash(id);
       return {
         id: id, lon: ll[0], lat: ll[1],
-        // 每个城市的“觉醒年”：工业与组织越强越早，用固定哈希保证可复现
-        onset: 1830 + Math.floor(seed * 70),
-        activity: 0, weight: 0.6 + seed * 0.9,
+        onset: 1910,            // 之后由真实事件覆盖
+        activity: 0, weight: 0.5,
         name: ({"london":"伦敦","trier":"特里尔","paris":"巴黎","lyon":"里昂","silesia":"西里西亚",
                 "brussels":"布鲁塞尔","berlin":"柏林","peterburg":"彼得格勒","geneva":"日内瓦",
                 "hague":"海牙","cologne":"科隆","vienna":"维也纳","budapest":"布达佩斯",
@@ -145,6 +206,11 @@
     var dYear = dt * 1.6;                 // 每秒推进约 1.6 年
     year += dYear;
     if (year > YEAR1) { year = YEAR1; playing = false; setPlayBtn(); }
+
+    /* 真实事件：跨过该年就播一次，一个事件只播一次 */
+    EVENTS.forEach(function (e) {
+      if (!e.fired && year >= Number(e.year)) { e.fired = true; fireEvent(e); }
+    });
 
     var spread = P.spread, repress = P.repress, org = P.org;
     CITIES.forEach(function (c) {
@@ -300,10 +366,14 @@
 
   function load() {
     Promise.all([
-      fetch("assets/geo/europe.json").then(function (r) { return r.json(); })
+      fetch("assets/geo/europe.json").then(function (r) { return r.json(); }),
+      fetch("assets/manifests/events.json").then(function (r) { return r.json(); })
+        .catch(function () { return { events: [] }; })
     ]).then(function (res) {
       GEO = res[0];
+      EVENTS = (res[1] && res[1].events) ? res[1].events.slice() : [];
       resize();
+      applyEventYears();
       initCities();
       bind();
       setPlayBtn();
