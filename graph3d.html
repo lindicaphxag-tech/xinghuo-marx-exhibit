@@ -42,7 +42,8 @@
 <link rel="stylesheet" href="css/gallery-v2.css?v=1">
 <link rel="stylesheet" href="css/font-theme.css?v=1">
 <link rel="stylesheet" href="css/unify.css?v=1">
-<link rel="stylesheet" href="css/ref-sd.css"></head>
+<link rel="stylesheet" href="css/ref-sd.css"><link rel="stylesheet" href="css/sections-palette.css">
+</head>
 <body>
 <a class="back" href="index.html">← 返回展馆</a>
 <a class="back" style="left:auto;right:26px" href="sim.html">扩散模拟 →</a>
@@ -322,5 +323,44 @@
 <script src="js/ui-chrome.js?v=2"></script>
 <script src="js/back.js?v=1"></script>
 <script src="js/font-theme.js?v=1"></script>
+
+<script>
+(function(){
+  function ok(){try{var c=document.createElement('canvas');
+    var gl=c.getContext('webgl2')||c.getContext('webgl');return !!gl;}catch(e){return false;}}
+  if(ok()) return;
+  /* 无 WebGL：用静态图代替三维画布，界面与图例保持原样 */
+  function swap(){
+    var cv=document.querySelector('canvas');
+    if(document.getElementById('graph3d-fallback')) return;
+    if(!cv){
+      /* three.js 建渲染器时就失败了，画布根本没生成 */
+      var im=document.createElement('img');
+      im.id='graph3d-fallback';
+      im.src='assets/img/graph3d-fallback.png?v=1';
+      im.alt='三维知识图谱（静态）';
+      im.style.cssText='position:fixed;inset:0;width:100%;height:100%;object-fit:contain;background:#080706;z-index:1';
+      document.body.appendChild(im);
+      var tip=document.createElement('p');
+      tip.textContent='当前设备未启用 WebGL，已显示静态图谱；节点与关系统计与三维版一致。';
+      tip.style.cssText='position:fixed;left:24px;bottom:64px;z-index:5;margin:0;font-size:12px;color:#b3a795';
+      document.body.appendChild(tip);
+      return;
+    }
+    var img=document.createElement('img');
+    img.id='graph3d-fallback';
+    img.src='assets/img/graph3d-fallback.png?v=1';
+    img.alt='三维知识图谱（静态）';
+    img.style.cssText='position:fixed;inset:0;width:100%;height:100%;object-fit:contain;background:#080706;z-index:1';
+    cv.parentNode.insertBefore(img, cv);
+    cv.style.visibility='hidden';
+    var note=document.createElement('p');
+    note.textContent='当前设备未启用 WebGL，已显示静态图谱；节点关系与统计与三维版一致。';
+    note.style.cssText='position:fixed;left:24px;bottom:64px;z-index:5;margin:0;font-size:12px;color:#b3a795';
+    document.body.appendChild(note);
+  }
+  window.addEventListener('load', function(){ setTimeout(swap, 1200); });
+})();
+</script>
 </body>
 </html>
