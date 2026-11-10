@@ -98,7 +98,7 @@
       controls.minDistance = 0.45;
       controls.maxDistance = 12;
       controls.autoRotate = true;          /* 进场景即缓慢环绕 */
-      controls.autoRotateSpeed = 1.6;
+      controls.autoRotateSpeed = -1.6;
       controls.addEventListener("start", function () { controls.autoRotate = false; });
       controls.target.set(0, 0, 0);
       scene.userData.controls = controls;
@@ -194,8 +194,21 @@
     syncWireToggle();
   });
 
+  /* 实测过的朝向（度）：这几件自动判断会翻倒，直接给定角度 */
+  var ORIENT_OVERRIDE = {
+    forum_berlin: [0, 0, 90],
+    monument_berlin: [0, 0, 90]
+  };
+
   /* 把一个模型扶正：最长轴转到 Y；再用“底部截面更宽”判断是否上下颠倒 */
   function upright(obj) {
+    var it = items[current] || {};
+    var ov = ORIENT_OVERRIDE[it.id];
+    if (ov) {
+      obj.rotation.set(ov[0] * Math.PI / 180, ov[1] * Math.PI / 180, ov[2] * Math.PI / 180);
+      obj.updateMatrixWorld(true);
+      return;
+    }
     obj.updateMatrixWorld(true);
     var box = new THREE.Box3().setFromObject(obj);
     var s = box.getSize(new THREE.Vector3());
