@@ -109,9 +109,7 @@
 }
 .topbar a:hover{ color:var(--sd-gold) }
 
-/* ---------- 全站底色偏墨绿 ---------- */
-body{ background:#08110e }
-.section, .wall, .vol{ background-color:#08110e }
+/* ---------- 内容区保持原底色（不改正文页配色，只改首屏） ---------- */
 
 /* ---------- 章节标题旁加朱印 ---------- */
 .vol h2::after{
