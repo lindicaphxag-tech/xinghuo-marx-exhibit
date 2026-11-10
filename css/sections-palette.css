@@ -78,3 +78,63 @@
   outline-offset:3px;
   transition: outline-color .3s ease;
 }
+
+
+/* ---------- 文献卷：收拢版式，去掉散落的深色大块 ---------- */
+#relic .relic-layout{
+  grid-template-columns: 1fr !important;
+  gap: 20px;
+  max-width: 940px;
+}
+#relic .manifest-complete{
+  margin: 0 0 16px;
+  padding: 16px 18px;
+  background: #fffdf8;
+  border: 1px solid var(--sec-hair);
+  border-radius: 3px;
+  color: #2c2921;
+}
+#relic .manifest-complete summary{
+  color: #2c2921; font-size: 15px; letter-spacing: .02em;
+  padding-bottom: 8px; border-bottom: 1px solid var(--sec-hair); margin-bottom: 8px;
+}
+#relic .manifest-complete p{ color: #57503f; font-size: 13px; line-height: 1.9; margin: 6px 0 10px }
+#relic .manifest-complete a{ color: #8a5b2c }
+#relic .manifest-complete .manifest-open{
+  background: transparent; border: 1px solid var(--sec-hair); color: #8a5b2c;
+  padding: 8px 12px; border-radius: 2px;
+}
+#relic .manifest-cover img{ max-width: 210px; border: 1px solid rgba(120,85,47,.16) }
+#relic .manifest-cover figcaption{ font-size: 11.5px; color: #8a7c67 }
+/* 提问卡与三个块统一宽度与节奏 */
+#relic .chapter-head .lede{ max-width: 860px }
+#relic .relic-reader, #relic .mf-reader{ margin-top: 4px }
+#relic .rr-head h3, #relic .mf-head h3{ font-size: 16px }
+/* 年份小签聚到一行、靠左 */
+#relic .rr-tabs, #relic .mf-eras{ display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 14px }
+
+
+
+
+/* 初版扫描块：左图右文，链接单独一行 */
+#relic .manifest-complete{
+  display:flex; flex-wrap:wrap; align-items:flex-start;
+  gap:12px 20px;
+}
+#relic .manifest-complete summary{ flex:0 0 100%; order:0; margin-bottom:4px }
+#relic .manifest-cover{ order:1; float:none; flex:0 0 168px; width:168px; margin:0 }
+#relic .manifest-cover figcaption{ font-size:10.5px; line-height:1.5; color:#8a7c67; margin-top:6px }
+#relic .manifest-complete p{ order:2; flex:1 1 520px; min-width:280px; margin:0; max-width:none }
+#relic .manifest-complete > a{
+  order:3; flex:0 0 auto; margin:0 18px 0 0; font-size:12.5px;
+}
+#relic .manifest-complete::after{ display:none }
+
+
+/* 封面图与其说明保持上下排列 */
+#relic .manifest-cover{ display:block !important }
+#relic .manifest-cover img{ display:block; width:100% }
+#relic .manifest-cover figcaption{
+  display:block !important; width:auto !important; float:none !important;
+  font-size:10.5px; line-height:1.55; color:#8a7c67; margin-top:6px;
+}
