@@ -5,8 +5,9 @@
   if (window.__AUTODEMO__) return;
   window.__AUTODEMO__ = true;
 
-  var IDLE_MS = 4000;      // 静止多久开始演示
-  var STEP_MS = 2600;      // 每步间隔
+  var IDLE_MS = 3000;      // 静止多久开始演示
+  var STEP_MS = 2600;      // 默认每步间隔
+  var STEP_BY_SECTION = { network: 1000, press: 1000 };   // 这两个卷一秒一切
   var timer = null, stepTimer = null, active = null, idx = 0;
 
   function stop() {
@@ -30,46 +31,32 @@
       return function () { api.showChapter(i % n); i++; };
     },
     network: function () {
-      /* 两种演示交替：一边讲节点，一边轮换聚类方式 */
-      var sel0 = document.getElementById("net-cluster");
-      var tick = 0;
-      return function () {
-        tick++;
-        if (window.HSNetTour && window.HSNetTour.start && !window.HSNetTour.isPlaying()) {
-          window.HSNetTour.start();
-        }
-        if (sel0 && tick % 3 === 0 && sel0.options.length) {
-          var k = (sel0.selectedIndex + 1) % sel0.options.length;
-          sel0.selectedIndex = k;
-          sel0.dispatchEvent(new Event("change", { bubbles: true }));
-        }
-      };
       var sel = document.getElementById("net-cluster");
-      if (sel && sel.options.length) {
-        var k = 0;
-        return function () {
-          k = (k + 1) % sel.options.length;
-          sel.selectedIndex = k;
-          sel.dispatchEvent(new Event("change", { bubbles: true }));
-        };
-      }
-      var btns = document.querySelectorAll("#network [data-cluster]");
-      if (!btns.length) return null;
-      var i = 0;
-      return function () { btns[i % btns.length].click(); i++; };
+      if (!sel || !sel.options.length) return null;
+      var k = 0, started = false;
+      return function () {
+        if (!started && window.HSNetTour && window.HSNetTour.start) {
+          started = true;
+          if (!window.HSNetTour.isPlaying()) window.HSNetTour.start();
+        }
+        k = (sel.selectedIndex + 1) % sel.options.length;
+        sel.selectedIndex = k;
+        sel.dispatchEvent(new Event("change", { bubbles: true }));
+      };
     },
     press: function () {
-      if (document.querySelector("[data-reel-next]")) {
-        /* 期号面板会整块重绘，必须每次重新取按钮 */
-        return function () {
+      /* 环形轮换：按卡片顺序走，到最后一期回到第一期 */
+      var idx = 0;
+      return function () {
+        var cards = document.querySelectorAll("#press [data-issue-index]");
+        if (!cards.length) {
           var n = document.querySelector("[data-reel-next]");
           if (n) n.click();
-        };
-      }
-      var tabs = document.querySelectorAll("#press [data-issue-index]");
-      if (!tabs.length) return null;
-      var i = 0;
-      return function () { tabs[i % tabs.length].click(); i++; };
+          return;
+        }
+        idx = (idx + 1) % cards.length;
+        cards[idx].click();
+      };
     },
     artifacts: function () {
       var api = window.HS && window.HS.artifacts;
@@ -128,7 +115,8 @@
     active = section;
     section.classList.add("demo-on");
     step();
-    stepTimer = setInterval(step, STEP_MS);
+    var every = STEP_BY_SECTION[section.id] || STEP_MS;
+    stepTimer = setInterval(step, every);
   }
 
   /* 用「占视口比例最大」来判断当前卷，比 IntersectionObserver 阈值稳 */
