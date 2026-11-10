@@ -143,6 +143,11 @@
   position: sticky !important;
   top: 88px !important;
   align-self: start;
-  height: min(76vh, 880px) !important;
+  /* 高度铺满可视区，避免地图下方留出黑带 */
+  height: calc(100vh - 104px) !important;
+  max-height: 900px;
+  background: #0e0c0a;
 }
+/* 地图舞台本身不要底色，交给画布 */
+.map-stage{ background: transparent !important; }
 .map-side{ height: auto !important }
