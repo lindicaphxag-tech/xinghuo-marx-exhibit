@@ -16,6 +16,8 @@
     sel.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
+  /* 严格按卡片顺序前进：每次点下一张，到末页回到第一期 */
+  var pressIdx = 0;
   function tickPress() {
     if (now() < (pausedUntil.press || 0)) return;
     var cards = document.querySelectorAll("#press [data-issue-index]");
@@ -24,8 +26,8 @@
       if (n) n.click();
       return;
     }
-    state.press = (state.press + 1) % cards.length;
-    cards[state.press].click();
+    pressIdx = (pressIdx + 1) % cards.length;
+    cards[pressIdx].click();
   }
 
   function start(key, fn) {

@@ -52,9 +52,9 @@ HS_DATA.press.push({
       date: "1919-05", year: 1919, volume: "第6卷第5号", title: "马克思主义研究专题期",
       note: "本期目录含“马克思研究”专题，并刊载李大钊《我的马克思主义观》。",
       highlights: ["我的马克思主义观 · 李大钊", "马克思学说 · 顾兆熊", "马克思奋斗的生涯 · 渊泉"],
-      thumb: null,
-      scan: null,
-      pdf: null,
+      thumb: "assets/documents/covers/11_xinqingnian_1919-05.jpg",
+      scan: "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E9%9D%92%E5%B9%B4_%E7%AC%AC6%E5%8D%B7%E7%AC%AC5%E8%99%9F.djvu",
+      pdf: "https://upload.wikimedia.org/wikipedia/commons/1/14/%E6%96%B0%E9%9D%92%E5%B9%B4_%E7%AC%AC6%E5%8D%B7%E7%AC%AC5%E8%99%9F.djvu",
       text: "https://zh.wikisource.org/zh-hans/%E6%96%B0%E9%9D%92%E5%B9%B4/%E7%AC%AC06%E5%8D%B7"
     },
     {
